@@ -15,3 +15,6 @@ ls -d */ <dir>
 
 # To display directories only, include hidden:
 ls -d .*/ */ <dir>
+
+# To display only files and not sub directories
+ls -ptw 1 | grep -v /

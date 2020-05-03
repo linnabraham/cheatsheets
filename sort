@@ -9,3 +9,6 @@ sort -r <file>
 
 # To sort a file randomly:
 sort -R <file>
+
+# To sort a filename using a seperator character - and select the 2nd field
+sort -t- -k2

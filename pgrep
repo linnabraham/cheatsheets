@@ -3,3 +3,6 @@ pgrep <pattern>
 
 # To kill all PIDs matching <pattern>:
 pgrep -f <pattern> | xargs kill
+
+# To return id that matchs exactly with command name
+pgrep -x command

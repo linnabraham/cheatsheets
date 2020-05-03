@@ -9,3 +9,7 @@ seq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i<=NF;i++)printf("%dx%d=%d%s", i, NR,
 
 # To specify an output separator character:
 printf '1 2 3' | awk 'BEGIN {OFS=":"}; {print $1,$2,$3}'
+
+# To extract the string between paranthesis
+awk -F"[()]" '{print $2}'o
+

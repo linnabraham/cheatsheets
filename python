@@ -12,3 +12,6 @@ python -m smtpd -n -c DebuggingServer localhost:1025
 
 # Pretty print a json
 python -m json.tool foo.json
+
+# To convert from python2 to python3 use -w flag to write changes to file
+python -m lib2to3 file.py 

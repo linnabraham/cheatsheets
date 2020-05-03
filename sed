@@ -21,3 +21,6 @@ sed '/Once upon a time/i\Chapter 1'
 
 # To add a line after a matching pattern:
 sed '/happily ever after/a\The end.'
+
+# To replace anything that isn't a letter, number, period, underscore, or dash with an underscore.
+sed -e 's/[^A-Za-z0-9._-]/_/g' <file>

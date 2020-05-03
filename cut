@@ -1,2 +1,5 @@
 # To cut out the third field of text or stdoutput that is delimited by a #:
 cut -d# -f3
+
+# To get the string between two curly braces
+cut -d "{" -f2 | cut -d "}" -f1

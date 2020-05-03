@@ -25,3 +25,6 @@ echo ${PIPESTATUS[0]}  # replace 0 with N
 
 # To create a lockfile:
 ( set -o noclobber; echo > my.lock ) || echo 'Failed to create lock file'
+
+# To extract from a string variable the part without extension
+"${i%.*}"
