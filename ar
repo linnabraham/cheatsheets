@@ -1,0 +1,2 @@
+# To uncompress a deb file
+ar x filename.deb

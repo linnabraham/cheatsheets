@@ -1,0 +1,2 @@
+# To convert from markdown to pdf
+pandoc input.pdf -o output.pdf
