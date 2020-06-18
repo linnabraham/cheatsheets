@@ -1,2 +1,0 @@
-# To convert ods to csv 
-soffice --headless --convert-to csv filename.ods
