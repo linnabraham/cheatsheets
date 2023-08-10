@@ -1,0 +1,30 @@
+# scroll through images in image mode
+n or space - forward
+p or backspace - previous
+
+# run external scripts
+ctrl-x followed by a key
+
+# enter thumbnail mode
+enter
+
+# view all images in all subdirectories in thumbnail mode
+sxiv -r -t *
+
+# to mark a range of images
+press m on first image then shift+m on the last image
+
+# to delete multiple images without prompt
+use the external script bound to Ctrl+d
+
+# open a newline-separated list of images, reading filenames from standard input:
+echo path/to/file | sxiv -i
+
+# open a space-separated list of images in thumbnail mode:
+sxiv -t path/to/file
+
+# open a newline separate list of images in thumbnail mode from stdout
+| sxiv -ito
+
+# output names of selections to stdout
+sxiv -o

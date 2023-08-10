@@ -1,0 +1,22 @@
+# config file can be made in .screenrc
+
+# specify logfile name using date and time using the config file
+logfile /tmp/screenlog-%Y%m%d-%c:%s
+
+# start recording screen when running
+Ctrl-a H
+
+# specify logfile name
+Ctrl-a :logfile name
+
+# monitor screenlog using
+tail -f 'logfilename'
+
+# using less -r flag for --raw-control-chars
+less -r screenlog.0
+
+# specify screen logging using L flag
+screen -L --Logfile custom_screenlog  -S screename
+
+# maybe this will work
+screen -L $(date -s "-%u") -S screename

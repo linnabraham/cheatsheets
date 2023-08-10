@@ -1,0 +1,17 @@
+# configure page template
+gooseberry config kb page
+
+# configure individual annotation template
+gooseberry config kb annotation
+
+# configure name of index page
+gooseberry config kb index
+
+# configure layout of index page
+gooseberry config kb links
+
+# regenerate knowledge base
+gooseberry make
+
+# bulk tag all annotations made today
+gooseberry tag --from=today tagname

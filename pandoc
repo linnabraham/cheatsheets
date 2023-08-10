@@ -1,0 +1,24 @@
+# To convert from markdown to pdf
+pandoc input.md -o output.pdf
+# To convert word document to markdown
+pandoc -f docx -t markdown -o test.md test.docx
+# To convert markdown to word
+pandoc -o output.docx -f markdown -t docx filename.md
+# To convert markdown with beamer formatting to pdf
+pandoc -i meet025.md -t beamer -o 10nov.pdf
+
+# to format a md file as beamer use the header
+---
+title:
+- Detection of Rings in Galaxies
+theme:
+- Copenhagen
+---
+
+# convert all .md files in a directory to pdf
+pandoc *.md -o result.pdf
+# convert multiple .md files to pdf using lualatex and a toc
+pandoc --pdf-engine=lualatex --toc -o result.pdf *.md
+
+# convert latex to a single html file
+pandoc main.tex -f latex -t html -s -o article3.html

@@ -1,0 +1,44 @@
+# Always confirm that the query is run in the context of the proper database like Panstarrs or SDSS
+
+# select values in a range
+WHERE rDevRadius BETWEEN 14 AND 17.77
+
+# min and max
+SELECT MIN(column1) INTO mydb.tablename from TABLE
+
+
+# PROCEDURE  spGetNeighbors
+
+Get the neighbors to a list of @ra,@dec pairs in #upload
+
+The procedure is used in conjunction with a list upload service, where the (ra,dec) coordinates of an object list are put into a temporary table #upload by the web interface. This table name is hardcoded in the procedure. It then returns a matchup table, containing the up_id and the SDSS objId. The result of this is then joined with the PhotoTag table, to return the attributes of the photometric objects.
+create table #x (id int,objID bigint)
+insert into #x EXEC spGetNeighbors 2.5
+
+## Input and output parameters
+| name | type | length | inout | pnum |
+|---|---|---|---|---|
+| @r | float | 8 | input | 1 |
+
+# randomize sort order
+WHERE (htmid*37 & 0x000000000000FFFF)
+    < (650 * 50)
+
+# casjobs query based on ra and dec coordinates
+-- Run this in the PanSTARRS_DR2 Casjobs context
+
+ select psc.objid, psc.ps_score, o.nDetections, o.nStackDetections
+ from fGetNearbyObjEq(10.0, 20.0, 1.0) f
+ join ObjectThin o on o.objid=f.objid
+ join HLSP_PS1_PSC.pointsource_scores psc on psc.objid=f.objid
+
+ # example queries
+select psc.objid, o.raMean, o.decMean, psc.ps_score, o.nDetections, o.nStackDetections, m.iMeanPSFMag-m.iMeanKronMag AS psfminuskron, s.ipsfMajorFWHM, s.iKronRad
+from fGetNearbyObjEq(194.547506,-28.280495, 1.0) f
+join ObjectThin o on o.objid=f.objid
+join MeanObject m on m.objid=f.objid
+join StackObjectView s on s.objid=f.objid
+join HLSP_PS1_PSC.pointsource_scores psc on psc.objid=f.objid
+
+# equals comparison
+=

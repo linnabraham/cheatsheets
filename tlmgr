@@ -1,0 +1,14 @@
+# to get tlmgr --gui to work
+Install perl-tk
+
+# to install from a frozen repository change the repository option in tlmgr --gui
+ftp://tug.org/historic/systems/texlive/2019/tlnet-final
+
+# to show installed texlive packages
+tlmgr list --only-installed
+
+# to search for packages
+tlmgr info packagename
+
+# install packages
+tlmgr install packagename

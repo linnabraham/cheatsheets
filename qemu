@@ -1,0 +1,4 @@
+# create hd image file
+qemu-img create -f raw hdimage_file 4G
+# to resize storage file
+qemu-img resize -f raw hdimage_file +2G

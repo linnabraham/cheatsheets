@@ -1,0 +1,14 @@
+# reduce brightness
+xrandr --output LVDS-1 --brightness 0.75
+
+# Getting the screen name
+xrandr | grep connected | grep -v disconnected | awk '{print $1}'
+
+# Reduce the screen size by 20% (zoom-in)
+xrandr --output screen-name --scale 0.8x0.8
+
+# Reset xrandr changes
+xrandr --output screen-name --scale 1x1
+
+# change current screen resolution ; add command to .xprofile to make permanent
+xrandr --output screen-name --mode "1280x720"

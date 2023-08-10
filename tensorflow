@@ -1,0 +1,72 @@
+# check if gpu is detected
+tf.test.is_gpu_available()
+
+# reduce logging to show only errors
+import logging
+tf.get_logger().setLevel(logging.ERROR)
+
+# sometimes loading images produces errors when predicting
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
+# check what this does
+test_generator.reset()
+
+# For tensorflow1, to find out which device is used, you can enable log device placement like this:
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+
+# plot model
+tf.keras.utils.plot_model(model, show_shapes=True, show_layer_names=True)
+
+# fix issue with tensorflow not showing INFO when run from cmd line but shows in notebook
+import logging
+tf.logging.set_verbosity(tf.logging.INFO)
+
+# in order to view the content of a dataset object in tf 1.x you need to enable eager execution before any other
+# tf operations are done
+import tensorflow as tf
+tf.enable_eager_execution()
+
+#
+import tensorflow as tf
+import tensorflow_datasets as tfds # requires pip install tensorflow-datasets=3.2.1 for compatibility with py3.7
+
+ds = tfds.load('iris', split='train', shuffle_files=True)
+
+# check shape from generator
+for image_batch, labels_batch in train_ds:
+  print(image_batch.shape)
+  print(labels_batch.shape)
+  print(image_batch[0].numpy().shape)
+  break
+
+# Retrieve filenames as single list from tf dataset which is batched
+    test_ds = tf.data.Dataset.load(test_dir)
+    test_ds = tf.keras.utils.image_dataset_from_directory(
+      data_dir,
+      #color_mode='grayscale',
+      shuffle=False,
+      seed=123,
+      image_size=(img_height, img_width),
+      batch_size=batch_size)
+ 
+    normalization_layer = layers.Rescaling(1./255)
+
+    def change_inputs(images, labels, paths):
+      x = normalization_layer(images)
+      return x, labels,  tf.constant(paths)
+
+    normalized_ds = test_ds.map(lambda images, labels: change_inputs(images, labels, paths=test_ds.file_paths))
+    AUTOTUNE = tf.data.AUTOTUNE
+    normalized_ds = normalized_ds.cache().prefetch(buffer_size=AUTOTUNE)
+
+
+# getting positive and negative sample count
+positive_count = dataset.map(lambda _, label: tf.reduce_sum(label)).reduce(0, lambda count, val: count + val)
+negative_count = dataset.map(lambda _, label: tf.reduce_sum(1 - label)).reduce(0, lambda count, val: count + val)
+
+print("Positive class count:", positive_count.numpy())
+print("Negative class count:", negative_count.numpy())
+
+# see all keys in history
+print(history.history.keys())	

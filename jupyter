@@ -1,0 +1,13 @@
+# convert notebook to script
+jupyter-nbconvert analyze-catalogue.ipynb --to script
+
+# To  instal kernel in jupyter notebook
+python -m ipykernel install --user --name other-env --display-name "Python (other-env)"
+
+jupyter --paths
+jupyter kernelspec list
+jupyter kernelspec uninstall unwanted-kernel
+ipython kernel install --user --name=<name>
+
+# dont open browser
+--no-browser

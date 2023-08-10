@@ -1,0 +1,140 @@
+# sort using column
+df.sort_values(colname,ascending=True) # or df.sort_values(by=colname)
+
+# search if column value is in a particular range
+pd.Series.between(0,1)
+
+# clean data
+# count number of missing elements in each column
+counter_nan  = df_all.isnull().sum()
+
+counter_without_nan = counter_nan[counter_nan==0]
+
+# remove columns with missing elements
+df_all = df_all[counter_without_nan.keys()]
+
+# Here filtering the rows according to
+# Grade column which has notnull value.
+df = df.loc[df['Grade'].notnull()]
+
+# find 75th percentile for a particular column
+df['colname'].quantile(0.75)
+
+# rename columns
+df.rename(columns={oldcol:newcol,oldcol2:newcol2})
+
+# convert boolean series to integer
+Series.astype(int)
+
+# convert pandas series to list
+Series.values.tolist()
+
+# reset index
+df.reset_index(drop=True)
+
+# create dataframe from multidimensional lists
+# List1
+lst = [['tom', 'reacher', 25], ['krish', 'pete', 30],
+       ['nick', 'wilson', 26], ['juli', 'williams', 22]]
+
+df = pd.DataFrame(lst, columns =['FName', 'LName', 'Age'], dtype = float)
+df
+
+# display all rows
+DataFrame.to_string(index=False)
+
+# create a series from a list
+pd.DataFrame(mylist,columns=['id'])
+
+# pandas version of np.argmax
+# Return index of first occurrence of maximum over requested axis.
+df.idxmax
+
+# shuffle dataframe
+df.sample(frac=1)
+# to reset the index after shuffling
+df = df.sample(frac=1).reset_index(drop=True)
+
+# read data from csv without index duplicate
+pd.read_csv('path',index_col=0)
+
+# index pandas dataframe using a numpy array of indices
+df.iloc[indarr]
+
+# select rows whose column values in an array
+df.loc[df['favorite_color'].isin(array)]
+
+# select inverse of indexes of a numpy array
+mask = np.ones(len(data), np.bool)
+mask[sample_indexes] = 0
+other_data = data[mask]
+
+# join two dataframes
+pd.merge(df1,df2,on='column')
+
+# to merge two dataframes without any common columns
+# make the indexes match by ordering both and resetting the indexes
+# then merge using left_index=True and right_index=True
+
+# split dataframe into n parts
+np.array_split(df, 3)
+
+# reading excel data
+pip install openpyxl
+df = pd.read_excel("Book1.xlsx",sheet_name=0)
+
+# parse dates
+df = pd.read_csv('data/data_3.csv', parse_dates=['date'])
+
+# skipping footer the number you pass is the number of lines to skip beginning from bottom
+df = pd.read_csv(skipfooter=12..)
+
+# remove columsn
+df.drop("colname",axis=1)
+
+# reading columns as float instead of int
+# if some values are missing in a numerical column pandas treats the columns as float as NaN is considered a float
+# This might lead to data loss check other fields in the dropped rows
+df.dropna(inplace=True)
+df.a = df.a.astype(int)
+df.b = df.b.astype(int)
+
+# read commas in numbers
+ pd.read_csv(thousands=',')
+
+ # max rows and columns
+pd.set_option("display.max_rows", 8)
+pd.set_option('display.max_colwidth', None)
+
+# describe all options
+pd.describe_option()
+
+# read dates from excel file
+df1 = pd.read_excel(file, converters= {'COLUMN': pd.to_datetime})
+
+# convert any date column to date datatype
+# check if day or month comes first
+pd.to_datetime(Series,dayfirst=True)
+
+# read only some columns
+pd.read_csv(usecols=[]) # usecols=range(8) for the first 9 columns
+
+# avoid copy warning by creating a copy of the original and setting on the copy
+df_copy = cdf_sorted.copy()
+df_copy['radius_rank'] = df_copy['radius'].rank(ascending=False,pct=True)
+
+# remove duplicates on only specific columns
+df = df.drop_duplicates(subset=['ID','Order Date'], keep='last')
+
+# combine conditions in row selection
+df[(df['psfMajorFWHM']>=2) & (df['kronRad'].between(10,14))] # always use the brackets otherwise you may get unexpected results
+
+import pandas as pd
+df = pd.read_excel("export?format=xlsx",sheet_name=0)
+df.to_csv("python_dress.csv")
+
+# random sample
+df.sample(10)
+
+# convert pandas timestamp to isoformat
+Timestamp.isoformat()

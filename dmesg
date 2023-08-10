@@ -1,0 +1,2 @@
+# see error msgs
+dmesg --level=err

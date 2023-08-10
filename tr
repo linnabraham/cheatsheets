@@ -1,0 +1,12 @@
+# trim trailing newlines
+tr -d '\n'
+
+# replace space with newline
+echo "/path/to/file /path/to/file2 /path/to/file3 /path/to/file4 /path/to/file5"\
+| tr " " "\n"
+
+# extract pattern in between quotes
+tr -d '"'
+
+# remove tabs
+tr -d '\t'

@@ -1,0 +1,17 @@
+# import skycoord
+from astropy.coordinates import SkyCoord
+
+# convert list of skycoords to table
+from astropy.table import QTable
+table = QTable([c_galactic], names=["skycoord"])
+
+# match two catalogs
+c = SkyCoord(ra=ra1*u.degree, dec=dec1*u.degree) # ra1, dec1 etc are numpy arrays
+catalog = SkyCoord(ra=ra2*u.degree, dec=dec2*u.degree)
+idx, d2d, d3d = c.match_to_catalog_sky(catalog)
+max_sep = 1.0 * u.arcsec
+sep_constraint = d2d < max_sep
+c_matches = c[sep_constraint]
+catalog_matches = catalog[idx[sep_constraint]]
+
+catalog_df.iloc[idx[sep_constraint]]

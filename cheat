@@ -1,0 +1,8 @@
+# To supplement an already existing cheatsheat by adding an entry in the path personal
+cheat -p personal -e <command
+
+# To view all versions of a particular command
+cheat -l <command>
+
+# To search for text inside available cheatsheets; this doesnt work perfect
+cheat -s <command>

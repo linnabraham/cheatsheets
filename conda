@@ -1,0 +1,56 @@
+# MKL takes roughly 100MB and some use cases do not need it, so users can opt out of MKL and instead use OpenBLAS for Linux. To opt out, run
+conda install nomkl
+# and then use conda install to install packages that would normally include MKL or depend on packages that include MKL, such as scipy, numpy, and pandas. Conda will install the non-MKL versions of these packages together with their dependencies.
+
+# To create a py27 environment
+conda create --name <name> python=2.7
+conda list --revisions
+conda install --revision N
+where N is the number of the revision
+
+# make space in conda directory
+# It removes unused packages from under the pkgs/ directory wherever you happen to have conda installed. An "unused" package is one that's not used in any environment. All conda packages are stored under the pkgs/ directory and then hard-linked (if possible) into the environments.
+conda clean --all
+
+# remove conda environment
+conda env remove --name envname
+
+# auto enae
+If your shell is Bash or a Bourne variant, enable conda for the current user with
+
+    $ echo "[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh" >> ~/.bashrc
+
+or, for all users, enable conda with
+
+    $ sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+
+# see existing conda environments
+conda env list
+
+# enable conda and activate virtualenv in single command
+source /opt/miniconda3/bin/activate <envname>
+
+
+# create conda environment from yaml file
+conda env create -f environment.yml
+
+# create the environment file to use with conda
+# an example yaml file contents
+name: stats2
+channels:
+  - javascript
+dependencies:
+  - python=3.9
+  - bokeh=2.4.2
+  - conda-forge::numpy=1.21.*
+  - nodejs=16.13.*
+  - flask
+  - pip
+  - pip:
+    - Flask-Testing
+    - -r requirements.txt
+    - -r makedata/requirements.txt
+
+# use faster conda solver
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba

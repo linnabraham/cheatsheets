@@ -1,0 +1,105 @@
+# fix axis labels getting cut out
+plt.savefig(bbox_inches='tight')
+
+# set figure size in inches
+f = plt.figure()
+f.set_figwidth(4)
+f.set_figheight(1)
+
+# normalize histogram to have heights in (0,1)
+weights = np.ones_like(myarray) / len(myarray)
+plt.hist(myarray, weights=weights)
+
+# to normalize a plot usually means that the area under the curve becomes one.
+# when this is done on multiple histograms they are easier to compare
+density=True
+
+# seaborn theme
+sns.set_theme()
+
+# plot binary masks
+plt.imshow(im, cmap='gray', vmin=0, vmax=255)
+
+# change dpi
+plt.savefig("myfig.png", dpi=300)
+
+# change dpi for image shown in notebook
+import matplotlib as mpl
+mpl.rcParams['figure.dpi'] = 300
+
+
+# matplotlib subplots
+fig, ax = plt.subplots(2, 2, figsize=(10, 10), sharex=True, sharey=True)
+
+ax[0, 0].imshow(mark_boundaries(img, segments_fz))
+ax[0, 0].set_title("Felzenszwalbs's method")
+ax[0, 1].imshow(mark_boundaries(img, segments_slic))
+ax[0, 1].set_title('SLIC')
+ax[1, 0].imshow(mark_boundaries(img, segments_quick))
+ax[1, 0].set_title('Quickshift')
+ax[1, 1].imshow(mark_boundaries(img, segments_watershed))
+ax[1, 1].set_title('Compact watershed')
+
+for a in ax.ravel():
+    a.set_axis_off()
+
+plt.tight_layout()
+plt.show()
+
+
+# create an image grid
+from PIL import Image
+
+def img_reshape(img):
+    img = Image.open('./images/'+img).convert('RGB')
+    img = img.resize((300,300))
+    img = np.asarray(img)
+    return img
+
+for image in images:
+    img_arr.append(img_reshape(image))
+
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import ImageGrid
+import numpy as np
+
+fig = plt.figure(figsize=(20., 20.))
+grid = ImageGrid(fig, 111,
+                 nrows_ncols=(2, 2),  # creates 2x2 grid of axes
+                 axes_pad=0.1,  # pad between axes
+                 )
+
+for ax, im in zip(grid, img_arr):
+    ax.imshow(im)
+
+plt.show()
+
+# remove whitespace around image or figure when saving
+plt.savefig("test.png",bbox_inches='tight')
+
+# save image without borders or whitespace
+ax.axis('tight')
+ax.axis('off')
+
+# plot subplots
+df.plot.scatter(x='X', y='Y', c='red', ax=ax[0])
+df.plot.scatter(x='X', y='Y', c='red', ax=ax[1])
+
+# set title for subplot
+ax.set_title()
+
+# read a png image as uint8
+im = plt.imread("img.jpg")
+I=im*255
+dest=I.astype(np.unit8)
+if the image was saved to png using matplotlib then the this might not work. the orginal unint8 data in the image would be changed due to mpl normalization.
+
+# saving images when using subplots
+use the figure variable returned with fig.savefig rather than the plt.savefig
+
+# for transparency in bar plots etc.
+alpha=0.5
+
+# for qt backend for matplotlib
+# https://matplotlib.org/stable/users/explain/backends.html
+conda install -c conda-forge pyqt

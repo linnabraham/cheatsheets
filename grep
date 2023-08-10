@@ -1,0 +1,50 @@
+# grep understands three different types of regular expression syntax as follows:
+
+#basic (BRE)
+#extended (ERE)
+#perl (PCRE)
+
+
+# To show succeeding and preceeding lines
+grep -A 4
+
+grep -B 4
+
+# grep parameter
+-I      Ignore binary files
+
+[[:alpha:]] – Alphabetic characters
+# To use OR in grep
+grep -E 'patt1|patt2'
+
+# use multiple patterns in grep
+grep -v 'bar\|foo' /dir1/dir2/file1
+
+# To find files not in a list using grep pipe output of find to
+grep -Fxvf
+
+#grep returns a different exit code if it found something (zero) vs. if it hasn't found anything (non-zero). In an if statement, a zero exit code is mapped to "true" and a non-zero exit code is mapped to false. In addition, grep has a -q argument to not output the matched text (but only return the exit status code)
+
+if grep -q PATTERN file.txt; then
+    echo found
+else
+    echo not found
+fi
+
+# grep ebook files use a flag to read file as ascii
+grep -a "pattern" *.epub
+
+# list only filenames that match
+grep -l
+
+# suppress binary file matches
+-I
+
+# match digit
+[[:digit:]]
+
+# grep till end of line
+grep -Pzo 'PATTERN(.*\n)'
+
+# to print 3 lines of context above and below a matched line
+grep -C 3

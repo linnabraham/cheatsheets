@@ -1,0 +1,33 @@
+# print the name of the weekday
+date '+%a'
+
+# unix timestamp
+date -u '+%s'
+
+# see time in different timezone
+TZ='Asia/Qatar' date
+
+# print date in a simple format
+date "+%b %d (%a)"
+
+# print time alone
+date "+%I:%M%p"
+
+# print a usable filename with date and time
+date '+%4Y%m%d_%s' or date  '+%4Y%m%d_%H%M%S'
+
+# print todays date
+date '+%Y-%m-%d'
+
+# last date of month
+date -d "-$(date +%d) days  month" +%Y-%m-%d
+
+# first three characters of month name
+date '+%b'
+
+# date as number without separators
+date +%Y%m%d
+
+# date arithmetic
+# Get the date n number of days into the future
+date --date '+10 days'

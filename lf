@@ -1,0 +1,22 @@
+# to jump to a selcted directory
+w
+
+# sort files by time
+st
+
+# open with program keymap
+`
+
+# toggle tag
+t
+
+# enable image previews in lf with ueberzug
+install ueberzug
+creater a preview and cleaner scripts in ~/.config/lf/
+make these executable
+
+# To additionally add cd on exit functionality
+copy over code from lfrc documentation which defines a function called lfcd into your shell script
+
+# clear red flag for files marked for deletion
+:clear

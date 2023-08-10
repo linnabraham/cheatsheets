@@ -1,0 +1,31 @@
+# use ffmpeg for screen capture
+ffmpeg -f x11grab -s 1366x768 -i :0.0 out.mkv
+
+# change container without re-encoding
+ffmpeg -i input.mkv -codec copy output.mp4
+
+# To convert mp4 to gif
+#works, but the output GIF would be way larger than the input video, because video formats can compress more efficiently across frames with advanced algorithms, while GIF can only does a simple rectangular frame diff.
+ffmpeg -i in.mp4 out.gif
+
+#capture and preview webcam with ffmpeg
+ffmpeg -f v4l2 -i /dev/video0 -map 0 -c:v libx264 -f tee "output.mp4|[f=nut]pipe:" | ffplay pipe:
+
+# crop video uisng timestamps
+ffmpeg -i input.mp4 -ss 00:00:00 -to 00:17:18.433 -c copy out.mp4
+
+# merge videos ; create a textfile in the following format
+# file '/path/to/vid1.mp4'
+# file '/path/to/vid2.mp4'
+ffmpeg -f concat -safe 0 -i inpfile.txt -codec copy outfinal.mp4
+
+# create a video from individual images
+ffmpeg -r 1 -pattern_type glob -i '*.jpg' -b:v 21000k -s hd1080 -vcodec vp9 -an -pix_fmt yuv420p -filter:v bwdif=mode=send_field:parity=auto:deint=all
+
+# fix for screen recordings not playing in telegram internal player
+# https://superuser.com/questions/1372702/ffmpeg-yuv420p-pixel-format-missing
+# https://superuser.com/questions/859010/what-ffmpeg-command-line-produces-video-more-compatible-across-all-devices
+-pix_fmt yuv420p
+
+# stack two gif files horizontally
+ffmpeg -i 89.gif -i 89_label.gif -filter_complex hstack output_cube.gif

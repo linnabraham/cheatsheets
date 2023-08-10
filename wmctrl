@@ -1,0 +1,17 @@
+# toggle full screen
+wmctrl -r ':ACTIVE:' -b toggle,fullscreen
+
+# toggle window maximized state
+wmctrl -r ':ACTIVE:' -b toggle,maximized_vert,maximized_horz
+
+# use title of window
+wmctrl -r Alacritty -b toggle,fullscreen
+
+# list active windows
+wmctrl -l
+
+# toggle stickiness of window
+wmctrl -r Minitube -b toggle,above
+
+# move active window to different workspace
+wmctrl -r :ACTIVE: -t 1

@@ -1,0 +1,33 @@
+# describe ec2 instances
+aws ec2 describe-instances --output table
+
+# filter output
+aws --output table ec2 describe-instances --filters Name=instance-type,Values="t2.large"
+
+# limit information
+aws --output table ec2 describe-instances --filters Name=instance-type,Values="t2.large" --query "Reservations[*].Instances[*].{Instance:InstanceId,Subnet:SubnetId}"
+
+# view user provided name of instance
+ aws --output table ec2 describe-instances --filters Name=instance-type,Values="t2.large" --query 'Reservations[*].Instances[*].{Instance:InstanceId,Name:Tags[?Key==`Name`]|[0].Value}'
+
+# view instance running state
+aws --output table ec2 describe-instances  --query 'Reservations[*].Instances[*].{Instance:InstanceId,Name:Tags[?Key==`Name`]|[0].Value,NetworkInterfaces:State.Name}'
+
+# view running state with public ip
+aws --output table ec2 describe-instances  --query 'Reservations[*].Instances[*].[InstanceId,Tags[?Key==`Name`]|[0].Value,PublicIpAddress,State.Name]'
+
+# dont use page
+ aws --no-cli-pager
+
+# start instance
+aws ec2 start-instances --instance-ids <instance-id> 
+
+ # handy
+aws --no-cli-pager --output table ec2 describe-instances  --query 'Reservations[*].Instances[*].{Instance:InstanceId,Type:InstanceType,Name:Tags[?Key==`Name`]|[0].Value,State:State.Name}'
+
+# tips
+# AWS doesnt allow you to downsize a root volume. Only expands it.
+# So start out with a low root volume. Expand if you want
+
+# mount an s3 bucket
+s3fs <bucketname> /mountpoint

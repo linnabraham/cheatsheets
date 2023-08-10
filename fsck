@@ -1,0 +1,5 @@
+# To use fsck safely and not run on mounted partitions
+fsck -M /dev/sdc1
+
+# To force check even if a filesystem is clean
+fsck -f /dev/sdc1

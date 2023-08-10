@@ -1,0 +1,11 @@
+# know default gateway (router) IP address
+ip route | grep default
+
+# another way to know the same
+netstat -rn
+
+# get my local ip
+ip route get 1.2.3.4 | awk '{print $7}'
+
+# get mac id
+ip link | awk -F': ' '/state UP/ {print $2}' | sed 's/:.*//' | xargs -I {} sh -c "echo {}; ip link show {} | awk '/ether/ {print \$2}'"

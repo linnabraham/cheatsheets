@@ -1,0 +1,33 @@
+# download through tor network needs torsocks and tor installed
+torsocks youtube-dl -v --no-check-certificate -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'
+
+# download a portion of the audio combine the following with audio extraction parameters
+youtube-dl --postprocessor-args "-ss 0:0:15 -to 0:1:20"
+
+# avoid non ascii characters in filename
+--restrict-filenames
+
+# save downloaded file ids to a textfile
+--download-archive filename.txt
+
+# download vimeo video which is embedded
+# obtain vimeo id from the html source
+-referer <url of the webpage where video is embedded>
+
+## script remnants
+# the download-archive option is pretty much useless here as we are not downloading videos however if the option could give support for the write-thumbnail mode it would be good.
+# --download-archive "$HOME/Downloads/ytthumbs/list.txt"
+    # -o "%(duration)s-%(view_count)s-%(title)s-[%(id)s].%(ext)s"
+    #yt-dlp -P $thumbdir  --verbose --cookies $cookiefile --skip-download :ytwatchlater --write-thumbnail --restrict-filenames  --playlist-reverse --compat-options playlist-index --playlist-start 1 -o "%(duration)s-%(title)s-[%(id)s].%(ext)s"
+
+# restrict number of videos
+--playlist-end 10
+
+# read list of urls from file
+-a /path/to/file
+
+# solve issue with long filename
+ yt-dlp -o "%(id)s.%(ext)s"
+
+# download only part of video from 0 seconds to 300 seconds
+--download-sections "*0-300"

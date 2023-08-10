@@ -1,0 +1,17 @@
+# use sqlite interactively
+sqlite3
+
+# open database
+.open FILENAME
+
+# show database
+.databases
+
+# show schema
+.schema
+
+# show table structure
+.schema table_name
+
+# dump content
+.dump

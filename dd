@@ -1,0 +1,2 @@
+# write iso to disk
+dd if=/path/to/.iso of=/dev/sdb status="progress"

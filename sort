@@ -1,0 +1,5 @@
+# replace file with unique values inside file
+sort -u file -o file
+
+# reverse sort
+sort -r

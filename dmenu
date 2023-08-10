@@ -1,0 +1,17 @@
+# way to run dmenu
+dmenu_path | dmenu
+
+# use dmenu for receiving input
+dmenu -i
+
+# specify prompt msg
+dmenu -p
+
+# specify font size in dmenu
+dmenu -l 10 -fn ':size=16'
+
+# use dmenu to capture plain input
+echo "" | dmenu -p "Search:"
+
+# pipe a list to dmenu
+echo -e "yes\nno" | dmenu

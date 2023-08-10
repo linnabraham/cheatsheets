@@ -1,0 +1,18 @@
+# workflow for dvc
+# install dvc dvc[s3] through pip or package manager
+# authorize with s3 storage using appropriate config files
+pip install dvc dvc[s3]
+
+# some times boto should be added additionally.
+pip instal boto
+
+# Step 1: add data
+dvc add filepaths
+
+# Step 2: git commit the .dvc files and .gitignores
+git add .dvc .gitignore
+git commit -m "added data to storage"
+git push
+
+# Step 3: push to dvc
+dvc push

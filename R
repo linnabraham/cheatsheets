@@ -1,0 +1,12 @@
+# install ODBC connector
+install.packages("odbc")
+
+# install glue
+install.packages("glue")
+
+# upgrading packages
+update.packages(ask=FALSE)
+
+#Or when you also need to rebuild packages which were built for an older version:
+
+update.packages(ask=FALSE, checkBuilt=TRUE)

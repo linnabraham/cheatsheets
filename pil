@@ -1,0 +1,32 @@
+# Invert an image
+from PIL import Image, ImageChops
+
+# Opening the test image, and saving it's object
+img = Image.open('test.jpg')
+
+inv_img = ImageChops.invert(img)
+
+# To convert a pil image to numpy array
+np.array(pil_img)
+
+# To convert RGB to grayscale
+from PIL import Image
+img = Image.open('image.png').convert('L')
+img.save('greyscale.png')
+
+# To save numpy array as png
+n = Image.fromarray(data)
+n.save("img.png")
+
+# To save float 32 numpy array as png
+image = (image*255/np.max(image)).astype(np.uint8)
+
+
+# Use nearest neightbor interpolation
+
+from PIL import Image
+np.array(Image.fromarray(img).resize((9, 9), Image.NEAREST))
+
+# Convert the image to 'RGB' mode
+image = image.convert('RGB')
+
