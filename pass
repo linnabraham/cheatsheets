@@ -1,0 +1,21 @@
+# generate new password and change only the first line
+pass generate -i wallabag -c 8 # -c to copy to clipboard 8 for length of password
+
+# create encrypted backup
+tar -cz .password-store \
+    | gpg --sign --encrypt -r <keyid> \ 
+    > password-store-backup.tar.gz.gpg
+
+# decrypt
+gpg --decrypt \
+    < password-store-backup.tar.gz.gpg \
+    | tar -xz
+
+# copy specific line number
+pass show -c2 passitem
+
+# to view the key used for encoding from within the passowd-store directory
+cat .gpg-id
+
+# edit entry already in database
+pass edit /path/to/entry
