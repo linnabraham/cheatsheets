@@ -51,3 +51,9 @@ awk -F"," '$NF ~ /^NonRings[[:space:]]*$/ {print}'
 # view evaluation results
 cat eval_output.csv | awk -F"," '$NF ~ /^Rings[[:space:]]*$/ {print $1}' | sxiv -i
 
+# ignore lines starting with a character like #
+awk '!/^#/'
+
+# Print specific fields from csv file based on field name instead of field index
+awk -F',' 'NR == 1 { for (i=1; i<=NF; i++) { if ($i == "pRing" || $i == "PGC" || $i == "iRing" || $i == "oRing") field_indices[$i] = i } }
+{ print $field_indices["pRing"], $field_indices["PGC"], $field_indices["iRing"], $field_indices["oRing"] }' efigi.csv

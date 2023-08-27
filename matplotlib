@@ -103,3 +103,6 @@ alpha=0.5
 # for qt backend for matplotlib
 # https://matplotlib.org/stable/users/explain/backends.html
 conda install -c conda-forge pyqt
+
+# Fix for  plt.tight_layout() not working use
+bbox_inches="tight" in savefig function

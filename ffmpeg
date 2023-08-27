@@ -22,6 +22,9 @@ ffmpeg -f concat -safe 0 -i inpfile.txt -codec copy outfinal.mp4
 # create a video from individual images
 ffmpeg -r 1 -pattern_type glob -i '*.jpg' -b:v 21000k -s hd1080 -vcodec vp9 -an -pix_fmt yuv420p -filter:v bwdif=mode=send_field:parity=auto:deint=all
 
+# a simpler version of above script
+ffmpeg -r 1 -pattern_type glob -i '*.png' -c:v libx264 -pix_fmt yuv420p flare_vid_512.mp4
+
 # fix for screen recordings not playing in telegram internal player
 # https://superuser.com/questions/1372702/ffmpeg-yuv420p-pixel-format-missing
 # https://superuser.com/questions/859010/what-ffmpeg-command-line-produces-video-more-compatible-across-all-devices

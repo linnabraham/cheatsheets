@@ -253,3 +253,6 @@ gu followed by motion changes those characters to lowercase
 for example: gue, gu$, guiw, etc
 gU followed by motion changes those characters to UPPERCASE
 for example: gUe, gU$, gUiw, etc
+
+# To insert tab character go to insert mode
+Ctrl+v <tab>
