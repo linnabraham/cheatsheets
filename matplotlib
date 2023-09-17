@@ -106,3 +106,6 @@ conda install -c conda-forge pyqt
 
 # Fix for  plt.tight_layout() not working use
 bbox_inches="tight" in savefig function
+
+# For ggplot style plotting
+plt.style.use("ggplot")

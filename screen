@@ -20,3 +20,12 @@ screen -L --Logfile custom_screenlog  -S screename
 
 # maybe this will work
 screen -L $(date -s "-%u") -S screename
+
+# kill all screen sessions at once
+killall screen
+
+# always use screen when sshing
+# write the following in the bashrc
+case $- in
+  *i*) screen -Rd;;
+esac

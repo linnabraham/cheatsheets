@@ -1,2 +1,5 @@
 # see error msgs
 dmesg --level=err
+
+# open in watch mode
+dmesg -w

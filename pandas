@@ -138,3 +138,7 @@ df.sample(10)
 
 # convert pandas timestamp to isoformat
 Timestamp.isoformat()
+
+# iterate over pandas dataframe rows and access by index or column name
+for _, row in df.iterrows():
+        print(row['colname']) # or row[0]

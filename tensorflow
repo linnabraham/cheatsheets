@@ -70,3 +70,9 @@ print("Negative class count:", negative_count.numpy())
 
 # see all keys in history
 print(history.history.keys())	
+
+# plot a single image from a tensorflow dataset
+    image, label = next(iter(train_ds))
+    image_data = image.numpy().astype(np.uint8)
+    plt.imshow(image_data)
+    plt.show()
