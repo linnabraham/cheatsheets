@@ -1,0 +1,40 @@
+# combine multiple pdfs into single pdf
+pdftk 1.pdf 2.pdf 3.pdf cat output 123.pdf
+
+# write outline information into a pdf
+pdftk  out.pdf update_info meta.txt  output final.pdf
+
+# sample meta.txt
+InfoBegin
+InfoKey: Creator
+InfoValue: PDFTK
+NumberOfPages: 3
+PageMediaBegin
+PageMediaNumber: 1
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
+BookmarkBegin
+BookmarkTitle: Page 1
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkBegin
+BookmarkTitle: Page 2
+BookmarkLevel: 1
+BookmarkPageNumber: 2
+BookmarkBegin
+BookmarkTitle: Page 3
+BookmarkLevel: 1
+BookmarkPageNumber: 3
+
+# or a simpler one
+BookmarkBegin
+BookmarkTitle: Contents
+BookmarkLevel: 1
+BookmarkPageNumber: 7
+
+# To remove annotations from pdfs
+pdftk original.pdf output uncompressed.pdf uncompress
+LANG=C sed -n '/^\/Annots/!p' uncompressed.pdf > stripped.pdf
+pdftk stripped.pdf output final.pdf compress
+
