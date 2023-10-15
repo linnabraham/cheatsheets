@@ -1,0 +1,26 @@
+# buku print only urls convert tabs to spaces
+b -p -f 10 --nc | sed 's/\t/ /g'
+
+# tag bookmarks that do not have any
+buku -S blank
+
+# print
+buku -p
+
+# add tag to url
+buku -u id --tag tagname
+
+# remove entry
+b -d id
+
+# count number of links
+buku -p -f 1 | wc -l
+
+# to search for multiple tag
+buku --stag tools + foss
+
+# disable interactive prompt
+buku --np
+
+# prevent buku asking for input
+the nostd in parameter has to come before other parameters to work perfectly in all situations

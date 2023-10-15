@@ -1,0 +1,11 @@
+# zip a folder
+zip -r filename.zip folder_to.zip
+
+# exclude files from zip
+zip -r node.zip . -x "**/node_modules/*"
+
+# fix issue with path traversal protection
+unzip -: foo.zip
+
+# zip output of command
+command | xargs zip outfile.zip

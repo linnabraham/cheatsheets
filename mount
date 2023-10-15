@@ -1,0 +1,23 @@
+# mount a btrfs partition
+sudo mount /dev/nvme0n1p8 -o subvol=@Dropbox /home/linn/Dropbox
+
+# dat file can be mounted as loop device
+
+# add fstab entry for drive that may be unplugged at times to not cause boot failure
+#https://man.archlinux.org/man/mount.8#FILESYSTEM-INDEPENDENT_MOUNT_OPTIONS
+add the parameter 'nofail' after 'auto' in the options
+
+# change the size of tmp directory
+sudo mount -o remount,size=10G /tmp
+
+# mount iso files on linux
+mount -o loop /path/to/disk1.iso /mnt/disk
+
+# unmount all subdirectories or unmount a busy disk
+umount -l /mnt
+
+# sometime umount doest unmount
+sudo umount -R /mnt
+
+# mount all filesystems listed in fstab
+mount -a

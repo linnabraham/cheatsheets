@@ -1,0 +1,258 @@
+# To insert a table of contents
+A table of contents (ToC) is produced by inserting \tableofcontents at the appropriate place in your document.
+
+# To get a partial derivative in latex
+\partial
+
+# symbols
+# angstrom in text mode
+\AA
+
+# Correct way when running biber
+pdflatex test
+biber test
+pdflatex test
+
+# To insert a close enough degree symbol in latex
+$^{\circ}$
+
+# For your compilation to work properly, you should compile in the following manner:
+pdflatex file.tex && bibtex file.aux && pdflatex file.tex && pdflatex file.tex
+
+# generate fake text with the blindtext package
+\blindtext
+
+# define a path for images
+\graphicspath{ {./images/} }
+
+# To avoid numbering sections  but make them appear in toc
+\setcounter{secnumdepth}{0}
+
+# link style set up
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+# squiggly underline
+\usepackage[normalem]{ulem} % [normalem] to set \emph{} to default behaviour (italic instead of underlining)
+...
+\uwave{to be underlined in a squiggly way}
+
+# spacing
+\usepackage{setspace}
+\onehalfspacing
+
+# math symbols
+\mp for +-
+\equiv for equivalent
+
+# changing fonts
+{\tt This will be in a "typewriter font"}
+
+# add space after line breaks
+\\[3cm]
+
+# insert photo in a resume
+\begin{tikzpicture}[remember picture, overlay]
+  \node [anchor=north east, inner sep=0pt]  at (current page.north east)
+     {\includegraphics[height=3cm]{example-image}};
+\end{tikzpicture}
+
+# suppress page numbering
+\thispagestyle{empty}
+
+# insert tabular
+\begin{tabular}{lr}
+a & b \\
+c & d \\
+\end{tabular}
+
+# inserting degree symbol
+# The \degree command is provided by the gensymb package
+\usepackage{gensymb}
+
+# create outline or bookmarks automatically
+\usepackage[bookmarks]{hyperref}
+
+# using natbib package
+# cite within paranthesis
+\citep
+
+# use natbib to cite only author
+\citeauthor
+
+# in text citations
+\citet
+# including images
+# relative path of images should be relative to the main .tex file
+
+# cross referencing when using external files
+\usepackage{xr}
+% In your preamble
+
+\myexternaldocument{File2}
+
+# referencing a section
+Use \label{} next to a section and then \ref{} to create the reference.
+
+# display a wide figure in a two column document
+\begin{figure*}
+
+# for \toprule \midrule etc
+\usepackage{booktabs}
+
+# blank to fill in latex
+\rule{1cm}{0.5mm}
+
+# color text differently
+\textcolor{red}{what ever}
+
+# enclosing paranthesis
+\left(   \right)
+\left[ \right]
+
+
+# underline a character
+\underline{u}
+
+# add a footnote
+\footnote{text for footnote}
+
+# insert image as grid
+\begin{figure}
+\begin{tabular}{cc}
+  \includegraphics[width=65mm]{it} &   \includegraphics[width=65mm]{it} \\
+(a) first & (b) second \\[6pt]
+ \includegraphics[width=65mm]{it} &   \includegraphics[width=65mm]{it} \\
+(c) third & (d) fourth \\[6pt]
+\multicolumn{2}{c}{\includegraphics[width=65mm]{it} }\\
+\multicolumn{2}{c}{(e) fifth}
+\end{tabular}
+\end{figure}
+
+# resize table width
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{r|lll}
+\multicolumn{1}{r}{}
+& \multicolumn{1}{l}{Heading 1}
+& \multicolumn{1}{l}{Heading 2}
+& \multicolumn{1}{l}{Heading 3} \\ \cline{2-4}
+Row 1 & Cell 1,1 & Cell 1,2 & Cell 1,3 \\
+Row 2 & Cell 2,1 & Cell 2,2 & Cell 2,3
+\end{tabular}%
+}
+
+# include cpp
+C\texttt{++}
+# tilde
+\sim
+# infinity
+\infty
+# square root
+\sqrt{things under root}
+# not equal
+\neq
+# plus or minu
+\pm
+# hat or cap
+\hat{a}
+
+# put citation inside caption
+\protect \cite{citekey}
+
+# cannot find reference error can occur if \label comes before \caption in figure environment
+
+# combined multiple input files to single latex file
+latexpand main.tex > combined.tex
+
+# keep comment
+latexpand --keep-comments main.tex
+
+# bibliography
+\begin{thebibliography}{9}  % Replace "9" with the maximum number of digits in your citations
+
+\bibitem{chollet2018}
+Chollet, François. \emph{Deep Learning with Python}. Shelter Island, New York: Manning Publications Co, 2018.
+
+% Add more \bibitem entries if needed
+
+\end{thebibliography}
+
+When you compile your document, the \cite command in the text will generate a citation number within square brackets, and the bibliography section will display the manually entered bibliography entries.
+
+Note that this approach requires you to manually maintain the bibliography entries within the LaTeX document. If you have a large number of references or plan to reuse them in multiple documents, using a separate .bib file with BibTeX is generally more convenient.
+
+# multi line comments in overleaf
+ctrl + /
+
+# latex transpose
+\mathbf{A}^T 
+
+# norm
+|| x ||
+
+# insert text into equation
+\textrm{your text here}
+
+# convert tex to ebook
+tex4ebook main.tex
+
+# Use pdflatex without interactive prompts
+-interaction=nonstopmode
+
+# Mark the differences between two pdf versions on the updated pdf using 
+# the corresponding tex files
+# https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents
+latexdiff old_version.tex new_version.tex > diff.tex
+pdflatex diff.tex
+
+# table environment
+\begin{table}
+\end{table}
+
+# Using bib file for creating references
+\documentclass{article}
+\begin{document}
+This is a citation example \cite{einstein1905}.
+
+\bibliographystyle{plain} % Choose a bibliography style
+\bibliography{mybibfile}  % Name of your .bib file
+\end{document}
+
+# citing online resources with bibtex
+@misc{winnt,
+  title = {{ms windows nt} kernel description},
+  howpublished = {\url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}},
+  note = {accessed: 2010-09-30}
+}
+
+# To keep First Name and Surname as single unit in citation
+@book{citekey,
+author = {{FirstName LastName}},
+} 
+
+# If you use \bibitem way of including references, the sequence of 4 commands, pdflatex -> bibtex -> pdflatex etc is not needed.
+# To generate \bibitem eventhough you are use a bib file and bibtex after running bibtex copy the contents of the .bbl file
+
+# Use natbib
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+
+# Renew name of bibliography  
+\renewcommand\bibname{Reference}
+
+\printbibliography[title={Reference}] # Using biblatex
+
+
+# number items in bibliography
+\usepackage[numbers]{natbib}
+
+# cite multiple references
+\cite{citation01,citation02,citation03,citation04,citation05}
+
+# for code
+\begin{verbatim}
+\end{verbatim}

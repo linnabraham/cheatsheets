@@ -1,0 +1,322 @@
+# do not show untracked files in git status
+git status -uno
+
+# git revert a file to a specific version
+git checkout c5f567 -- file1/to/restore file2/to/restore
+
+# update url for a remote
+git remote set-url origin <remote-url>
+
+# remove remote
+git remote rm origin
+
+# cache credentials
+git config credential.helper "cache --timeout=3600"
+
+# git branch operations
+-m
+--move
+
+    Move/rename a branch and the corresponding reflog.
+-M
+
+    Shortcut for --move --force
+
+# combine last three git commits into one
+git reset --soft HEAD~3
+git commit -m "msg"
+git push -f
+
+# abanded unwanted merge
+git reset
+
+# create a  new taggit pull remote branch
+git tag <tagname>
+
+# compare local changes with remote after fetch
+git diff master origin/master
+
+# after fixing conflicts
+git pull --rebase
+git push
+
+# to checkout the remote branch
+git checkout <remote branch name>
+
+# this will switch to a new branch locally
+git checkout -b <branch name>
+
+# rename local and remote branch
+# Step 1: Rename the local branch to the new name
+git branch -m <old_name> <new_name>
+
+# Step 2: Delete the old branch on remote - where <remote> is, for example, origin
+git push <remote> --delete <old_name>
+
+# Or shorter way to delete remote branch [:]
+git push <remote> :<old_name>
+
+# Step 3: Prevent git from using the old name when pushing in the next step.
+# Otherwise, git will use the old upstream name instead of <new_name>.
+git branch --unset-upstream <new_name>
+
+# Step 4: Push the new branch to remote
+git push <remote> <new_name>
+
+# Step 5: Reset the upstream branch for the new_name local branch
+git push <remote> -u <new_name>
+
+# Delete local branch
+git branch -d <local-branch-name>
+
+# List all local merged branches.
+git branch --merged
+
+# List all local unmerged branches.
+git branch --no-merged
+
+# List all remote merged branches.
+git branch -r --merged
+
+# List all remote unmerged branches.
+git branch -r --no-merged
+
+# Deleting non-existent tracking branches
+git remote prune <remote> --dry-run
+
+# setting default name for git branch
+git config --global init.defaultBranch master
+
+# add all files and commit in single line
+git commit -am "Your commit message"
+
+# get one file from another branch
+git checkout master               # first get back to master
+git checkout experiment -- app.js # then copy the version of app.js from branch "experiment"
+
+# merge feature branch into master
+git checkout master
+git pull origin master
+git merge test
+git push origin master
+
+# abort a merge if it fails
+git merge --abort
+
+# To create a new branch and switch to it at the same time
+# you can run the git checkout command with the -b switch
+git checkout -b iss53
+
+# This is shorthand for:
+git branch iss53
+git checkout iss53
+
+# in order to retrieve a deleted file from git history
+# this restores the file
+git checkout -- filepath
+
+# to create a branch from a specific branch other than master
+git checkout -b newbranch dev
+
+# to abort a rebase operation
+git rebase --abort
+
+# see all branches in remote
+config ls-remote --heads origin
+
+# fix for some remote branches not being pulled; edit in the repo config file
+#https://stackoverflow.com/questions/12762922/git-cannot-see-new-remote-branch
+[remote "origin"]
+    fetch = +refs/heads/*:refs/remotes/origin/*
+
+# sometimes the branch may not be listed but you can just use
+git checkout <branch-on-remote>
+
+# stash
+git stash
+
+# git stash reapply
+git stash pop
+
+# unstage all changes or undo all staged files at once
+git reset
+
+# pull branch not existing locally (shown in git branch output)
+git checkout -b branchname
+
+# view difference between a file in two different branches
+git diff branch1 branch2 -- /path/to/file
+
+# In order to compare two branches using commit abbreviations, use the “git log” command with the following options.
+git log --oneline --graph --decorate --abbrev-commit branch1..branch2
+
+# try this also 
+git log --oneline --graph --all --decorate --abbrev-commit
+
+# Filter git diff by type of change
+# for filtering modified files
+--diff-filter=M
+
+# To fix if you accidently commit big file to git
+# if it was the most recent commit
+git rm --cached big/file/path
+git commit --amend -C HEAD
+# else find the commit hash of the last good commit - before the commit where added this file
+git rebase -i <commit-hash>
+# change the `pick` keyword to `edit` for the bad commit
+# write and exit and proceed using the first method - as if adding the file was the most recent commit
+# create a backup for safety reasons
+--allow-empty # use if needed
+
+# undo latest git commit
+git reset HEAD~  # uses --soft by default
+
+# by using the --soft option you can keep the modifications in your Working Directory
+# To discard the changes in the working directory as well
+git reset --hard HEAD~
+
+# see difference between two branches
+git checkout master
+git diff feature
+
+# zip files indexed by git
+git archive --format zip --output /full/path/to/zipfile.zip master # from the root of the git directory
+
+# clone git repo using app password
+git clone https://oauth-key-goes-here@github.com/username/repo.git
+
+# get number of commits made sorted by author
+git shortlog -s
+
+# clone using ssh
+eval `ssh-agenet -s` # restart agent
+ssh-add ~/.ssh/id_rsa # add key
+ssh-add -L # list keys
+
+# see only word diff
+git diff --word-diff
+
+# ignore chmod changes mode
+git config core.fileMode false
+
+# To undo git add before a commit, run
+git reset <file>
+git reset #  to unstage all changes
+
+# view the url associated with git repo
+git config --get remote.origin.url
+
+# see details associated with git repo
+git config --list
+
+# fix for git push failed error
+# https://stackoverflow.com/questions/38378914/how-to-fix-git-error-rpc-failed-curl-56-gnutls
+git config --global http.postBuffer 1048576000
+
+# cloning git repo with PAT or personal access token
+git clone https://ghp_ThisIsThePersonalAccessTokenxxxxxxxx@github.com/username/reponame
+
+# create a branch without any previous commit history
+git branch --orphan
+
+# push an orphan branch to remote
+git push origin branchname
+
+# clone specific branch
+git clone -b <branch> 
+
+# revert to commit before merge without creating new commit
+git reset --hard <commit_before_merge>
+
+# git checkout if file or folder or same name exists
+git checkout branchname --
+
+# dry run for merge operation
+git merge --no-commit --no-ff $BRANCH
+git diff --cached # To examine the staged changes:
+git merge --abort # undo the merge, even if it is a fast-forward merge:
+
+# delete branches from remote 
+git push -d <remote> <branchname>
+
+# see which files changed along with commit history
+git log --raw
+
+# undo a revert commit
+git reset --hard HEAD^
+
+# stage only parts of a modified file interactively
+git add -p
+
+# checkout a specific version of file from git history and save it with different name
+git show <commit_id>:path/to/file > new_file_name
+
+# delete a branch
+git branch -d branchname # to show a warning if a branch is not merged
+git branch -D branchname # to directly delete it
+
+# Merge all changes in a linear fashion upto a specific commit
+git merge commit-hash # if the histories can be conneted linearly this is called a fast-forward merge
+# and proceeds without issues
+# Use cherry-pick to merge specific changes introduced by a specific commit
+git checkout -b temp # no dry run option 
+git cherry-pick commit-hash 
+# you might have to manually resolve merge conflicts if they happen by removing conflict 
+# markers in the affected file and then adding the file using
+git add file-path
+git cherry-pick --continue
+
+# To see the changes introduced by a specific commit to a particular file
+git log -p -1 merge_commit_hash -- path/to/your/file
+# the p option stands for patch and 1 limits the output to a single commit
+
+# To squash several commits into one. 
+git rebase -i HEAD~# # where # is the number of commits to squash. 
+Change pick to squash on each commit that should become part of the one above it. Then edit your commit messages as you see fit.
+
+# To show word diff instead of line diff in git
+git diff --word-diff filename
+
+# Noticed something about git
+# Contrary to my assumption, git rebase doesnt order commits using the timestamp of commits 
+
+# checkout file from another branch and but rename it
+git show [source_branch]:[file_path] > [full_file_path]
+
+# undo a git merge
+git reset --hard commit-before-the-merge
+or
+git reset --hard HEAD~1
+
+# A better way to undo a git merge
+#Since the methods discussed above will revert uncommitted changes, Git provides a safer flag which is --merge.
+
+#To undo a merge with the --merge flag, run git reflog to see the hashes of commits, then run 
+git reset --merge previous-commit
+
+# To get changes from master back into a feature branch
+git checkout feature-branch
+git rebase master || git rebase --abort
+
+# restore staged changes in file based on hunk or patch
+git checkout -p file.txt
+
+# restore a previous version of a file using commit hash but with different name
+git show <commit_hash>:path/to/old_filename.ext > path/to/new_filename.ext
+
+# see branches in remote
+git ls-remote --heads origin
+
+# delete branch from remote without deleting locally
+git checkout <branch-name>
+git push origin --delete <branch-name>
+
+# see last three commit info
+git log -n 3
+
+# select individual commits to be added from an old branch to a new branch
+git checkout new-branch
+git cherry-pick <commit-hash-1>
+
+# see condensed diff
+git diff --stat master develop

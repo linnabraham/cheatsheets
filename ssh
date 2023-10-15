@@ -1,0 +1,64 @@
+# change permissions
+sudo chmod 700 .ssh/id_rsa
+
+# list public keys
+ssh-add -L
+
+# another way to show the public key
+cat .ssh/key-for-vm.pub
+
+# generate keys
+# ssh-keygen -t rsa -f ~/.ssh/[KEY_FILENAME] -C [USERNAME]
+# [KEY_FILENAME] is the name that you want to use for your SSH key files.
+# For example, a filename of my-ssh-key generates a private key file named my-ssh-key and a public key file named my-ssh-key.pub
+ssh-keygen -t rsa -f ~/.ssh/key-for-vm -C linnvm
+
+# generate ssh keys
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+#Add your SSH private key to the ssh-agent.
+ssh-add ~/.ssh/id_ed2551sh # &>/dev/null when run from a server
+
+# Start the ssh-agent in the background.
+eval "$(ssh-agent -s)" # &>/dev/null if this is run from a  server
+
+# ssh using a particular key identity
+ssh -i .ssh/key-for-vm linnvm@external-ip
+
+# remove passphrase from ssh key
+ssh-keygen -p -f <path-to-ssh-pvt-key>
+
+# transfer files wirelessly from windows machine
+enable sshd and use wincp on windows with the sftp protocol
+
+# You can specify default settings per host via the config file.
+Host hostname
+    User username
+    IdentityFile ~/.ssh/somekey
+
+# give hostname to ip address
+Host customname
+	HostName <IP addr>
+	User username
+
+# restart sshd
+systemctl restart sshd
+
+# enable X forwarding edit sshd_config with
+    X11Forwarding yes
+
+# prevent ssh getting disconnected
+ssh -o "ServerAliveInterval 60" <SERVER_ADDRESS>
+
+# transfer primary ssh key to server
+ssh-copy-id  user@remote_server_ip
+
+# use ssh-copy-id to copy a different SSH public key:
+ssh-copy-id -i /path/to/your/public_key user@remote_server_ip
+
+# remove all keys corresponding to an ip from known hosts
+ssh-keygen -R 192.168.25.232
+
+# fix permission issues
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*

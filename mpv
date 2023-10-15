@@ -1,0 +1,47 @@
+# to get audio only in youtube links
+mpv --no-video # make sure --force-window is not set in config
+
+# repeat
+mpv --loop
+# resize video
+alt +/-
+
+# reset playback speed to normal
+BACKSPACE
+
+# Toggle stay-on-top (see also --ontop).
+T
+
+#Toggle infinite looping. Especially for gif files
+L
+
+# screenshot
+s
+
+# watch youtube without buffering; requires yt-dlp installed
+mpv --script-opts=ytdl_hook-ytdl_path=yt-dlp  "https://youtu.be/url"
+
+# stream music with mpv
+mpv --ytdl-raw-options='format=ba' "https://youtu.be/url"
+
+# default keybinding for disabling video
+_ cycle video
+
+# options to enable hw acceleration
+--hwdec=vaapi
+--hwdec=auto
+
+# try fix for audio video desync by removing the following line
+--vo=xv
+
+# override config
+--no-config
+
+# add key binding to get currently playing file path into the clipboard
+C run "/bin/sh" "-c" "echo -n \"${path}\" | xclip -i -selection clipboard" # add to input.conf
+
+# disable hw decodeing keybinding
+cltr + h
+
+# add subtitle file
+mpv --sub-file=that_file.srt the_video.mp4

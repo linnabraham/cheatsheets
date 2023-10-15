@@ -1,0 +1,24 @@
+# test out docker
+docker run hello-world
+
+# build from dockerfile
+sudo docker build -f Dockerfile -t galaxy:train .
+
+# map a directory on the host to one inside the container
+-v ${PWD}/model_repository:/models
+
+# get docker container id
+docker ps --format "{{.Names}}"
+
+# get data from docker to local system
+from another terminal outside the contianer whne it is running
+docker cp <container-id>:/path/to/mounted/directory /path/on/local/system
+
+# make space with docker [ChatGPT]
+To make free space by deleting Docker cache, you can follow the steps below:
+Run the command docker system prune in your terminal. This will remove all stopped containers, dangling images, and cache.
+If you want to remove only the cache, use the command docker builder prune. This will remove all builder cache.
+To remove unused images, you can run the command docker image prune.
+If you want to remove all unused data (containers, networks, images, and cache), use the command docker system prune -a.
+If you want to specify a filter to remove only a specific type of cache, use the command docker builder prune --filter <filter>. For example, to remove all cache that is older than 48 hours, use docker builder prune --filter "until=48h".
+Note that these commands will permanently delete data, so make sure you don't need any of the removed data before executing the commands.

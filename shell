@@ -1,0 +1,22 @@
+# exit status of the last executed command
+$?
+
+# make the processor directive use the environment variables
+'#!/usr/bin/env python'
+
+# for tracking time inside shell scripts
+echo $SECONDS
+
+$_ expands to the last argument passed to the previous shell command
+
+# enable job control in scripts
+set -m
+
+# parameter expansions
+:- is used in the ${parameter:-word} shell parameter expansion: if parameter is null or unset, it expands to the value of word, otherwise to the value of parameter.
+
+# to kill shell after executing script
+cmd && exit
+
+# to keep it open
+cmd; $SHELL

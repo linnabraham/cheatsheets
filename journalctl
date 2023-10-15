@@ -1,0 +1,14 @@
+# retain past two days
+journalctl --vacuum-time=2d
+
+# retain past 500 MB
+journalctl --vaccum-size=500M
+
+# follow logs of bluetooth alone
+journalctl --unit=bluetooth -f
+
+# show system messages from current boot
+journalctl -b-0
+
+# To display all errors since last boot:
+journalctl -b -p err

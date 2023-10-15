@@ -1,0 +1,263 @@
+# convert python2 code to 3, automatically create a .py.bak file for backup
+/usr/lib64/python3.7/site-packages/scripts/2to3 -w graph.py
+
+# To import custom packages
+set the $PYTHONPATH variable in your bashrc
+
+# work around  to make jupyter notebooks readonly
+# use the -R option in chmod to apply the setting to all files inside a folder
+chmod a-w *.ipynb
+
+# plot network as a figure
+from keras.utils import plot_model
+    plot_model(model, to_file='model.png', show_shapes=True,show_layer_names=True)
+
+# plot histogram
+plt.hist(parray,range=(a,.001*b),bins=10,density=True);
+
+# installing tensorflow
+TMPDIR=/data/vincents/ pip install --cache-dir=/data/vincents/ --build /data/vincents/ tensorflow-gpu
+
+# install tensorflow
+pip install --no-cache-dir tensorflow
+
+# install tensorflow by changing temp dir size temporarily
+sudo mount -o remount,size=10G /tmp
+
+# create virtual environment using a different python
+virtualenv -p python3.7 envname
+
+# A not-so-commonly known fact is that train_test_split can split any number of arrays, not just two ("train", and "test").
+
+# copy using shutil
+shutil.copy(src,dest)
+
+# move file using shutil
+shutil.move(src,dest)
+
+# using regex or regular expression in python
+import re
+pat = re.compile("regex pattern")
+for text in listofstrings:
+	o = pat.search(text)
+	if o:
+		print(o.string)
+
+# create directory recursively
+os.makedirs()
+
+# check if path exists
+os.path.exists()
+
+# run another python script
+os.system("python file.py args1 args2")
+
+# get $HOME variable
+os.environ['HOME']
+
+# split extension from filename
+os.path.splitext("/path/to/some/file.txt.zip.asc")[0]
+
+# change current directory in python script
+os.chdir('path')
+
+# get absolute path
+os.path.abspath
+
+# return parent directory name from a given string
+os.dirname("fullpath/to/file")
+
+# get path of script that is being run
+current_script_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_script_dir, ".."))
+sys.path.append(parent_dir)
+
+# add a user defined path to path
+sys.path.append('custom/path')
+
+# writing csv file
+import csv
+with open('eggs.csv', 'w', newline='') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=' ',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
+
+# getting key given value from dict
+mydict = {'george': 16, 'amber': 19}
+print mydict.keys()[mydict.values().index(16)]
+
+# getting value from dict without knowing key
+next(iter(my_dict))
+
+# to run a python script that imports package installed in a different environment
+# set the PYTHONPATH variable. Setting the PATH variable doesnt work
+
+# read a csv file into a dictionary
+a_csv_file = open("sample.csv", "r")
+
+dict_reader = csv.DictReader(a_csv_file)
+
+ordered_dict_from_csv = list(dict_reader)[0]
+
+dict_from_csv = dict(ordered_dict_from_csv)
+
+# search for pattern in string using
+if "blah" not in somestring:
+    continue
+
+# print amazon s3 bucket name
+import boto3
+s3 = boto3.resource('s3')
+for bucket in s3.buckets.all():
+    print (bucket.name)
+
+# not operator
+if myvar not is "hello":
+        print(world)
+
+# read yaml files
+pip install pyyaml #!pip install pyyaml==5.4.1
+stream = open('clusters.yml', 'r')
+data = yaml.load(stream)
+
+# convert model details into a pandas table
+table=pd.DataFrame(columns=["Name","Type","Shape"])
+for layer in model.layers:
+    table = table.append({"Name":layer.name, "Type": layer.__class__.__name__,"Shape":layer.output_shape}, ignore_index=True)
+
+# multiline commments in jupyter
+cltr+/
+
+# remove future warnings
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
+# unpack a list
+# use in an expression
+*mylist
+
+# check if a key present in dict with variable name original
+# if the first condition is missed we will get a key error
+if ('tags' in original and 'habitica' in original['tags']):
+
+# python name==main
+if __name__ == “__main__”:
+
+# profile a python script and sort on total time
+python -m cProfile -s 'tottime' /path/to/script.py params
+
+# Pad number with zeros (left padding, width 2)
+{:0>2d}
+
+# escape braces in f-strings with double braces
+# escape quotes with backslash
+
+# format string integer with fixed number of digits padded with zeroes
+# if 0 is skipped the padding is done with spaces
+f"{i:05d}.jpeg"
+
+# format float string with fixed number of digits after zero
+f"{i:.5f}.jpeg"
+
+# and operator
+&
+
+# read json file as dict
+# Opening JSON file
+f = open('data.json')
+
+# returns JSON object as
+# a dictionary
+data = json.load(f)
+
+# Factor an integer to something as close to a square as possible
+
+def factor_int(n):
+    val = math.ceil(math.sqrt(n))
+    val2 = int(n/val)
+    while val2 * val != float(n):
+        val -= 1
+        val2 = int(n/val)
+    return val, val2, n
+
+# imap lib - search using date
+typ, data = M.search(None, 'AFTER', '"01-Jan-2010"')
+
+# log using custom base
+exponent = math.log(number, base)  # = 3
+
+# display model image file inline
+from IPython.display import Image, display
+Image('rnn-mnist.png')
+
+
+# sorted() is a built-in method that (fun fact) uses a hybrid sorting algorithm called Timsort that combines aspects of merge sort and insertion sort.
+# If a key parameter is passes, for e.g. a lamda function, then the sorting is done on the result of the lambda function on the org list and not on
+# the original list itself.
+
+this is useful for eg if we want to sort a tuple based on the one of the elements in the tuple.
+
+
+# multiple matches in a list
+# If you want to check all of your input matches,
+all(x in ['b', 'a', 'foo', 'bar'] for x in ['a', 'b'])
+
+# if you want to check at least one match,
+any(x in ['b', 'a', 'foo', 'bar'] for x in ['a', 'b'])
+
+# lambda functions in python
+# A lambda function is a small anonymous function.
+# A lambda function can take any number of arguments, but can only have one expression.
+
+lambda arguments : expression
+
+# this function can be used as a doubler or tripler or whatever
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+print(mydoubler(11))
+print(mytripler(11))
+
+# cannot use a directory called code to keep custom py scripts it already exists it seems
+
+# save dict to json file
+# assume you have the following dictionary
+sampleDict = { "name": "Emma", "rollNumber": 5 }
+with open("student.json", "w") as write_file:
+    json.dump(developer, write_file, indent=4)
+
+scipy.misc.imsave has been deprecated in newer Scipy versions.
+
+Change your code to:
+
+import imageio
+imageio.imwrite('filename.jpg', array)
+
+# read pickle files
+import pickle
+
+with open('serialized.pkl', 'rb') as f:
+    data = pickle.load(f)
+
+# http server
+python -m http.server # default port 8000
+
+# download using requests
+import requests
+URL = "https://instagram.com/favicon.ico"
+response = requests.get(URL)
+open("instagram.ico", "wb").write(response.content)
+
+# using class in python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_name(self):
+        return self.name
+
+# sort in reverse order
+sorted(imgs, reverse=True)

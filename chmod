@@ -1,0 +1,29 @@
+# Linux permissions
+# User Group and Others
+0	No Permission	---
+1	Execute	--x
+2	Write	-w-
+3	Execute + Write	-wx
+4	Read	r--
+5	Read + Execute	r-x
+6	Read +Write	rw-
+7	Read + Write +Execute	rwx
+
+# no need to memorize all of this; instead learn the following
+0	No Permission
+1	Execute
+2	Write
+4	Read
+
+# To recursively remove execute permissions from files without touching folders
+If you are fine with setting the execute permissions for everyone on all folders:
+
+chmod -R -x+X *
+The -x removes execute permissions for all
+The +X will add execute permissions for all, but only for directories.
+
+# fix cannot ls permission issue
+chmod 775 .
+
+# give read write execute permission to other users in the same group as the owner(user)
+sudo chmod 770 -R username

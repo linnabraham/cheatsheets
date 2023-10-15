@@ -1,0 +1,11 @@
+# Use mozilla as the user agent
+wget -U 'mozilla'
+
+# get list of urls from text file
+wget -i list.text
+
+# to resume download if broken
+wget -c
+
+# to specify output directory
+wget -P "path/to/save/to"

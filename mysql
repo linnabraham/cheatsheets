@@ -1,0 +1,72 @@
+# login
+sudo mysql -u root -p
+
+# see databases
+show databases;
+
+# select database
+use database dbname;
+
+# see all tables inside the current db
+show tables;
+
+# see all rows inside a table
+select * from tablename;
+
+# create table
+CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
+       species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+
+# load data from file after creating table in mysql
+LOAD DATA local INFILE '/path/to/csv' INTO TABLE tablename FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS
+
+# delete all rows
+truncate table tablename;
+
+# reserved words cannot be used for fields - "CONDITION"
+
+# check for NULL and NOT NULLS
+WHERE column_name IS NOT NULL;
+
+# not equal operator
+!=
+
+# find duplicates
+SELECT OrderID, COUNT(OrderID)
+FROM Orders
+GROUP BY OrderID
+HAVING COUNT(OrderID)>1
+
+# mariadb config
+# change CoW on data dir if on btrfs
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql # run before starting mariadb service
+
+# sort by column
+ORDER BY COLUMNAME DESC # default order is ASC
+
+# alias for column_name
+SELECT col1-col2 AS coldiff FROM tablename;
+
+# python mysql connection
+#login
+mysql -u linn -p
+
+# kill process
+show processlist;
+kill <id>
+
+SHOW GRANTS for 'linn'@'localhost';
+
+# see scheme of table
+describe tablename;
+
+# string format query in python
+sql = """LOAD DATA local INFILE '/path/to/csv'
+         INTO TABLE dress
+         FIELDS TERMINATED BY ','
+         OPTIONALLY ENCLOSED BY '"'
+         LINES TERMINATED BY '\n'
+         IGNORE 1 ROWS"""
+
+# create table to store csv data
+CREATE TABLE csvdata (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), age INT)

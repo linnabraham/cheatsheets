@@ -1,0 +1,27 @@
+# list timers
+systemctl --user list-timers
+
+# force run timer service
+systemctl start --user nameof.service
+
+# change action of power button edit /etc/systemd/logind.conf
+HandlePowerKey=suspend
+HandleLidSwitch=ignore # ignore laptop lid close
+
+# List active services
+systemctl list-unit-files --state=enabled --no-pager
+
+# List services
+systemctl --type=service
+
+# List
+systemctl list-unit-files --type=service
+
+# boot time
+systemd-analyze time
+
+# splits
+systemd-analyze blame
+
+# critical parts
+systemd-analyze  critical-chain [service]

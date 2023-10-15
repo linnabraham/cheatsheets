@@ -1,0 +1,20 @@
+# To sort directories/files by size:
+du -sk *| sort -rn
+
+# To show cumulative human-readable size:
+du -sh
+
+# follow symlinks
+-L
+
+# to see disk usage in MB
+du -m
+
+# find by modification time
+--time
+
+# exclude files
+--exclude
+
+# see file size in MiB
+du -b path/to/file | awk '{print $1/1048576}'
