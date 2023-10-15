@@ -1,0 +1,34 @@
+# To delete files in the target that are not present at source; used for mirroring
+rsync -av --delete <src> <dest>
+
+# command to sync from laptop to desktop over lan using ssh
+rsync -rvplhxe ssh --progress --exclude-from=myignore.txt user@local-ip:/home/user/ /home/user/
+
+# migrate linux installation from usb to hdd
+# mount the root partition to /mnt
+rsync -vaHAXS --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / /mnt
+
+# a simple rsync command
+rsync -avP <src> <dest>
+
+# to troublshoot ssh issues when using rsync
+rsync -e "ssh -p <port>"
+
+# what happens when you dont give a destination - target is missing
+   Usages with just one SRC arg and no DEST arg will list the source files
+   instead of copying
+
+# show files that will get deleted
+rsync -avun --delete $TARGET $SOURCE  |grep "^deleting "
+
+# rsync becomes verbose when include and exclude are given
+# Think that include and exclude needs to come before the target
+
+# commands for syncing data
+rsync -avz --delete <src> <dest>
+
+# send files to aws machine
+rsync -avP utils/custom_data_loader.py -e "ssh -i ~/.ssh/aws.pem"  ubuntu@IP:/home/ubuntu
+
+# use rsync to copy the file /home/user/file1 to /destination/home/user/file1.
+--relative
