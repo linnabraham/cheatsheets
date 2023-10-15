@@ -193,7 +193,7 @@ Ctrl-I (same as Tab) to jump forward to the next (newer) location.
 # setting font in gvim
 set guifont="font \name"
 
-# auto completion for vimtex citations
+# trigger complete citations in vimtex
 ctrl-x ; ctrl-o
 
 # dont use the virtualenv python within vim
@@ -256,3 +256,23 @@ for example: gUe, gU$, gUiw, etc
 
 # To insert tab character go to insert mode
 Ctrl+v <tab>
+
+# To bring up content in the next line to the end of the current line
+J
+
+# use the surround plugin to enclose visual selection with paranthesis 
+leader + Sb
+
+It actually can do a lot of surrounding: various quotes, tags, etc. It allows you to put cursor in the double-quoted word and change double quotes to single quotes by typing: cs"' (change-surround " to '). Or you can completely delete quotes by typing ds" (delete-surround ").
+
+Read the docs by link, it is really awesome!
+
+# Vimdiff
+# to bring the changes of the current block of code from other file into current one
+do
+
+# to unfold all folds
+zr
+
+# to close folded lines
+zc

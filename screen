@@ -29,3 +29,15 @@ killall screen
 case $- in
   *i*) screen -Rd;;
 esac
+
+# scroll 
+Press "Ctrl-A" on the keyboard and press "Esc."
+Press the "Up" and "Down" arrow keys or the "PgUp" and "PgDn" keys to scroll through previous output.
+Press "Esc" to exit scrollback mode.
+
+# detach screen
+Ctrl + a + d
+
+# detach using command
+ctrl + a
+:detach

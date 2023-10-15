@@ -34,6 +34,11 @@ source /opt/miniconda3/bin/activate <envname>
 # create conda environment from yaml file
 conda env create -f environment.yml
 
+# install or update packages into current environment from a yaml file
+# the prune flags removes any dependencies not mentioned in the file
+conda env update --name myenv --file local.yml --prune
+
+
 # create the environment file to use with conda
 # an example yaml file contents
 name: stats2
@@ -58,3 +63,24 @@ conda config --set solver libmamba
 # Fix for cryptography ssl issue
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 conda install cryptography
+
+# show available package versions
+conda search -f <package_name>
+
+# With this activated shell, install conda’s shell functions for easier access in the future:
+conda init
+
+#If you’d prefer that conda’s base environment not be activated on startup, set the auto_activate_base parameter to false:
+conda config --set auto_activate_base false
+
+# 
+bash ~/miniconda.sh -b -p $HOME/miniconda
+-b—Batch mode with no PATH modifications to ~/.bashrc. Assumes that you agree to the license agreement. Does not edit the .bashrc or .bash_profile files.
+
+-p—Installation prefix/path.
+
+-f—Force installation even if the installation prefix/path already exists.
+
+
+# install ranger with conda
+conda install -c conda-forge ranger-fm

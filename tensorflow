@@ -76,3 +76,10 @@ print(history.history.keys())
     image_data = image.numpy().astype(np.uint8)
     plt.imshow(image_data)
     plt.show()
+
+# test train split for tf.data.Dataset
+
+validation_size = int(0.2 * total_size)
+zipped_dataset = zipped_dataset.shuffle(buffer_size=total_size)
+train_dataset = zipped_dataset.skip(validation_size)
+validation_dataset = zipped_dataset.take(validation_size)

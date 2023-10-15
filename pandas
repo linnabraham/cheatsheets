@@ -142,3 +142,9 @@ Timestamp.isoformat()
 # iterate over pandas dataframe rows and access by index or column name
 for _, row in df.iterrows():
         print(row['colname']) # or row[0]
+
+# find duplicates
+duplicates = df1[df1.duplicated(subset='key')]
+
+# join two dataframes on common column
+pd.merge(df1, df2, on="columnname")

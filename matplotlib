@@ -109,3 +109,12 @@ bbox_inches="tight" in savefig function
 
 # For ggplot style plotting
 plt.style.use("ggplot")
+
+# Turn off the axis
+plt.axis('off')
+
+# common title for subplots
+fig.suptitle('Common Title for Subplots', fontsize=16)
+
+# insert text in plot or on top of image
+ax.text(10,40, text_to_display,fontsize=8, color='red')
