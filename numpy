@@ -20,12 +20,7 @@ numpy.squeeze(a, axis=None)
 # Given an interval, values outside the interval are clipped to the interval edges. For example, if an interval of [0, 1] is specified, values smaller than 0 become 0, and values larger than 1 become 1.
 np.clip
 
-# To reshape a NumPy array from shape (64, 128, 128) to (128, 128, 64) without changing the data, you can use the numpy.transpose function along with the numpy.reshape function. Here's an example:
-
+# To reshape a NumPy array from shape (64, 128, 128) to (128, 128, 64) without changing the data 
 arr = np.zeros((64, 128, 128))  # Replace with your actual array
-
-# Reshape the array
-reshaped_arr = np.transpose(arr, (2, 1, 0)).reshape((128, 128, 64))
-
-# Print the new shape of the array
-print(reshaped_arr.shape)
+arr = np.moveaxis(arr, 0, 2) # Reshape the array
+print(reshaped_arr.shape) # Print the new shape of the array
