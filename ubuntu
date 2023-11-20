@@ -1,0 +1,9 @@
+# install docker
+sudo apt install docker.io
+
+# install nvidia driver
+sudo apt install nvidia-driver-470
+
+# update system
+sudo apt update
+sudo apt upgrade
