@@ -1,0 +1,46 @@
+# toggle repeat
+mpc repeat on
+mpc repeat off
+
+# formatting
+mpc current -f '%title% \n%artist%'
+
+# see statistics of library
+mpc stats
+
+# to loop only single song from playlist
+# enable single mode and repeat
+
+# search using tag values
+mpc find "(Artist == \"K. J. Yesudas & K. S. Chithra\")"
+
+# contains
+mpc find "(Artist contains \"K. J. Yesudas\")"
+
+mpc search filename "Brown"
+
+mpc play
+
+# shuffle songs without enabling random mode
+mpc shuffle
+
+# add all songs to queue
+mpc add /
+# or this
+mpc search filename / | mpc add
+
+# add a subset of song to the queue
+mpc ls fixed/eng_fixed | mpc add
+
+# insert a file to be played next
+mpc insert "fixed/tamil_fixed/Anjali Anjali.mp3"
+
+# play next song
+mpc next
+
+# list all songs in the library
+mpc listall
+
+# enable or disable single mode
+mpc single on
+mpc single off 

@@ -1,5 +1,6 @@
 # print the name of the weekday
-date '+%a'
+date '+%a' #short version
+date '+%A' #long version
 
 # unix timestamp
 date -u '+%s'
@@ -34,3 +35,6 @@ date --date '+10 days'
 
 # 2023_08_03
 date "+%Y_%m_%d"
+
+# Saturday, Nov 11
+date "+%A, %b %d"

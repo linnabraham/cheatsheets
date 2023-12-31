@@ -41,3 +41,12 @@ Ctrl + a + d
 # detach using command
 ctrl + a
 :detach
+
+# Attach to a session that is already attached elsewhere.
+# This option allows multiple clients to attach to the same session simultaneously. 
+# If the session is not attached elsewhere, it creates a new session.
+-x
+
+-RR:
+# This is a shorthand for two screen commands. 
+# It first tries to reconnect to a detached session if one exists, and if not, it creates a new session.

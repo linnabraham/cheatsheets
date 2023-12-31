@@ -1,0 +1,40 @@
+# install
+pacman -S cronie
+
+# enable at startup
+systemctl enable cronie.service
+
+# display jobs
+crontab -l
+
+# edit jobs
+	MAILTO=your@email
+	LOGFILE=/var/log/cron-pacman.log
+
+	# 1. minute (0-59)
+	# |   2. hour (0-23)
+	# |   |   3. day of month (1-31)
+	# |   |   |   4. month (1-12)
+	# |   |   |   |   5. day of week (0-7: 0 or 7 is Sun, or use names)
+	# |   |   |   |   |   6. commandline
+	# |   |   |   |   |   |
+	#min hr  dom mon dow command
+	00   13   *   *   *  . /etc/profile && (echo; date; yes |pacman -Syuq) &>>$LOGFILE || (echo 'pacman failed!'; tail $LOGFILE; false)
+	00   13   *   *   *  updatedb && date>>/root/done.txt
+
+# use anacron
+# write script inside .local/etc/cron.daily/
+
+# run tasks every 5 minute
+crontab -e
+*/5  *  *  *  * runremindtask
+
+# run tasks hourly
+# place or symlink scripts inside /etc/cron.hourly
+sudo chmod 777 scrip/path
+
+# test if scripts placed inside /etc/cron.hourly works
+run-parts --test /etc/cron.hourly
+
+# giving your script an extension will make it invalid and result in the job not being run.
+# [a-zA-Z0-9_-] are the valid characters, so the '.' makes it invalid.

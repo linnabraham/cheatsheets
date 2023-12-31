@@ -197,7 +197,8 @@ ctrl + /
 # insert text into equation
 \textrm{your text here}
 
-# convert tex to ebook
+# convert tex to epub
+# use fixed width for images to render well in epub output
 tex4ebook main.tex
 
 # Use pdflatex without interactive prompts
@@ -256,3 +257,12 @@ author = {{FirstName LastName}},
 # for code
 \begin{verbatim}
 \end{verbatim}
+
+# insert urls 
+\href{/path/to/link}{display text}
+
+# make a citation like this (DR7; Abazajian et al. 2009)
+\citep[DR7;][]{abazajian_seventh_2009}
+
+# elbow symbol for logical negation
+\neg

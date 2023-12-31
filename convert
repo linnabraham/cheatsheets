@@ -1,3 +1,5 @@
+# imagemagick utility
+
 # To resize an image to a fixed width and proportional height:
 convert original.jpg -resize 100x converted.jpg
 
@@ -38,3 +40,6 @@ convert -delay 3 *.png giffile
 
 # join two images side by side 
 convert img1 img2 +append result.jpg
+
+# convert images to gif using image magick
+convert -delay 20 -loop 0 *.jpg myimage.gif

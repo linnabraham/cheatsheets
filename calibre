@@ -1,0 +1,14 @@
+#To convert html to epub
+ebook-convert file.html .epub
+
+# Enable dark mode
+export CALIBRE_USE_DARK_PALETTE=1
+
+# To debug calibre gui
+calibre-debug -g
+
+# To know the options for ebook-convert
+ebook-convert dummy.html .epub -h
+
+# Convert markdown to epub with desired title 
+ebook-convert physics-needs-philosophy-philosophy-needs-physics-scientific-ame-18990fb4720.md .epub --title "physics-needs-philosophy-philosophy-needs-physics-scientific-ame-18990fb4720"

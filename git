@@ -217,7 +217,7 @@ git config --global http.postBuffer 1048576000
 git clone https://ghp_ThisIsThePersonalAccessTokenxxxxxxxx@github.com/username/reponame
 
 # create a branch without any previous commit history
-git branch --orphan
+git checkout --orphan <branchname>
 
 # push an orphan branch to remote
 git push origin branchname
@@ -317,6 +317,48 @@ git log -n 3
 # select individual commits to be added from an old branch to a new branch
 git checkout new-branch
 git cherry-pick <commit-hash-1>
+# or if multiple commits
+git cherry-pick <oldest-commit>^..<newest-commit>
+# if duplicate commits are a concern
+-x # this will add a cherry-picked from message in the commit msg
 
 # see condensed diff
 git diff --stat master develop
+
+# see the diff between latest commit and the one prior for a particular file 
+git diff HEAD^ HEAD -- examples/make_dataset_single.py
+
+# using a particular commit hash
+git diff abcdef1 -- path/to/your/file.txt
+
+# to see the history of changes or commits that affect a single file
+git log -- <file>
+
+# when using git stash pop a file may appear under both modified
+# to discard changes in current repo and keep remote
+git checkout --theirs <file> # after restoring add and commit it
+
+# to decide whether to git pull or git pull --rebase
+git fetch origin # Fetch changes from the remote
+git log origin/<branch-name>..HEAD  # Check the commit history
+# or the other way around
+git log HEAD..origin/<branch-name>
+
+# force merge an orphan branch into the master
+--allow-unrelated-histories
+
+# see condensed git diff
+git diff branch1 branch2 --stat
+
+# similar to git show, get an entire directory from a previous commit
+# note that this can overwrite your local folder of same name if you have one
+git checkout <commit-hash> -- path/to/folder
+
+# see the global git configuration
+git config --list
+
+# create branch from latest commit which has not been merged
+git checkout -b temp-review origin/main
+
+# add using the patch option
+git add -p

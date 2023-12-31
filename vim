@@ -276,3 +276,22 @@ zr
 
 # to close folded lines
 zc
+
+# close all splits at once
+:qall
+
+# check and load changes made on disk
+:checktime
+
+# remove the BOM character
+# <U+FEFF> character showing up in certain files
+awk '{ gsub(/\xef\xbb\xbf/,""); print }' INFILE > OUTFILE
+
+# fix issues with paste in vim
+Before entering insert mode to paste, run :set paste. 
+Turn it off once you leave insert mode with :set nopaste.
+
+# key bindings
+# bring up python help on current word
+K
+

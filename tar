@@ -1,0 +1,14 @@
+# Extract to a different directory
+tar -xvf file.tgz -C filedir
+
+# To list contents without extracting
+tar -tvf
+
+# To open .bz2 files
+tar -xf file.bz2
+
+# To compress a directory into a .tgz archive
+tar -cvzf file.tgz filedir
+
+# Exclude files while compressing
+tar -cvzf aug-galaxy.tgz --exclude="**/train_data/*" --exclude="**/output/*"  aug-galaxy

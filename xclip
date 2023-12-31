@@ -1,0 +1,17 @@
+# To copy a text to clipboard
+echo "text" | xclip -sel clip
+
+# To copy file contents to clipboard
+xclip filepath
+
+# copy image to clipboard
+xclip -selection clipboard -t image/png -i path/to/image.png
+
+# copy to clipboard from pipe
+| xclip
+
+# access clipboard contents
+xclip -o --selection clipboard
+
+# access primary selection
+xclip -o --selection primary
