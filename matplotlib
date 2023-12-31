@@ -118,3 +118,10 @@ fig.suptitle('Common Title for Subplots', fontsize=16)
 
 # insert text in plot or on top of image
 ax.text(10,40, text_to_display,fontsize=8, color='red')
+
+# colormap or colorbar
+plt.colobar()
+
+# format ticks 
+from matplotlib.ticker import FormatStrFormatter
+ax.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))

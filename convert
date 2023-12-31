@@ -19,7 +19,7 @@ for file in `ls original/image/path/`;
 done
 
 # convert pdf to image
-convert -density 150 filename.pdf -quality 90 output-%3d.jpg
+convert -density 150 filename.pdf -quality 90 output-%03d.jpg
 
 # convert multiple images to single pdf
 convert "*.jpg" -quality 85 outfile.pdf
@@ -32,3 +32,9 @@ convert input.jpg -rotate 90 output.jpg
 
 # make gif from images
 convert -delay 3 *.png giffile
+
+# remove transparency layer if present from pdf or images
+-alpha remove
+
+# join two images side by side 
+convert img1 img2 +append result.jpg

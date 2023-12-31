@@ -15,3 +15,6 @@ echo "" | dmenu -p "Search:"
 
 # pipe a list to dmenu
 echo -e "yes\nno" | dmenu
+
+# position bottom
+dmenu -b

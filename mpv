@@ -45,3 +45,6 @@ cltr + h
 
 # add subtitle file
 mpv --sub-file=that_file.srt the_video.mp4
+
+# shuffle
+--shuffle

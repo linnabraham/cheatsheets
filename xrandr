@@ -12,3 +12,9 @@ xrandr --output screen-name --scale 1x1
 
 # change current screen resolution ; add command to .xprofile to make permanent
 xrandr --output screen-name --mode "1280x720"
+
+# list connected monitors
+xrandr --list-monitors
+
+# multi monitor setup
+xrandr --output HDMI-2 --left-of eDP-1

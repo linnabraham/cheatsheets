@@ -84,3 +84,6 @@ bash ~/miniconda.sh -b -p $HOME/miniconda
 
 # install ranger with conda
 conda install -c conda-forge ranger-fm
+
+# create conda environment from existing
+conda list --export > environment.yml

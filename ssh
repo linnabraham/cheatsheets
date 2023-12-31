@@ -62,3 +62,6 @@ ssh-keygen -R 192.168.25.232
 # fix permission issues
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/*
+
+# for clipboard access when using ssh
+ForwardX11Trusted yes

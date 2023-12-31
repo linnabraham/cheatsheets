@@ -7,3 +7,7 @@ sudo apt install nvidia-driver-470
 # update system
 sudo apt update
 sudo apt upgrade
+
+# change default editor
+sudo update-alternatives --config editor
+
