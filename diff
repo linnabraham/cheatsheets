@@ -1,3 +1,6 @@
+# To diff and patch in single command
+diff <file1> <file2> -u | patch
+
 # compare two directories
 diff -r dir1/ dir2/
 

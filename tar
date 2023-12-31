@@ -12,3 +12,10 @@ tar -cvzf file.tgz filedir
 
 # Exclude files while compressing
 tar -cvzf aug-galaxy.tgz --exclude="**/train_data/*" --exclude="**/output/*"  aug-galaxy
+
+# The following command backups /wwwdata directory to dumpserver.nixcraft.in (IP 192.168.1.201) host over ssh session:
+tar zcvf - /wwwdata | ssh vivek@192.168.1.201 "cat > /backup/wwwdata.tar.gz"
+
+# copy files from remote to destination ; running code on destination machine
+ssh host@ip  'cd /path/to/parent && tar c ./dir' | tar xvf - -C /path/to/destination
+
