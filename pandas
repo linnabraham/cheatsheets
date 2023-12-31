@@ -1,5 +1,6 @@
 # sort using column
 df.sort_values(colname,ascending=True) # or df.sort_values(by=colname)
+# if you want to reset index after sort use ignore_index=True
 
 # search if column value is in a particular range
 pd.Series.between(0,1)
@@ -51,7 +52,10 @@ pd.DataFrame(mylist,columns=['id'])
 df.idxmax
 
 # shuffle dataframe
-df.sample(frac=1)
+# the default random state is derived from the system time
+#for reproducability specify a random state
+df.sample(frac=1, random_state=42)
+
 # to reset the index after shuffling
 df = df.sample(frac=1).reset_index(drop=True)
 
@@ -59,7 +63,7 @@ df = df.sample(frac=1).reset_index(drop=True)
 pd.read_csv('path',index_col=0)
 
 # index pandas dataframe using a numpy array of indices
-df.iloc[indarr]
+df.iloc[indarr] # df.iloc[:50] does same as df[:50]
 
 # select rows whose column values in an array
 df.loc[df['favorite_color'].isin(array)]
@@ -75,6 +79,9 @@ pd.merge(df1,df2,on='column')
 # to merge two dataframes without any common columns
 # make the indexes match by ordering both and resetting the indexes
 # then merge using left_index=True and right_index=True
+
+# join two dataframes in sql style
+pd.merge(df1, df2, left_on="col1", right_on="col1", validate="one_to_one", how="inner")
 
 # split dataframe into n parts
 np.array_split(df, 3)
@@ -101,10 +108,6 @@ df.b = df.b.astype(int)
 
 # read commas in numbers
  pd.read_csv(thousands=',')
-
- # max rows and columns
-pd.set_option("display.max_rows", 8)
-pd.set_option('display.max_colwidth', None)
 
 # describe all options
 pd.describe_option()
@@ -146,5 +149,20 @@ for _, row in df.iterrows():
 # find duplicates
 duplicates = df1[df1.duplicated(subset='key')]
 
-# join two dataframes on common column
-pd.merge(df1, df2, on="columnname")
+# create dataframe from list of dicts
+pd.DataFrame(listname)
+
+# save latex code to tex file
+# might have to install the following for longtable support for tables that extend over pages
+pip install Jinja2
+df.to_latex(buf="path/to/save", longtable=True, index=False)
+
+# iterate over groups in groupby
+for group_key, group_df in df.groupby(['col1', 'col2']):
+
+# to get an individual group
+grouped = df.groupby()
+grouped.get_group((key1,key2))
+
+# query dataframe 
+df.query('colname == value')

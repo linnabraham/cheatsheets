@@ -138,3 +138,7 @@ model.fit(validation_data=val_ds)
 
 # length of dataset
 len(list(dataset))
+
+# get expected model input shape
+config = model.get_config() # Returns pretty much every information about your model
+print(config["layers"][0]["config"]["batch_input_shape"]) # returns a tuple of width, height and channels

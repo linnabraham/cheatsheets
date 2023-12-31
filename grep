@@ -48,3 +48,9 @@ grep -Pzo 'PATTERN(.*\n)'
 
 # to print 3 lines of context above and below a matched line
 grep -C 3
+
+# recursively search files
+-r
+
+-n -- prefix each line of output with the 1-based line number within its input file
+-H -- print the file name for each match

@@ -261,3 +261,19 @@ class Person:
 
 # sort in reverse order
 sorted(imgs, reverse=True)
+
+
+# convert a string '(4,5)' to a tuple
+eval(tuple_string)
+
+# get absolute path of python file being run
+os.path.abspath(__file__)
+
+# append parent directory to path
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(cur_dir,".."))
+
+# select everything except last item in a list
+# -1 denotes last item index in python but also the index specified for the last item
+# is skipped in python
+listname[:-1]
