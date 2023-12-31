@@ -1,0 +1,21 @@
+# to make classification report out of a pandas table with two columns
+from sklearn.metrics import classification_report, accuracy_score
+
+classification_rep = classification_report(y_real, y_pred)
+accuracy = accuracy_score(y_real, y_pred)
+
+# stratified k-fold splitting 
+# where X and Y are numpy arrays containing image_paths and labels
+from sklearn.model_selection import StratifiedKFold
+	print(f"Startified Splits........")
+	skf = StratifiedKFold(n_splits=10)
+	for i, (train_index, test_index) in enumerate(skf.split(X, Y)):
+		print(f"Fold {i}:")
+		print(f"  Train: index={train_index}")
+		print(f"  Test:  index={test_index}")
+		print(f"Size of k-1 train folds: {len(train_index)}, size of 1 fold: {len(test_index)}")
+		ring_index = [i for i in Y[test_index] if i==0]
+		non_ring_index = [i for i in Y[test_index] if i==1]
+		print(f"In each validation split")
+		print(f"Size of rings: {len(ring_index)}, Size of nonrings: {len(non_ring_index)}")
+

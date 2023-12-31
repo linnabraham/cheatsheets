@@ -1,0 +1,17 @@
+import time
+time.time()
+
+from datetime import datetime
+
+datetime.fromtimestamp(time.time())
+
+# to print date in the format required for api requests
+datetime.now().isoformat()
+
+# comparison of dates can be done using <, > , == etc
+
+# from date string
+datetime.fromisoformat('2021-01-01')
+
+# get only the time part from a datetime
+start_date.time()

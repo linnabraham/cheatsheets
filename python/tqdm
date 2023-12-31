@@ -1,0 +1,14 @@
+# overhead
+60 ns per iteration
+
+# simple use of tqdm
+for i in listname:
+        print("hi")
+
+for i in tqdm(listname):
+        print("hi")
+
+# use with pandas apply
+from tqdm import tqdm
+tqdm.pandas()
+df.groupby(0).progress_apply(lambda x: x**2)
