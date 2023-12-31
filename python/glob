@@ -1,0 +1,4 @@
+# always prefer glob to os.listdir as the filenames listed have base path attached
+from glob import glob
+files = glob("path/to/dir/*.jpg")
+files.extend(glob("path/to/dir/*.jpeg"))

@@ -1,0 +1,22 @@
+# using subprocess
+p = subprocess.call(
+    ['C:\Working\Python\celp.exe', '-o', 'ofile'],
+    stdin=subprocess.PIPE,
+    stdout=subprocess.PIPE,  # needed for the next line to be sensible
+    stderr=subprocess.STDOUT,
+)
+
+# change shell used
+import subprocess
+
+def bash_command(cmd):
+    subprocess.Popen(cmd, shell=True, executable='/bin/bash')
+
+bash_command('a="Apples and oranges" && echo "${a/oranges/grapes}"')
+
+# subprocess
+p1 = subprocess.run(["pass app-passwords/official_gmail_k9"], shell=True, text=True, stdout=subprocess.PIPE)
+p1.stdout
+
+# Use subprocess to get STDOUT captured to file
+    subprocess.run(command, stdout=file, text=True)

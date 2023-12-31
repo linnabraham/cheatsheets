@@ -1,0 +1,8 @@
+# encode url parameters
+queryParam={"limit":10000,"start_at":"1950-06-01T00:00:00.000Z","end_at":"2022-09-01T23:59:59.000Z"}
+
+out = requests.get('https://api.trakt.tv/users/linnabraham/history/movies/?extended=full',
+            headers=header,params=queryParam)
+
+# logging network requests
+logging.basicConfig(level=logging.DEBUG)

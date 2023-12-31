@@ -1,0 +1,19 @@
+#import
+import sunpy.map 
+
+# use sunpy colormap in matplotlib
+import matplotlib
+import sunpy.visualization.colormaps as cm
+sdoaia171 = matplotlib.colormaps['sdoaia171']
+plt.imshow(data, cmap=sdoaia171)
+
+# load map by specifiying header and data separately
+smap = Map(data, header)
+
+# print wcs info
+smap.wcs
+
+# hek 
+from sunpy.net import hek
+client = hek.HEKClient()
+print(client.default)
