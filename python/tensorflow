@@ -142,3 +142,16 @@ len(list(dataset))
 # get expected model input shape
 config = model.get_config() # Returns pretty much every information about your model
 print(config["layers"][0]["config"]["batch_input_shape"]) # returns a tuple of width, height and channels
+
+# fix for tensorflow not using gpu when installed using pip
+NVIDIA_PACKAGE_DIR="$CONDA_PREFIX/lib/python3.12/site-packages/nvidia"
+
+for dir in $NVIDIA_PACKAGE_DIR/*; do
+    if [ -d "$dir/lib" ]; then
+        export LD_LIBRARY_PATH="$dir/lib:$LD_LIBRARY_PATH"
+    fi
+done
+
+# single line code to test if GPU will be used
+python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
