@@ -2,7 +2,7 @@
 dmenu_path | dmenu
 
 # use dmenu for receiving input
-dmenu -i
+echo | dmenu -i
 
 # specify prompt msg
 dmenu -p
@@ -18,3 +18,7 @@ echo -e "yes\nno" | dmenu
 
 # position bottom
 dmenu -b
+
+# password prompt in dmenu
+bash -c  'SUDO_ASKPASS=/home/guest/Apps/dpass sudo -iA $(dmenu_path | dmenu)'
+

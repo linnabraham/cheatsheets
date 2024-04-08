@@ -29,3 +29,6 @@ sed '/^[[:space:]]*$/d'
 
 # remove new line characters
 sed ':a;N;$!ba;s/\n//g'
+
+# replace 2nd occurence
+s/../../2

@@ -12,3 +12,6 @@ journalctl -b-0
 
 # To display all errors since last boot:
 journalctl -b -p err
+
+# display only kernel messages
+journalctl -k

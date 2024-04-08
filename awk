@@ -63,3 +63,6 @@ awk -F, 'NR == 1 || ($2 > 0.7 && $2 < 1.0)' your_file.csv
 
 # print only selected field 
 awk -F, 'NR == 1 || ($2 > 0.9) { print $1 }' pred_output.csv
+
+# print last field
+awk '{print $NF}'

@@ -14,3 +14,37 @@ style="width:500px;height:600px;"
 
 # center an item
 <center> </center>
+
+# comments in html
+<!-- content -->
+
+# css padding
+top right bottom left
+if left is missing assumed to be zero
+
+# blocks side by side css
+float:left;
+
+# embed a link
+<a href=\path> "Text to show </a>
+
+# embed php
+<?php
+$txt1 = "learn php";
+$txt2 = "w3schools.com";
+$x = 5;
+$y = 4;
+
+print "<h2>" . $txt1 . "</h2>";
+print "study php at " . $txt2 . "<br>";
+print $x + $y;
+
+$image_folder = "daily_images";
+$file_type = ".jpg";
+$today = date('l');
+$image_name = $today . $file_type;
+print "expected image path: $image_name<br>";
+
+print "<img src=\"$image_folder/$image_name\" alt=\"put some text here\" />";
+
+?>

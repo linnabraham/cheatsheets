@@ -249,6 +249,7 @@ git reset --hard HEAD^
 git add -p
 
 # checkout a specific version of file from git history and save it with different name
+# without file path the show command might produce a diff
 git show <commit_id>:path/to/file > new_file_name
 
 # delete a branch
@@ -362,3 +363,15 @@ git checkout -b temp-review origin/main
 
 # add using the patch option
 git add -p
+
+# split into individual hunks manually using e in patch mode
+if you want to keep only lines starting with -
+delete lines starting with +
+if you want to selectively keep some lines starting with - 
+change the - to a space
+
+# see last 5 commits in log
+-n5
+
+# do actions in bulk like git restore
+git restore --staged .

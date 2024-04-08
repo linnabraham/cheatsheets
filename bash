@@ -151,3 +151,9 @@ while read p; do mv ~/Downloads/efigi_png_gri-1.6/efigi-1.6/ALL/PGC00"$p".png EF
 # basename fails when filename starts with hyphen
 when the filename starts with a hyphen ("-"), it can be interpreted as an option by some commands, including basename.
 To handle filenames that start with a hyphen, you can use the double dash (--) to indicate the end of options,
+
+# bash not equal operator
+-ne
+
+# capture error output to variable
+errors=$(ls non-existent-file 2>&1) 

@@ -18,3 +18,12 @@ xrandr --list-monitors
 
 # multi monitor setup
 xrandr --output HDMI-2 --left-of eDP-1
+
+# turn off monitor
+xrandr --output HDMI-2 --off
+
+# do the opposite of turning off
+xrandr --output eDP-1 --auto
+
+# mirror instead of extending 
+xrandr --output HDMI-2 --same-as eDP-1

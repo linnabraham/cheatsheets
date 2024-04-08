@@ -44,3 +44,6 @@ mpc listall
 # enable or disable single mode
 mpc single on
 mpc single off 
+
+# clear queue
+mpc clear

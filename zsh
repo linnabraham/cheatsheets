@@ -26,3 +26,5 @@ zsh -o NO_RCS
 # characters that need to be escaped in zsh and if not using single quotes
 !
 
+# show all history instead of last 16
+history 1

@@ -65,3 +65,8 @@ chmod 600 ~/.ssh/*
 
 # for clipboard access when using ssh
 ForwardX11Trusted yes
+
+# Fix for the error
+# Unable to negotiate with ..: no matching host key type found. Their offer: ssh-rsa,ssh-dss
+    HostKeyAlgorithms +ssh-rsa
+
