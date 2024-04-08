@@ -1,3 +1,13 @@
+# config file
+~/.tmux.conf
+
+# Change prefix from 'Ctrl+B' to 'Ctrl+A'
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+# source file to enable changes in config
+tmux source-file ~/.tmux.conf
+
 # To start tmux:
 tmux
 
@@ -60,3 +70,24 @@ Ctrl-b +(→, ←, ↑, ↓)
 
 # start new named session
 tmux new -s my_session
+
+# attach to a named session
+tmux a -t nameofsession
+
+# list windows
+tmux lsw
+
+# activate copy mode in tmux
+Ctrl-b  "["
+
+# 
+:join-pane -h -s [session]:[window_number]
+
+# https://stackoverflow.com/questions/9592969/how-to-join-two-tmux-windows-into-one-as-panes
+# move the 2nd window as a pane to the 1st window. The opposite command is break-pane
+join-pane -s 2 -t 1 
+
+# show some preview of all sessions etc.
+<C-b> + w
+
+# to quit use q

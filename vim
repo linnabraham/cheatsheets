@@ -99,6 +99,7 @@ R - overwrite all letters in the word
 <C-r>= means the following Ctrl+R=
 <C-r>, without =, allows you to insert the content of any register at the cursor while staying in insert mode: <C-r>+, for example, inserts the content of my system clipboard
 
+# to go to a definition in any file use ctags and create tags first
 # navigate tags in vim
 <C-]>
 
@@ -164,7 +165,7 @@ else
 endif
 
 # for dark version of theme
-set background=dark
+set background=dark # the theme set in the terminal can interfere with vim theme
 
 # nerdtree
 Use the natural Vim navigation keys hjkl to navigate the files.
@@ -176,9 +177,8 @@ Press p to go to parent directory.
 Press r to refresh the current directory.
 Press m to launch NERDTree menu inside Vim
 
+# Start Vim in nocompatible mode (-N), without reading your viminfo file (-i NONE), without reading any configuration file (-u NONE for not reading .vimrc file and -U NONE for not reading a .gvimrc file) or even plugin.
 vim -u NONE -U NONE -N -i NONE
-
-# This starts Vim in nocompatible mode (-N), without reading your viminfo file (-i NONE), without reading any configuration file (-u NONE for not reading .vimrc file and -U NONE for not reading a .gvimrc file) or even plugin.
 
 # toggle vimtex quick fix dialog box
 \le
@@ -295,3 +295,40 @@ Turn it off once you leave insert mode with :set nopaste.
 # bring up python help on current word
 K
 
+# yank all word (including trailing space)
+yaw
+
+# yank all paragraph including trailing newline
+yap
+
+# yank 3 lines starting at current one
+3yy
+
+# yank one character to the right of cursor
+yl
+
+# write to disk and exit (changes modification time) only when the file has changed
+:x
+
+# copy doesnt work with sudo vim
+# press down shift while copying to make selection by mouse not go to visual mode
+# https://superuser.com/questions/436890/cant-copy-to-clipboard-from-vim 
+
+# also check this
+https://stackoverflow.com/questions/4608161/copying-text-outside-of-vim-with-set-mouse-a-enabled
+
+# vim built in to go directly to file on cursor
+gf
+
+# go back to original file
+<C-o>
+
+# open the built in file explorer
+:Ex or :Explore
+
+# vimrc file env variable  or use vim --version to see
+:echo $MYVIMRC
+
+# backspace whole words using ctrl+backspace
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
