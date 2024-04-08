@@ -1,0 +1,2 @@
+# skip the last line
+head -n -1 foo.txt

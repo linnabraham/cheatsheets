@@ -1,0 +1,2 @@
+# extract cookies automatically from browser
+--cookies-from-browser "chromium"

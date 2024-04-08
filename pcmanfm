@@ -1,0 +1,16 @@
+# When using the open with context menu dekstop files are auto generated in ~/.local/share/applications
+
+
+# To add context menu to file manager https://web.archive.org/web/20180627170128/http://www.nautilus-actions.org/?q=node/377
+Create a shell script that takes an input variable say $1 and does something with that
+Create a desktop entry in ~/.local/share/applications that wraps that shell script
+Add a MimeType key to the desktop file for the mimetypes you want to add custom action to
+Edit the ~/.local/share/applications/mimeinfo.cache file and add the name of the desktop entry for the corresponding mimetype
+
+# You can also add context menu options by placing desktop files in ~/.local/share/file-manager/actions/
+
+# Update mimeinfo cache
+update-desktop-database ~/.local/share/applications/
+
+# config file for changing icon theme etc.
+.config/pcmanfm-qt/default/settings.conf

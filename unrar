@@ -1,0 +1,5 @@
+# list the contents of rar file
+unrar l file.rar
+
+# uncompress the rar file
+unrar e file.rar

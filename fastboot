@@ -1,0 +1,5 @@
+# To poweron your android from recovery mode
+fastboot continue
+
+# To reboot
+fastboot reboot

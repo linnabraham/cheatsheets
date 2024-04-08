@@ -1,0 +1,13 @@
+# Since lsblk outputs a tree of devices and partitions by default, the 
+# -l parameter is set for making it output a list and 
+# -n for removing the list's header line. 
+# -d means no dependencies, so no partitions, only real devices, and 
+# -o path limits the output format to device paths, which is what we want, eg. /dev/sda or /dev/nvme1.
+
+lsblk -lndo path
+
+# print more info
+lsblk -o name,mountpoint,label,size,uuid
+
+# show partition information
+lsblk -f

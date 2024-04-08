@@ -1,0 +1,4 @@
+# mount a remote server using sshfs
+sshfs hostname:remote_directory /local/mount/point
+
+# unmount using fusermount command

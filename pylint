@@ -1,0 +1,2 @@
+# display only errors with pylint
+--errors-only

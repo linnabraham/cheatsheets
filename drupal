@@ -1,0 +1,2 @@
+# rebuild cache ; this is not enough to clear all cache
+drush cr

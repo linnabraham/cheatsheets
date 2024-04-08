@@ -1,0 +1,2 @@
+# query website with a specific dns server
+drill @nameserver domain

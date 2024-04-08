@@ -1,0 +1,17 @@
+# search for music
+fd -e .mp3 -e .m4a -e .flac
+
+# find multiple patterns
+fd '(pattern1|pattern2)'
+
+# list files only
+fd -t f
+
+# for sorting by time like find has you can use
+fd -X ls -lt
+
+# follow symlinks
+fd -L
+
+# exclude pattern
+fd --exclude pattern

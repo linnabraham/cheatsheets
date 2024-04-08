@@ -1,0 +1,5 @@
+# unzip 7zip file
+7z e "filename.7z"
+
+# list contents
+7z l filename.7z

@@ -1,0 +1,5 @@
+# convert docx to pdf
+abiword --to=pdf filename.docx
+
+# convert to output directory
+abiword --to-name /path/to/dir/file.pdf filename.odt

@@ -1,0 +1,20 @@
+# To Disable MSI
+# You may try disabling MSI. Though Linux kernel supports MSI for several years now, a wrong implementation of MSI from some hardware manufacturer may lead to the PCIe errors.
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi"
+
+# For grub to remember the last used option and use it as default
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+
+# grub not getting installed even though no errors reported
+Try using the --removable flag in grub-install
+
+# To login to a uefi shell with bcfg to modify the boot entries in nvram
+sudo pacman -S edk2-shell
+create a fat32 pendrive and place the binary provided by the package into EFI/BOOT/BOOx64.EFI
+
+run grubconfig after editing /etc/default/grub
+
+# Pass kernel parameters at boot time
+Edit /etc/grub/default and regenerate the grub.cfg file using
+grub-mkconfig -o /boot/grub/grub.cfg

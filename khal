@@ -1,0 +1,16 @@
+# To add new event
+khal new <date> <time> <summary> :: <description>
+
+# print events due tomorrow
+
+khal --no-color list --format "{title} {start-time}{to-style}{end-time} {description}" tomorrow 1d
+
+khal  list --format "{title}" tomorrow 1d | sed '0~1a\\' | sed  "s/^/   /"
+
+# print events due today
+khal --no-color list --day-format "" --once --format "{start-date} {title}" today 1d
+
+# khal doesnt support a single ics file with multiple uids - use vdirsyncer to split them by creating
+# a new sync pair then feed the split files as separate khal calendar
+
+# you can add a nl character with {nl} for example

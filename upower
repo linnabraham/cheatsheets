@@ -1,0 +1,5 @@
+# list attached devices
+upower -e
+
+# dump information
+upower --dump

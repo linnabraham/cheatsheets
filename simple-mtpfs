@@ -1,0 +1,8 @@
+# list devices
+simple-mtpfs -l
+
+#mount android both internal and sdcard
+simple-mtpfs <mount point> # requires sudo if mntpoint is outside home
+
+#unmount
+fusermount -u <mount point>

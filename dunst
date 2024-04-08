@@ -1,0 +1,22 @@
+# snooze dunst notifications
+dunstctl set-paused true
+
+# unsnooze
+dunstctl set-paused false
+
+# show history
+dunstctl history-pop
+
+# check status
+dunstctl is-paused
+
+# open url in dunst ; make changes in config
+notify-send "Test" "<a href=\"https://forums.bunsenlabs.org/\">BL</a>"
+
+# reload 
+killall -SIGUSR2 duns
+
+# color using pango markup
+
+# specify time out for notifications in milliseconds
+-t 10000

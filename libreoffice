@@ -1,0 +1,5 @@
+# To convert ods to csv 
+soffice --headless --convert-to csv filename.ods
+
+# To convert docx to pdf
+libreoffice6.2 --headless --convert-to pdf --outdir . filename.docx

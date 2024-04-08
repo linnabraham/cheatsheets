@@ -1,0 +1,26 @@
+# start the transmission daemon
+transmission-daemon
+
+# download torrent; can see the logs but process exits if the command is killed
+transmission-cli <magnetlink>
+
+# add a locally downloaded torrent file
+transmission-remote -a ~/Downloads/Fedora-LXDE-Live-x86_64-36.torrent
+
+# use the daemon to download the torrent in the background using a magnet link
+transmission-remote -a "magnet-link"
+
+# see the status of torrents
+transmission-remote -l
+
+# reload daemon after editing configuration file
+kill -s SIGHUP $(pidof transmission-daemon)
+
+# get magnet link of added torrent
+transmission-remote -t tid -i # where id is shown using -l command
+
+# remove torrent
+transmission-remote -t tid -r
+
+# remove and delete local files
+transmission-remote -t tid -rad
