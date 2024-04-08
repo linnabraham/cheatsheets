@@ -47,3 +47,8 @@ mpc single off
 
 # clear queue
 mpc clear
+# rate currently playing song
+mpc sticker "`mpc -f %file% current`" set rating 7
+
+# list available stickers for file
+mpc sticker fileuri list
