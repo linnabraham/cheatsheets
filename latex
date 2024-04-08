@@ -322,3 +322,7 @@ latexpand --empty-comments mytexfile.tex > mytexfile-stripped.tex
 
 # remove lines with only % and whitespace
 sed -i '/^\s*%/d' mytexfile-stripped.tex
+
+# to provide a shorter chapter title that appears in the header
+\chapter[<short title>]{<long title>}
+
