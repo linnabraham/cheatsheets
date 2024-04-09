@@ -24,3 +24,6 @@ transmission-remote -t tid -r
 
 # remove and delete local files
 transmission-remote -t tid -rad
+
+# download directory config parameter
+ --download-dir
