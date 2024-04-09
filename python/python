@@ -43,34 +43,9 @@ for text in listofstrings:
 	if o:
 		print(o.string)
 
-# create directory recursively
-os.makedirs()
+# instead of compiling pattern it can be given directly like
+if re.search(r'\b[A-Za-z]\.?\b', name) is not None:
 
-# check if path exists
-os.path.exists()
-
-# run another python script
-os.system("python file.py args1 args2")
-
-# get $HOME variable
-os.environ['HOME']
-
-# split extension from filename
-os.path.splitext("/path/to/some/file.txt.zip.asc")[0]
-
-# change current directory in python script
-os.chdir('path')
-
-# get absolute path
-os.path.abspath
-
-# return parent directory name from a given string
-os.dirname("fullpath/to/file")
-
-# get path of script that is being run
-current_script_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_script_dir, ".."))
-sys.path.append(parent_dir)
 
 # add a user defined path to path
 sys.path.append('custom/path')
@@ -266,14 +241,26 @@ sorted(imgs, reverse=True)
 # convert a string '(4,5)' to a tuple
 eval(tuple_string)
 
-# get absolute path of python file being run
-os.path.abspath(__file__)
-
-# append parent directory to path
-cur_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(cur_dir,".."))
 
 # select everything except last item in a list
 # -1 denotes last item index in python but also the index specified for the last item
 # is skipped in python
 listname[:-1]
+
+# create unique name from uuid
+import uuid
+unique_id = str(uuid.uuid4())[:8]
+
+# list comprehension
+[print('hi') for filename in files if 'disp' in filename]
+
+# use the inspect module for seeing the source code
+python -m inspect torchvision.models.alexnet
+
+# indexing from the end 
+# get the substring starting from the fourth index from end 
+# till the end of the string
+last_four_indexes = my_string[-4:]
+
+# floor operator in python
+//

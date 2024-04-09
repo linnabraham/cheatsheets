@@ -157,3 +157,13 @@ python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'
 
 # install tensorflow for gpu
 pip install tensorflow[and-cuda]
+
+# tf equivalent of np.where
+# Set negative values to 0 using tf.where
+processed_tensor = tf.where(tensor < 0, tf.zeros_like(tensor), tensor)
+
+# sqrt square root 
+image = tf.math.sqrt(image)
+
+# working version of log disabling
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'

@@ -1,3 +1,6 @@
+# basic search using column value conditions
+df.loc[df['Class']=="Barred"]
+
 # sort using column
 df.sort_values(colname,ascending=True) # or df.sort_values(by=colname)
 # if you want to reset index after sort use ignore_index=True
@@ -166,3 +169,18 @@ grouped.get_group((key1,key2))
 
 # query dataframe 
 df.query('colname == value')
+
+# rename pandas columns using a list of names
+master_df.set_axis(col_names, axis=1)
+
+# best practice
+It is not recommended to build DataFrames by adding single rows in a for loop. Build a list of rows and make a DataFrame in a single concat.
+
+# pd.concat
+ Any None objects will be dropped silently unless they are all None in which case a ValueError will be raised
+
+# remove the index and place it as a new column
+df.reset_index(names=['newindex'])
+
+# using pandas df.apply
+df.apply(lambda x: os.path.basename(x['first_filenames']), axis=1)

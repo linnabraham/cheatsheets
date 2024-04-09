@@ -113,7 +113,7 @@ plt.style.use("ggplot")
 # Turn off the axis
 plt.axis('off')
 
-# common title for subplots
+# title for the whole plot when you are using subplots
 fig.suptitle('Common Title for Subplots', fontsize=16)
 
 # insert text in plot or on top of image
@@ -125,3 +125,21 @@ plt.colobar()
 # format ticks 
 from matplotlib.ticker import FormatStrFormatter
 ax.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
+
+# save to pdf instead of images
+from matplotlib.backends.backend_pdf import PdfPages
+with PdfPages(pdf_path) as pdf:
+       # replace plt.savefig with the following
+        pdf.savefig(fig)
+
+# disable axis labels when plotting image
+# need to do this for every subplot
+plt.axis("off")
+
+# backend
+import matplotlib
+print(matplotlib.get_backend())
+matplotlib.use('Qt5Agg')  # Or any other X11 back-end
+
+# using camera to capture animation
+from celluloid import Camera
