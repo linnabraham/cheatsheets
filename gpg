@@ -1,0 +1,60 @@
+# list keys
+gpg --list-keys --keyid-format long
+
+# generate keys using gpg
+gpg --full-generate-key
+
+# kill gpg daemon runnning in background
+killall gpg-agent
+
+# trust key
+sudo gpg --edit-key <key-id>
+# type trust into the gpg prompt
+
+# encrypt using gpg
+gpg -r your.emailid -e <filename>
+
+# decrypt using gpg
+gpg -d <filename.gpg>
+
+# export gpg key to file
+ gpg --armor --export-secret-key keyid  > private.gpg
+
+# export gpg encryption subkey
+# It is important to use the exclamation mark at the end of the subkey-id!
+ gpg --output secret-subkey --export-secret-subkeys subkeyid!
+
+ # reload gpg agent
+ gpg-connect-agent reloadagent /bye
+
+ # remove passphrase from gpg key
+ # use the edit key option using the keyid then use the prompt to enter
+ passwd
+
+ # transfer gpg private keys to remote machine
+gpg --export-secret-key SOMEKEYID | ssh othermachine gpg --import
+
+# use gpg subkey as ssh key
+###############################
+# add following line to the file .gnupg/gpg-agent.conf
+enable-ssh-support
+# obtain the keygrip of the subkey
+# It is the 2048 sub key that is used for ssh
+gpg2 -K --with-keygrip
+# add it to the sshcontrol file
+echo KEYGRIP >> ~/.gnupg/sshcontrol
+# add the following to bashrc
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+###############################
+
+
+# list only my keys
+gpg --list-secret-keys --keyid-format long
+
+# when there are multiple key pairs and you want to use a specific key pair for encryption
+# where the id after recipeit is the public id of the key pair obtained with gpg --list-keys after the line starting with pub
+gpg --encrypt --recipient 12345678 <file to encrypt>
+
+# import gpg secret key on another machine
+gpg --import private.gpg
