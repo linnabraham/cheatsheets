@@ -21,3 +21,6 @@ sudo umount -R /mnt
 
 # mount all filesystems listed in fstab
 mount -a
+
+# unmount all partitions on a device
+sudo umount /dev/sdb?*
