@@ -47,8 +47,18 @@ mpc single off
 
 # clear queue
 mpc clear
+
 # rate currently playing song
 mpc sticker "`mpc -f %file% current`" set rating 7
 
+# get rating of currently playing
+mpc sticker "`mpc -f %file% current`" get rating
+
 # list available stickers for file
 mpc sticker fileuri list
+
+# find songs that have a sticker value
+mpc sticker path/to/dir find rating
+
+# valid search queries
+mpc find  <any|Artist|Album|AlbumArtist|Title|Track|Name|Genre|Date|Composer|Performer|Comment|Disc|MUSICBRAINZ_ARTISTID|MUSICBRAINZ_ALBUMID|MUSICBRAINZ_ALBUMARTISTID|MUSICBRAINZ_TRACKID|MUSICBRAINZ_RELEASETRACKID|OriginalDate|ArtistSort|AlbumArtistSort|AlbumSort|Label|MUSICBRAINZ_WORKID|Grouping|Work|Conductor|ComposerSort|Ensemble|Movement|MovementNumber|Location|Mood|TitleSort|MUSICBRAINZ_RELEASEGROUPID>

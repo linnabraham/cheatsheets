@@ -38,3 +38,6 @@ date "+%Y_%m_%d"
 
 # Saturday, Nov 11
 date "+%A, %b %d"
+
+# for 24 h time
+date '+%H:%M'

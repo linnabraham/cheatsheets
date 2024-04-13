@@ -60,6 +60,12 @@ dependencies:
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
 
+# see which solver is currently used
+conda config --show-sources
+
+# revert temporarily to default solver
+conda install numpy --solver=classic
+
 # Fix for cryptography ssl issue
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 conda install cryptography
@@ -93,3 +99,6 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 
 # remove package from conda env
 conda remove packagename
+
+# conda upgrade a package
+conda update wandb

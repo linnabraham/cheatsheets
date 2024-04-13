@@ -54,3 +54,6 @@ grep -C 3
 
 -n -- prefix each line of output with the 1-based line number within its input file
 -H -- print the file name for each match
+
+# multiple exclude patterns 
+--exclude={*log*,tags}

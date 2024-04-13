@@ -84,10 +84,17 @@ Ctrl-b  "["
 :join-pane -h -s [session]:[window_number]
 
 # https://stackoverflow.com/questions/9592969/how-to-join-two-tmux-windows-into-one-as-panes
-# move the 2nd window as a pane to the 1st window. The opposite command is break-pane
-join-pane -s 2 -t 1 
+# move the 2nd window as a pane to the 1st window in horizontal way. The opposite command is break-pane
+join-pane -s 2 -t 1 -h
 
 # show some preview of all sessions etc.
 <C-b> + w
 
 # to quit use q
+#
+# to switch windows ctrl-b + shift + ]
+
+# copy a rectangular patch in tmux
+Enter copy mode
+Ctrl+Space
+Alt + w to paste
