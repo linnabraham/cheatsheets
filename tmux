@@ -80,12 +80,11 @@ tmux lsw
 # activate copy mode in tmux
 Ctrl-b  "["
 
-# 
-:join-pane -h -s [session]:[window_number]
-
 # https://stackoverflow.com/questions/9592969/how-to-join-two-tmux-windows-into-one-as-panes
 # move the 2nd window as a pane to the 1st window in horizontal way. The opposite command is break-pane
 join-pane -s 2 -t 1 -h
+:join-pane -h -s [session]:[window_number]
+:break-pane -d -t 0
 
 # show some preview of all sessions etc.
 <C-b> + w
