@@ -1,2 +1,8 @@
 # rebuild cache ; this is not enough to clear all cache
 drush cr
+
+# this command failed for me
+composer require 'drupal/flexslider:^3.0@alpha'
+
+# to fix this I did
+composer update drupal/flexslider

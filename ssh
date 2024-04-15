@@ -14,6 +14,8 @@ cat .ssh/key-for-vm.pub
 ssh-keygen -t rsa -f ~/.ssh/key-for-vm -C linnvm
 
 # generate ssh keys
+# for use with github this should be the email id you use with github
+# this will also become the label in the key
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 #Add your SSH private key to the ssh-agent.

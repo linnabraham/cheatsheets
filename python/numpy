@@ -51,3 +51,7 @@ np.save("filename.npy", arr)
 np.pad(array, pad_width, mode)
 pad_width: Number of values padded to the edges of each axis. 
 ((before_1, after_1), ... (before_N, after_N))
+
+# reshape before predicting with tf.model
+img_array = np.expand_dims(img_array, axis=0)
+>>>>>>> b27dc9e (Make changes)
