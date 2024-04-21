@@ -1,0 +1,4 @@
+# change mouse acceleration speed where 9 is the device id obtained from xinput list
+# and driver used is libinput ; acceleration factor is a number between -1 and 1
+
+xinput --set-prop 9 'libinput Accel Speed' .8

@@ -1,0 +1,114 @@
+# dont ask for confirmation
+pacman -S --noconfirm
+
+# see only aur packages
+pacman -Qm
+
+# to find if a file is owned by any package
+pacman -Qo filename
+
+pacman -Scc to remove all the cache from /var
+
+pacman -Rs to remove packages which dont depend on others
+
+pacman -Su to do full system upgrade
+pacman -Syu - system upgrade with sync
+
+pacman -Qe to list all explcitly installed packages
+
+pacman -Qu to list upgrades
+
+# list dependencies of packages installed and not
+pacman -Qi (i.e., pacman --query --info
+
+pacman -Si (i.e., pacman --sync --info)
+
+pacman -U /var/cache/pacman/pkg/packagvers.zst - to downgrade package from cache
+
+pacman -Qdtq - to see packages that dont depend on others
+
+pacman -F /usr/bin/qemu-system-i386 - searches through the file contents of all packages in arch repo
+# run this to populate the database in order to run the above command
+sudo pacman -Fy
+
+pacman -Rdd uninstall package without considering dependencies
+
+pacman -Rcns - uninstall package and its dependencies
+
+pacman -Ql - see files installed by a package
+# find the diff-highlight program distributed by git 
+pacman -Ql git | grep diff-highlight
+
+# rebuild or recompile all packages that depend on python
+pacman -Qoq /usr/lib/python3.9/ | paru -S --rebuild -
+
+# search installed packages by name or pattern
+pacman -Qs ^ttf
+pacman -Qs "(intel-media|libva|xf86-video)"
+
+# To remove packages that do not depend on others
+sudo pacman -Rns $(pacman -Qdtq)
+
+# install from pkg list
+sudo pacman -S - < list_to_install
+
+# mark a package as a dependency when reinstalling
+pacman -D --asdeps jre-openjdk
+
+# to edit ignored packages in pacman edit the following file
+/etc/pacman.conf
+
+# update pacman mirror list
+reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+
+# get the good mirror list with reflector and save it to mirrorlist. You can change the country from US to your own country.
+reflector -c "US" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
+
+# remove pacman lock
+sudo rm /var/lib/pacman/db.lck
+
+# downgrade using the downgrade bash script from aur
+sudo downgrade <package-name>
+
+# man page
+REMOVE OPTIONS
+       -c, --cascade
+           Remove all target packages, as well as all packages that depend on one or more
+           target packages. This operation is recursive, and must be used with care since it
+           can remove many potentially needed packages.
+
+       -k, --keep
+           Removes the database entry only. Leaves all files in place.
+
+       -n, --nosave
+           Instructs pacman to ignore file backup designations. Normally, when a file is
+           removed from the system the database is checked to see if the file should be
+           renamed with a ".pacsave" extension.
+
+       -s, --recursive
+           Remove each target specified including all of their dependencies, provided that
+           (A) they are not required by other packages; and (B) they were not explicitly
+           installed by the user. This operation is recursive and analogous to a backwards
+           --sync operation, and helps keep a clean system without orphans. If you want to
+           omit condition (B), pass this option twice.
+
+       -u, --unneeded
+           Removes the targets that are not required by any other packages. This is mostly
+           useful when removing a group without using the -c option, to avoid breaking any
+           dependencies.
+
+# manual patch for packages in aur
+patch --forward --strip=1 --input="path/to/patch"
+makepkg -si
+
+# view the difference in the config files .pacnew
+pacdiff
+
+# pacman animation
+ILoveCandy # inplace of Color option
+
+# force remove package with dependency breakage
+--nodeps
+
+# find packages installed as dependency for removal 
+sudo cat /var/log/pacman.log | grep "installed"

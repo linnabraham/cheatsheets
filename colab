@@ -1,0 +1,19 @@
+# mount google drive
+from google.colab import drive
+
+drive.mount('/content/gdrive/', force_remount=True)
+
+# How to create a folder in google drive mounted in colab
+'/content/drive/MyDrive/Mask_RCNN'
+
+# download files from drive
+from google.colab import files
+files.download("file_name")
+
+# shell script 
+%%shell
+
+# To download folder from gdrive
+!zip -r /content/file.zip /content/Folder_To_Zip
+from google.colab import files files.download("/content/file.zip")
+

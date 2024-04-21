@@ -1,0 +1,5 @@
+# To see info about wifi
+iwlist scan
+
+# To see the link quality
+iwlist scan | egrep -i 'ssid|quality'

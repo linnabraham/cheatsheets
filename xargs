@@ -1,0 +1,4 @@
+find | xargs -I {} echo {}
+
+# copy
+xargs -I {} cp "{}" dest/path

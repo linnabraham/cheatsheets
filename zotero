@@ -1,0 +1,5 @@
+# find untagged items
+tag does not contain %
+
+# fix for theme issue in zotero desktop file
+Exec=env GTK_THEME=Arc /usr/bin/zotero -url %U

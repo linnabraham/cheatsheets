@@ -1,0 +1,19 @@
+# Add a new column to existing table using algebraic expression or other
+
+# convert numerical to string
+toString( fpVal )
+
+# logical operators
+! (not)
+&& (and)
+|| (or)
+
+# relational
+==
+
+# To do a database join for matching on two columns 
+pair match
+
+# to convert a column that is read as string to numeric type
+create a synthetic column using
+parseInt(colname)

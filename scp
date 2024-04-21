@@ -1,0 +1,2 @@
+# transfer using scp
+scp src target

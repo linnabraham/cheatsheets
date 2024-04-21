@@ -1,0 +1,5 @@
+# pause running instance of mpv
+xdotool key --window "$(xdotool search --class mpv)" p
+
+# emulate key press
+xdotool key 'name-of-key' # get name from xev

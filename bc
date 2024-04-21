@@ -1,0 +1,9 @@
+# for floating point arithmetic in bash
+bc -l <<< '100/3'
+
+# specify decimal places with stored variables
+num=10/3
+scale=2
+num/1
+# just doing num would not work
+# this is because the / operation reads the scale variable

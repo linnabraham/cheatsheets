@@ -1,0 +1,41 @@
+# get header
+curl -I
+
+# make verbose
+curl -v
+
+# save to file
+curl -O
+
+# make curl silent
+curl -s
+
+# access wallabag api through curl
+curl -X GET 'https://app.wallabag.it/api/entries.json?access_token=<access-token>' | jq
+
+
+# pass multiple parameters in curl
+ curl -X GET 'https://app.wallabag.it/api/search.txt?access_token=<access-token>&term=linux' | jq '.. | .url? '
+
+# get my external ipv4 address
+curl ifconfig.me/ip
+
+# get my external ipv6 address
+curl icanhazip.com
+
+# follow redirects
+curl -L
+
+# Sending GET requests with curl
+Run the curl command followed by the target URL. Curl automatically selects the HTTP GET request method unless you use the -X, --request, or -d command-line option.
+The target URL is passed as the first command-line option.
+
+# to send a post request using curl
+curl -X POST "https://api.dropbox.com/1/oauth2/token?grant_type=authorization_code&client_id=&client_secret=&redirect_uri=http://localhost&code="
+
+# get approximate geo location of server using external ip
+curl -s https://ipvigilante.com/$(curl -s https://ipinfo.io/ip) | jq '.data.latitude, .data.longitude, .data.city_name, .data.country_name'
+
+# get weather for kochi
+curl http://wttr.in/kochi
+

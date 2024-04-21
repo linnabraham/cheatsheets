@@ -1,0 +1,9 @@
+# build the site
+# puts the file by default into a directory named public
+hugo
+
+# build with drafts
+hugo -D
+
+# run the website locally
+hugo server

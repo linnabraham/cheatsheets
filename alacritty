@@ -1,0 +1,18 @@
+# enable transparency in config
+window:
+  opacity: 0.9
+
+# in the command line
+alacritty -o window.opacity=0.9
+
+# use in scripts
+alacritty -e vim buffer.md
+
+# Remain open after child process exits
+--hold
+
+# Start the shell in the specified working directory
+--working-directory
+
+# open window using centre of frame coordinates
+alacritty -o window.opacity=0.1 window.position.x=540 window.position.y=960

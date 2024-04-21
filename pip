@@ -1,0 +1,9 @@
+# to see details about a package including dependencies in some cases
+pip show <packagename>
+
+
+# python virtualenv inherit specific packages from your global site-packages
+--system-site-packages
+
+# to install things in virtualenv rather than system python
+pip install --ignore-installed or pip install -I

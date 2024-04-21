@@ -1,0 +1,17 @@
+# To find files by case-insensitive extension (ex: .jpg, .JPG, .jpG):
+find . -iname "*.jpg"
+
+# print find results in single line
+find . -name someFile -type f -printf "%p "
+
+# find most recently modified file
+find ~  -type f  -printf "%T@ %Tc %p\n" | sort -nr | head -1 | awk '{print $9}'
+
+# find files following symlinks; note: order maybe important
+find -L . pattern
+
+# find multiple pattersn
+find -iname "*.pdf" -o iname "*.epub"
+
+# remove duplicates that are present in another folder
+find ./ -maxdepth 1 -type f -iname "*.md" -exec sh -c 'if [ -e "mdfiles/$(basename "$1")" ]; then rm "$1"; fi' _ {} \;
