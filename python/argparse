@@ -1,0 +1,15 @@
+# import
+import argparse
+
+# create object
+parser = argparse.ArgumentParser()
+
+# do the actual parsing
+parser.parse_args()
+
+# stores true as default value
+parser.add_argument('-runtrain', action="store_true", help="switch to run the training")
+
+# add a tuple input
+parser.add_argument('-target_size', nargs='+', type=int, default=(240,240), help="target size to resize images to before training")
+-target_size 1 2 3 4 # way to pass data to the script
