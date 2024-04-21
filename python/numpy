@@ -27,6 +27,7 @@ arr = np.moveaxis(arr, 0, 2) # Reshape the array
 print(reshaped_arr.shape) # Print the new shape of the array
 
 # using numpy where
+# not sure if this works all the time
 X[np.where(condition)]
 
 # using np.where

@@ -20,3 +20,6 @@ p1.stdout
 
 # Use subprocess to get STDOUT captured to file
     subprocess.run(command, stdout=file, text=True)
+
+# if you are not using subprocess.PIPE use `shell=True` 
+
