@@ -167,3 +167,6 @@ image = tf.math.sqrt(image)
 
 # working version of log disabling
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+# moveaxis
+tf.keras.ops.moveaxis

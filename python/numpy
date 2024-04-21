@@ -54,4 +54,6 @@ pad_width: Number of values padded to the edges of each axis.
 
 # reshape before predicting with tf.model
 img_array = np.expand_dims(img_array, axis=0)
->>>>>>> b27dc9e (Make changes)
+
+# find percentile
+np.percentile(image. 99.99)

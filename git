@@ -375,3 +375,6 @@ change the - to a space
 
 # do actions in bulk like git restore
 git restore --staged .
+
+# git log in oneline with date information
+git log --pretty=format:"%h %ad %s" --date=short

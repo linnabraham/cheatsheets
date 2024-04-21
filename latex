@@ -276,6 +276,13 @@ author = {{FirstName LastName}},
 \end{document}
 
 # combine figures and tables using subfigure
+\usepackage{caption}
+\usepackage{subcaption}
+
+The width specified for each subfigure should add upto the textwidth
+in each include figure specify width as \textwidth but it will be what you
+specified in the subfigure line instead of original \textwidth
+
     \begin{figure}[htb]
     \centering
 \begin{subfigure}{0.48\linewidth}
