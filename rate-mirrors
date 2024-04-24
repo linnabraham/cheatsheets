@@ -1,0 +1,10 @@
+# pacman mirrors update
+# use rate-mirrors script to create a backup of old mirrors and write fresh list of fast and in sync mirrors
+export TMPFILE="$(mktemp)"; \
+    sudo true; \
+    rate-mirrors --entry-country US,IN --save=$TMPFILE arch --max-delay=21600 \
+      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist
+
+# alternate single line command
+rate-mirrors --disable-comments-in-file --entry-country=IN --protocol=https arch --max-delay 7200 | sudo tee /etc/pacman.d/mirrorlist
