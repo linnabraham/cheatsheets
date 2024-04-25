@@ -94,8 +94,6 @@ conda install -c conda-forge ranger-fm
 # create conda environment from existing
 conda list --export > environment.yml
 
-# instal pytorch
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 
 # remove package from conda env
 conda remove packagename
