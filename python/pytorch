@@ -1,2 +1,16 @@
+# instal pytorch
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# install pytorch lightning
+conda install lightning -c conda-forge
+
+# install captum
+pip install captum
+
+# install torch lightning
+python -m pip install lightning
+
 # padding
 padding='valid' is the same as no padding. padding='same' pads the input so the output has the shape as the input. However, this mode doesn't support any stride values other than 1.
+
+
