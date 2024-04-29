@@ -56,11 +56,14 @@ Ctrl-b x
 Ctrl-b [0-9]
 Ctrl-b Arrows
 
-# To split windows horizontally:
+# To split windows vertically:
 Ctrl-b %
 
-# To split windows vertically:
+# To split windows horizontally:
 Ctrl-b "
+
+# To cycle through available layouts
+Ctrl-b space
 
 # To swap windows:
 Ctrl-b :swap-window -s [0-9] -t [0-9]
@@ -97,3 +100,6 @@ join-pane -s 2 -t 1 -h
 Enter copy mode
 Ctrl+Space
 Alt + w to paste
+
+# directly enter into a tmux session from ssh
+ssh remote -t "tmux a -t sessname"
