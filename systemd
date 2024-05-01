@@ -62,3 +62,10 @@ After=network-online.target
 loginctl
 
 loginctl show-session <sessid> -p Type
+
+# set hostname for current session
+hostnamectl set-hostname new-hostname
+
+# know whether wayland or xorg is currently in use
+loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}'
+
