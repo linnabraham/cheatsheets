@@ -17,6 +17,12 @@ systemctl --type=service
 # List
 systemctl list-unit-files --type=service
 
+# see systemctl services
+systemctl --type=service --state=running
+
+# even dead
+systemctl --type=service --state=active
+
 # boot time
 systemd-analyze time
 
@@ -25,3 +31,34 @@ systemd-analyze blame
 
 # critical parts
 systemd-analyze  critical-chain [service]
+
+# fix windows changing time on linux issue
+timedatectl set-local-rtc 1 --adjust-system-clock
+
+# correct time
+timedatectl set-ntp true
+
+# synchronize time using ntp server
+ntpdate -u pool.ntp.org
+
+# fix time
+ntpd -qg
+
+# revert to default login system
+systemctl set-default graphical.target
+
+# know the current login method
+systemctl get-default
+
+# Suspend
+systemctl suspend
+
+# systemd service to run only after network is enabled ; edit .service [Unit] to have
+Wants=network-online.target
+After=network-online.target
+
+# see which type of session is used xorg or wayland
+# get id of session
+loginctl
+
+loginctl show-session <sessid> -p Type

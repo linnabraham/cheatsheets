@@ -14,7 +14,7 @@ dunstctl is-paused
 notify-send "Test" "<a href=\"https://forums.bunsenlabs.org/\">BL</a>"
 
 # reload 
-killall -SIGUSR2 duns
+killall dunst
 
 # color using pango markup
 
