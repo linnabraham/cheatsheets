@@ -4,5 +4,5 @@ drush cr
 # this command failed for me
 composer require 'drupal/flexslider:^3.0@alpha'
 
-# to fix this I did
+# to fix this I did in the website home
 composer update drupal/flexslider
