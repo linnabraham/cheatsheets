@@ -1,0 +1,8 @@
+# omnivore.app how to use a NOT filter in search
+-label:"Newsletter"
+
+# Download articles from omnivore server using the omnivore-api-demo github repo
+# Change the article limit from default of 20 by editing the relevant line in the index.ts file
+
+# search for word in title
+title:<your search word>
