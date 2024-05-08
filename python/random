@@ -1,0 +1,2 @@
+# generate 10 random indices between 0 and maxval
+indices = [random.randrange(maxval) for x in range(10)]
