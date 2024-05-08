@@ -19,3 +19,7 @@ from sklearn.model_selection import StratifiedKFold
 		print(f"In each validation split")
 		print(f"Size of rings: {len(ring_index)}, Size of nonrings: {len(non_ring_index)}")
 
+# create a montage
+from skimage.util import montage
+# where image_arrays is a 3D or 4D numpy array
+im_montage = montage(image_arrays, channel_axis=-1)

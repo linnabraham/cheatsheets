@@ -1,5 +1,8 @@
-# instal pytorch
+# install pytorch
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# install pytorch for cuda 12
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
 # install pytorch lightning
 conda install lightning -c conda-forge
@@ -10,6 +13,9 @@ conda install captum -c pytorch
 
 # install torch lightning
 python -m pip install lightning
+
+# install vit-pytorch
+conda install vit-pytorch -c conda-forge
 
 # padding
 padding='valid' is the same as no padding. padding='same' pads the input so the output has the shape as the input. However, this mode doesn't support any stride values other than 1.
@@ -23,3 +29,15 @@ values, indices = torch.max(input, dim=1)
 # load saved weights
 model = TheModelClass(*args, **kwargs)
 model.load_state_dict(torch.load(PATH))
+
+# check this out
+torch.cuda.set_per_process_memory_fraction(0.1)
+
+# find number of cpu threads used
+num_threads = torch.get_num_threads()
+
+# using tqdm
+# leave=False is used to prevent multiple progress bars for each epoch
+for epoch in range(num_epochs):
+for batch_idx, (data, targets) in tqdm(enumerate(train_loader), \
+   total=len(train_loader), leave=False):
