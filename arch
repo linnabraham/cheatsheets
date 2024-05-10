@@ -55,3 +55,13 @@ DNS=10.1.10.1
 
 # After installation if there is still no internet access.
 # Make sure there is a proper /etc/resolv.conf file setup
+
+# Alternate set of instructions for setting up static IP
+# Set IP address and subnet mask
+sudo ip addr add <IP>/<SUBNET> dev <INTERFACE>
+
+# Set default gateway
+sudo ip route add default via <GATEWAY>
+
+# Set DNS server
+echo "nameserver <DNS>" | sudo tee /etc/resolv.conf > /dev/null

@@ -1,3 +1,6 @@
+# installation
+conda install jupyterlab -c conda-forge
+
 # convert notebook to script
 jupyter-nbconvert analyze-catalogue.ipynb --to script
 
@@ -14,3 +17,4 @@ ipython kernel install --user --name=<name>
 
 # refresh the page if showing a blank page
 Ctrl + shift + r
+

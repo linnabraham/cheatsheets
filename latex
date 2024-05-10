@@ -333,3 +333,18 @@ sed -i '/^\s*%/d' mytexfile-stripped.tex
 # to provide a shorter chapter title that appears in the header
 \chapter[<short title>]{<long title>}
 
+# set intersection symbol
+\cap
+
+# insert equations
+\usepackage{amsmath}
+
+\begin{gather} # without alignment on equals
+eqn \\
+eqn 2
+\end{gather}
+
+\begin{align} # align on equals
+a &= b
+c &= d
+\end{align}
