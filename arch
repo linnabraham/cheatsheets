@@ -19,5 +19,39 @@ sudo chown :newgroup /path/to/directory
 # see all users
 cat /etc/passwd
 
-# remove user 
+# remove user
 sudo userdel username
+
+# add users
+sudo useradd users -mG wheel username
+
+# create swap file
+# Use dd to create a swap file the size of your choosing. For example, creating a 512 MiB swap file:
+dd if=/dev/zero of=/swapfile bs=1M count=512 status=progress
+
+chmod 0600 /swapfile
+
+mkswap -U clear /swapfile
+
+swapon /swapfile
+# finally  edit your fstab
+
+# Setup Static IP during installation for network acess
+# the live cd makes use of the following for network configuration and dns resolution
+systemd-networkd.service
+systemd-resolved.service
+
+# create the following file /etc/systemd/network/20-wired.network
+# susbtitute with your correct interface id, static ip address, Gateway and DNS
+```
+[Match]
+Name=enp1s0
+
+[Network]
+Address=10.1.10.9/24
+Gateway=10.1.10.1
+DNS=10.1.10.1
+```
+
+# After installation if there is still no internet access.
+# Make sure there is a proper /etc/resolv.conf file setup

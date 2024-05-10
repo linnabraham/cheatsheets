@@ -16,3 +16,6 @@ makepkg -g # cd to folder containing PKGBUILD
 
 # skip pgp check
 --skippgpcheck
+
+# skip checking cheksums when installing with paru
+--mflags --noextract
