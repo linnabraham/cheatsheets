@@ -1,0 +1,23 @@
+# recover from broken arch
+rm /var/lib/pacman/db.lck
+pacman -S linux # after chrooting
+
+# caution: dont use grub from other bootloaders to boot arch
+# It always safe to use arch grub
+
+# users and groups
+# create new group
+sudo groupadd groupname
+
+# add user to group
+# need to logout and relogin to take effect
+sudo usermod -aG mygroup username
+
+# add group owner to directory
+sudo chown :newgroup /path/to/directory
+
+# see all users
+cat /etc/passwd
+
+# remove user 
+sudo userdel username
