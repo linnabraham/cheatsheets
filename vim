@@ -332,3 +332,6 @@ gf
 # backspace whole words using ctrl+backspace
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
+
+# edit remote file directly
+vim /path/to/local/file  scp://remote//path/to/remote/file  -O

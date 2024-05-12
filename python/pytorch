@@ -41,3 +41,5 @@ num_threads = torch.get_num_threads()
 for epoch in range(num_epochs):
 for batch_idx, (data, targets) in tqdm(enumerate(train_loader), \
    total=len(train_loader), leave=False):
+
+# unsqueeze(1) is used to make your labels with this shape [x,1] where x was the original size
