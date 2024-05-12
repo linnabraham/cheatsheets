@@ -44,6 +44,7 @@ pacman -Ql - see files installed by a package
 pacman -Ql git | grep diff-highlight
 
 # rebuild or recompile all packages that depend on python
+# where python3.9 is the older version of python
 pacman -Qoq /usr/lib/python3.9/ | paru -S --rebuild -
 
 # search installed packages by name or pattern
