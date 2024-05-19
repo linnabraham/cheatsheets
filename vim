@@ -14,6 +14,7 @@
 :g/^$/d
 
 # show diff in vim
+# see changes before saving
 w !diff % -
 
 # insert current date into vim using noremap and inoremap
@@ -28,6 +29,7 @@ shift + >
 # find and replace in vim
 # replace find on all lines (globally)
 :%s/find/replace/g
+:'<,'>s/find/replace/g # for selected text
 
 # change vim highlight to underline in spelling corrections
 cterm=underline

@@ -2,7 +2,9 @@
 simple-mtpfs -l
 
 #mount android both internal and sdcard
-simple-mtpfs <mount point> # requires sudo if mntpoint is outside home
+# requires sudo if mntpoint is outside home
+# rerun this command after allowing access from phone
+simple-mtpfs <mount point> 
 
 #unmount
 fusermount -u <mount point>

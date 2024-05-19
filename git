@@ -30,8 +30,12 @@ git push -f
 # abanded unwanted merge
 git reset
 
-# create a  new taggit pull remote branch
+# create a  new tag
+# git pull remote branch
 git tag <tagname>
+
+# push tags
+git push --tags
 
 # compare local changes with remote after fetch
 git diff master origin/master

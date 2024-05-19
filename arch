@@ -65,3 +65,9 @@ sudo ip route add default via <GATEWAY>
 
 # Set DNS server
 echo "nameserver <DNS>" | sudo tee /etc/resolv.conf > /dev/null
+
+# install deb apps on arch
+# install debtap from AUR
+sudo debtap -u
+debtap -Q  package_name.deb
+sudo pacman -U package_name.pkg
