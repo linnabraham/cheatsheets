@@ -1,2 +1,4 @@
 # transfer using scp
 scp src target
+# Use scp with port number
+scp -P <port no>
