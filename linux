@@ -1,0 +1,294 @@
+# To decrease backlight use the xbacklight provided by either xorg-xbacklight or acpilight
+xbacklight -inc 10
+
+echo 800 > /sys/class/backlight/intel_backlight/brightness
+
+# To make scripts not print to terminal
+> /dev/null 2>&1
+
+# To make scripts not terminate if the wrapper script is terminated
+nohup scriptname
+setside -f scriptname
+
+# sort numeric files
+sort -n file
+
+# move only if file doesnt exist
+mv -n
+
+# get chmod numerical value for a file
+stat --format '%a' <file>
+
+# find metadata for images
+identify -verbose <imagename>
+exif <imagename>
+
+# x11 or wayland
+echo $XDG_SESSION_TYPE
+
+# use aliases in scripts
+shopt -s expand_aliases
+source ~/.bash_aliases
+
+# to see the existing partition on a disk
+file -s /dev/sdb1
+
+# startup scripts with delay
+/bin/sh -c 'sleep 15;kalu &'
+
+# set default browser
+xdg-settings set default-web-browser firefox-esr.desktop
+
+# become super user without root password
+sudo su -
+
+# wrap lines at 50 characters
+fmt -50
+
+# show ssid of connected network
+iwgetid -r
+
+# unarchive .xz files
+xz --decompress file.xz
+
+# make desktop notification permanant ; the notification will stay on the screen until you click it.
+notify-send -u critical -t 0
+
+# switch the escape and capslock key
+You can achieve this by editing the file /etc/X11/xorg.conf.d/00-keyboard.conf.
+
+Example file:
+
+Section "InputClass"
+        Identifier      "system-keyboard"
+        MatchIsKeyboard     "on"
+        Option          "XkbLayout" "us"
+        Option          "XkbModel"  "pc104"
+        Option          "XkbOptions" "caps:swapescape"
+EndSection
+
+# sound is mute
+# from within the pulsemixer
+M - to toggle mute status
+
+# unlock user acct after 3 failed attempts
+faillock --reset --user username
+
+# clear journal files
+rm -r /var/log/journal/*
+
+# replacement for netstat on arch
+ss -tulpn
+
+# change theme in desktop file
+Exec=env GTK_THEME=elementary
+
+# To launch .desktop files
+gtk-launch file.desktop
+
+# gtk-launch takes at least one argument, the name of the application to launch. The name should match application desktop file name, as residing in /usr/share/application, with or without the '.desktop' suffix.
+
+# see release info
+cat /etc/*release
+
+# chane default shell for user
+# dont forget to logout of your session and login
+sudo chsh -s /bin/zsh username
+
+#To learn what sort of filesystem is on the disk, use blkid, as in:
+sudo blkid /dev/sdb3
+
+# record and play sound from the terminal
+arecord filename.wav
+cat filename.wav | aplay
+
+# find danling links
+symlinks .
+
+# Use the file -s command to get information about a specific device, such as its file system type. If the output shows simply data, as in the following example output, there is no file system on the device
+sudo file -s /dev/sda
+
+#To skip grub change your timeout to 5 to 0 and set the grub style from menuto hidden and it will only appear when you hold shift.
+
+# Get information of wireless channels nearby
+sudo iwlist wlan0 scan | grep Frequency | sort | uniq -c | sort -n
+
+# Get information about frequencies supported by wireless card
+iwlist wlan0 channel
+
+# see the window info
+xwininfo
+
+# view info about groups present
+cat /etc/group
+
+# loop through file contents
+while read p; do echo $p; done < file.txt
+
+# get last modified date of file
+stat -c %y $1 | cut -d' ' -f1
+
+# get model name for hdd or ssd disks
+sudo fdisk -l
+
+# switch from vim mode to emacs
+bindkey -e
+
+# capture screenshot using imagemagick import
+import -window root filename
+
+# battery settings
+cd /sys/class/power_supply/BAT0
+
+# turn off swap
+sudo swapoff -a
+
+# turn swap on
+sudo swapon /dev/sda5
+
+# find if webcam is activated
+lsmod | grep '^uvcvideo' | awk '{print $3}'
+
+# see if you are sudoer
+sudo -lU linn
+
+# get wifi passwords
+cd /etc/NetworkManager/system-connections # become root
+
+# login details
+w
+
+# wrap lines of text
+fold -sw55
+
+# see progress of sync
+watch -d grep -e Dirty: -e Writeback: /proc/meminfo
+
+# solve screen flickering issue with some laptops
+i915.enable_psr=0
+
+# redirect stderr
+command 2>/dev/null
+
+# using faketime
+faketime "2023-03-06 14:30:00" polybar
+
+# where some sounds are stored
+/usr/share/sounds/freedesktop/stereo/
+
+# clear screen using escape sequence 
+printf "\ec"
+
+# find the mimetype of a file
+file -i filename
+
+# check the current default for a mimetype
+xdg-mime query default inode/directory
+xdg-mime query default application/pdf
+
+# sharing home partition across distributions
+UID and GID must be the same on each distributions for the certain user(s).
+this can be done by first checking the userids using
+
+# check UID of user and group id
+id username
+id groupname
+
+# edit the /etc/passwd file to reflect the new UID
+
+# find user id and group id
+id
+
+# If you wish to see the UID and all groups associated with a user, enter id without any options, as follows:
+
+id username
+id groupname
+
+# To find the uid and gid of a user
+ id -g username
+ id -u username
+
+# use gnome-keyring to get the SSH keys etc
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
+# export the value returned by this command
+
+# to fix issue with gnome-keyring
+install seahorse  gui for gnome-keyring and update the password 
+if the issue is due to password change
+
+# lock screen
+dm-tool lock
+
+# add user to sudo group
+sudo chmod -aG sudo username
+
+# to know which OS you are running
+cat /etc/issue
+
+# turn off screen
+xset dpms force off
+
+# get process id from name
+pgrep -x brave
+
+# disable network manager connected notification
+gsettings set org.gnome.nm-applet disable-connected-notifications "true"
+
+# changing console font tty
+/etc/vconsole.conf
+restart systemd-vconsole-setup.service
+
+# load a kernel module
+modprobe modulename
+
+# show all currently loaded modules
+lsmod
+
+# pipe output of cat back into cat
+cat file | uniq | cat > file
+
+# write live cd
+cat path/to/iso > /dev/sdX
+
+# check memory information for upgrade etc.
+sudo lshw -C memory
+
+# check GPU on machine
+sudo lshw -C display
+sudo lshw -C video
+
+# for kill processes default signal is 15
+# to force kill
+killall -9 processname
+
+# some times when the killall comand doesnt work this works
+killall -1 polybar
+
+# show window classes etc. graphically by clicking on a window
+xprop
+
+# monitor hardware aceleration
+intel_gpu_top
+
+# see current gtk theme
+gsettings get org.gnome.desktop.interface gtk-theme
+
+# to find the current theme used
+# check inside ~/.config/openbox/rc.xml for the theme keyword
+
+# directories in linux need the executable bit set
+
+# enable screensaver and run custom script after 10 mins of inactivity
+xautolock -time 10 -locker "screen_lock" &
+
+# to lock immediately
+xautolock -locknow
+
+# fix anydesk error on Xorg
+Add "type=x11" to /etc/pam.d/system-login:
+-session optional pam_systemd.so type=x11
+
+# deal with argument list too long issue when using rm
+find data/neg_extracted/ -type f -exec rm {} \;
+
+
