@@ -291,4 +291,5 @@ Add "type=x11" to /etc/pam.d/system-login:
 # deal with argument list too long issue when using rm
 find data/neg_extracted/ -type f -exec rm {} \;
 
-
+# give read permission to specific user
+setfacl -R -m u:username:r dirname
