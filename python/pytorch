@@ -43,3 +43,13 @@ for batch_idx, (data, targets) in tqdm(enumerate(train_loader), \
    total=len(train_loader), leave=False):
 
 # unsqueeze(1) is used to make your labels with this shape [x,1] where x was the original size
+
+# sqrt transform
+torch.sqrt
+
+# log
+torch.log
+
+# move model to gpu
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+model.to(device)

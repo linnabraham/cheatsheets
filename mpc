@@ -62,3 +62,10 @@ mpc sticker path/to/dir find rating
 
 # valid search queries
 mpc find  <any|Artist|Album|AlbumArtist|Title|Track|Name|Genre|Date|Composer|Performer|Comment|Disc|MUSICBRAINZ_ARTISTID|MUSICBRAINZ_ALBUMID|MUSICBRAINZ_ALBUMARTISTID|MUSICBRAINZ_TRACKID|MUSICBRAINZ_RELEASETRACKID|OriginalDate|ArtistSort|AlbumArtistSort|AlbumSort|Label|MUSICBRAINZ_WORKID|Grouping|Work|Conductor|ComposerSort|Ensemble|Movement|MovementNumber|Location|Mood|TitleSort|MUSICBRAINZ_RELEASEGROUPID>
+
+# combine multiple criteria
+mpc find "((Genre == \"Malayalam\") AND (Date == \"2000\"))"
+
+# add all recenly added songs
+# cd to Music directory
+find . -type f -mtime -1  | awk '{ sub(/^\.\//, ""); print }' | mpc add

@@ -159,6 +159,8 @@ C\texttt{++}
 \pm
 # hat or cap
 \hat{a}
+# arcsec
+\arcsec
 
 # put citation inside caption
 \protect \cite{citekey}

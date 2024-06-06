@@ -156,6 +156,7 @@ duplicates = df1[df1.duplicated(subset='key')]
 pd.DataFrame(listname)
 
 # save latex code to tex file
+# \usepackage{booktabs}
 # might have to install the following for longtable support for tables that extend over pages
 pip install Jinja2
 df.to_latex(buf="path/to/save", longtable=True, index=False)
@@ -184,3 +185,13 @@ df.reset_index(names=['newindex'])
 
 # using pandas df.apply
 df.apply(lambda x: os.path.basename(x['first_filenames']), axis=1)
+
+# drop rows bases on criteria
+# Identify the index of rows that meet the criteria
+index_to_drop = df[criteria].index
+
+# Drop the rows
+df = df.drop(index_to_drop)
+
+# (Optional) Reset the index
+df = df.reset_index(drop=True)

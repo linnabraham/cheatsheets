@@ -33,6 +33,7 @@ git reset
 # create a  new tag
 # git pull remote branch
 git tag <tagname>
+git tag <tagname> commit-hash
 
 # push tags
 git push --tags
