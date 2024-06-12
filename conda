@@ -100,3 +100,6 @@ conda remove packagename
 
 # conda upgrade a package
 conda update wandb
+
+# create a requirements file from conda env
+conda list -e > requirements. txt

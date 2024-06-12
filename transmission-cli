@@ -20,10 +20,14 @@ kill -s SIGHUP $(pidof transmission-daemon)
 transmission-remote -t tid -i # where id is shown using -l command
 
 # remove torrent
-transmission-remote -t tid -r
+transmission-remote -t tid1, tid2 -r
 
 # remove and delete local files
 transmission-remote -t tid -rad
 
 # download directory config parameter
  --download-dir
+
+# see which config is being used
+transmission-daemon --dump-settings
+

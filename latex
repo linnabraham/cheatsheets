@@ -160,7 +160,9 @@ C\texttt{++}
 # hat or cap
 \hat{a}
 # arcsec
-\arcsec
+\arcsec # this comes from some package
+
+# in math mode you can just use '' and this will translate to the arcsec symbol
 
 # put citation inside caption
 \protect \cite{citekey}

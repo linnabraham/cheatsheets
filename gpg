@@ -58,3 +58,7 @@ gpg --encrypt --recipient 12345678 <file to encrypt>
 
 # import gpg secret key on another machine
 gpg --import private.gpg
+
+# gpg folder permissions
+# By default, the gpg home directory has its permissions set to 700 
+# and the files it contains have their permissions set to 600

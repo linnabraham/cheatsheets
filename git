@@ -38,6 +38,9 @@ git tag <tagname> commit-hash
 # push tags
 git push --tags
 
+# delete tag
+git tag -d tag-name
+
 # compare local changes with remote after fetch
 git diff master origin/master
 

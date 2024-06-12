@@ -23,3 +23,8 @@ from sklearn.model_selection import StratifiedKFold
 from skimage.util import montage
 # where image_arrays is a 3D or 4D numpy array
 im_montage = montage(image_arrays, channel_axis=-1)
+
+# confusion matrix
+from sklearn.metrics import confusion_matrix
+tn, fp, fn, tp = confusion_matrix([0, 1, 0, 1], [1, 1, 1, 0]).ravel()
+
