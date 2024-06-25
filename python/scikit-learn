@@ -28,3 +28,6 @@ im_montage = montage(image_arrays, channel_axis=-1)
 from sklearn.metrics import confusion_matrix
 tn, fp, fn, tp = confusion_matrix([0, 1, 0, 1], [1, 1, 1, 0]).ravel()
 
+# use precision and recall scores from scikit-learn
+from sklearn.metrics import precision_score, recall_score
+

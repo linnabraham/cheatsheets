@@ -254,6 +254,9 @@ unique_id = str(uuid.uuid4())[:8]
 # list comprehension
 [print('hi') for filename in files if 'disp' in filename]
 
+# list comprehension with if else
+[ 1 if pred_score > 0.5 else 0 for pred_score in pred_scores ] 
+
 # use the inspect module for seeing the source code
 python -m inspect torchvision.models.alexnet
 

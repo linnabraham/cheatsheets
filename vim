@@ -337,3 +337,8 @@ noremap! <C-h> <C-w>
 
 # edit remote file directly
 vim /path/to/local/file  scp://remote//path/to/remote/file  -O
+
+# navigate to the previous location
+ctrl-o
+
+# replace using r doesnt work reliably in visual selection use :s//

@@ -20,3 +20,8 @@ killall dunst
 
 # specify time out for notifications in milliseconds
 -t 10000
+
+# use notification id
+notification_id=$(notify-send -t 3000 "No events scheduled for Today" -p)
+notify-send -r $notification_id -t 30000 "Events in 3 days" "$(khal --no-color list --day-format "" --once --format "{start-date} {title}" tomorrow 2d)"
+

@@ -19,3 +19,6 @@ makepkg -g # cd to folder containing PKGBUILD
 
 # skip checking cheksums when installing with paru
 --mflags --noextract
+
+# Force the build process, even if the source files are already present.
+-f 

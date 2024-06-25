@@ -103,3 +103,6 @@ Alt + w to paste
 
 # directly enter into a tmux session from ssh
 ssh remote -t "tmux a -t sessname"
+
+# source the bashrc
+set-option default-command "/bin/bash"

@@ -386,3 +386,30 @@ git restore --staged .
 
 # git log in oneline with date information
 git log --pretty=format:"%h %ad %s" --date=short
+
+# with coloring etc.
+git log --pretty=format:"%C(auto)%h%C(reset) %ad %C(auto)%d%C(reset) %s" --date=format:"%b %d, %Y"
+
+# undo a git reset 
+git reset ORIG_HEAD
+
+# see all stash
+git stash list
+
+# see contents in a stash
+git stash show stash@{0}
+
+# show diff between the stashed state and its original parent
+git stash show -p
+
+# see individual file changes from the stash
+git diff stash@{0}^! -- /path/to/file
+
+# save the version of file in the stash with different name
+git show stash@{0}:/path/to/file
+
+# drop the stash
+git stash drop stash@{0}
+
+# save the version in shown in git status
+git show :/path/to/file > new/path/to/file

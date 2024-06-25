@@ -7,3 +7,18 @@ hugo -D
 
 # run the website locally
 hugo server
+
+# configuration file
+hugo.toml
+
+# to disable HTTP caching
+--noHTTPCache
+
+# to clean destination directory
+--cleanDestinationDir
+
+# disable fast render
+--disableFastRender
+
+# Link to an internal page in markdown ref:https://gohugo.io/content-management/cross-references/
+[About]({{< ref "/about" >}} "About Us")

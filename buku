@@ -24,3 +24,6 @@ buku --np
 
 # prevent buku asking for input
 the nostd in parameter has to come before other parameters to work perfectly in all situations
+
+# run bukuserver
+bukuserver run --host 127.0.0.1 --port 5001

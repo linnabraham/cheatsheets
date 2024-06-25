@@ -1,3 +1,6 @@
+# package to install
+pillow
+
 # Invert an image
 from PIL import Image, ImageChops
 
