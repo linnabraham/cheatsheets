@@ -143,3 +143,6 @@ matplotlib.use('Qt5Agg')  # Or any other X11 back-end
 
 # using camera to capture animation
 from celluloid import Camera
+
+# fix for colarbar doesn't match size of image or subplot
+plt.colorbar(shrink=0.5)
