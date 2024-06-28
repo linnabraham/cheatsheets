@@ -267,3 +267,6 @@ last_four_indexes = my_string[-4:]
 
 # floor operator in python
 //
+
+# using assert and isinstance
+assert isinstance(key, str)
