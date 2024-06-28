@@ -6,7 +6,7 @@ or tasks they need not be saved. But for things we might need to do repeatedly a
 efforts become useful. I have a lot of such information stored in executable scripts. But if I want to use them in other scenarious I would have to 
 decipher my own scripts and make them reusable. 
 
-This repository can be used in conjuction with the `cheat` command in linux. This program is very minimal but useful. The program comes with its own
+This repository can be used in conjuction with the [`cheat`](https://github.com/cheat/cheat) command in linux. This program is very minimal but useful. The program comes with its own
 community generated cheatsheets to which users can add their own cheatsheets. Which is precisely what I have done in this repo. 
 
 This repo contains my notes and documentation of various programs that I use on Linux. Additionally it might also contain other helpful information 
