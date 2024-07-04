@@ -37,9 +37,6 @@ grep -a "pattern" *.epub
 # list only filenames that match
 grep -l
 
-# suppress binary file matches
--I
-
 # match digit
 [[:digit:]]
 

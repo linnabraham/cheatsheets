@@ -103,3 +103,8 @@ conda update wandb
 
 # create a requirements file from conda env
 conda list -e > requirements. txt
+
+# set verbosity
+# 0 is warn. 1 is info. 2 is debug. 3 is trace
+conda config --describe verbosity
+conda config --set verbosity 2

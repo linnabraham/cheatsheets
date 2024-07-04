@@ -157,3 +157,6 @@ To handle filenames that start with a hyphen, you can use the double dash (--) t
 
 # capture error output to variable
 errors=$(ls non-existent-file 2>&1) 
+
+# Shell only exits after the 10th consecutive Ctrl-d
+set -o ignoreeof

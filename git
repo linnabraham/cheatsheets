@@ -140,12 +140,6 @@ config ls-remote --heads origin
 # sometimes the branch may not be listed but you can just use
 git checkout <branch-on-remote>
 
-# stash
-git stash
-
-# git stash reapply
-git stash pop
-
 # unstage all changes or undo all staged files at once
 git reset
 
@@ -393,6 +387,15 @@ git log --pretty=format:"%C(auto)%h%C(reset) %ad %C(auto)%d%C(reset) %s" --date=
 # undo a git reset 
 git reset ORIG_HEAD
 
+# stash
+git stash
+
+# save individual file to stash
+git stash -m "message" -- path/to/file
+
+# git stash reapply
+git stash pop
+
 # see all stash
 git stash list
 
@@ -413,3 +416,9 @@ git stash drop stash@{0}
 
 # save the version in shown in git status
 git show :/path/to/file > new/path/to/file
+
+# you forgot to add something in your last commit
+git commit --amend --no-edit
+
+# restore with patch
+git restore -p
