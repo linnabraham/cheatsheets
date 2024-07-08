@@ -1,2 +1,6 @@
 # don't open a browser
 --no_browser
+
+# run carta on remote server with public ip
+# specify the local ip
+--host=
