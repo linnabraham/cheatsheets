@@ -108,3 +108,6 @@ conda list -e > requirements. txt
 # 0 is warn. 1 is info. 2 is debug. 3 is trace
 conda config --describe verbosity
 conda config --set verbosity 2
+
+# history of your environment
+inside the conda-meta directory in  your environment directory

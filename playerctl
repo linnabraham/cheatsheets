@@ -1,0 +1,9 @@
+# show playing music title
+playerctl metadata title
+
+# control tracks
+playerctl next
+playerctl previous
+
+# show all players
+playerctl --list-all # same as playerctl -l

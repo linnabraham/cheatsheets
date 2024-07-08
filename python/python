@@ -270,3 +270,7 @@ last_four_indexes = my_string[-4:]
 
 # using assert and isinstance
 assert isinstance(key, str)
+
+# requirements.txt format
+docopt == 0.6.1
+

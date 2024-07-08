@@ -422,3 +422,21 @@ git commit --amend --no-edit
 
 # restore with patch
 git restore -p
+
+# use reflog to find commit or HEAD number
+git reflog
+git reset --hard HEAD@{1}
+
+# local git configuration
+git config user.email "email-id"
+git config user.name "username"
+
+# Do a fast-forward merge but create a merge commit if not possible
+git pull --ff
+
+# Abort if a fast-forward merge is not possible
+git pull --ff-only
+
+# prevent git config holding sensitive information
+[include]
+        path = ~/.gitconfig.local
