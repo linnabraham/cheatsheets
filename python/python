@@ -274,3 +274,5 @@ assert isinstance(key, str)
 # requirements.txt format
 docopt == 0.6.1
 
+# tabs or spaces
+spaces (4) according to PEP-8
