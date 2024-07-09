@@ -18,3 +18,5 @@ ipython kernel install --user --name=<name>
 # refresh the page if showing a blank page
 Ctrl + shift + r
 
+# specify ip to run on
+--ip=local-ip

@@ -6,13 +6,18 @@ pip install dvc dvc[s3]
 # some times boto should be added additionally.
 pip instal boto
 
-# Step 1: add data
-dvc add filepaths
+# Step 1: initialize DVC
+dvc init
 
-# Step 2: git commit the .dvc files and .gitignores
-git add .dvc .gitignore
+# Step 2: DVC stages some files and you just need to commit it
+git commit -m "Initialize DVC"
+
+# Step 3: add data
+dvc add path/to/data
+git add path/to/data.dvc path/to/.gitignore
 git commit -m "added data to storage"
 git push
 
-# Step 3: push to dvc
+# Step 4(optional): if you use remote storage
+# push to dvc
 dvc push
