@@ -1,0 +1,6 @@
+#patch using diff file
+patch < patchfile.diff
+
+# reverse patch
+patch -R < patchfile.diff
+
