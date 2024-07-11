@@ -1,0 +1,30 @@
+# make reload changes
+openbox --reconfigure
+
+# to regenerate and force rewrite the openbox menu.xml file
+mmaker -v OpenBox3 -f
+
+# Open the desktop switching dialog, to go to the desktop to the right of the current one, and bring the active window with you
+Shift + Alt + Right arrow
+
+#  Lower the active window behind other windows, and activate the last window that was in use
+Alt + Esc
+
+# get names of windows to use in openbox config
+obxprop | less
+
+# add the following udev rule to /etc/udev/rules.d/backlight.rules
+ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"
+
+# Use alt-tab to swtich to applications in all workspaces
+<keybind key="C-A-Tab">
+  <action name="NextWindow">
+    <allDesktops>yes</allDesktops>
+  </action>
+</keybind>
+
+# Use mod+left or mod+right to snap windows to left or right or middle
+
+# lock screen
+Lock button in the lxsession-logout menu uses the /usr/bin/lxlock script
+which checks for many common utilities and runs them if it finds they are installed
