@@ -1,0 +1,23 @@
+# make rclone verbose
+rclone -vv
+
+# sync
+rclone sync -i source remote:DESTINATION
+
+#eg: to copy to google drive saved with name pdrive
+rclone sync -i moosic/fixed pdrive:music --auto-confirm
+
+# dry run
+--dry-run
+
+# skip confirmation msgs
+--auto-confirm
+
+# show existing remotes
+rclone listremotes
+
+# list files
+rclone ls gdrive:
+
+# the i flag is for interactivity and is recommended to prevent data loss
+-i
