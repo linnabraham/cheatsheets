@@ -1,0 +1,8 @@
+# Take screenshot of itself
+Alt + S
+
+# Make dmenu mode case insensitive
+rofi -dmenu -i
+
+# rofi calculator
+rofi -show calc -modi calc -no-show-match -no-sort
