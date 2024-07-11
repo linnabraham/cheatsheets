@@ -1,0 +1,7 @@
+# run as root
+# To know the status of your disk
+smartctl -a /dev/sdc
+
+# To run a self test in long mode in the background
+smartctl -t long /dev/sdc
+
