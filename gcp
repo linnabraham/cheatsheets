@@ -1,0 +1,5 @@
+ # mount google cloud storage bucket
+ gcsfuse nimbus21 /mnt
+
+# unmount gc storage bucket
+ fusermount -u /path/to/mount
