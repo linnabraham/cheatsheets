@@ -1,0 +1,2 @@
+# format from command line
+mkfs.ext4 /dev/partition
