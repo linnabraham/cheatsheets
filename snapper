@@ -1,0 +1,23 @@
+# initialize config
+sudo snapper -c home create-config /home
+
+# list snapshots
+sudo snapper -c home list
+
+# send snapper snapshot incrementally to external hdd
+# first make a directory with the proper id number
+# note that the parent snapshot should exist at both the source and destination
+# Doas does not work currently unless configured ; please use \sudo
+sudo btrfs send -p 188/snapshot 264/snapshot/ | sudo btrfs receive /path/to/external-hdd/mirrored_backups/202309 -v
+
+# copy the snapshot metadata back into the folder
+sudo cp 264/info.xml /run/media/linn/f2f6aee1-80e0-4be6-ae28-bca87703f36b/mirrored_backups/202309
+
+# delete and sync snapshots to make space
+sudo snapper -c home delete --sync 125-187
+
+# create snapshot using snapper
+sudo snapper -c home create -d "Monthly backup for June"
+
+# sending snapshot to external drive
+sudo btrfs send /.snapshots/home-day1 | sudo btrfs receive /run/media/user/mydisk/bk
