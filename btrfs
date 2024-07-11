@@ -1,0 +1,69 @@
+# reference
+https://btrfs.wiki.kernel.org/index.php/Manpage/btrfs(5)
+
+
+# create a partitioning structure
+btrfs su cr /mnt/@
+btrfs su cr /mnt/@home
+btrfs su cr /mnt/@var
+btrfs su cr /mnt/@opt
+btrfs su cr /mnt/@tmp
+btrfs su cr /mnt/@.snapshots
+
+# mount options in fstab for home, opt, tmp, .snapshots
+mount -o noatime,commit=120,compress=zstd,subvol=@home /dev/sda3 /mnt/home
+
+# for var
+mount -o subvol=@var /dev/sda3 /mnt/var
+
+# progs to install
+btrfs-progs
+
+# taking readonly snapshots
+sudo btrfs subvolume snapshot -r /home /.snapshots/home-day1
+
+# disk free
+sudo btrfs fi show
+
+# disk info
+sudo btrfs fi df /
+
+# disk usage
+sudo btrfs fi du /
+
+#List Subvolumes based on mountpoint
+sudo btrfs subv list /home
+
+#Mount Subvolume
+sudo mount -o subvolid=267 /dev/sda1 /media/games
+
+# or add this to fstab
+UUID=IDGOESHERE /media/games rw,exec,subvolid=267 0 0
+
+#  after a successfull reboot and rollback
+sudo btrfs subv delete /home # delete the old home
+sudo btrfs subv snapshot /home/.snapshots/2020-01-13 /home # convert the good snapshot to home
+
+# see more info about a snapshot
+sudo btrfs subvolume show /data/.snapshots/web1-2020-12-25
+
+# delete any snapshot
+sudo btrfs subvolume delete /mnt/data/@some_dir-snapshot-test
+
+# send an incremental snapshot to a network location using ssh
+\sudo btrfs send -p /mnt/pool/volumes/home/.snapshots/home_2023.02.19-15.01.01 /mnt/pool/volumes/home/.snapshots/home_2023.02.25-22.01.01 | ssh user@localip "\sudo -S btrfs receive /run/media/user/uuid/backups -v"
+
+# fix issue with no space left due to btrfs metadata usage above 75 pc
+# useful to delete some of the existing backups
+btrfs balance start -dusage=1 /
+
+# see disk usage of snapshots
+# move into the folder containing snapshots
+sudo btrfs fi du -s *
+
+# umount btrfs volume
+sudo umount /path/to/your/subvolume
+
+# disable cow for single directory or file
+# make sure the directory is empty ; only new files will be affected
+chattr +C /dir/file
