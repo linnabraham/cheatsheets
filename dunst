@@ -25,3 +25,10 @@ killall dunst
 notification_id=$(notify-send -t 3000 "No events scheduled for Today" -p)
 notify-send -r $notification_id -t 30000 "Events in 3 days" "$(khal --no-color list --day-format "" --once --format "{start-date} {title}" tomorrow 2d)"
 
+# To send a desktop notification via dbus:
+notify-send -i 'icon-file/name' -a 'application_name' 'summary' 'body of message'
+
+# The -i and -a flags can be omitted if unneeded.
+
+# Make notification stay until dismissed
+-t 0
