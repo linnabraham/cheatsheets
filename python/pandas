@@ -195,3 +195,6 @@ df = df.drop(index_to_drop)
 
 # (Optional) Reset the index
 df = df.reset_index(drop=True)
+
+# replace placeholder data with nan to get proper statistics
+df.replace(-999999, np.nan, inplace=True)
