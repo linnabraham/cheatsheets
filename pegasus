@@ -1,0 +1,22 @@
+# submit an interactive job
+qsub -I -l select=1:ncpus=32:host=gpu003 -lwalltime=48:00:00
+
+# status of all resources
+sinfo
+
+pbsnodes -aSj
+
+# job status
+qstat -ans
+
+# submit job
+qsub cluster_job.s
+
+# job status of particular job
+qstat <jobid>
+
+# delete job
+qdel <jobid>
+
+# access graphics1 node directly with X forwarding
+ssh -X <username>@192.168.11.236

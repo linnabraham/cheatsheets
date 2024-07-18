@@ -1,0 +1,14 @@
+##UUID=6AB62E27B62DF46B   /mnt/sda5       ntfs            rw,nosuid,nodev,nofail,uid=0,gid=0,allow_other,blksize=4096   0 0
+
+# The 6th column is the fsck option.
+
+    0 — do not check.
+    1 — first file system (partition) to check; / (root partition) should be set to 1.
+    2 — all other file systems to be checked.
+
+# To mount path as normal user on non-ext file systems
+uid=<user_id>
+gid=<group_id>
+
+# when  using the noauto option you can manually mount using
+mount </dev/sdXy> or mount <mountpoint>

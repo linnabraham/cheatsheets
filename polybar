@@ -1,0 +1,15 @@
+# reload polybar
+polybar -r <bar_name>
+
+# Huge Emojis Problem: When using the Noto Emoji font, Emojis appear extremely big on the bar. Setting the size property doesn't help.
+# This issue was discovered in #905.
+Fix: Add the scale property to the font definition in your config. For example font-7 = NotoEmoji:scale=10. The larger the number the smaller the Emojis.
+
+# font issue with fontawesome https://github.com/polybar/polybar/issues/924
+
+# hide polybar on startup
+xdo has the -m flag which will wait for a window to be created before doing something. adding
+
+polybar somebar&
+(xdo id -m -N Polybar && polybar-msg cmd hide)&
+

@@ -1,0 +1,5 @@
+# list
+rfkill list
+
+# unblock bluetooth
+rfkill unblock bluetooth

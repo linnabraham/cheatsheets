@@ -1,0 +1,2 @@
+# to fix permission issues
+sudo openvpn client.ovpn
