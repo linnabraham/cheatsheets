@@ -3,3 +3,6 @@ tag does not contain %
 
 # fix for theme issue in zotero desktop file
 Exec=env GTK_THEME=Arc /usr/bin/zotero -url %U
+
+# show collection an item is part of
+select the item and then hold down the Option key (macOS), Control key (Windows), or Alt key (Linux)

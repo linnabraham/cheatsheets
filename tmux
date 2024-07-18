@@ -106,3 +106,6 @@ ssh remote -t "tmux a -t sessname"
 
 # source the bashrc
 set-option default-command "/bin/bash"
+
+# see tmux version
+-V

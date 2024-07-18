@@ -160,3 +160,7 @@ errors=$(ls non-existent-file 2>&1)
 
 # Shell only exits after the 10th consecutive Ctrl-d
 set -o ignoreeof
+
+# history
+HISTSIZE: This variable sets the number of commands to remember in the command history
+HISTFILESIZE: This variable sets the maximum number of lines contained in the history file
