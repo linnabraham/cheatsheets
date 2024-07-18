@@ -13,23 +13,6 @@ git remote rm origin
 # cache credentials
 git config credential.helper "cache --timeout=3600"
 
-# git branch operations
--m
---move
-
-    Move/rename a branch and the corresponding reflog.
--M
-
-    Shortcut for --move --force
-
-# combine last three git commits into one
-git reset --soft HEAD~3
-git commit -m "msg"
-git push -f
-
-# abanded unwanted merge
-git reset
-
 # create a  new tag
 # git pull remote branch
 git tag <tagname>
@@ -44,35 +27,12 @@ git tag -d tag-name
 # compare local changes with remote after fetch
 git diff master origin/master
 
-# after fixing conflicts
+# avoid merge conflicts while pulling
 git pull --rebase
 git push
 
 # to checkout the remote branch
 git checkout <remote branch name>
-
-# this will switch to a new branch locally
-git checkout -b <branch name>
-
-# rename local and remote branch
-# Step 1: Rename the local branch to the new name
-git branch -m <old_name> <new_name>
-
-# Step 2: Delete the old branch on remote - where <remote> is, for example, origin
-git push <remote> --delete <old_name>
-
-# Or shorter way to delete remote branch [:]
-git push <remote> :<old_name>
-
-# Step 3: Prevent git from using the old name when pushing in the next step.
-# Otherwise, git will use the old upstream name instead of <new_name>.
-git branch --unset-upstream <new_name>
-
-# Step 4: Push the new branch to remote
-git push <remote> <new_name>
-
-# Step 5: Reset the upstream branch for the new_name local branch
-git push <remote> -u <new_name>
 
 # Delete local branch
 git branch -d <local-branch-name>
@@ -141,10 +101,8 @@ config ls-remote --heads origin
 git checkout <branch-on-remote>
 
 # unstage all changes or undo all staged files at once
+# or abanded unwanted merge
 git reset
-
-# pull branch not existing locally (shown in git branch output)
-git checkout -b branchname
 
 # view difference between a file in two different branches
 git diff branch1 branch2 -- /path/to/file
@@ -159,21 +117,11 @@ git log --oneline --graph --all --decorate --abbrev-commit
 # for filtering modified files
 --diff-filter=M
 
-# To fix if you accidently commit big file to git
-# if it was the most recent commit
-git rm --cached big/file/path
-git commit --amend -C HEAD
-# else find the commit hash of the last good commit - before the commit where added this file
-git rebase -i <commit-hash>
-# change the `pick` keyword to `edit` for the bad commit
-# write and exit and proceed using the first method - as if adding the file was the most recent commit
-# create a backup for safety reasons
---allow-empty # use if needed
-
 # undo latest git commit
 git reset HEAD~  # uses --soft by default
 
 # by using the --soft option you can keep the modifications in your Working Directory
+
 # To discard the changes in the working directory as well
 git reset --hard HEAD~
 
@@ -181,11 +129,11 @@ git reset --hard HEAD~
 git checkout master
 git diff feature
 
-# zip files indexed by git
-git archive --format zip --output /full/path/to/zipfile.zip master # from the root of the git directory
-
 # clone git repo using app password
 git clone https://oauth-key-goes-here@github.com/username/repo.git
+
+# cloning git repo with PAT or personal access token
+git clone https://ghp_ThisIsThePersonalAccessTokenxxxxxxxx@github.com/username/reponame
 
 # get number of commits made sorted by author
 git shortlog -s
@@ -198,9 +146,6 @@ ssh-add -L # list keys
 # see only word diff
 git diff --word-diff
 
-# ignore chmod changes mode
-git config core.fileMode false
-
 # To undo git add before a commit, run
 git reset <file>
 git reset #  to unstage all changes
@@ -210,13 +155,6 @@ git config --get remote.origin.url
 
 # see details associated with git repo
 git config --list
-
-# fix for git push failed error
-# https://stackoverflow.com/questions/38378914/how-to-fix-git-error-rpc-failed-curl-56-gnutls
-git config --global http.postBuffer 1048576000
-
-# cloning git repo with PAT or personal access token
-git clone https://ghp_ThisIsThePersonalAccessTokenxxxxxxxx@github.com/username/reponame
 
 # create a branch without any previous commit history
 git checkout --orphan <branchname>
@@ -440,3 +378,67 @@ git pull --ff-only
 # prevent git config holding sensitive information
 [include]
         path = ~/.gitconfig.local
+
+# reverse the usual order of the diff
+diff -R
+
+########################
+ADVANCED
+########################
+
+# git branch operations
+-m
+--move
+
+    Move/rename a branch and the corresponding reflog.
+-M
+
+    Shortcut for --move --force
+
+# combine last three git commits into one
+git reset --soft HEAD~3
+git commit -m "msg"
+git push -f
+
+# rename local and remote branch
+# Step 1: Rename the local branch to the new name
+git branch -m <old_name> <new_name>
+
+# Step 2: Delete the old branch on remote - where <remote> is, for example, origin
+git push <remote> --delete <old_name>
+
+# Or shorter way to delete remote branch [:]
+git push <remote> :<old_name>
+
+# Step 3: Prevent git from using the old name when pushing in the next step.
+# Otherwise, git will use the old upstream name instead of <new_name>.
+git branch --unset-upstream <new_name>
+
+# Step 4: Push the new branch to remote
+git push <remote> <new_name>
+
+# Step 5: Reset the upstream branch for the new_name local branch
+git push <remote> -u <new_name>
+
+# To fix if you accidently commit big file to git
+# if it was the most recent commit
+git rm --cached big/file/path
+git commit --amend -C HEAD
+# else find the commit hash of the last good commit - before the commit where added this file
+git rebase -i <commit-hash>
+# change the `pick` keyword to `edit` for the bad commit
+# write and exit and proceed using the first method - as if adding the file was the most recent commit
+# create a backup for safety reasons
+--allow-empty # use if needed
+
+# zip files indexed by git
+git archive --format zip --output /full/path/to/zipfile.zip master # from the root of the git directory
+
+# ignore chmod changes mode
+git config core.fileMode false
+
+# fix for git push failed error
+# https://stackoverflow.com/questions/38378914/how-to-fix-git-error-rpc-failed-curl-56-gnutls
+git config --global http.postBuffer 1048576000
+
+
