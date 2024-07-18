@@ -198,3 +198,9 @@ df = df.reset_index(drop=True)
 
 # replace placeholder data with nan to get proper statistics
 df.replace(-999999, np.nan, inplace=True)
+
+# round to two decimal places
+pd.options.display.float_format = '{:.2f}'.format
+
+# select string datatype
+Pass ``string`` or pd.StringDtype() to dtype parameter

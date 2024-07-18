@@ -6,6 +6,8 @@ pip install dvc dvc[s3]
 # some times boto should be added additionally.
 pip instal boto
 
+# install using conda
+conda install -c conda-forge dvc
 # Step 1: initialize DVC
 dvc init
 
@@ -21,3 +23,9 @@ git push
 # Step 4(optional): if you use remote storage
 # push to dvc
 dvc push
+
+# see status
+dvc status
+
+# checkout the version of data from last commit
+dvc checkout

@@ -110,6 +110,9 @@ done
 when used with commands the second one executes only if the previous command was successful
 || - OR
 
+# example usage OR
+if [ "$next_ws" -eq 9 ] || [ "$next_ws" -eq 10 ];
+
 # remove alias
 unalias myalias
 

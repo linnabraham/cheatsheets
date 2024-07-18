@@ -441,4 +441,10 @@ git config core.fileMode false
 # https://stackoverflow.com/questions/38378914/how-to-fix-git-error-rpc-failed-curl-56-gnutls
 git config --global http.postBuffer 1048576000
 
+# To stash your working directory including untracked files
+# (especially those that are in the .gitignore)
+git stash -u
 
+# Abort a stash pop
+# Note: This will discard any staged changes
+git reset --merge
