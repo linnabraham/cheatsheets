@@ -342,3 +342,6 @@ vim /path/to/local/file  scp://remote//path/to/remote/file  -O
 ctrl-o
 
 # replace using r doesnt work reliably in visual selection use :s//
+
+# delete entire word ignoring characters like hyphens
+df<space>

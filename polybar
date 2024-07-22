@@ -1,4 +1,4 @@
-# reload polybar
+# reload polybar when configuration is changed
 polybar -r <bar_name>
 
 # Huge Emojis Problem: When using the Noto Emoji font, Emojis appear extremely big on the bar. Setting the size property doesn't help.

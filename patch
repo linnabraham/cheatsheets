@@ -4,3 +4,7 @@ patch < patchfile.diff
 # reverse patch
 patch -R < patchfile.diff
 
+# specify strip level
+The strip level indicates how many leading components of the file paths in the patch file should be removed.
+patch -p1 < patchfile.diff
+

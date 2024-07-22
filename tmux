@@ -109,3 +109,6 @@ set-option default-command "/bin/bash"
 
 # see tmux version
 -V
+
+# attach to last detached session
+tmux a
