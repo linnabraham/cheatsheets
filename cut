@@ -1,0 +1,2 @@
+# truncate sentence to first 5 words
+cut -d' ' -f1-5
