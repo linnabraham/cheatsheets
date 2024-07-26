@@ -17,3 +17,5 @@ files.download("file_name")
 !zip -r /content/file.zip /content/Folder_To_Zip
 from google.colab import files files.download("/content/file.zip")
 
+# magic to write cell as file
+%%writefile filename.py

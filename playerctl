@@ -7,3 +7,6 @@ playerctl previous
 
 # show all players
 playerctl --list-all # same as playerctl -l
+
+# prefer a particular client
+playerctl --player=vlc,%any play

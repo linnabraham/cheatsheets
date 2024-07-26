@@ -113,6 +113,9 @@ git log --oneline --graph --decorate --abbrev-commit branch1..branch2
 # try this also 
 git log --oneline --graph --all --decorate --abbrev-commit
 
+# see git log for specific branches
+git log --oneline --graph branch1 branch2
+
 # Filter git diff by type of change
 # for filtering modified files
 --diff-filter=M

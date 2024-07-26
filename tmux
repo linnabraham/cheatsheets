@@ -112,3 +112,6 @@ set-option default-command "/bin/bash"
 
 # attach to last detached session
 tmux a
+
+# copy with mouse enabled
+click shift while selecting

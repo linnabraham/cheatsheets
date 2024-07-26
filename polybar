@@ -13,3 +13,12 @@ xdo has the -m flag which will wait for a window to be created before doing some
 polybar somebar&
 (xdo id -m -N Polybar && polybar-msg cmd hide)&
 
+# Mouse action codes
+1: left click
+2: middle click
+3: right click
+4: scroll up
+5: scroll down
+6: double left click
+7: double middle click
+8: double right click

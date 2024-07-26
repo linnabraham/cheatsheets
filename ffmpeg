@@ -14,7 +14,7 @@ ffmpeg -f v4l2 -i /dev/video0 -map 0 -c:v libx264 -f tee "output.mp4|[f=nut]pipe
 # crop video uisng timestamps
 ffmpeg -i input.mp4 -ss 00:00:00 -to 00:17:18.433 -c copy out.mp4
 
-# merge videos ; create a textfile in the following format
+# merge audio or video ; create a textfile in the following format
 # file '/path/to/vid1.mp4'
 # file '/path/to/vid2.mp4'
 ffmpeg -f concat -safe 0 -i inpfile.txt -codec copy outfinal.mp4
