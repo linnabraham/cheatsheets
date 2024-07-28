@@ -9,3 +9,8 @@ select the item and then hold down the Option key (macOS), Control key (Windows)
 
 # tag multiple items at once
 select the items and drag to the tags list and drop on the particular tag
+
+# install the latest beta version for Zotero 7
+paru -G zotero-beta-bin
+# run the update script to update the PKGBUILD
+makepkg -si --skipinteg --skippgpcheck --noextract
