@@ -9,3 +9,9 @@ ip route get 1.2.3.4 | awk '{print $7}'
 
 # get mac id
 ip link | awk -F': ' '/state UP/ {print $2}' | sed 's/:.*//' | xargs -I {} sh -c "echo {}; ip link show {} | awk '/ether/ {print \$2}'"
+
+# disable interface
+sudo ip link set eno1 down
+
+# enable interface
+sudo ip link set eno1 up
