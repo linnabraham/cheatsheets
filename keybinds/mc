@@ -1,0 +1,9 @@
+# make hidden files invisible in midnight commander mc 
+esc + . 
+alt + .
+
+# select files
+Ctrl + t
+
+# search files
+C-s or Alt-s
