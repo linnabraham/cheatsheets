@@ -6,6 +6,7 @@ Exec=env GTK_THEME=Arc /usr/bin/zotero -url %U
 
 # show collection an item is part of
 select the item and then hold down the Option key (macOS), Control key (Windows), or Alt key (Linux)
+- this has changed to ctrl in Zotero 7
 
 # tag multiple items at once
 select the items and drag to the tags list and drop on the particular tag

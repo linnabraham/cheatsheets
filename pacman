@@ -54,7 +54,7 @@ pacman -Qs "(intel-media|libva|xf86-video)"
 # To remove packages that do not depend on others
 sudo pacman -Rns $(pacman -Qdtq)
 
-# install from pkg list
+# install from pkg list text file
 sudo pacman -S - < list_to_install
 
 # mark a package as a dependency when reinstalling

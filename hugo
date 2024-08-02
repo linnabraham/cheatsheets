@@ -22,3 +22,7 @@ hugo.toml
 
 # Link to an internal page in markdown ref:https://gohugo.io/content-management/cross-references/
 [About]({{< ref "/about" >}} "About Us")
+
+# insert latex in markdown
+for inline latex enclose latex using
+\( .. \)

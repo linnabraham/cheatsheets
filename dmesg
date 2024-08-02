@@ -1,5 +1,5 @@
 # see error msgs
-dmesg --level=err
+sudo dmesg --level=err
 
 # open in watch mode
-dmesg -w
+sudo dmesg -w
