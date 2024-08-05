@@ -106,9 +106,12 @@ do
 done
 
 # logical operators
-&& - and
-when used with commands the second one executes only if the previous command was successful
-|| - OR
+# logical and
+&&
+ - when used with commands the second one executes only if the previous command was successful
+
+# logical or
+||
 
 # example usage OR
 if [ "$next_ws" -eq 9 ] || [ "$next_ws" -eq 10 ];
@@ -167,3 +170,6 @@ set -o ignoreeof
 # history
 HISTSIZE: This variable sets the number of commands to remember in the command history
 HISTFILESIZE: This variable sets the maximum number of lines contained in the history file
+
+# check if file exists
+[ -e "$p" ]

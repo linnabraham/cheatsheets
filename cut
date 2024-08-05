@@ -1,2 +1,8 @@
 # truncate sentence to first 5 words
 cut -d' ' -f1-5
+
+# cut on tab character
+cut -d$'\t' filename.txt
+
+# select multiple columns
+cut -d' ' -f 1,3

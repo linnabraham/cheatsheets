@@ -25,3 +25,6 @@ makepkg -g # cd to folder containing PKGBUILD
 
 # Only download PKGBUILD don't install
 paru -G # or paru --getpkg
+
+# install already built package
+makepkg -i or pacman -U 
