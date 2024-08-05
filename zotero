@@ -13,5 +13,20 @@ select the items and drag to the tags list and drop on the particular tag
 
 # install the latest beta version for Zotero 7
 paru -G zotero-beta-bin
+
 # run the update script to update the PKGBUILD
 makepkg -si --skipinteg --skippgpcheck --noextract
+
+# tag attachment files stored in zotero storage with a name using tmsu
+
+# STEP 1: sqlite query to obtain attachment filename and unique key which is used to stored each pdf file
+select itemAttachments.itemID, quote(itemAttachments.path), items.key, itemAttachments.parentItemID, collections.collectionName, collections.libraryID from itemAttachments
+inner join items on items.itemID = itemAttachments.itemID
+inner join collectionItems on itemAttachments.parentItemID = collectionItems.itemID 
+inner join collections on collectionItems.collectionID = collections.collectionID
+where collections.collectionName = 'Books' and collections.libraryID
+
+# STEP 2: Save output as tsv since csv might be problematic later since filenames might have commas
+
+# STEP 3: Prefix the key to the filename returned
+awk -F'\t' '{gsub(/storage:/, "storage/" $2 "/"); print $1}' output_file.tsv > modified_output_file.tsv
