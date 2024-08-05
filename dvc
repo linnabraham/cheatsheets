@@ -30,5 +30,5 @@ dvc status
 # checkout the version of data from last commit
 dvc checkout
 
-# list file tracked by dvc
-dvc ls --dvc-only
+# list file tracked by dvc in current directory
+dvc list --dvc-only . 
