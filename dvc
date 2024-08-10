@@ -32,3 +32,6 @@ dvc checkout
 
 # list file tracked by dvc in current directory
 dvc list --dvc-only . 
+
+# compute the hash for a directory
+dvc-data build /path/to/dir

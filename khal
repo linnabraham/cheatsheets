@@ -1,5 +1,9 @@
 # To add new event
 khal new <date> <time> <summary> :: <description>
+# default time delta is 1h
+
+# To see supported time formats
+khal printformats
 
 # print events due tomorrow
 

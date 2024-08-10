@@ -16,3 +16,6 @@ parser.add_argument('-target_size', nargs='+', type=int, default=(240,240), help
 
 # print the usage format string
 parser.format_usage()
+
+# print defaults
+parser= argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)

@@ -361,3 +361,7 @@ c &= d
 
 # count words appearing in pdf from tex file
 texcount filename.tex
+
+# brackets
+\left(
+\right)

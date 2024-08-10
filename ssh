@@ -23,6 +23,7 @@ ssh-add ~/.ssh/id_ed2551sh # &>/dev/null when run from a server
 
 # Start the ssh-agent in the background.
 eval "$(ssh-agent -s)" # &>/dev/null if this is run from a  server
+# if your ssh key is in the default location or you have specified one through ssh config, you can get away without running the agent
 
 # ssh using a particular key identity
 ssh -i .ssh/key-for-vm linnvm@external-ip

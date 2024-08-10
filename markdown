@@ -34,3 +34,10 @@ leave two spaces at the end of each line
 
 # block quote (Logseq)
 >
+
+# insert equations using LaTeX and render using MathJax
+# Read more https://www.fabriziomusacchio.com/blog/2021-08-10-How_to_use_LaTeX_in_Markdown/
+This is an inline equation: $$V_{sphere} = \frac{4}{3}\pi r^3$$,<br>
+followed by a display style equation:
+
+$$V_{sphere} = \frac{4}{3}\pi r^3$$
