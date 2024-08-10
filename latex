@@ -8,13 +8,52 @@ A table of contents (ToC) is produced by inserting \tableofcontents at the appro
 # angstrom in text mode
 \AA
 
+# To insert a close enough degree symbol in latex
+$^{\circ}$
+
+# math symbols
+\mp for +-
+\equiv for equivalent
+
+# tilde
+\sim
+
+# infinity
+\infty
+
+# square root
+\sqrt{things under root}
+
+# not equal
+\neq
+
+# plus or minu
+\pm
+
+# hat or cap
+\hat{a}
+
+# arcsec
+\arcsec # this comes from some package
+
+# in math mode you can just use '' and this will translate to the arcsec symbol
+
+# latex transpose
+\mathbf{A}^T 
+
+# norm
+|| x ||
+
+# elbow symbol for logical negation
+\neg
+
+# set intersection symbol
+\cap
+
 # Correct way when running biber
 pdflatex test
 biber test
 pdflatex test
-
-# To insert a close enough degree symbol in latex
-$^{\circ}$
 
 # For your compilation to work properly, you should compile in the following manner:
 pdflatex file.tex && bibtex file.aux && pdflatex file.tex && pdflatex file.tex
@@ -44,10 +83,6 @@ pdflatex file.tex && bibtex file.aux && pdflatex file.tex && pdflatex file.tex
 # spacing
 \usepackage{setspace}
 \onehalfspacing
-
-# math symbols
-\mp for +-
-\equiv for equivalent
 
 # changing fonts
 {\tt This will be in a "typewriter font"}
@@ -114,7 +149,6 @@ Use \label{} next to a section and then \ref{} to create the reference.
 \left(   \right)
 \left[ \right]
 
-
 # underline a character
 \underline{u}
 
@@ -147,22 +181,6 @@ Row 2 & Cell 2,1 & Cell 2,2 & Cell 2,3
 
 # include cpp
 C\texttt{++}
-# tilde
-\sim
-# infinity
-\infty
-# square root
-\sqrt{things under root}
-# not equal
-\neq
-# plus or minu
-\pm
-# hat or cap
-\hat{a}
-# arcsec
-\arcsec # this comes from some package
-
-# in math mode you can just use '' and this will translate to the arcsec symbol
 
 # put citation inside caption
 \protect \cite{citekey}
@@ -191,12 +209,6 @@ Note that this approach requires you to manually maintain the bibliography entri
 
 # multi line comments in overleaf
 ctrl + /
-
-# latex transpose
-\mathbf{A}^T 
-
-# norm
-|| x ||
 
 # insert text into equation
 \textrm{your text here}
@@ -268,9 +280,6 @@ author = {{FirstName LastName}},
 # make a citation like this (DR7; Abazajian et al. 2009)
 \citep[DR7;][]{abazajian_seventh_2009}
 
-# elbow symbol for logical negation
-\neg
-
 # basic bibliography
 \usepackage{natbib}
 \begin{document}
@@ -336,9 +345,6 @@ sed -i '/^\s*%/d' mytexfile-stripped.tex
 
 # to provide a shorter chapter title that appears in the header
 \chapter[<short title>]{<long title>}
-
-# set intersection symbol
-\cap
 
 # insert equations
 \usepackage{amsmath}
