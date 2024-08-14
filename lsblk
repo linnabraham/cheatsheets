@@ -7,7 +7,7 @@
 lsblk -lndo path
 
 # print more info
-lsblk -o name,mountpoint,label,size,uuid
+lsblk -o name,size,type,mountpoint,label,uuid
 
 # show partition information
 lsblk -f

@@ -679,4 +679,13 @@ To allow client to use X11 on server add the following line in /etc/ssh/sshd_con
 
 X11Forwarding yes
 
+# Uninstall Koofr
+https://koofr.eu/help/linking-koofr-with-desktops/how-do-i-uninstall-the-desktop-client-for-linux/
 
+# Add djvu thumbnailer to pcmanfm-qt
+https://github.com/lxqt/pcmanfm-qt/wiki#thumbnails
+
+# debug issues with j4-dmenu-desktop
+--log-level DEBUG
+
+# add user to `storage` group for bashmount to work on certain partitions

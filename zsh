@@ -28,3 +28,7 @@ zsh -o NO_RCS
 
 # show all history instead of last 16
 history 1
+
+# bracketed paste is enabled by default in zsh to disable
+unset zle_bracketed_paste
+

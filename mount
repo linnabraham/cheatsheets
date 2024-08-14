@@ -24,3 +24,6 @@ mount -a
 
 # unmount all partitions on a device
 sudo umount /dev/sdb?*
+
+# mount ntfs partition
+mount -t ntfs3  /dev/sdbx

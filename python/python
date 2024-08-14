@@ -265,7 +265,8 @@ python -m inspect torchvision.models.alexnet
 # till the end of the string
 last_four_indexes = my_string[-4:]
 
-# floor operator in python
+# floor division in python
+# divides and then rounds down to nearest whole number (float)
 //
 
 # using assert and isinstance

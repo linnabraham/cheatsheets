@@ -69,3 +69,5 @@ hostnamectl set-hostname new-hostname
 # know whether wayland or xorg is currently in use
 loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}'
 
+# lock session
+loginctl lock-session

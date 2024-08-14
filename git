@@ -451,3 +451,9 @@ git stash -u
 # Abort a stash pop
 # Note: This will discard any staged changes
 git reset --merge
+
+# specify location of git dir in case of bare git repos
+--git-dir=/path/to/git
+
+# use vimdiff as your git diff tool
+difftool -y -t vimdiff filename
