@@ -1,2 +1,4 @@
 # run in the background as service
 sudo systemctl enable anydesk
+# the anydesk systemd service is for configuring wayland support
+# might lead to conflict if you are using Xorg

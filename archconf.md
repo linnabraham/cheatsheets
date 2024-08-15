@@ -695,3 +695,8 @@ ctrl+w shortcut is enabled in many apps like evince, xfce4-terminal etc and clos
 # adding minconda path might lead to issue with clear command
 # to fix it add this
 export TERMINFO=/usr/share/terminfo
+
+# temporary hack to get only primary monitor or one that is on the right of the first monitor
+# when using a mulit-monitor setup
+import -silent -window root -geometry $(xrandr | awk '/\*/ {print $1; exit}') ~/Pictures/"$timestamp".png
+
