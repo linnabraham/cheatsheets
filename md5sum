@@ -1,0 +1,6 @@
+# save md5sum to file
+md5sum data/dataset.csv > data/dataset.csv.md5
+
+# verify md5sum
+md5sum -c data/dataset.csv.md5
+

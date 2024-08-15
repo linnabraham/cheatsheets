@@ -1,0 +1,2 @@
+# download from command line using google drive shared link
+gdown --fuzzy "google-drive-shared-link"

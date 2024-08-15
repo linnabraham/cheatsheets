@@ -1,0 +1,6 @@
+# get a random file name to use for saving
+next(tempfile._get_candidate_names())
+
+# create temporary directory
+temp_dir = tempfile.mkdtemp(dir='./')
+
