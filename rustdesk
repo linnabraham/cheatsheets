@@ -1,0 +1,5 @@
+# in order to enable rust desk to run without a monitor physically connected or without loggin in
+use a vnc server and run rustdesk within that # anydesk doesnt seem to open up within the vncsession
+
+# auto start at boot
+sudo systemctl enable rustdesk

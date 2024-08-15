@@ -1,0 +1,14 @@
+# Add existing git repo to overleaf
+# There are issues in this documentation https://www.overleaf.com/learn/how-to/Git_integration
+
+$ cd my-paper
+$ git remote add overleaf <GIT-URL>
+
+Pull the latest content from the Overleaf project and merge it into your master branch.
+$ git checkout master
+$ git pull --rebase overleaf master --allow-unrelated-histories
+#$ git pull overleaf main --allow-unrelated-histories
+#Revert the merge to get rid of the files in the existing Overleaf project.
+#$ git revert --mainline 1 HEAD
+Push your project to Overleaf.
+$ git push overleaf master

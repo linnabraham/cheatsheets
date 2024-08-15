@@ -1,0 +1,4 @@
+# hardware acceleration for video decoding
+
+~/.config/brave-flags.conf
+--enable-features=VaapiVideoDecodeLinuxGL

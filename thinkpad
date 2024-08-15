@@ -1,0 +1,10 @@
+# https://github.com/rickysarraf/laptop-mode-tools/issues/173
+# check existing battery charge thresholds
+cd /sys/class/power_supply/BAT0
+for x in charge_*; do echo $x; cat $x; done
+
+# stop charging at 85 percent
+echo 85 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
+
+# start charging at 65 percent
+echo 65 | sudo tee /sys/class/power_supply/BAT0/charge_control_start_threshold

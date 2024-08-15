@@ -1,0 +1,2 @@
+# restart pipewire service
+systemctl --user restart pipewire

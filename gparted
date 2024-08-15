@@ -1,0 +1,9 @@
+# Error:  Numerical result out of range During resizing of NTFS partition
+
+You might try running "chkdsk /f /r" on the drive letter from Windows and rebooting twice before trying to resize again in GParted.
+
+Also you might try resizing by a smaller amount.
+
+# Fixing resize issues
+Leave lot of free space in your partition if you want to shrink and move the head of the partition around.
+Afer the shrink there should be sufficient space in your parition.

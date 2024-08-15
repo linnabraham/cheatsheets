@@ -1,0 +1,5 @@
+# convert .xls file to csv
+ssconvert file.xls file2.csv
+
+# to create a new template
+# place your template .gnumeric file inside /usr/share/gnumeric/* and change ownership of the file to root
