@@ -689,3 +689,9 @@ https://github.com/lxqt/pcmanfm-qt/wiki#thumbnails
 --log-level DEBUG
 
 # add user to `storage` group for bashmount to work on certain partitions
+
+ctrl+w shortcut is enabled in many apps like evince, xfce4-terminal etc and closes the window.
+
+# adding minconda path might lead to issue with clear command
+# to fix it add this
+export TERMINFO=/usr/share/terminfo
