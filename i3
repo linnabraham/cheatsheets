@@ -6,3 +6,5 @@ for_window [instance=notepad] sticky enable
 
 # open a new workspace without specifying the number
 i3-msg workspace $(($(i3-msg -t get_workspaces | tr , '\n' | grep '"num":' | cut -d : -f 2 | sort -rn | head -1) + 1))
+# OR
+i3-msg -t get_workspaces | jq 'max_by(.num) | .num')+1

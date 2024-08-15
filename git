@@ -457,3 +457,13 @@ git reset --merge
 
 # use vimdiff as your git diff tool
 difftool -y -t vimdiff filename
+
+# set up a submodule
+git submodule add "/path/to/repo"
+git submodule update --init --recursive
+
+# change the remote url of a submodule
+git submodule set-url -- voidrice git@github.com:linnabraham/voidrice.git
+Add and commit the .gitmodule file
+## on cloned version of repo do the following after pulling
+git submodule sync

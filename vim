@@ -345,3 +345,7 @@ ctrl-o
 
 # delete entire word ignoring characters like hyphens
 df<space>
+
+# vimagit keybinds
+# refresh
+R

@@ -293,3 +293,6 @@ find data/neg_extracted/ -type f -exec rm {} \;
 
 # give read permission to specific user
 setfacl -R -m u:username:r dirname
+
+# see dpi information
+xdpyinfo | grep -B2 resolution

@@ -35,6 +35,7 @@ tmux -S /tmp/your_shared_session
 chmod 777 /tmp/your_shared_session
 
 # To help screen (Q to quit):
+# or to see list of keybindings
 Ctrl-b ?
 
 # To scroll in window:

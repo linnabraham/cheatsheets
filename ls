@@ -11,3 +11,6 @@ ls -S
 
 # list files in reverse order of modification
 ls -ltr
+
+# environment variable that stores options
+LS_OPTIONS

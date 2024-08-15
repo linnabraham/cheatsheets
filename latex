@@ -365,3 +365,7 @@ texcount filename.tex
 # brackets
 \left(
 \right)
+
+# use trim to crop a figure
+\includegraphics[trim={1cm 10cm 1cm 2cm }, clip, width=\textwidth]{figure.pdf}
+
