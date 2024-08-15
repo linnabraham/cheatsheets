@@ -1,0 +1,8 @@
+# To check the awesome configuration files for errors
+awesome -k
+
+# restart
+echo 'awesome.restart()' | awesome-client
+
+# remove title bars from windows
+titlebars_enabled=true

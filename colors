@@ -1,0 +1,25 @@
+# colors for dunst
+    # red
+    #foreground = "#c61616"
+    # green
+    #foreground = "#00FF00"
+
+    frame_color = "#282828"
+
+    # default background for dunst with greenish blue
+    background = "#458588"
+
+    # white
+    background = "#ffffff"
+
+    # a greyish black shade
+    background = "#2b2b2b"
+    # kind of transparent greyish black shade
+    background = "#19172466"
+
+    # a white shade
+    foreground = "#ebdbb2"
+
+# hexcodes
+# green color
+#00FF00

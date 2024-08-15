@@ -1,0 +1,13 @@
+# to enable tap to click
+create the file /etc/X11/xorg.conf.d/40-libinput.conf with the following contents
+Section "InputClass"
+     Identifier "libinput touchpad catchall"
+     MatchIsTouchpad "on"
+     MatchDevicePath "/dev/input/event*"
+     Option "Tapping" "True"
+     Option "TappingDrag" "True"
+     Driver "libinput"
+EndSection
+
+# debug issues
+sudo libinput debug-events
