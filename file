@@ -7,3 +7,5 @@ file -sL
 # read special files, such as block or character devices, and attempt to identify their content based on the data contained within them. It's often used for analyzing disk partitions or raw disk images.
 -s
 
+# check mime type
+--mime-type

@@ -28,3 +28,6 @@ paru -G # or paru --getpkg
 
 # install already built package
 makepkg -i or pacman -U 
+
+# use regex pattern in search
+--regex

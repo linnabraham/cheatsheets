@@ -116,3 +116,6 @@ tmux a
 
 # copy with mouse enabled
 click shift while selecting
+
+# to detach from inner most session when there are nested tmux sessions
+Use prefix twice before using d

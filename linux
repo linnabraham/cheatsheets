@@ -296,3 +296,6 @@ setfacl -R -m u:username:r dirname
 
 # see dpi information
 xdpyinfo | grep -B2 resolution
+
+# reset the PATH variable to default value
+PATH=$(getconf PATH)

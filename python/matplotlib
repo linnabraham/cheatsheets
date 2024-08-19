@@ -146,3 +146,7 @@ from celluloid import Camera
 
 # fix for colarbar doesn't match size of image or subplot
 plt.colorbar(shrink=0.5)
+
+# x-limit and y-limit
+plt.xlim(0, 0.5)
+plt.ylim(0, 0.5)
