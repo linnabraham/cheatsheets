@@ -9,3 +9,6 @@ wget -c
 
 # to specify output directory
 wget -P "path/to/save/to"
+
+# specify output filename
+wget -O /path/to/filename

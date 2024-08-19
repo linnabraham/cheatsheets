@@ -8,3 +8,9 @@ patch -R < patchfile.diff
 The strip level indicates how many leading components of the file paths in the patch file should be removed.
 patch -p1 < patchfile.diff
 
+# from arch wiki page on st
+To apply a patch, download the diff and apply it with patch -i patch.diff.
+This alters the default config file config.def.h; if you are maintaining your own config.h, 
+copy your configs from config.h into a copy of config.def.h and rename it config.h, then make clean install
+
+
