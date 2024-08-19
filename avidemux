@@ -1,0 +1,7 @@
+# To convert mkv to mp4 for playback on smart tv without reencoding
+# Make sure that pendrive is formatted using some fat32 or exfat file system
+Open mkv file using avidemux
+Set video output to copy codec
+Check out audio menu to select one of multiple audio tracks if present ; The AAC track is preferrable
+Select MP4 muxer in output format
+Select File -> save

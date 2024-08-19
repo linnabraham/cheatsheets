@@ -700,3 +700,25 @@ export TERMINFO=/usr/share/terminfo
 # when using a mulit-monitor setup
 import -silent -window root -geometry $(xrandr | awk '/\*/ {print $1; exit}') ~/Pictures/"$timestamp".png
 
+
+# setup calendar using vdirsyncer and khal
+install packages along with oauth dependency for vdirsyncer (python-aiohttp-oauthlib)
+remove token file shown in vdirsyncer config from disk if too old and reauthenticate
+discover then sync calendars using vdirsyncer
+configure khal by giving path to specific calendars if you dont want it to show all calendars
+make sure khal shows events properly
+enable the timer using systemctl for auto syncing vdirsyncer
+setup a daemon that integrates with notify-send for showing notifications on time.
+currently im running a python script with a sleep of 10 seconds
+
+## what happened when i swapped a and b in vdirsyncer config?
+my a = google calendar was empty, my b=local calendar had things
+when i made a as local and b as google and synced ; conflict - a wins
+all items were copied from local calendar to google calendar
+rather than everything in local calendar being deleted
+
+# to create a desktop file for an installed application
+gendesk name/of/application
+
+# if you dont want to auto mount a partition write this in ur etc fstab
+UUID=C68E30678E3051E3  /mnt/ntfs1  ntfs-3g noauto,uid=1000,gid=1000,umask=0022  0  0
