@@ -727,3 +727,7 @@ UUID=C68E30678E3051E3  /mnt/ntfs1  ntfs-3g noauto,uid=1000,gid=1000,umask=0022  
 MimeType=image/x-fits;
 
 # mpd-mpris has to be relaunched after mpd is killed and restarted
+
+# Packages to install for theme and icons in pcmanfm-qt
+whitesur-gtk-theme
+whitesur-icon-theme
