@@ -722,3 +722,8 @@ gendesk name/of/application
 
 # if you dont want to auto mount a partition write this in ur etc fstab
 UUID=C68E30678E3051E3  /mnt/ntfs1  ntfs-3g noauto,uid=1000,gid=1000,umask=0022  0  0
+
+# To register carta as being able to open .fits file add this line to the desktop file
+MimeType=image/x-fits;
+
+# mpd-mpris has to be relaunched after mpd is killed and restarted
