@@ -1,0 +1,14 @@
+# check which font is in use
+LANG=ml_IN fc-match
+
+# see list of fonts installed
+fc-list
+
+# after install a font using pacman
+fc-cache
+
+# check the default font
+fc-match
+
+# check the default monospace font
+fc-match Monospace
