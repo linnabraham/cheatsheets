@@ -6,3 +6,6 @@ rofi -dmenu -i
 
 # rofi calculator
 rofi -show calc -modi calc -no-show-match -no-sort
+
+# run desktop files
+rofi -show drun

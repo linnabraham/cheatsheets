@@ -225,6 +225,13 @@ tex4ebook main.tex
 # https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents
 latexdiff old_version.tex new_version.tex > diff.tex
 pdflatex diff.tex
+bibtex diff.aux
+
+# To not have lines broken in the diff
+latexdiff -t CFONT
+
+# Only Highlight additions in bold
+latexdiff -t BOLD last_read.tex main.tex > diff.tex
 
 # table environment
 \begin{table}
@@ -369,3 +376,5 @@ texcount filename.tex
 # use trim to crop a figure
 \includegraphics[trim={1cm 10cm 1cm 2cm }, clip, width=\textwidth]{figure.pdf}
 
+# place output file in separate directory
+pdflatex -output-directory=target <file>

@@ -20,6 +20,7 @@ tmux attach
 
 # To detach an already attached session (great if you are moving devices with different screen resolutions):
 tmux attach -d
+tmux attach -t <tmux_session_name> -d
 
 # To display session:
 tmux ls
@@ -119,3 +120,6 @@ click shift while selecting
 
 # to detach from inner most session when there are nested tmux sessions
 Use prefix twice before using d
+
+# kill a session
+tmux kill-session -t <session-name>
