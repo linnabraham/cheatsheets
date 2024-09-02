@@ -265,9 +265,17 @@ J
 # use the surround plugin to enclose visual selection with paranthesis 
 leader + Sb
 
-It actually can do a lot of surrounding: various quotes, tags, etc. It allows you to put cursor in the double-quoted word and change double quotes to single quotes by typing: cs"' (change-surround " to '). Or you can completely delete quotes by typing ds" (delete-surround ").
+It actually can do a lot of surrounding: various quotes, tags, etc.
+It allows you to put cursor in the double-quoted word and change double quotes to single quotes by typing: cs"' (change-surround " to ').
+Or you can completely delete quotes by typing ds" (delete-surround ").
 
 Read the docs by link, it is really awesome!
+
+# another way to surround with paranthesis is:
+yss(
+
+# to surround with curly braces
+yss{
 
 # Vimdiff
 # to bring the changes of the current block of code from other file into current one
