@@ -31,3 +31,6 @@ makepkg -i or pacman -U
 
 # use regex pattern in search
 --regex
+
+# install packages that have updates, are explicitly installed and are not present in the ignore list
+paru -Syyy $(pacman -Qeu | grep -Fv "[ignored]" | awk '{print $1}')
