@@ -3,11 +3,15 @@
 # authorize with s3 storage using appropriate config files
 pip install dvc dvc[s3]
 
+# for dvc-data command
+pip install dvc-data[cli]
+
 # some times boto should be added additionally.
 pip instal boto
 
 # install using conda
 conda install -c conda-forge dvc
+# might be better to install using pip since dvc[cli] can only be installed using pip
 # Step 1: initialize DVC
 dvc init
 
