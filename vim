@@ -357,3 +357,6 @@ df<space>
 # vimagit keybinds
 # refresh
 R
+
+# specify evince as the default pdf reader in vimtex plugin
+let g:vimtex_view_general_viewer = 'evince'

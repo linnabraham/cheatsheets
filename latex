@@ -143,6 +143,7 @@ Use \label{} next to a section and then \ref{} to create the reference.
 \rule{1cm}{0.5mm}
 
 # color text differently
+# requires the xcolor package
 \textcolor{red}{what ever}
 
 # enclosing paranthesis
