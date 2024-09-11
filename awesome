@@ -6,3 +6,9 @@ echo 'awesome.restart()' | awesome-client
 
 # remove title bars from windows
 titlebars_enabled=true
+
+# For moving windows
+hold "Mod4" (Windows) key and left click on mouse.
+
+# For resizing windows
+hold "Mod4" key and right click on mouse.

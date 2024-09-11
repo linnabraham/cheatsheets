@@ -379,3 +379,7 @@ texcount filename.tex
 
 # place output file in separate directory
 pdflatex -output-directory=target <file>
+
+# minimal code need for bibliography using bibtex
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{refs} % Entries are in the refs.bib file

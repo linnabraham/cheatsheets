@@ -299,3 +299,12 @@ xdpyinfo | grep -B2 resolution
 
 # reset the PATH variable to default value
 PATH=$(getconf PATH)
+
+# specify depth in tree command
+tree -L <level>
+
+# list only directories
+tree -d
+
+# see evince defaults
+gsettings list-recursively org.gnome.Evince

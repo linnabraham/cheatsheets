@@ -20,3 +20,7 @@ qdel <jobid>
 
 # access graphics1 node directly with X forwarding
 ssh -X <username>@192.168.11.236
+
+# check storage quota
+lfs quota -h -u clinn /mnt/
+lfs quota -h -u clinn /scratch/
