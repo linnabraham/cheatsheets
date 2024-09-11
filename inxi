@@ -1,0 +1,8 @@
+# system details
+inxi -Fxxxz
+
+# which compositor is running
+inxi -Gxx | grep compositor
+
+# view full information
+sudo inxi -F
