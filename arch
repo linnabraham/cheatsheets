@@ -71,3 +71,7 @@ echo "nameserver <DNS>" | sudo tee /etc/resolv.conf > /dev/null
 sudo debtap -u
 debtap -Q  package_name.deb
 sudo pacman -U package_name.pkg
+
+# sysreq enable all features
+Write the following into /etc/sysctl.d/50-default.conf
+kernel.sysrq = 1

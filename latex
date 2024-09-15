@@ -383,3 +383,5 @@ pdflatex -output-directory=target <file>
 # minimal code need for bibliography using bibtex
 \bibliographystyle{plain} % We choose the "plain" reference style
 \bibliography{refs} % Entries are in the refs.bib file
+
+# pound symbol in \url is unsupported escape it to avoid errors

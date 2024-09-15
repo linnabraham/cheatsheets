@@ -12,3 +12,6 @@ hold "Mod4" (Windows) key and left click on mouse.
 
 # For resizing windows
 hold "Mod4" key and right click on mouse.
+
+# merge two tags
+cltr + super + tagname

@@ -174,3 +174,7 @@ tf.keras.ops.moveaxis
 # enable memory growth in tf 2.14
 gpu = tf.config.experimental.list_physical_devices('GPU')[0]
 tf.config.experimental.set_memory_growth(gpu, True)
+
+# use predict_on_batch
+images_batch, labels_batch = next(iter(test_ds))
+pred_scores = model.predict_on_batch(images_batch)

@@ -123,3 +123,13 @@ Use prefix twice before using d
 
 # kill a session
 tmux kill-session -t <session-name>
+
+# remove stale tmux sockets
+rm -rf /tmp/tmux-$(id -u)/
+
+# list existing key binds
+tmux list-keys 
+
+# rebind a key
+unbind-key -T prefix C-c
+bind-key -T prefix C-d send-keys -X cancel
