@@ -308,3 +308,6 @@ tree -d
 
 # see evince defaults
 gsettings list-recursively org.gnome.Evince
+
+# see login information
+last

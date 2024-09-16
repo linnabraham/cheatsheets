@@ -6,3 +6,6 @@ inxi -Gxx | grep compositor
 
 # view full information
 sudo inxi -F
+
+# check full system details
+inxi --full --verbosity=7 --filter --no-host

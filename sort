@@ -3,3 +3,6 @@ sort -u file -o file
 
 # reverse sort
 sort -r
+
+# natural sort for numbers
+sort -V

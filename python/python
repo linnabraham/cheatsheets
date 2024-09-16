@@ -277,3 +277,7 @@ docopt == 0.6.1
 
 # tabs or spaces
 spaces (4) according to PEP-8
+
+# assert and print
+assert x > y, f"x ({x}) should be greater than y ({y})"
+

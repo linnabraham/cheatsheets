@@ -274,6 +274,9 @@ Read the docs by link, it is really awesome!
 # another way to surround with paranthesis is:
 yss(
 
+# surround with paraenthsis but without space
+ysiwb
+
 # to surround with curly braces
 yss{
 
@@ -360,3 +363,7 @@ R
 
 # specify evince as the default pdf reader in vimtex plugin
 let g:vimtex_view_general_viewer = 'evince'
+
+# open a new tab
+:tabnew filename
+

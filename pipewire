@@ -1,2 +1,9 @@
 # restart pipewire service
 systemctl --user restart pipewire
+
+# list attached audio devices
+pactl list sinks
+
+# unmute audio devices
+# where sink name can be obtained from pactl list sinks
+pactl set-sink-mute <sink_name> 0
