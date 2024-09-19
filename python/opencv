@@ -1,3 +1,6 @@
+# install using conda
+conda install -c conda-forge opencv
+
 # show image in opencv
 
 cv2.imshow(’image’,img)

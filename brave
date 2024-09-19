@@ -2,3 +2,11 @@
 
 ~/.config/brave-flags.conf
 --enable-features=VaapiVideoDecodeLinuxGL
+
+# Scrollable tabs like in firefox
+brave://flags/#scrollable-tabstrip
+Choose the "Enabled  - tabs shrink to medium width" option
+
+# disable hotkeys or keybinds
+brave://settings/system/shortcuts
+

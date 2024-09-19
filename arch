@@ -75,3 +75,6 @@ sudo pacman -U package_name.pkg
 # sysreq enable all features
 Write the following into /etc/sysctl.d/50-default.conf
 kernel.sysrq = 1
+
+# extract rpm file on arch
+rpmextract.sh /path/to/rpm
