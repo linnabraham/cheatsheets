@@ -1,2 +1,11 @@
 # write bookmarks to file
 bookmark-djvu /path/to/file.djvu outline.yaml
+
+# format for outline.yaml file
+- title: Cover
+  page: 1
+- title: Preface
+  page: 6
+- title: Contents
+  page: 12
+

@@ -385,3 +385,9 @@ pdflatex -output-directory=target <file>
 \bibliography{refs} % Entries are in the refs.bib file
 
 # pound symbol in \url is unsupported escape it to avoid errors
+#
+# stylised l
+$\ell$
+
+# script version of captial letters
+\mathcal{A}
