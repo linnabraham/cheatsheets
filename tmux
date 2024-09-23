@@ -133,3 +133,6 @@ tmux list-keys
 # rebind a key
 unbind-key -T prefix C-c
 bind-key -T prefix C-d send-keys -X cancel
+
+# break a pane into its own window
+ctrl-b !

@@ -385,9 +385,15 @@ pdflatex -output-directory=target <file>
 \bibliography{refs} % Entries are in the refs.bib file
 
 # pound symbol in \url is unsupported escape it to avoid errors
-#
+ 
 # stylised l
 $\ell$
 
 # script version of captial letters
 \mathcal{A}
+
+# wrap long lines by defining fixed width for columns
+\begin{tabular}{|p{5cm}|c|c|}
+
+# right margin
+\usepackage[right=3cm]{geometry}

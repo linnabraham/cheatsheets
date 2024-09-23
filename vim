@@ -367,3 +367,5 @@ let g:vimtex_view_general_viewer = 'evince'
 # open a new tab
 :tabnew filename
 
+# open a file readonly in vim
+-R 

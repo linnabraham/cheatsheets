@@ -78,3 +78,9 @@ kernel.sysrq = 1
 
 # extract rpm file on arch
 rpmextract.sh /path/to/rpm
+
+# open sudoers file with vimdiff
+VISUAL=vimdiff sudoedit /etc/sudoers /etc/sudoers.pacnew
+
+# switch kernel
+install the package from pacman; update grub

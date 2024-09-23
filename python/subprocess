@@ -19,7 +19,10 @@ p1 = subprocess.run(["pass app-passwords/official_gmail_k9"], shell=True, text=T
 p1.stdout
 
 # Use subprocess to get STDOUT captured to file
-    subprocess.run(command, stdout=file, text=True)
+# here f is a file object
+subprocess.run(command, stdout=f, text=True)
 
 # if you are not using subprocess.PIPE use `shell=True` 
 
+# don't print output of subprocess to stdout
+result = subprocess.run(command_to_run, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
