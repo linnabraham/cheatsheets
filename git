@@ -467,3 +467,6 @@ git submodule set-url -- voidrice git@github.com:linnabraham/voidrice.git
 Add and commit the .gitmodule file
 ## on cloned version of repo do the following after pulling
 git submodule sync
+
+# make git push verbose
+git push --verbose

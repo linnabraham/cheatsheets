@@ -12,3 +12,6 @@ $ git pull --rebase overleaf master --allow-unrelated-histories
 #$ git revert --mainline 1 HEAD
 Push your project to Overleaf.
 $ git push overleaf master
+
+# fix git push getting stuck
+git config http.postBuffer 10485760
