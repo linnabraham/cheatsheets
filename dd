@@ -1,2 +1,3 @@
 # write iso to disk
+# the output path should be to the device not the partition
 dd if=/path/to/.iso of=/dev/sdb status="progress"
