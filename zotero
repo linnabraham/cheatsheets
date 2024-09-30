@@ -30,3 +30,6 @@ where collections.collectionName = 'Books' and collections.libraryID
 
 # STEP 3: Prefix the key to the filename returned
 awk -F'\t' '{gsub(/storage:/, "storage/" $2 "/"); print $1}' output_file.tsv > modified_output_file.tsv
+
+# change scroll speed in pdf viewer
+setting Preferences > Advanced > Config Editor > "mousewheel.min_line_scroll_amount"

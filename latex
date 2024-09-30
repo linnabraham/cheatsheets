@@ -397,3 +397,6 @@ $\ell$
 
 # right margin
 \usepackage[right=3cm]{geometry}
+
+# disable todos from todonotes package
+\usepackage[disable]{todonotes}
