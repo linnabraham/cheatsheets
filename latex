@@ -400,3 +400,6 @@ $\ell$
 
 # disable todos from todonotes package
 \usepackage[disable]{todonotes}
+
+# remove empty pages after a chapter in book
+\documentclass[openany]{book}

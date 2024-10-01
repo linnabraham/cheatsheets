@@ -369,3 +369,9 @@ let g:vimtex_view_general_viewer = 'evince'
 
 # open a file readonly in vim
 -R 
+
+# Change each 'foo' to 'bar', but ask for confirmation first.
+:%s/foo/bar/gc
+
+# open terminal inside vim window
+:terminal

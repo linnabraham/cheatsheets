@@ -1,0 +1,9 @@
+# enable basic networking with iwd
+/etc/iwd/main.conf
+[General]
+EnableNetworkConfiguration=true
+
+# connect using iwctl where wlan0 is the device-name
+iwctl station wlan0 scan
+iwctl station wlan0 get-networks
+iwctl station wlan0 connect <SSID>
