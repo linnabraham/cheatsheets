@@ -71,3 +71,6 @@ loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{
 
 # lock session
 loginctl lock-session
+
+# locate the .service file for an application for e.g. mpd
+systemctl cat mpd

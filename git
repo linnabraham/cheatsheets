@@ -270,6 +270,7 @@ git cherry-pick <oldest-commit>^..<newest-commit>
 git diff --stat master develop
 
 # see the diff between latest commit and the one prior for a particular file 
+# HEAD^ refers to parent commit of current HEAD
 git diff HEAD^ HEAD -- examples/make_dataset_single.py
 
 # using a particular commit hash

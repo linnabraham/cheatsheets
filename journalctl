@@ -15,3 +15,9 @@ journalctl -b -p err
 
 # display only kernel messages
 journalctl -k
+
+# follow log for individual application
+journalctl -u mpd -f
+
+# see list of boots
+journalctl --list-boots
