@@ -53,3 +53,11 @@ torch.log
 # move model to gpu
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model.to(device)
+
+# to see memory used
+current_memory = torch.cuda.memory_allocated() / (1024 ** 2)
+print(f"Allocated GPU memory ({current_memory} MB)")
+
+# to see memory reserved
+memory_reserved = torch.cuda.memory_reserved() / (1024 ** 2)
+print(f"GPU memory reserved: {memory_reserved}")

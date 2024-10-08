@@ -118,6 +118,9 @@ tmux a
 # copy with mouse enabled
 click shift while selecting
 
+# paste from buffer
+prefix + ]
+
 # to detach from inner most session when there are nested tmux sessions
 Use prefix twice before using d
 
@@ -136,3 +139,6 @@ bind-key -T prefix C-d send-keys -X cancel
 
 # break a pane into its own window
 ctrl-b !
+
+# see if you have vi or emacs style keys
+tmux show-options -g status-keys
