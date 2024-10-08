@@ -403,3 +403,12 @@ $\ell$
 
 # remove empty pages after a chapter in book
 \documentclass[openany]{book}
+
+# quick verbatim text
+\verb|text with special characters \ { }|
+
+# insert text within align environment
+\intertext
+
+# break long urls
+\usepackage[hyphens]{url}
