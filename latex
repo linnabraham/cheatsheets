@@ -412,3 +412,22 @@ $\ell$
 
 # break long urls
 \usepackage[hyphens]{url}
+
+# foldable block
+\documentclass[a4paper]{minimal}
+\usepackage{ocgx}
+\begin{document}
+Max Mustermann \switchocg{ocg1}{\fcolorbox{blue}{red}{\bfseries +}}\begin{ocg}{OCG 1}{ocg1}{0}
+  \colorbox{yellow}{ \parbox{5cm}{Max Mustermann\\Musterweg 1\\12345 Musterstadt}}
+\end{ocg}
+
+Erika Mustermann
+\end{document}
+
+# code with line breaks
+\usepackage{listings}
+
+\lstset{
+  breaklines=true, % Prevents breaking lines
+  basicstyle=\ttfamily % Uses monospaced font
+}
