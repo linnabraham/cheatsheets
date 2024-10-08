@@ -35,3 +35,6 @@ ffmpeg -i 89.gif -i 89_label.gif -filter_complex hstack output_cube.gif
 
 # stack horizontally two mp4
 ffmpeg -i crudemovie.mp4 -i cool_movie.mp4 -filter_complex hstack=inputs=2 comb_out.mp4
+
+# check metadata of file
+ffprobe

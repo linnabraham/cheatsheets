@@ -30,9 +30,6 @@ echo $XDG_SESSION_TYPE
 shopt -s expand_aliases
 source ~/.bash_aliases
 
-# to see the existing partition on a disk
-file -s /dev/sdb1
-
 # startup scripts with delay
 /bin/sh -c 'sleep 15;kalu &'
 
@@ -105,9 +102,6 @@ cat filename.wav | aplay
 # find danling links
 symlinks .
 
-# Use the file -s command to get information about a specific device, such as its file system type. If the output shows simply data, as in the following example output, there is no file system on the device
-sudo file -s /dev/sda
-
 #To skip grub change your timeout to 5 to 0 and set the grub style from menuto hidden and it will only appear when you hold shift.
 
 # Get information of wireless channels nearby
@@ -178,9 +172,6 @@ faketime "2023-03-06 14:30:00" polybar
 
 # clear screen using escape sequence 
 printf "\ec"
-
-# find the mimetype of a file
-file -i filename
 
 # check the current default for a mimetype
 xdg-mime query default inode/directory

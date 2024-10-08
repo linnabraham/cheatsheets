@@ -14,3 +14,6 @@ ls -ltr
 
 # environment variable that stores options
 LS_OPTIONS
+
+# show access time instead of modification time
+--time=atime

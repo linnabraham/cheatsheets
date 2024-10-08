@@ -1,5 +1,5 @@
 # To show the last lines of <file> starting with <number>:
 tail -n +<number> <file>
 
-# monitor changes to any file using 
+# monitor changes to any file using  or view log files
 tail -f /path/to/file

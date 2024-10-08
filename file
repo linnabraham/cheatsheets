@@ -9,3 +9,13 @@ file -sL
 
 # check mime type
 --mime-type
+
+# find the mimetype of a file
+file -i filename
+
+# to see the existing partition on a disk
+file -s /dev/sdb1
+
+# Use the file -s command to get information about a specific device, such as its file system type. If the output shows simply data, as in the following example output, there is no file system on the device
+sudo file -s /dev/sda
+
