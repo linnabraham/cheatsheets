@@ -375,3 +375,14 @@ let g:vimtex_view_general_viewer = 'evince'
 
 # open terminal inside vim window
 :terminal
+
+# find the next instance of a character
+f<char>
+
+# go to normal mode temporarily
+ctrl-o
+
+# go to end of current word in normal mode
+ea
+# the same can be emulated with f<space>
+# this is also useful if you are already in insert mode
