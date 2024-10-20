@@ -48,3 +48,6 @@ mpv --sub-file=that_file.srt the_video.mp4
 
 # shuffle
 --shuffle
+
+# save position on quit
+Shift+q
