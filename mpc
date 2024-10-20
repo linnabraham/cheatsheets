@@ -69,3 +69,10 @@ mpc find "((Genre == \"Malayalam\") AND (Date == \"2000\"))"
 # add all recenly added songs
 # cd to Music directory
 find . -type f -mtime -1  | awk '{ sub(/^\.\//, ""); print }' | mpc add
+
+# find song later than a date
+mpc list Date | grep -E '^[0-9]{4}' | while read date; do
+  if [[ "$date" -gt 2000 ]]; then
+    mpc find "((Genre == \"Malayalam\") AND (Date == \"$date\"))"
+  fi
+done
