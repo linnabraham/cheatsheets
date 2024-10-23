@@ -10,3 +10,5 @@ Choose the "Enabled  - tabs shrink to medium width" option
 # disable hotkeys or keybinds
 brave://settings/system/shortcuts
 
+# maximize or unmaximize
+double click on the titlebar

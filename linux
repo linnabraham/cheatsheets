@@ -258,6 +258,9 @@ killall -1 polybar
 # show window classes etc. graphically by clicking on a window
 xprop
 
+# see whether window is maximized or not
+xprop _NET_WM_STATE
+
 # monitor hardware aceleration
 intel_gpu_top
 
