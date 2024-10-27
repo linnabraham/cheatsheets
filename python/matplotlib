@@ -150,3 +150,14 @@ plt.colorbar(shrink=0.5)
 # x-limit and y-limit
 plt.xlim(0, 0.5)
 plt.ylim(0, 0.5)
+
+# add text to plot
+from matplotlib.offsetbox import AnchoredText
+anchored_text = AnchoredText("Custom Text", loc="upper left")
+plt.gca().add_artist(anchored_text)
+
+# step plot
+plt.step(masked_bins[:-1], histogram, where='mid')
+
+# plot computed histogram using line plot
+plt.plot(intensity_bins[:-1], histogram, color='blue', linestyle='-', linewidth=1)

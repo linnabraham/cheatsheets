@@ -134,6 +134,9 @@ f"{i:05d}.jpeg"
 # format float string with fixed number of digits after zero
 f"{i:.5f}.jpeg"
 
+# format float with fixed number of decimals and exponential notation
+f"{i.4e}.jpeg"
+
 # and operator
 &
 
@@ -281,3 +284,7 @@ spaces (4) according to PEP-8
 # assert and print
 assert x > y, f"x ({x}) should be greater than y ({y})"
 
+# more pythonic
+if channel is not None
+# than
+if not channel is None

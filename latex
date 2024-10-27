@@ -436,3 +436,6 @@ Erika Mustermann
 \listoftodos
 \addcontentsline{toc}{chapter}{List of Todos}
 
+# strikeout or strikethrough
+\usepackage[normalem]{ulem}
+\sout{Hello World}

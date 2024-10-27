@@ -15,3 +15,10 @@ c_matches = c[sep_constraint]
 catalog_matches = catalog[idx[sep_constraint]]
 
 catalog_df.iloc[idx[sep_constraint]]
+
+# Fix for too many files open error
+def read_fits(file_path):
+    with fits.open(file_path) as hdul:
+        data = hdul[0].data.copy()
+    del hdul[0].data
+    return data
