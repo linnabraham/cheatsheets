@@ -1,0 +1,5 @@
+# import
+from dateutil import parser
+
+# parse string
+parser.parse('datestr')

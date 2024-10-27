@@ -1,0 +1,16 @@
+# standard import
+import dask.array as da
+
+# use multi-threading with dask
+from concurrent.futures import ThreadPoolExecutor
+
+with ThreadPoolExecutor() as executor:
+    dask_arrs = list(executor.map(lambda file_: da.from_array(read_numpy(file_), chunks='auto'), file_names))
+
+# blocked variant of np.histogram
+# the bins argument should be either bin edges or if nbins are given range is required
+da.histogram
+
+# read large number of files when required
+# where read_fits is a function decorated with @delayed
+dask_arrays = [da.from_delayed(read_fits(path), shape=(512,512), dtype=np.dtype('>f8')) for path in matches]
