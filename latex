@@ -112,6 +112,9 @@ c & d \\
 # create outline or bookmarks automatically
 \usepackage[bookmarks]{hyperref}
 
+# break urls
+\usepackage[breaklinks=true]{hyperref}
+
 # using natbib package
 # cite within paranthesis
 \citep

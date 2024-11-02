@@ -288,3 +288,12 @@ assert x > y, f"x ({x}) should be greater than y ({y})"
 if channel is not None
 # than
 if not channel is None
+
+# iterate over key value paris in dictionary
+for key, value in dict_name.items():
+
+# add items to an empty dictionary
+dict['key'] = value
+
+# for strings to span over multiple lines
+""" text """

@@ -161,3 +161,6 @@ plt.step(masked_bins[:-1], histogram, where='mid')
 
 # plot computed histogram using line plot
 plt.plot(intensity_bins[:-1], histogram, color='blue', linestyle='-', linewidth=1)
+
+# change font size in anchored text
+anchored_text = AnchoredText("Anchored Text", loc='upper left', prop=dict(size=14))

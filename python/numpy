@@ -58,3 +58,6 @@ img_array = np.expand_dims(img_array, axis=0)
 
 # find percentile
 np.percentile(image. 99.99)
+
+# for info about smallest numbers that can be represented
+numpy.finfo

@@ -305,3 +305,6 @@ gsettings list-recursively org.gnome.Evince
 
 # see login information
 last
+
+# measure how much of cpu was being used
+mpstat 2 5 | grep "all" | tail -n1 | awk '{print 100 - $12}'

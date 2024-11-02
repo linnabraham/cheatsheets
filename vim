@@ -386,3 +386,12 @@ ctrl-o
 ea
 # the same can be emulated with f<space>
 # this is also useful if you are already in insert mode
+
+# open NERDTree from base of current file
+:NERDTreeFind
+
+# open another file in a vertical split
+:vsplit filename
+
+# open in horizontal split
+:split filename

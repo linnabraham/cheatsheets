@@ -62,3 +62,7 @@ gpg --import private.gpg
 # gpg folder permissions
 # By default, the gpg home directory has its permissions set to 700 
 # and the files it contains have their permissions set to 600
+
+# delete key
+gpg --delete-secret-key <pub-key-id>
+gpg --delete-key <pub-key-id>
