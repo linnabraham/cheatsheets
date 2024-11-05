@@ -428,6 +428,7 @@ Erika Mustermann
 \end{document}
 
 # code with line breaks
+# Using a monospaced font for the listing fixes most of the copy-paste issues
 \usepackage{listings}
 
 \lstset{
@@ -435,6 +436,11 @@ Erika Mustermann
   basicstyle=\ttfamily % Uses monospaced font
 }
 
+\begin{lstlisting}
+...
+\end{lstlisting}
+
+#
 # add to contents or toc
 \listoftodos
 \addcontentsline{toc}{chapter}{List of Todos}

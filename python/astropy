@@ -22,3 +22,6 @@ def read_fits(file_path):
         data = hdul[0].data.copy()
     del hdul[0].data
     return data
+
+# Show information of fits file
+hdul.info()

@@ -382,7 +382,7 @@ f<char>
 # go to normal mode temporarily
 ctrl-o
 
-# go to end of current word in normal mode
+# go to end of current word from normal mode and drop to insert mode
 ea
 # the same can be emulated with f<space>
 # this is also useful if you are already in insert mode
