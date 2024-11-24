@@ -8,7 +8,7 @@ xclip filepath
 xclip -selection clipboard -t image/png -i path/to/image.png
 
 # copy to clipboard from pipe
-| xclip
+| xclip -selection clipboard
 
 # access clipboard contents
 xclip -o --selection clipboard

@@ -57,6 +57,10 @@ sudo btrfs subvolume delete /mnt/data/@some_dir-snapshot-test
 # useful to delete some of the existing backups
 btrfs balance start -dusage=1 /
 
+# or if that doesn't work
+# to process chunks that are atleast 50 percent full
+sudo btrfs balance start -dusage=50 -musage=50 /
+
 # see disk usage of snapshots
 # move into the folder containing snapshots
 sudo btrfs fi du -s *

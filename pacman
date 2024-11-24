@@ -117,3 +117,6 @@ ILoveCandy # inplace of Color option
 
 # find packages installed as dependency for removal 
 sudo cat /var/log/pacman.log | grep "installed"
+
+# find which package that is not necessarily installed, owns a file
+pacman -Fq command

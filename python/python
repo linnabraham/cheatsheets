@@ -297,3 +297,7 @@ dict['key'] = value
 
 # for strings to span over multiple lines
 """ text """
+
+# get the index corresponding to a value from a list
+listname.index(value)
+

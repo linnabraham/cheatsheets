@@ -9,3 +9,6 @@ lsof +d '/Users/al'
 
 # The next command lists files that are open in the directory specified, and also descends into sub-directories. Beware: this can take a very long time to run for large directory structures:
 lsof +D '/Users/al'
+
+# Find what is using a file or mountpoint
+lsof +f -- /mnt/sda/automount/Media

@@ -21,3 +21,6 @@ sudo snapper -c home create -d "Monthly backup for June"
 
 # sending snapshot to external drive
 sudo btrfs send /.snapshots/home-day1 | sudo btrfs receive /run/media/user/mydisk/bk
+
+# service that automatically takes snapshots
+snapper-timeline.timer

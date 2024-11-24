@@ -6,3 +6,6 @@ cheat -l <command>
 
 # To search for text inside available cheatsheets; this doesnt work perfect
 cheat -s <command>
+
+# if you have multiple cheatsheets installed and you need to choose one for searching
+cheat -t personal

@@ -54,3 +54,6 @@ grep -C 3
 
 # multiple exclude patterns 
 --exclude={*log*,tags}
+
+# exclude directory
+--exclude-dir /path/to/dir

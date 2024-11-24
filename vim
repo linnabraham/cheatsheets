@@ -395,3 +395,6 @@ ea
 
 # open in horizontal split
 :split filename
+
+# check file format is dos or unix
+:set ff?

@@ -84,3 +84,6 @@ VISUAL=vimdiff sudoedit /etc/sudoers /etc/sudoers.pacnew
 
 # switch kernel
 install the package from pacman; update grub
+
+# sound test
+speaker-test -c 2

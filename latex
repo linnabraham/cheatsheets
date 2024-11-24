@@ -448,3 +448,22 @@ Erika Mustermann
 # strikeout or strikethrough
 \usepackage[normalem]{ulem}
 \sout{Hello World}
+
+# simple table
+\begin{tabular}{|c|c|c|}
+item1 & item2 & item3 \\
+item4 & item5 & item6
+\end{tabular}
+
+# less than and greater than
+\le
+\ge
+
+# prime or dash for first derivative
+\prime
+
+# double prime for double derivative
+a^{\prime\prime}
+
+# automatic numbering of rows in table
+https://tex.stackexchange.com/questions/21243/automatic-table-row-numbers

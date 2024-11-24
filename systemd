@@ -74,3 +74,9 @@ loginctl lock-session
 
 # locate the .service file for an application for e.g. mpd
 systemctl cat mpd
+
+# list automount systemd units
+systemctl list-units --type=automount
+
+# reboot straight to uefi or bios firmware setup screen
+systemctl reboot --firmware-setup
