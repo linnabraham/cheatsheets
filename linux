@@ -308,3 +308,10 @@ last
 
 # measure how much of cpu was being used
 mpstat 2 5 | grep "all" | tail -n1 | awk '{print 100 - $12}'
+
+# don't use -r when removing a symlink
+# if you do and then you also add a slash at the end, your actual directory contents would
+# be removed recursively
+#
+# remove target of symlink without removing actual symlink
+rm $(readlink /path/to/link)

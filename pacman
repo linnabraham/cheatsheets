@@ -120,3 +120,6 @@ sudo cat /var/log/pacman.log | grep "installed"
 
 # find which package that is not necessarily installed, owns a file
 pacman -Fq command
+ 
+# remove cache but not for the packages installed
+sudo pacman -Sc
