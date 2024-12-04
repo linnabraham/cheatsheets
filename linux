@@ -315,3 +315,6 @@ mpstat 2 5 | grep "all" | tail -n1 | awk '{print 100 - $12}'
 #
 # remove target of symlink without removing actual symlink
 rm $(readlink /path/to/link)
+
+# check fundamental block size
+stat -f
