@@ -301,3 +301,6 @@ dict['key'] = value
 # get the index corresponding to a value from a list
 listname.index(value)
 
+# create an error log file
+with open("path/to/logfile", "a") as log_file:
+    log_file.write(f"error text\n")
