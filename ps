@@ -3,3 +3,12 @@ ps aux
 
 # see open ports
 ps -fA | grep python
+
+# filter process based on username
+pgrep -u username processname
+
+# kill processes in a loop
+pgrep <process_name> | xargs kill -s SIGTERM
+
+# get process id from name
+pgrep -x brave

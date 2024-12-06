@@ -219,9 +219,6 @@ cat /etc/issue
 # turn off screen
 xset dpms force off
 
-# get process id from name
-pgrep -x brave
-
 # disable network manager connected notification
 gsettings set org.gnome.nm-applet disable-connected-notifications "true"
 
@@ -318,3 +315,4 @@ rm $(readlink /path/to/link)
 
 # check fundamental block size
 stat -f
+
