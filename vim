@@ -398,3 +398,10 @@ ea
 
 # check file format is dos or unix
 :set ff?
+
+# indent the next n lines without first selecting those
+# here n=9
+>9>
+
+# join the following line to current line
+J

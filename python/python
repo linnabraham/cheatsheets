@@ -304,3 +304,6 @@ listname.index(value)
 # create an error log file
 with open("path/to/logfile", "a") as log_file:
     log_file.write(f"error text\n")
+
+# get value from dict without getting an error if key not present
+dictname.get(key, None)

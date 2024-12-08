@@ -5,7 +5,8 @@
 set-option -g prefix C-a
 bind-key C-a send-prefix
 
-# source file to enable changes in config
+# reload after changing config file
+# you might also have to create a new session
 tmux source-file ~/.tmux.conf
 
 # To start tmux:
@@ -142,3 +143,6 @@ ctrl-b !
 
 # see if you have vi or emacs style keys
 tmux show-options -g status-keys
+
+# show all windos across all sessions
+tmux list-windows -a

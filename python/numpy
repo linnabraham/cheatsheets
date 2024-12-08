@@ -61,3 +61,11 @@ np.percentile(image. 99.99)
 
 # for info about smallest numbers that can be represented
 numpy.finfo
+
+# stack list of numpy array into single array by adding a new
+# dimension to the specified axis
+np.stack(image_list, axis=-1)
+
+# stack a list of arrays along the last dimension
+# without adding new dimension
+np.concatenate(image_list, axis=-1)

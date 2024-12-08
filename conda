@@ -111,3 +111,6 @@ conda config --set verbosity 2
 
 # history of your environment
 inside the conda-meta directory in  your environment directory
+
+# remove or delete environment
+conda remove -n envname --all
