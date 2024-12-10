@@ -34,8 +34,11 @@ dvc status
 # checkout the version of data from last commit
 dvc checkout
 
+# checkout specific file
+dvc checkout -- /path/to/file
+
 # list file tracked by dvc in current directory
-dvc list --dvc-only . 
+dvc list --dvc-only <path>
 
 # compute the hash for a directory
 dvc-data build /path/to/dir
