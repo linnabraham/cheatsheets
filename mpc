@@ -76,3 +76,12 @@ mpc list Date | grep -E '^[0-9]{4}' | while read date; do
     mpc find "((Genre == \"Malayalam\") AND (Date == \"$date\"))"
   fi
 done
+
+# list playlists
+mpc lsplaylists
+
+# add file to playlist from pipe
+cmd | mpc addplaylist playlistname
+
+# save current queue as playlist file with .m3u
+mpc save filename
