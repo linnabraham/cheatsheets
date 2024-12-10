@@ -308,5 +308,14 @@ with open("path/to/logfile", "a") as log_file:
 # get value from dict without getting an error if key not present
 dictname.get(key, None)
 
+# create your own package to be installed with pip
+# create file in accordance with following file structure
+# Note that the directory name shouldn't have a hyphen
+# this is the name that will be specified as name in the setup.py
+package-name/package_name
+package-name/package_name/__init__.py
+package-name/package_name/module.py
+package-name/setup.py
+package-name/README
 # pip install package from github
 pip install --force-reinstall git+/path/to/github/repo/https
