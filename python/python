@@ -307,3 +307,6 @@ with open("path/to/logfile", "a") as log_file:
 
 # get value from dict without getting an error if key not present
 dictname.get(key, None)
+
+# pip install package from github
+pip install --force-reinstall git+/path/to/github/repo/https
