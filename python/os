@@ -22,17 +22,12 @@ os.path.abspath
 # return parent directory name from a given string
 os.dirname("fullpath/to/file")
 
-# get path of script that is being run
-current_script_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_script_dir, ".."))
-sys.path.append(parent_dir)
-
 # get absolute path of python file being run
 os.path.abspath(__file__)
 
 # append parent directory to path
-cur_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(cur_dir,".."))
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(parent_dir)
 
 # get cpu count
 os.cpu_count()
