@@ -349,8 +349,11 @@ noremap! <C-h> <C-w>
 # edit remote file directly
 vim /path/to/local/file  scp://remote//path/to/remote/file  -O
 
-# navigate to the previous location
+# navigate to the previous location from normal mode
 ctrl-o
+
+# navigate to the next location
+ctrl-I
 
 # replace using r doesnt work reliably in visual selection use :s//
 
@@ -379,7 +382,7 @@ let g:vimtex_view_general_viewer = 'evince'
 # find the next instance of a character
 f<char>
 
-# go to normal mode temporarily
+# go to normal mode temporarily from insert mode
 ctrl-o
 
 # go to end of current word from normal mode and drop to insert mode
@@ -405,3 +408,11 @@ ea
 
 # join the following line to current line
 J
+
+# install python extension in coc vim plugin
+:CocInstall coc-python
+
+# disable overlay type hints etc.
+Open :CocConfig, set pyright.inlayHints.enable: false
+
+# install python-nvim for python support in nvim

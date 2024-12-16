@@ -3,3 +3,6 @@ use a vnc server and run rustdesk within that # anydesk doesnt seem to open up w
 
 # auto start at boot
 sudo systemctl enable rustdesk
+
+# get the id programmatically
+rustdesk --get-id

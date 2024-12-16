@@ -471,3 +471,6 @@ git submodule sync
 
 # make git push verbose
 git push --verbose
+
+# see existing tags
+git tag -l
