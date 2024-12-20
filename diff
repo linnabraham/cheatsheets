@@ -18,4 +18,7 @@ diff --color=always
 diff -qr --exclude="microsoft-edge" --exclude=.cache /mnt/linn ~ # this exlcudes .config/microsoft-edge
 
 # create a patch file
-diff -u file.txt.orig  file.txt > file.patch
+diff -u file.txt.orig file.txt > file.patch
+
+# for adding context lines
+diff -u

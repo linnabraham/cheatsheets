@@ -416,3 +416,11 @@ J
 Open :CocConfig, set pyright.inlayHints.enable: false
 
 # install python-nvim for python support in nvim
+
+# restore split to original size
+<C-w> =
+# use full width for split pane
+<C-w> |
+# use full height for split pane
+<C-w> _
+
