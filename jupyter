@@ -20,3 +20,7 @@ Ctrl + shift + r
 
 # specify ip to run on
 --ip=local-ip
+
+# display video in cell
+from IPython.display import Video
+Video("/path/to/file.mp4", embed=True)

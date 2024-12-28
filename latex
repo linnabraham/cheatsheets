@@ -467,3 +467,12 @@ a^{\prime\prime}
 
 # automatic numbering of rows in table
 https://tex.stackexchange.com/questions/21243/automatic-table-row-numbers
+
+# missing figure in todo notes
+The figure \ref{nicefigure}
+\begin{figure}[h]
+\centering
+\missingfigure{\Huge Nice this triangle?}
+\caption{Some caption}
+\label{nicefigure}
+\end{figure}

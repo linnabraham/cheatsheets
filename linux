@@ -316,3 +316,5 @@ rm $(readlink /path/to/link)
 # check fundamental block size
 stat -f
 
+# for issues mounting ntfs partition on linux
+sudo ntfs-3g /dev/sdxx /mnt

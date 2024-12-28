@@ -31,3 +31,5 @@ transmission-remote -t tid -rad
 # see which config is being used
 transmission-daemon --dump-settings
 
+# number of simultaneous downloads
+download-queue-size

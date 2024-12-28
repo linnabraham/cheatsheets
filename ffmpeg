@@ -38,3 +38,7 @@ ffmpeg -i crudemovie.mp4 -i cool_movie.mp4 -filter_complex hstack=inputs=2 comb_
 
 # check metadata of file
 ffprobe
+
+# downscale video
+# set the width to 720, and automatically adjust the height to the closest value that is divisible by 2
+ffmpeg -i /path/to/input -filter:v "scale=720:-2" -c:a copy output.mp4
