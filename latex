@@ -15,7 +15,7 @@ $^{\circ}$
 \mp for +-
 \equiv for equivalent
 
-# tilde
+# tilde or approx
 \sim
 
 # infinity
@@ -476,3 +476,9 @@ The figure \ref{nicefigure}
 \caption{Some caption}
 \label{nicefigure}
 \end{figure}
+
+# add a title to book template
+# add this to the preamble
+\title{Your title}
+\maketitle
+

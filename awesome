@@ -15,3 +15,7 @@ hold "Mod4" key and right click on mouse.
 
 # merge two tags
 cltr + super + tagname
+
+# show only occupied tags
+# in the wibar configuration change the filter to this
+filter  = awful.widget.taglist.filter.noempty,
