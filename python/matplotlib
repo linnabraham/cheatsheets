@@ -164,3 +164,7 @@ plt.plot(intensity_bins[:-1], histogram, color='blue', linestyle='-', linewidth=
 
 # change font size in anchored text
 anchored_text = AnchoredText("Anchored Text", loc='upper left', prop=dict(size=14))
+
+# set x and y labels
+ax.set_xlabel("Text")
+ax.set_ylabel("Text")

@@ -204,3 +204,11 @@ pd.options.display.float_format = '{:.2f}'.format
 
 # select string datatype
 Pass ``string`` or pd.StringDtype() to dtype parameter
+
+# find number of groups
+grouped = df.groupby()
+grouped.ngroups
+
+# delete row where column has value
+idx = df[df["col"] == value].index
+df.drop(idx, inplace=True)

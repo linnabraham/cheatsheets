@@ -146,3 +146,6 @@ tmux show-options -g status-keys
 
 # show all windos across all sessions
 tmux list-windows -a
+
+# rename panel
+ctrl-b ,

@@ -338,6 +338,9 @@ git stash -m "message" -- path/to/file
 # git stash reapply
 git stash pop
 
+# git stash specific stash
+git stash pop stash@{2}
+
 # see all stash
 git stash list
 

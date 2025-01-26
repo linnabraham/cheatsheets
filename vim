@@ -424,3 +424,5 @@ Open :CocConfig, set pyright.inlayHints.enable: false
 # use full height for split pane
 <C-w> _
 
+# delete lines matching pattern
+:g/error/d

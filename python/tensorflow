@@ -1,5 +1,3 @@
-# check if gpu is detected
-tf.test.is_gpu_available()
 
 # reduce logging to show only errors
 import logging
@@ -154,6 +152,9 @@ done
 
 # single line code to test if GPU will be used
 python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+# check if gpu is detected
+tf.test.is_gpu_available()
 
 # install tensorflow for gpu
 pip install tensorflow[and-cuda]

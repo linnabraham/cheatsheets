@@ -7,3 +7,9 @@ pip show <packagename>
 
 # to install things in virtualenv rather than system python
 pip install --ignore-installed or pip install -I
+
+# install specific branch or commit hash or tag from git
+pip install git+https://github.com/<username>/<repo>.git@<branch>
+pip install git+https://github.com/<username>/<repo>.git@<commit-hash>
+pip install git+https://github.com/<username>/<repo>.git@v1.2.3
+
