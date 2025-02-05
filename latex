@@ -482,3 +482,18 @@ The figure \ref{nicefigure}
 \title{Your title}
 \maketitle
 
+# simple article template
+\documentclass{article}
+
+\title{My Article Title}
+\author{Author Name}
+\date{\today} % You can replace this with a custom date or leave it empty for no date
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This is the introduction.
+
+\end{document}

@@ -179,3 +179,9 @@ tf.config.experimental.set_memory_growth(gpu, True)
 # use predict_on_batch
 images_batch, labels_batch = next(iter(test_ds))
 pred_scores = model.predict_on_batch(images_batch)
+
+# take a subset of data from dataset object
+train_ds = train_ds.take(16)
+
+# load trained model
+tf.keras.models.load_model

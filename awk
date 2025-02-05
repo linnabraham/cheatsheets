@@ -1,6 +1,8 @@
 # print the quote character
 \x27
 
+# NF is a built-in awk variable that represents the Number of Fields in the current line
+
 # select output from first row
 'NR==1{print $1}'
 

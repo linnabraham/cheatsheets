@@ -477,3 +477,9 @@ git push --verbose
 
 # see existing tags
 git tag -l
+
+# preserve color when piping  git status command
+git -c color.status=always status
+
+# show only tracked files in root directory
+git ls-files | awk -F'/' 'NF==1'

@@ -17,6 +17,9 @@ grep -B 4
 # To use OR in grep
 grep -E 'patt1|patt2'
 
+# to show lines that do not match pattern
+git -v 'pattern'
+
 # use multiple patterns in grep
 grep -v 'bar\|foo' /dir1/dir2/file1
 

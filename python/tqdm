@@ -12,3 +12,6 @@ for i in tqdm(listname):
 from tqdm import tqdm
 tqdm.pandas()
 df.groupby(0).progress_apply(lambda x: x**2)
+
+# add to zip
+tqdm(zip(test_labels, test_images), total=len(test_labels), desc="Processing")

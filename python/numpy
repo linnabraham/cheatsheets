@@ -69,3 +69,6 @@ np.stack(image_list, axis=-1)
 # stack a list of arrays along the last dimension
 # without adding new dimension
 np.concatenate(image_list, axis=-1)
+
+# count unique values
+unique_values, counts = np.unique(arr, return_counts=True)

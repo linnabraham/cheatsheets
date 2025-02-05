@@ -426,3 +426,12 @@ Open :CocConfig, set pyright.inlayHints.enable: false
 
 # delete lines matching pattern
 :g/error/d
+
+# search and replace in visual block
+:'<,'>s/old/new/g
+
+# run python code
+:w !python
+
+# run selected code
+:'<,'>!python
