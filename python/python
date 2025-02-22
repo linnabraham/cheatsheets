@@ -319,3 +319,6 @@ package-name/setup.py
 package-name/README
 # pip install package from github
 pip install --force-reinstall git+/path/to/github/repo/https
+
+# repr() is a built-in Python function that returns a string 
+# representation of an object that is more detailed and unambiguous compared to str()

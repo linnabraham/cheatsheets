@@ -498,5 +498,10 @@ This is the introduction.
 
 \end{document}
 
+<<<<<<< HEAD
 # to make pdf open in full screen mode always use this in the hypersetup
 pdfpagemode=FullScreen
+
+# add animation in beamer
+    \item First item
+    \pause

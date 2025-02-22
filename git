@@ -483,3 +483,9 @@ git -c color.status=always status
 
 # show only tracked files in root directory
 git ls-files | awk -F'/' 'NF==1'
+
+# dont stash staged and untracked files
+git stash push --keep-index
+
+# dont stash staged files alone
+git stash push --keep-index --include-untracked

@@ -13,3 +13,6 @@ drush watchdog:show
 
 # enable custom module
 drush en module_name -y
+
+# disable module
+drush pm:uninstall module_name

@@ -140,6 +140,8 @@ bind-key -T prefix C-d send-keys -X cancel
 
 # break a pane into its own window
 ctrl-b !
+or
+ctrl-b : break-pane
 
 # see if you have vi or emacs style keys
 tmux show-options -g status-keys
