@@ -19,3 +19,11 @@ from google.colab import files files.download("/content/file.zip")
 
 # magic to write cell as file
 %%writefile filename.py
+
+# use conda with colab
+!pip install -q condacolab
+import condacolab
+condacolab.install()
+
+# check md5sum
+echo "HASH  /path/to/file" | md5sum -c

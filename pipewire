@@ -4,6 +4,15 @@ systemctl --user restart pipewire
 # list attached audio devices
 pactl list sinks
 
+# short version of above command
+pactl list sinks short
+
+# see loaded modules
+pactl list modules
+
 # unmute audio devices
 # where sink name can be obtained from pactl list sinks
 pactl set-sink-mute <sink_name> 0
+
+# see list of sinks and sources
+wpctl status

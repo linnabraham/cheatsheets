@@ -117,3 +117,5 @@ conda remove -n envname --all
 
 # install to different environment than activated
 conda install -n envname
+
+# for GLIBCXX issues install proper version of gcc

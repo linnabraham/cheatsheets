@@ -435,3 +435,8 @@ Open :CocConfig, set pyright.inlayHints.enable: false
 
 # run selected code
 :'<,'>!python
+
+# dependency of coc vim plugin
+node
+pylint
+jedi

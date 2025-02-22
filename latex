@@ -497,3 +497,6 @@ The figure \ref{nicefigure}
 This is the introduction.
 
 \end{document}
+
+# to make pdf open in full screen mode always use this in the hypersetup
+pdfpagemode=FullScreen

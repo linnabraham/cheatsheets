@@ -318,3 +318,10 @@ stat -f
 
 # for issues mounting ntfs partition on linux
 sudo ntfs-3g /dev/sdxx /mnt
+
+# prevent screen from being turned off or locked?
+xset s off -dpms
+
+# test mic with alsa
+arecord -f cd -d 5 test-mic.wav
+aplay test-mic.wav
