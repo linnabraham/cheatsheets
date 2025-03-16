@@ -41,3 +41,6 @@ jq ' .data | .[]' | jq '"\( .text), \(.history | .[] | .scoredUp)"'
 
 # return ouput in different format
 @csv
+
+# convert json to csv
+jq -r '.[] | [.rank, .id, .listed_at, .notes, .type, .movie.title, .movie.year, .movie.ids.imdb, .movie.ids.tmdb] | @csv' movies.json > movies.csv

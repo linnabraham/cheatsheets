@@ -325,3 +325,6 @@ xset s off -dpms
 # test mic with alsa
 arecord -f cd -d 5 test-mic.wav
 aplay test-mic.wav
+
+# check dependencies
+lddtree
