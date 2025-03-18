@@ -72,3 +72,7 @@ np.concatenate(image_list, axis=-1)
 
 # count unique values
 unique_values, counts = np.unique(arr, return_counts=True)
+
+# load npz data
+# get keys
+npz_data.files

@@ -322,3 +322,9 @@ pip install --force-reinstall git+/path/to/github/repo/https
 
 # repr() is a built-in Python function that returns a string 
 # representation of an object that is more detailed and unambiguous compared to str()
+
+# raise error
+raise ValueError("An error occurred due to an invalid value")
+
+# find key
+key = next((k for k, v in my_dict.items() if v == value_to_find), None)

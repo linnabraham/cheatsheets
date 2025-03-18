@@ -489,3 +489,6 @@ git stash push --keep-index
 
 # dont stash staged files alone
 git stash push --keep-index --include-untracked
+
+# tag with more metadata
+git tag -a v1.04 -m "Message"
