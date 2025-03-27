@@ -17,3 +17,6 @@ LS_OPTIONS
 
 # show access time instead of modification time
 --time=atime
+
+# list only directories
+ls -d */
