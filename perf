@@ -1,0 +1,14 @@
+# Capture call graphs (stack traces), in order to see the function call hierarchy.
+perf record -g
+
+# specify sampling frequency of 9999 Hz
+perf record -F 9999
+
+# save the profiling data to file
+-o perf.data
+
+# analyze report using perf
+perf report -i perf.data
+
+# see support for perf profiler
+python -m sysconfig | grep HAVE_PERF_TRAMPOLINE
