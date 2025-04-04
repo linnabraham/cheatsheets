@@ -97,6 +97,7 @@ conda list --export > environment.yml
 
 # remove package from conda env
 conda remove packagename
+conda uninstall packagename
 
 # conda upgrade a package
 conda update wandb
