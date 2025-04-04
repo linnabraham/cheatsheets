@@ -1,0 +1,2 @@
+# check if headphone is connected or not
+amixer contents | grep -A5 'Jack'
