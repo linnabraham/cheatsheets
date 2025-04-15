@@ -492,3 +492,6 @@ git stash push --keep-index --include-untracked
 
 # tag with more metadata
 git tag -a v1.04 -m "Message"
+
+# show the last commmited version
+git show HEAD:path/to/original_file > new_file

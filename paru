@@ -34,3 +34,6 @@ makepkg -i or pacman -U
 
 # install packages that have updates, are explicitly installed and are not present in the ignore list
 paru -Syyy $(pacman -Qeu | grep -Fv "[ignored]" | awk '{print $1}')
+
+# skip tests
+ --mflags --nocheck

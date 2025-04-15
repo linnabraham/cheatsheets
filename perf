@@ -12,3 +12,8 @@ perf report -i perf.data
 
 # see support for perf profiler
 python -m sysconfig | grep HAVE_PERF_TRAMPOLINE
+
+# use flamegraph to analyze perf data
+perf script > out.perf
+stackcollapse-perf.pl out.perf > out.folded
+flamegraph.pl out.folded > out.svg

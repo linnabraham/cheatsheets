@@ -10,3 +10,6 @@ playerctl --list-all # same as playerctl -l
 
 # prefer a particular client
 playerctl --player=vlc,%any play
+
+# playerctl doesnt seem to be working
+playerctld daemon
