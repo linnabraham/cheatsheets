@@ -12,26 +12,16 @@ A table of contents (ToC) is produced by inserting \tableofcontents at the appro
 $^{\circ}$
 
 # math symbols
-\mp for +-
-\equiv for equivalent
+\mp # for minus plus
+\pm # for plus minus
+\equiv # for equivalent
+\approx # for approximate
+\sim # tilde or approx
 
-# tilde or approx
-\sim
-
-# infinity
-\infty
-
-# square root
-\sqrt{things under root}
-
-# not equal
-\neq
-
-# plus or minu
-\pm
-
-# hat or cap
-\hat{a}
+\infty # infinity
+\sqrt{things under root} # square root
+\neq # not equal
+\hat{a} # hat or cap
 
 # arcsec
 \arcsec # this comes from some package
@@ -404,6 +394,10 @@ $\ell$
 # disable todos from todonotes package
 \usepackage[disable]{todonotes}
 
+# add to contents or toc
+\listoftodos
+\addcontentsline{toc}{chapter}{List of Todos}
+
 # remove empty pages after a chapter in book
 \documentclass[openany]{book}
 
@@ -439,11 +433,6 @@ Erika Mustermann
 \begin{lstlisting}
 ...
 \end{lstlisting}
-
-#
-# add to contents or toc
-\listoftodos
-\addcontentsline{toc}{chapter}{List of Todos}
 
 # strikeout or strikethrough
 \usepackage[normalem]{ulem}

@@ -440,3 +440,6 @@ Open :CocConfig, set pyright.inlayHints.enable: false
 node
 pylint
 jedi
+
+# search for a unicode character which is invisible in vim
+/\%u202f  # U+202F
