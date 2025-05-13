@@ -328,3 +328,23 @@ raise ValueError("An error occurred due to an invalid value")
 
 # find key
 key = next((k for k, v in my_dict.items() if v == value_to_find), None)
+
+# Documentation in Python
+# some of the associated documentation is shown from the corresponding __init__.py file
+help() # use with package name
+
+# print the doc
+print(package_name.__doc__)
+
+# use inspect to see functions
+import inspect
+import astro_utils.aia as aia
+
+functions = [name for name, obj in inspect.getmembers(aia, inspect.isfunction)]
+print(functions)
+
+# use pdoc
+import pdoc
+html = pdoc.pdoc('astro_utils.aia')
+from IPython.core.display import display, HTML
+display(HTML(html))

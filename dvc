@@ -40,5 +40,9 @@ dvc checkout -- /path/to/file
 # list file tracked by dvc in current directory
 dvc list --dvc-only <path>
 
+# to look inside a nested directory using dvc
+# where data is a directory inside dvc
+dvc list . data --dvc-only
+
 # compute the hash for a directory
 dvc-data build /path/to/dir

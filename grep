@@ -60,3 +60,6 @@ grep -C 3
 
 # exclude directory
 --exclude-dir /path/to/dir
+
+# grep within jupyter notebook source code
+find . -name '*.ipynb' | while read -r file; do  jq -r '.cells[].source[]?' "$file" | grep --color=always -H "pattern/to/search" | sed "s|^|$file: |"; done | less -R
