@@ -63,3 +63,6 @@ grep -C 3
 
 # grep within jupyter notebook source code
 find . -name '*.ipynb' | while read -r file; do  jq -r '.cells[].source[]?' "$file" | grep --color=always -H "pattern/to/search" | sed "s|^|$file: |"; done | less -R
+
+# a simpler version of above without file information
+find . -name '*.ipynb' -exec jq -r '.cells[].source[]?' {} \; | grep --color=always 'time' | less -R

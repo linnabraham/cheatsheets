@@ -497,4 +497,4 @@ git tag -a v1.04 -m "Message"
 git show HEAD:path/to/original_file > new_file
 
 # add and commit a file different from the staged ones
-git commit --only /path/to/file -m COMMIT-MSG
+git commit --only /path/to/file -m COMMIT-MSG # -o for short
