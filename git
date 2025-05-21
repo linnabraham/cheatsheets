@@ -121,9 +121,10 @@ git log --oneline --graph branch1 branch2
 --diff-filter=M
 
 # undo latest git commit
-git reset HEAD~  # uses --soft by default
-
+# If you used git reset HEAD~ without --soft, it would default to --mixed, 
+# which keeps the changes in the working directory but unstages them.
 # by using the --soft option you can keep the modifications in your Working Directory
+git reset --soft HEAD~
 
 # To discard the changes in the working directory as well
 git reset --hard HEAD~
