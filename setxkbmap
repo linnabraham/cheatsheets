@@ -1,0 +1,2 @@
+# temporarily switch caps and escape without rebooting system after kernel update
+setxkbmap -option caps:swapescape
