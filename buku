@@ -27,3 +27,6 @@ the nostd in parameter has to come before other parameters to work perfectly in 
 
 # run bukuserver
 bukuserver run --host 127.0.0.1 --port 5001
+
+# command to run with buku
+buku -w 'vim' -a "$(xclip -o --selection primary)"

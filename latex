@@ -448,6 +448,12 @@ item4 & item5 & item6
 \le
 \ge
 
+# less than equal to
+\leq
+
+# greater than equal to
+\geq
+
 # prime or dash for first derivative
 \prime
 
@@ -497,3 +503,20 @@ pdfpagemode=FullScreen
 # put auxillary files into separate folder
 pdflatex -output-directory=build main.tex 
 bibtex build/main
+
+# for strikeout using \st
+\usepackage{soul}
+
+# show paths in kpsewhich
+kpsewhich -show-path=bst
+
+# use hyperref for linking to sections
+\usepackage{hyperref}
+
+\section{Hello World}
+\label{sec:hello}
+
+\hyperref[sec:hello]{Word of text}
+
+# table of contents or outline
+\tableofcontents

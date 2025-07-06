@@ -92,7 +92,8 @@ ax.set_title()
 im = plt.imread("img.jpg")
 I=im*255
 dest=I.astype(np.unit8)
-if the image was saved to png using matplotlib then the this might not work. the orginal unint8 data in the image would be changed due to mpl normalization.
+# if the image was saved to png using matplotlib then the this might not work.
+# the orginal unint8 data in the image would be changed due to mpl normalization.
 
 # saving images when using subplots
 use the figure variable returned with fig.savefig rather than the plt.savefig

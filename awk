@@ -68,3 +68,6 @@ awk -F, 'NR == 1 || ($2 > 0.9) { print $1 }' pred_output.csv
 
 # print last field
 awk '{print $NF}'
+
+# check for values greater than threshold
+cut -d, -f 2 | awk '$1 > 0.5' | wc -l

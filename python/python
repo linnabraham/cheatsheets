@@ -348,3 +348,7 @@ import pdoc
 html = pdoc.pdoc('astro_utils.aia')
 from IPython.core.display import display, HTML
 display(HTML(html))
+
+# run a script which is not at the root of the directory
+# where the name of the script is train.py
+python -m vit.scripts.train

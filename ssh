@@ -74,5 +74,5 @@ ForwardX11Trusted yes
 # Unable to negotiate with ..: no matching host key type found. Their offer: ssh-rsa,ssh-dss
     HostKeyAlgorithms +ssh-rsa
 
-
-
+# Use EdDSA algorithm for keygen
+-t ed25519

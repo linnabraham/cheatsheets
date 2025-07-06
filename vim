@@ -79,6 +79,8 @@ D
 # end of word
 E
 
+# delete entire word before the cursor.
+
 # motions
 w - move forward a word
 e - move foward a word till last char
@@ -187,6 +189,8 @@ vim -u NONE -U NONE -N -i NONE
 
 # Jumping
 Ctrl-O to jump back to the previous (older) location.
+
+# Go forward
 Ctrl-I (same as Tab) to jump forward to the next (newer) location.
 
 # combine multiple commands at startup
@@ -443,3 +447,22 @@ jedi
 
 # search for a unicode character which is invisible in vim
 /\%u202f  # U+202F
+
+# use the magit plugin in nvim
+nvim -c MagitOnly
+
+# remove all trailing whitespace in vim
+:%s/\s\+$//e
+
+# Open coc config
+:CocConfig
+
+# substitute in visual block
+use c (change) after selecting visual block
+
+# By default, vim-instant-markdown will automatically launch the preview window when you open a Markdown file.
+# If you want to manually control this behavior, you can specify
+#
+let g:instant_markdown_autostart = 0
+#
+# in your .vimrc. You can then manually trigger preview via the command :InstantMarkdownPreview.

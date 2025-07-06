@@ -36,3 +36,6 @@ os.cpu_count()
 os.path.isfile(path)
 os.path.isdir(path)
 os.path.exists(path)  # returns true if either file or directory
+
+# dont error out if path already exists
+os.makedirs(output_prefix, exist_ok=True)

@@ -1,6 +1,9 @@
 # submit an interactive job
 qsub -I -l select=1:ncpus=32:host=gpu003 -lwalltime=48:00:00
 
+# specify number of gpus
+qsub -l select=1:ncpus=32:ngpus=1
+
 # status of all resources
 sinfo
 
@@ -24,3 +27,13 @@ ssh -X <username>@192.168.11.236
 # check storage quota
 lfs quota -h -u clinn /mnt/
 lfs quota -h -u clinn /scratch/
+
+# keep output and error files on execution host
+-k oe
+
+# specify output and error
+-o "path/to/file"
+-e "path/to/file"
+
+# specify memory
+PBS -l select=1:ncpus=2:mem=128gb

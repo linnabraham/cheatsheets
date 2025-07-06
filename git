@@ -499,3 +499,27 @@ git show HEAD:path/to/original_file > new_file
 
 # add and commit a file different from the staged ones
 git commit --only /path/to/file -m COMMIT-MSG # -o for short
+
+# git blame with colors
+git blame --color-lines --color-by-age
+
+# use meld to see visual diff
+meld <(git show :scripts/data_single.py) scripts/data_single.py
+
+# safer version of force push which allows only to push if no one else has already pushed
+git push --force-with-lease
+
+# checkout branch in a different directory than the main git dir
+git worktree add ../branch-dir branch-name
+
+# list open worktrees
+git worktree list
+
+# remove worktree
+git worktree remove /path/to/branch-dir
+
+# see if there are commits on feature that are not present in master
+git log feature --not master
+
+# to temporarily ignore .gitignore
+git status --ignored

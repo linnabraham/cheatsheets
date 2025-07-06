@@ -2,3 +2,7 @@
 sshfs hostname:remote_directory /local/mount/point
 
 # unmount using fusermount command
+
+# sometimes if the mounting is not proper there are issues with git repositories not
+# being recognized.
+sshfs suit: temp-mounts/suit -o uid=$(id -u),gid=$(id -g),umask=022

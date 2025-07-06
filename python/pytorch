@@ -4,6 +4,10 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 # install pytorch for cuda 12
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
+# official pytorch anaconda channel is deprecated now but the following works
+# https://github.com/pytorch/pytorch/issues/138506
+conda install -c conda-forge pytorch
+
 # install pytorch lightning
 conda install lightning -c conda-forge
 
@@ -61,3 +65,7 @@ print(f"Allocated GPU memory ({current_memory} MB)")
 # to see memory reserved
 memory_reserved = torch.cuda.memory_reserved() / (1024 ** 2)
 print(f"GPU memory reserved: {memory_reserved}")
+
+# see memory usage of a variable
+mem_bytes = tens.element_size() * tens.nelement()
+print(f"Tensor memory: {mem_bytes / 1024**2:.2f} MB")

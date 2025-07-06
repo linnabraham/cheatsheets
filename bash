@@ -173,3 +173,13 @@ HISTFILESIZE: This variable sets the maximum number of lines contained in the hi
 
 # check if file exists
 [ -e "$p" ]
+
+# compute the md5sum hashes of multiple files (preserving sequential order) and record in a text file
+ls *.tar.gz | sort -V | xargs md5sum > md5sums.txt
+
+# rename files to be in sequential order
+count=1
+for file in $( ls *.tar.gz | sort -V); do
+  mv "$file" "$count.tar.gz"
+  count=$((count + 1))
+done

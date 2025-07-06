@@ -19,3 +19,6 @@ cltr + super + tagname
 # show only occupied tags
 # in the wibar configuration change the filter to this
 filter  = awful.widget.taglist.filter.noempty,
+
+# send a toggle signal for custom function to awesome
+echo "toggle_notifications()" | awesome-client
