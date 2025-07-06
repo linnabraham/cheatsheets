@@ -1,0 +1,2 @@
+# test single function
+python -m unittest test_module.TestClass.test_function
