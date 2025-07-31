@@ -1,0 +1,11 @@
+# Package name for installation in arch
+tailscale
+
+# setup
+sudo systemctl enable --now tailscaled.service
+
+# this is where you authorize graphically
+sudo tailscale up
+
+# there is a file you have to delete form /var/lib/tailscale/ 
+# if you want to re-authorize with a different tailscale account.
