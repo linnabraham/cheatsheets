@@ -1,0 +1,2 @@
+# Seaborn barplot sets the saturation of the bar face colors to 0.75 by default.
+# This can be overridden by adding saturation=1 to the barplot call.

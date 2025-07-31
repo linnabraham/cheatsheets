@@ -1,0 +1,11 @@
+# get chmod numerical value for a file
+stat --format '%a' <file>
+
+# get last modified date of file
+stat -c %y $1 | cut -d' ' -f1
+
+# check fundamental block size
+stat -f
+
+# stat command can also be used to check if a file
+# is a regular file, symlink or hardlink

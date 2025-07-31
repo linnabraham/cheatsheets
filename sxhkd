@@ -1,0 +1,5 @@
+# reload config
+killall sxhkd && sxhkd &
+
+# if you are on zsh dont forget !
+killall sxhkd && sxhkd &!
