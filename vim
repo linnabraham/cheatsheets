@@ -466,3 +466,22 @@ use c (change) after selecting visual block
 let g:instant_markdown_autostart = 0
 #
 # in your .vimrc. You can then manually trigger preview via the command :InstantMarkdownPreview.
+
+# for persistent undo
+https://stackoverflow.com/questions/17936130/vim-undo-undo-changes-after-file-write
+
+# search and replace everything in between the \verb|....| pattern
+s/\v\\verb\|([^|]*)\|/\\texttt{\1}/g
+
+# very magic mode reduces the need to escape most characters.
+# For example, |, (, ) become special unless you escape them.
+# In \v mode, to match a literal pipe |, you must escape it as \|
+:s/\v<pattern>
+
+# turn off search highlight
+:noh
+
+# use the vim-gnupg plugin for writing an encrypted message using vim
+# put this in the first line
+# https://www.lotharschulz.info/2018/10/21/transparent-editing-of-gpg-encrypted-files-with-vim/
+[your name used in gpg key] <[your email used in gpg key]>

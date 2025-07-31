@@ -69,3 +69,6 @@ find . -name '*.ipynb' | while read -r file; do  jq -r '.cells[].source[]?' "$fi
 
 # a simpler version of above without file information
 find . -name '*.ipynb' -exec jq -r '.cells[].source[]?' {} \; | grep --color=always 'time' | less -R
+
+# show lines with non-ASCII characters
+grep --color='auto' -P -n '[^\x00-\x7F]' main.tex

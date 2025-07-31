@@ -510,6 +510,7 @@ meld <(git show :scripts/data_single.py) scripts/data_single.py
 git push --force-with-lease
 
 # checkout branch in a different directory than the main git dir
+# directory shouldnt already exist
 git worktree add ../branch-dir branch-name
 
 # list open worktrees
@@ -523,3 +524,9 @@ git log feature --not master
 
 # to temporarily ignore .gitignore
 git status --ignored
+
+# see the most recent change made to a file
+git log -p -1 -- <file>
+
+# to create a worktree for a non-existent branch based on a different branch
+git worktree add ../feature-x-dir -b feature-x main

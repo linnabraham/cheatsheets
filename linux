@@ -16,9 +16,6 @@ sort -n file
 # move only if file doesnt exist
 mv -n
 
-# get chmod numerical value for a file
-stat --format '%a' <file>
-
 # find metadata for images
 identify -verbose <imagename>
 exif <imagename>
@@ -118,9 +115,6 @@ cat /etc/group
 
 # loop through file contents
 while read p; do echo $p; done < file.txt
-
-# get last modified date of file
-stat -c %y $1 | cut -d' ' -f1
 
 # get model name for hdd or ssd disks
 sudo fdisk -l
@@ -313,9 +307,6 @@ mpstat 2 5 | grep "all" | tail -n1 | awk '{print 100 - $12}'
 # remove target of symlink without removing actual symlink
 rm $(readlink /path/to/link)
 
-# check fundamental block size
-stat -f
-
 # for issues mounting ntfs partition on linux
 sudo ntfs-3g /dev/sdxx /mnt
 
@@ -327,4 +318,4 @@ arecord -f cd -d 5 test-mic.wav
 aplay test-mic.wav
 
 # check dependencies
-lddtree
+lddtree /path/to/binary

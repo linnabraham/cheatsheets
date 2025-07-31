@@ -69,3 +69,6 @@ print(f"GPU memory reserved: {memory_reserved}")
 # see memory usage of a variable
 mem_bytes = tens.element_size() * tens.nelement()
 print(f"Tensor memory: {mem_bytes / 1024**2:.2f} MB")
+
+# check if the model is on gpu or not
+next(model.parameters()).device

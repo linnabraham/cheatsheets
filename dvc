@@ -11,6 +11,7 @@ pip instal boto
 
 # install using conda
 conda install -c conda-forge dvc
+conda install -c conda-forge dvc-gdrive # for google drive support
 # might be better to install using pip since dvc[cli] can only be installed using pip
 # Step 1: initialize DVC
 dvc init
@@ -40,9 +41,49 @@ dvc checkout -- /path/to/file
 # list file tracked by dvc in current directory
 dvc list --dvc-only <path>
 
+# produce a tree output
+dvc list --dvc-only . --tree
+
 # to look inside a nested directory using dvc
 # where data is a directory inside dvc
 dvc list . data --dvc-only
 
 # compute the hash for a directory
 dvc-data build /path/to/dir
+
+# configure google-drive as remote
+# 1. You need to use a custom project and enable google drive API
+# 2. Install the dvc-gdrive package
+# create a folder say dvcstore in your google drive and copy the ID for the folder
+# into your .dvc/config.local as.
+# [for more refer- https://dvc.org/doc/user-guide/data-management/remote-storage/google-drive#url-format]
+# https://dvc.org/doc/user-guide/data-management/remote-storage/google-drive#url-format
+url = gdrive://<FOLDER-ID>
+
+# dry run dvc repro
+dvc repro prediction-plots --dry
+
+# .dvc/config is meant to be tracked by Git and should not contain sensitive user info 
+# or secrets (passwords, SSH keys, etc). Use --local when in doubt.
+
+# Add a stage
+dvc stage add -n printer -d write.sh -o pages ./write.sh
+
+# add to dvc.lock without dvc repro
+dvc commit stage-name
+
+# partial push dvc
+dvc push data.zip.dvc
+
+# see all version of a file tracked by DVC
+git log -- /path/to/file.dvc
+# pick a commit
+git checkout commit-hash
+dvc checkout /path/to/file
+
+# remove item from dvc tracking
+# this also removes the corresponding entry from the .gitignore
+dvc remove /path/to/file.dvc
+
+# garbage collection
+dvc gc -w

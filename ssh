@@ -76,3 +76,5 @@ ForwardX11Trusted yes
 
 # Use EdDSA algorithm for keygen
 -t ed25519
+
+# ssh-copy-id only transfers the public key; to copy the private key use scp

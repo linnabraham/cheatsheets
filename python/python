@@ -320,6 +320,12 @@ package-name/README
 # pip install package from github
 pip install --force-reinstall git+/path/to/github/repo/https
 
+# use the package in developmental mode
+# clone the git repo into your current project directory
+# cd into your package directory
+pip install -e .
+# Then changes you make to the pacakge contents get directly reflected
+
 # repr() is a built-in Python function that returns a string 
 # representation of an object that is more detailed and unambiguous compared to str()
 

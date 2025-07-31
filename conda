@@ -94,6 +94,8 @@ conda install -c conda-forge ranger-fm
 # create conda environment from existing
 conda list --export > environment.yml
 
+# Export packages to environment file only those explicitly installed
+conda env export --from-history > environment.yml
 
 # remove package from conda env
 conda remove packagename
@@ -120,3 +122,14 @@ conda remove -n envname --all
 conda install -n envname
 
 # for GLIBCXX issues install proper version of gcc
+#
+
+#Do you wish to update your shell profile to automatically initialize conda?
+#This will activate conda on startup and change the command prompt when activated.
+#If you'd prefer that conda's base environment not be activated on startup,
+#   run the following command when conda is activated:
+
+conda config --set auto_activate_base false
+
+#You can undo this by running `conda init --reverse $SHELL`? [yes|no]
+

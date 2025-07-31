@@ -51,7 +51,7 @@ sudo btrfs subvolume show /data/.snapshots/web1-2020-12-25
 sudo btrfs subvolume delete /mnt/data/@some_dir-snapshot-test
 
 # send an incremental snapshot to a network location using ssh
-\sudo btrfs send -p /mnt/pool/volumes/home/.snapshots/home_2023.02.19-15.01.01 /mnt/pool/volumes/home/.snapshots/home_2023.02.25-22.01.01 | ssh user@localip "\sudo -S btrfs receive /run/media/user/uuid/backups -v"
+sudo btrfs send -p /path/to/parent/snapshot /path/to/child/snapshot | ssh user@localip "\sudo -S btrfs receive /run/media/user/uuid/backups -v"
 
 # fix issue with no space left due to btrfs metadata usage above 75 pc
 # useful to delete some of the existing backups

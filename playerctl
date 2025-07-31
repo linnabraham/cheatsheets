@@ -13,3 +13,6 @@ playerctl --player=vlc,%any play
 
 # playerctl doesnt seem to be working
 playerctld daemon
+
+# show debug info
+playerctld daemon --debug
