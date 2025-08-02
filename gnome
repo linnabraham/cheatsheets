@@ -1,0 +1,5 @@
+# to open another window showing the same file
+File --> Open a Copy
+
+# see evince defaults
+gsettings list-recursively org.gnome.Evince
