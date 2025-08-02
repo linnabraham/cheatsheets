@@ -1,0 +1,37 @@
+
+#8.2.1 Basic Reporting Commands
+
+balance
+bal
+
+    #Show account balances.
+register
+reg
+
+    #Show all transactions with running total.
+csv
+
+    #Show transactions in csv format, for exporting to other programs.
+print
+
+    #Print transactions in a format readable by ledger.
+equity
+
+    #Print account balances as transactions.
+
+
+
+
+#4.7.2 Command Directives
+include
+
+    #Include the stated file as if it were part of the current file. The file name can contain a wildcard (‘*’) to refer to multiple files (e.g. ‘bank/*.ledger’).
+
+# Hledger 
+
+# csv import
+# for dates in the standard format no special date format needed
+
+
+# set the amount to the 4th CSV field with "USD " prepended
+amount USD %4
