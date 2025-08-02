@@ -358,3 +358,6 @@ display(HTML(html))
 # run a script which is not at the root of the directory
 # where the name of the script is train.py
 python -m vit.scripts.train
+
+# in Python the . resolves to the current working directory irrespective
+# of where your script resides

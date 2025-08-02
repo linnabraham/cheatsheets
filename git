@@ -530,3 +530,6 @@ git log -p -1 -- <file>
 
 # to create a worktree for a non-existent branch based on a different branch
 git worktree add ../feature-x-dir -b feature-x main
+
+# see change introduced in the last commit made to a specific file
+git show $(git log -1 --pretty=format:%H -- scripts/make_config.py) -- scripts/make_config.py

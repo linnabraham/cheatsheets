@@ -32,3 +32,5 @@ history 1
 # bracketed paste is enabled by default in zsh to disable
 unset zle_bracketed_paste
 
+# ignore Ctrl-D which otherwise would exit the shell
+setopt IGNORE_EOF
