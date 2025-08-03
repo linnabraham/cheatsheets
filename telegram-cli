@@ -1,0 +1,9 @@
+msg <peer> <text>
+contact_list
+dialog_list
+channel_info <channelname>
+user_info <username>
+history <peer> [limit]
+# It is advised to also specify the -W option when you execute commands via the -e option, in order to make sure all the required data has been loaded before executing your commands:
+telegram-cli -W -e "<command>"
+

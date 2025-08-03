@@ -1,0 +1,3 @@
+# fix for kitty hanging on exit
+# https://github.com/kovidgoyal/kitty/issues/378
+ctrl + shift + w

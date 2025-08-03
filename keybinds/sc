@@ -1,0 +1,11 @@
+# yank selected cell
+yy
+
+# paste yanked cell
+p
+
+# delete cell
+dd
+
+# export into csv
+:w filename.csv

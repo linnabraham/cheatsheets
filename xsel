@@ -1,0 +1,2 @@
+# To output the selection to std out
+xsel -o

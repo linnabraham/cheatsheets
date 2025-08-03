@@ -1,0 +1,2 @@
+# apply the current openbox theme
+jgmenu_run init --apply-obtheme

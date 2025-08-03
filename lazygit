@@ -1,0 +1,2 @@
+# To work with bare repos
+lazygit --git-dir=$HOME/.myconf --work-tree=$HOME

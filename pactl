@@ -1,0 +1,2 @@
+# show bluetooth device details
+pactl list

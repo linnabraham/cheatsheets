@@ -1,0 +1,10 @@
+# toggle read status
+N
+# mark delete
+D
+# undo mark delete
+U
+# select all messages
+Shift + t + .
+# mark messages for deletion
+;D

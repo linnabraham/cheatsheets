@@ -1,0 +1,12 @@
+# view dual pane mode in zathura
+d
+
+# navigate to a page
+<pg number> gg
+
+# rotate
+r
+
+# open another program from zathura
+map <C-a> feedkeys ":exec okular %<Return>"
+

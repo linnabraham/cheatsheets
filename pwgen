@@ -1,0 +1,2 @@
+# generate a single password
+pwgen -N 1

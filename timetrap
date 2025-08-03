@@ -1,0 +1,17 @@
+# start entry
+tt in finish configuring openbox
+
+# end current work
+tt out
+
+# enter checkout time manually
+ tt out -a "2021-10-11 00:30:00"
+
+ # show ids
+ tt -v display
+
+ # delete entry
+ tt kill -i id
+
+ # edit entry
+ tt edit -i id --start time --end time
