@@ -1,0 +1,49 @@
+# show timew entries with entries
+timew summary :ids
+
+# lengthen or shorten interval
+timew lengthen @id 1hour
+
+# 0.5hr might not work
+timew shorten @id 30mins
+
+# move interval
+timew move @id 7pm
+
+# modify
+timew modify end @3 2020-12-28T17:00:00
+
+# track time; tags should follow time
+timew track 2021-10-05T20:00:00 for 1hour "class for HR" "watch khanacademy videos"
+
+# add missing tags
+timew tag @id "tagname"
+
+# remove tags
+timew untag @id "tagname"
+
+# 1hour and 30 mins as duration to track
+timew track today for PT1H13M
+
+# to see the data for a particular tag
+timew summary :all tagname
+
+# shell script hack for inserting date
+timew track "$YEST"T21:00 for 2hours "tags"
+
+# filter by month
+timew summary  :month
+
+timew summary :lastmonth
+
+# example commands
+timew track 06:00 for 1.5hr  "madhav" "teachlive"
+timew track yesterday for 1.5hr  "madhav" "teachlive"
+timew track wednesday for 1.5hr  "madhav" "teachlive"
+
+# use as a time tracker stopwatch
+timew start tagname
+timew stop
+
+# show all tags
+timew tags

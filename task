@@ -1,0 +1,108 @@
+# add task
+task add project:name +tag description
+
+# complete task
+task id done
+
+# to list task that are not part of project
+task list project.not:name
+
+# see tasks compeleted today
+task end:today completed
+
+# modify start and end dates of completed task
+task c0e44389 modify start:"2021-10-29T18:14"
+
+# to modify the created date of a task
+task id modify entry:yesterday
+
+# boost urgency for task
+task id modify +next
+
+# limit no of displayed task
+limit:3
+
+# add due after 3 days
+due:+3d
+
+# modify a recurring task to add a wait
+task uuid-of-parent modify wait:due-4days
+
+# modify urgency config variable
+task config urgency.user.tag.house.coefficient -0.5
+
+# rename a tag
+task +tag modify -tag +newtagname
+
+# prepend
+task id prepend "term"
+
+# purge tasks to remove them completely
+task uuid purge
+
+# to modify a context
+task context define context-name <new conditions>
+
+# define an alias
+task config alias.rm delete
+
+# remove annotation from task
+task id denotate
+
+# add dependent task
+$ task add Fix the leak depends:3 scheduled:3.due
+
+#This makes the new task dependent on task 3, and scheduled on the due date of task 3. Note that '3.due' is a DOM reference of a specific task.
+
+# using regex in filters or searches
+task 'project~galaxy or project~mscpro' list
+
+# taskwarrior-tui
+# mark tasks
+v
+
+# taskwarrior-tui gives u trouble if u have broken references in your tasks.
+
+# add a recurring task
+task add pay ksfe chitty amount due:11th recur:monthly until:40months wait:due-2days
+
+# get active context name
+task _get rc.context
+
+# get count of completed tasks
+task end:today status:completed count
+
+# find tasks due within 7 days using virtual tag
+task +DUE
+
+# find latest task id
+task newest rc.verbose=nothing limit:1 | cut -f1 -d' '
+
+# get only the description of particular task
+task _get 21.description
+
+# using relative recur hook
+task add 'shave beard' relativeRecurWait:1weeks relativeRecurDue:3weeks
+
+# show waiting tasks
+task waiting
+
+# show existing filters
+task show filter
+
+# see all recurring tasks(parent) and those with a wait added by relativerecur hook
+task all \(status:recurring or status:waiting \) and -CHILD
+
+# see all the metadata for a task
+task 32 export
+
+# use different instances of task
+TASKRC=~/.taskrc TASKDATA=~/.task task list
+
+# filter tasks not in project
+task project.not:galaxy
+
+# focus on the tasks that block everything else
+task +BLOCKING -BLOCKED
+
+# get pending task count irrespective of context active

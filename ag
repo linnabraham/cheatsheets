@@ -1,0 +1,5 @@
+# Only search Javascript files. -G allows for regular expressions
+ag searchterm -G js$
+
+# Ignore searching through Javascript files. --ignore doesn't take a regex
+ag searchterm --ignore=*.js

@@ -1,0 +1,11 @@
+# when using the addon add that prepends creation date 
+# adding priority in the task line doesnt work
+
+# add a priority of A to the 3rd task
+t p 3 A
+
+# list tasks that have some priority
+t lsp 
+
+# list tasks with priority B
+t lsp B

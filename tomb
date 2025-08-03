@@ -1,0 +1,8 @@
+# tomb dig -s 100 secret.tomb
+# tomb forge secret.tomb.key
+# tomb lock secret.tomb -k secret.tomb.key
+# tomb open secret.tomb -k secret.tomb.key
+# tomb close
+
+# to change the password on a key file
+tomb passwd -k path/to/key

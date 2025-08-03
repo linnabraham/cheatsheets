@@ -1,0 +1,6 @@
+# resize size of vhd
+virsh pool-list --all
+
+virsh vol-list poolname
+
+virsh vol-resize  --pool poolname volname 12GiB

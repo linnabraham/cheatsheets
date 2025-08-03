@@ -1,0 +1,5 @@
+# name of the binary
+ghb
+
+# changing container to mp4 without reencoding
+handbrake cannot do this it seems use another application

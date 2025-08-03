@@ -1,0 +1,5 @@
+# mount truecrypt volume
+truecrypt --mount /path/to/volume [path/to/mnt/]
+
+# unmount truecrypt volumes
+truecrypt -d

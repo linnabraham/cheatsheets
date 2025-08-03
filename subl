@@ -1,0 +1,22 @@
+# compile latex file in sublime
+Ctrl + b
+
+# install extensions
+go to command palette -> instal package control
+use package control : install package
+search and install various packages from the repo packagecontrol.io
+
+preferences -> package settings-> package user settings
+to tweak individual package settings
+
+put the json config under version control
+
+# to change keybindings
+preference -> keybindings -> paste into right panel and save
+
+# custom keybindings
+Markdown preview
+alt+shift+p
+
+# migrate configuration
+replace ~/.config/sublime-text-3

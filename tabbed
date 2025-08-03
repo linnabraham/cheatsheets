@@ -1,0 +1,9 @@
+# open pdfs as tabs in zathura
+tabbed -c zathura file.pdf -e
+
+# note the identifier printed when running the above command from the terminal
+# then in order to open another file in the same tabbed instance
+tabbed newfile.pdf -e <identifier>
+
+# to open multiple files in a directory
+tabbed -c zathura *.pdf -e

@@ -1,0 +1,26 @@
+# To get mc like view in ranger
+:set viewmode multipane
+
+# To open a shell in ranger
+S
+
+# To go back to ranger from shell
+exit
+
+# bulk rename with vim
+:bulkrename
+
+# select all files in a folder
+:mark
+
+# shorcut to edit file in vim
+E
+
+# to run shell scripts on a file
+press @
+
+# have ranger follow you around the filesystem
+. ranger
+
+# get a list of shortcuts
+g

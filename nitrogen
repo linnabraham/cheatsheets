@@ -1,0 +1,5 @@
+# restore last set wallpaper
+nitrogen --restore
+
+# add image as wallpaper
+nitrogen --set-centered /path/to/image
