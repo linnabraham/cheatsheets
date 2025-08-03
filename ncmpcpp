@@ -1,0 +1,20 @@
+# to clear playlist
+c
+
+# play pause
+p
+
+# to add a folder of music to now playing from view 2
+<space>
+
+# next song from current playing menu
+>
+
+# change the visualization
+<space>
+
+# save playlist
+S
+
+# shuffle playlist in ncmpcpp
+Z - Shuffle playlist
