@@ -183,3 +183,6 @@ for file in $( ls *.tar.gz | sort -V); do
   mv "$file" "$count.tar.gz"
   count=$((count + 1))
 done
+
+# bind key to shell alias or function
+bash -i -c "myalias"

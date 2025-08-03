@@ -3,3 +3,7 @@ truecrypt --mount /path/to/volume [path/to/mnt/]
 
 # unmount truecrypt volumes
 truecrypt -d
+#
+# mount truecrypt volume without truecrypt
+sudo cryptsetup --type tcrypt open /run/media/linn/Media/Vault vault
+sudo mount /dev/mapper/vault /path/to/mount

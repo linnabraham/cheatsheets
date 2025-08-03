@@ -12,3 +12,6 @@ wget -P "path/to/save/to"
 
 # specify output filename
 wget -O /path/to/filename
+
+# get my isp through bash
+wget -q -O - whoismyisp.org | grep -oP -m1 '(?<=isp">).*(?=</p)'

@@ -319,3 +319,107 @@ aplay test-mic.wav
 
 # check dependencies
 lddtree /path/to/binary
+
+# currency conversion from 1 USD into INR
+units "1 USD" INR
+
+# to update the exchange rates
+sudo units_cur
+
+# for a two second delay in capturing screenshots using scrot
+scrot -d 2
+
+vim is set to copy into clipboard buffer
+
+# login to a different installed desktop environemnt
+# after loggin into a tty
+startx /usr/bin/xfce4-session
+
+In current setup .bash_profile is a require entity to startx when using the default login method
+
+# using vi bindings in bashrc means somethings dont work as intended for eg. keyboard shortcuts like ctrl+l
+# dont work without going to normal mode
+
+# check updates to packages without syncing local repo
+checkupdates
+
+# In order to scale QT apps try some of these
+export QT_SCALE_FACTOR=2
+export QT_FONT_DPI=96
+export QT_AUTO_SCREEN_SET_FACTOR=0
+
+# remove hyperlinks from pdf
+pdfjam filename.path
+
+# for exec command backslash escape dollar characters
+
+# clean annotations from pdf
+rewritepdf.pl -C in.pdf out.pdf
+
+# text to speech
+gtts-cli "text" | mpg123 -
+
+ # wallabag api to list entries # install httpie
+http GET https://app.wallabag.it/api/entries.json \
+    "Authorization:Bearer <access_token>"
+
+# share images to cloud and get shareable link
+curl -F"file=@$fx" https://0x0.st | xclip -selection c
+
+# print battery percentage of bluetooth device using dbus (from reddit)
+dbus-send --print-reply=literal --system --dest=org.bluez /org/bluez/hci0/dev_00_1B_66_A5_C0_BB org.freedesktop.DBus.Properties.Get string:"org.bluez.Battery1" string:"Percentage"
+
+# to get netstat command install net-tools on archlinux
+
+# custom URIs in desktop files obsidian
+#Exec=opt/obsidian-appimage/obsidian-appimage.AppImage obsidian://open?vault=vimwiki&file=index
+#Exec=env DESKTOPINTEGRATION=true /usr/bin/obsidian %u --no-sandbox %U
+
+# extract cover art from existing file in picard
+double click on the icon from the metadata information
+open in browser or something.
+
+# puddle app
+add the albumartist field to the File-View by going to Edit->Preferences->Columns. Click on + to add a column. In the Title edit box put "Album Artist", in field put "albumartist" (without any spaces).
+
+# terminal sharing using tmate
+tmate -F
+
+# texmaker always compile main.tex file
+Have your main document in the current editing window. Now, select Options > Define Current Document as "Master Document". This should do what I understand you are asking for. You will now see in the left pane the structure of the document, and regardless of what subfile you are editing, running a compile will compile your main document.
+
+# multi comments in texmaker
+ctrl + t
+
+# user tag for custom command in texmaker
+\thisIsCool{@} # this surrounds selected text with text specified
+
+# combine lot of files in folders to single folder
+find gal_oursel_p2/ gal_oursel_p3/ gal_oursel_p4/ gal_oursel_p5/ -type f -print0 | xargs -0 -I file mv --backup=numbered file gal_oursel_master/
+
+# /etc/resolv.conf: Lists nameservers that are used by your host for DNS resolution. If you are using DHCP, this file is automatically populated with DNS record issued by DHCP server.
+# /etc/hosts/: It is just a static lookup method for resolution.
+
+# find location info from public ip
+geoiplookup -f /usr/share/GeoIP/GeoIPCity.dat 49.37.232.96
+
+# how to use pastebin like service ix.io
+vainfo |  curl -F 'f:1=<-' ix.io
+
+# ungoogled-chromium supplies the chromium binary
+
+# change all caps text to first letter of each word capitalized
+xclip -o -sel c | tr '[:upper:]' '[:lower:]' | sed -r 's/(^|\s)([a-z])/\1\u\2/g' | xclip -sel c
+
+# fix for environment variable expansion not working in desktop files
+Exec=${TERMINAL} --working-directory %f
+
+# plank issue
+XDG_SESSION_TYPE=x11 plank
+
+# add path to path environment variable
+export PATH=$PATH:~/opt/bin # add to end
+export PATH=~/opt/bin:$PATH # add to beginning
+
+# start barrier
+barrier --enable-crypto

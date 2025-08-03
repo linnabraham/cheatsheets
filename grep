@@ -72,3 +72,6 @@ find . -name '*.ipynb' -exec jq -r '.cells[].source[]?' {} \; | grep --color=alw
 
 # show lines with non-ASCII characters
 grep --color='auto' -P -n '[^\x00-\x7F]' main.tex
+
+# reverse lookup where an environment variable was defined
+grep -r "TERMINAL" ~/.bashrc ~/.bash_profile ~/.profile /etc/environment
