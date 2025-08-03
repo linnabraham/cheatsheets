@@ -1,0 +1,2 @@
+# To send mail using neomutt
+neomutt -s "subject" -a "path to attachement" -- <receipient id>

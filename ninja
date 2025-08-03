@@ -1,0 +1,6 @@
+# uninstall packages built with ninja
+# enter the build directory
+sudo ninja uninstall
+
+# uninstall mpdevil compilation
+sudo ninja -C builddir uninstall

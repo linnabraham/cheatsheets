@@ -66,3 +66,6 @@ gpg --import private.gpg
 # delete key
 gpg --delete-secret-key <pub-key-id>
 gpg --delete-key <pub-key-id>
+
+# To change pinentry program in gnupg
+pinentry /usr/bin/pinentry-curses

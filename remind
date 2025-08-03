@@ -1,0 +1,21 @@
+# to add a quick reminder
+echo "$TODAY AT 18:00 MSG take out the trash" >> .config/remind/reminders.rem
+
+# show reminders
+rem
+
+# show reminders hiding timed reminders
+rem -a
+
+# know tasks 4 days in advance
+'*4'
+
+# month view
+-c
+
+# reminder notification using notify-send
+remind -z -k'gxmessage -title "reminder" %s &' ~/.config/remind/reminders.rem &
+
+# reminder
+remind -z -k'notify-send "Reminder" %s -t 0 --icon=dialog-information &' ~/.reminders &
+

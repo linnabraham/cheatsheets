@@ -9,3 +9,6 @@ t lsp
 
 # list tasks with priority B
 t lsp B
+
+# when using todo-txt in script use the plain switch to avoid problmes
+todo.sh -p

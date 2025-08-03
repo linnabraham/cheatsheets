@@ -1,0 +1,23 @@
+# connect earphones using bluetoothctl
+devices
+connect MAC_ID
+exit
+# use pair MAC_ID  for pairing new device
+
+# disconnect bluetooth device using bluetoothctl
+[devicename]# disconnect
+
+run blueman-applet and then blueman-manager from dmenu
+to pair or connect graphically
+
+# bluetooth issue - no sound even though connected
+btdev="$(pactl list sinks|grep Name|grep 'bluez.*.a2dp.sink'|sed 's/Name: //'|sed 's/\s//')"
+pactl set-default-sink "$btdev"
+
+# using bluetoothctl
+# after connecting to device
+info
+
+# show bluetooth charge percentage
+bluetoothctl info "00:1B:66:A5:C0:BB" | grep "Battery Percentage" | awk -F'[()]' '{print $2}'
+

@@ -1,0 +1,82 @@
+# random issues
+# fix issue with tf2onnx install from pip from within nvidia docker container
+pip install onnx==1.4.1 # replace tf2onnx dependency with this
+
+# use python re to clean file name
+# Remove special characters and replace spaces with underscores
+filename = re.sub(r'[^\w\s-]', '', title).strip()
+filename = re.sub(r'[\s]+', '_', filename)
+filename = filename[:255] # Limit to a reasonable length (e.g., 255 characters)
+filename = f"{filename}.pdf" # add an extension to the filename, e.g., ".pdf"
+
+# not sure if it works
+# fix for not displaying all rows 
+pd.set_option("display.max_rows", 8)
+# fix for not displaying all columns in pandas
+pd.set_option('display.max_colwidth', None)
+
+# check if this works
+grep -rI --color=always -n -H --exclude="*.{min.*,html,css,js,bak}" --exclude-dir='Zotero'  --exclude-dir='.*'  "likelihood"
+
+# To search for movies online
+fast and furious 4 -inurl:(htm|html|php|pls|txt) intitle:index.of “last modified” (mkv|wma|aac|avi)
+
+# Gmail SMTP Setup settings
+SMTP username: Your Gmail address
+SMTP password: Your Gmail password
+SMTP server address: smtp.gmail.com
+Gmail SMTP port (TLS): 587
+SMTP port (SSL): 465
+SMTP TLS/SSL required: yes
+
+# to download facebook reel without yt-dlp
+change www in url to mbasic
+
+# use ngrok for ssh into machines
+# server side use --region=ap  for nearest data center
+ngrok authtoken <token>
+ngrok tcp 22
+# client side
+ssh user@0.tcp.ngrok.io -p13212
+# see disk usage in nnn
+t-d
+
+# Paste this code into any browser for quick note taking
+# https://lifehacker.com/5980134/turn-acny-browser-window-into-a-quick-edit-notepad
+data:text/html, <html contenteditable>
+sudo iwconfig wlan0 essid "Tenda_207190" ap C8:3A:35:20:71:91 mode managed commit
+
+# To read pdf on the command line
+pdftotext filename.pdf - | less
+
+# To convert html to text
+lynx --dump file.html
+
+# Render website locally using jekyll
+bundle exec jekyll serve
+
+# qemu to boot into iso or other file
+qemu-system-x86_64 -enable-kvm -m 2G  path/to/.iso
+qemu-system-x86_64 -enable-kvm -m 2G -kernel ipxe.419cd003a298.lkrn
+
+# To enable sysreq key
+create a file at /etc/sysctl.d/99-sysctl.conf with contents kernel.sysreq=1
+
+# To suppress error msg on screensaver
+Edit hidden file in home directory:
+~/.xscreensaver
+
+Change the option:
+captureStderr: True
+to
+captureStderr: False
+and
+overlayStderr: True
+to
+overlayStderr: False
+
+# to convert ecm file to bin
+ecm2bin file.ecm
+
+# Execute a JavaScript immediately after a page has been loaded:
+<body onload="myFunction()">

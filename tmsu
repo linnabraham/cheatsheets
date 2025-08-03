@@ -1,0 +1,8 @@
+# tag files
+tmsu tag --tags "tag1 tag2" *.mp3
+
+# list files attached with a tag
+tmsu files tagname
+
+# mount a VFS
+tmsu mount /path/to/mnt
