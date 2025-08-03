@@ -1,0 +1,13 @@
+# discover calendars first before syncing
+vdirsyncer -vdebug discover
+
+# sync calendars
+vdirsyncer -vdebug sync
+
+# force delete calendars
+vdirsyncer sync  --force-delete intheam
+
+# set up auto sync
+systemctl --user enable vdirsyncer.timer
+systemctl --user start vdirsyncer.timer
+systemctl --user start vdirsyncer # this step sometimes clears old errors

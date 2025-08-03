@@ -1,7 +1,6 @@
 # reference
 https://btrfs.wiki.kernel.org/index.php/Manpage/btrfs(5)
 
-
 # create a partitioning structure
 btrfs su cr /mnt/@
 btrfs su cr /mnt/@home
@@ -71,3 +70,6 @@ sudo umount /path/to/your/subvolume
 # disable cow for single directory or file
 # make sure the directory is empty ; only new files will be affected
 chattr +C /dir/file
+
+# mount to check space to use btdu
+sudo mount -o subvol=/@home /dev/nvme0n1p4 /mnt/pool/volumes/nvme0n1p4
