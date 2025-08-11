@@ -21,3 +21,6 @@ journalctl -u mpd -f
 
 # see list of boots
 journalctl --list-boots
+
+# show from user session not system-wide logs
+journalctl --user

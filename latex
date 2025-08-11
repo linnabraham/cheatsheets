@@ -530,3 +530,13 @@ kpsewhich -show-path=bst
 
 # add multiple graphics path
 \graphicspath{{images/}{figures/}{plots/}}
+
+# embedd link to pdf in current directory
+\href{run:./path/to/pdf}{Link Name}
+
+# svg is not supported natively in pdflatex
+convert svg files to different supported format
+
+# use pdf as image format when working with pdflatex as they are treated
+# as vector format unlike png and jpg
+# useful when deciding to convert from svg

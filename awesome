@@ -14,7 +14,7 @@ hold "Mod4" (Windows) key and left click on mouse.
 hold "Mod4" key and right click on mouse.
 
 # merge two tags
-cltr + super + tagname
+ctrl + super + tagname
 
 # show only occupied tags
 # in the wibar configuration change the filter to this

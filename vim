@@ -485,3 +485,7 @@ s/\v\\verb\|([^|]*)\|/\\texttt{\1}/g
 # put this in the first line
 # https://www.lotharschulz.info/2018/10/21/transparent-editing-of-gpg-encrypted-files-with-vim/
 [your name used in gpg key] <[your email used in gpg key]>
+
+# Turn on and off the linting provided by ALE
+:ALEDisable
+:ALEEnable

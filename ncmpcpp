@@ -1,3 +1,5 @@
+# cheatsheet - https://pkgbuild.com/~jelle/ncmpcpp/
+
 # to clear playlist
 c
 
@@ -18,3 +20,6 @@ S
 
 # shuffle playlist in ncmpcpp
 Z - Shuffle playlist
+
+# configure keybinds - https://colemannugent.com/blog/vim-keybindings-in-ncmpcpp
+place a file called bindings in the config directory

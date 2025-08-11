@@ -3,3 +3,7 @@ File --> Open a Copy
 
 # see evince defaults
 gsettings list-recursively org.gnome.Evince
+
+# evince keybinds for
+# fit width
+w

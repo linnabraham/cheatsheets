@@ -186,3 +186,6 @@ done
 
 # bind key to shell alias or function
 bash -i -c "myalias"
+
+# preview color codes
+for i in {0..255}; do printf "\e[48;5;%sm%3s \e[0m" "$i" "$i"; done; echo

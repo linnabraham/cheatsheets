@@ -533,3 +533,23 @@ git worktree add ../feature-x-dir -b feature-x main
 
 # see change introduced in the last commit made to a specific file
 git show $(git log -1 --pretty=format:%H -- scripts/make_config.py) -- scripts/make_config.py
+
+# gotcha
+git --ff and git --ff-only are different
+git --ff will try to do merge commit if --ff-only fails
+
+# rewrite history by keeping only content related to a particular file
+paru -S git-filter-repo
+git clone --no-local --no-hardlinks <path-or-url-to-your-repo> script-only-repo
+cd script-only-repo
+git filter-repo --path myscript.py
+
+# stash only the changes that are currently staged
+git stash push --staged
+
+# git status -s
+# it uses a two-column code to show the status of each file:
+# if one of the codes is missing you will see a blank space or an indent
+XY <path>
+X - Status of the file in the staging area (what will be committed).
+Y - Status of the file in the working directory (changes not staged yet).
