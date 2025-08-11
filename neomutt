@@ -1,2 +1,5 @@
 # To send mail using neomutt
 neomutt -s "subject" -a "path to attachement" -- <receipient id>
+
+# filter based on subject pattern
+l ~s Meeting

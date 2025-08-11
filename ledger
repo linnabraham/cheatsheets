@@ -35,3 +35,13 @@ include
 
 # set the amount to the 4th CSV field with "USD " prepended
 amount USD %4
+
+# see monthly food expenses
+ledger -M --period-sort "(amount)" reg ^expenses:Food\$
+
+# once you have specified a budget
+--budget  --monthly register ^expenses:Food\$
+
+# see bal and expenses for today
+ledger bal ^expenses --period "today"
+ledger reg ^expenses --period "today"
