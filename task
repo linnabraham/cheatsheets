@@ -50,7 +50,8 @@ task config alias.rm delete
 task id denotate
 
 # add dependent task
-$ task add Fix the leak depends:3 scheduled:3.due
+task add Fix the leak depends:3 scheduled:3.due
+task 17 mod depends:16
 
 #This makes the new task dependent on task 3, and scheduled on the due date of task 3. Note that '3.due' is a DOM reference of a specific task.
 
@@ -106,3 +107,22 @@ task project.not:galaxy
 task +BLOCKING -BLOCKED
 
 # get pending task count irrespective of context active
+
+# define context using a negative project filter
+task context define default project.not:personal
+
+# rename task without copy pasting the whole description
+use tasksh review
+
+# see percentage completion of a project
+task summary
+
+# see tasks completed in a nice report
+task timesheet
+
+# modify name of project
+task project:oldname modify project:newname
+
+# modify score or urgency of tag using coefficient
+# coefficient is just an arbitrary multiplier
+task config urgency.user.tag.tagname.coefficient 10
