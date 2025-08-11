@@ -1,8 +1,22 @@
-# tomb dig -s 100 secret.tomb
-# tomb forge secret.tomb.key
-# tomb lock secret.tomb -k secret.tomb.key
-# tomb open secret.tomb -k secret.tomb.key
-# tomb close
+# create a 100 MiB tomb called secret
+tomb dig -s 100 secret.tomb
+tomb forge secret.tomb.key
+tomb lock secret.tomb -k secret.tomb.key
+
+# open the tomb
+tomb open secret.tomb -k secret.tomb.key
+# this will open a folder in someplace like
+/run/media/username/secret
+
+# close the tomb
+tomb close
 
 # to change the password on a key file
 tomb passwd -k path/to/key
+
+# disregard warning against swap
+-f
+
+# use gpg key
+tomb forge secret.tomb.key -g user@email.com -r sec-key-id -f
+tomb lock secret.tomb -k secret.tomb.key -g user@email.com -r sec-key-id
