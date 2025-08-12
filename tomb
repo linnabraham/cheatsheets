@@ -20,3 +20,7 @@ tomb passwd -k path/to/key
 # use gpg key
 tomb forge secret.tomb.key -g user@email.com -r sec-key-id -f
 tomb lock secret.tomb -k secret.tomb.key -g user@email.com -r sec-key-id
+
+# open the tomb using the gpg key this doesn't ask for password if the 
+# gpg key is already unlocked with a passphrase
+tomb open secret.tomb -g

@@ -19,3 +19,5 @@ tar zcvf - /wwwdata | ssh vivek@192.168.1.201 "cat > /backup/wwwdata.tar.gz"
 # copy files from remote to destination ; running code on destination machine
 ssh host@ip  'cd /path/to/parent && tar c ./dir' | tar xvf - -C /path/to/destination
 
+# directly pipe output of gpg decrypt to tar for decompression
+gpg -d key-backups.tar.gpg | tar -xv

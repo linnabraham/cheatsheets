@@ -9,3 +9,6 @@ sudo tailscale up
 
 # there is a file you have to delete form /var/lib/tailscale/ 
 # if you want to re-authorize with a different tailscale account.
+
+# see other devices in network
+tailscale status

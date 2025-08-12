@@ -9,6 +9,10 @@ task list project.not:name
 
 # see tasks compeleted today
 task end:today completed
+task status:completed end:today all
+
+# get count of completed tasks today
+task end:today status:completed count
 
 # modify start and end dates of completed task
 task c0e44389 modify start:"2021-10-29T18:14"
@@ -70,9 +74,6 @@ task add pay ksfe chitty amount due:11th recur:monthly until:40months wait:due-2
 # get active context name
 task _get rc.context
 
-# get count of completed tasks
-task end:today status:completed count
-
 # find tasks due within 7 days using virtual tag
 task +DUE
 
@@ -126,3 +127,8 @@ task project:oldname modify project:newname
 # modify score or urgency of tag using coefficient
 # coefficient is just an arbitrary multiplier
 task config urgency.user.tag.tagname.coefficient 10
+
+# default command that task runs
+task show default.command
+# to see the default report which is next
+task show report.next.filter

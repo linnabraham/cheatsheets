@@ -413,6 +413,7 @@ ea
 # join the following line to current line
 J
 
+# autocompletion for python
 # install python extension in coc vim plugin
 :CocInstall coc-python
 

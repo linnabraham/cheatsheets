@@ -1,0 +1,2 @@
+# shred a file
+shred -u key-backups.tar

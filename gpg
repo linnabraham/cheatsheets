@@ -69,3 +69,6 @@ gpg --delete-key <pub-key-id>
 
 # To change pinentry program in gnupg
 pinentry /usr/bin/pinentry-curses
+
+# encrypt a file using symmetric encryption i.e. just a password
+gpg --symmetric --cipher-algo AES256 /path/to/file
