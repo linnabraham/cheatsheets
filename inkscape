@@ -1,0 +1,2 @@
+# convert to pdf
+inkscape -D input.svg -o input.pdf
