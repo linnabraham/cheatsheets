@@ -23,7 +23,10 @@ localhost:9901
 
 # in order to use without ssh tunneling add custom tcp inbound firewall rule on 5901
 
-# connect to existing session using vnc
+# to connect to existing session using vnc
+# run this on the server
+x0vncserver -display :0 -rfbauth ~/.vnc/passwd
+# or try this
 x0vncserver -rfbauth ~/.vnc/passwd -rfbport 5901 -display :0
 
 # access context menu in tigervnc viewer
@@ -34,3 +37,6 @@ vncviewer -via 10.1.10.2 localhost::5901
 
 # access gui for vnc connections by just using
 vncviewer
+
+# connec to server with public ip
+vncviewer <ip adddress>:5901
