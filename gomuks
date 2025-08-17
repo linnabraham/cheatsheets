@@ -1,0 +1,8 @@
+#exit
+/quit
+
+#verify session
+/fingerprint
+
+#switch tabs
+ctrl + up/down
