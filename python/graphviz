@@ -1,0 +1,2 @@
+# installation from conda
+mamba install -c anaconda python-graphviz

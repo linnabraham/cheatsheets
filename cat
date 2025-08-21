@@ -1,0 +1,4 @@
+# use as a stopwatch 
+# but doesnt print time elapsed until you terminate
+# when interrupted, the total is the wall clock time
+time cat
