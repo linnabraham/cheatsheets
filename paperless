@@ -1,0 +1,16 @@
+# check if docker runs using docker hello world
+# had to do a system reboot to get docker working
+
+# run the docker installation provided on the website
+# however this doesn't exit out properly 
+# so do this
+
+# check the init process which is running
+docker-compose ps -a
+
+# stop the process
+docker stop paperless-webserver-run-1022a8917a46
+
+# while inside the paperless-ngx folder in home
+# to start the proper process
+docker-compose up -d

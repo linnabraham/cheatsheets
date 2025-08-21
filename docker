@@ -1,3 +1,9 @@
+# enable and start the docker service
+sudo systemctl enable --now docker.service
+
+# add your user to docker group so that sudo is not needed
+sudo usermod -aG docker $USER
+
 # test out docker
 docker run hello-world
 
