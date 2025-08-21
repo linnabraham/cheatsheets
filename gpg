@@ -59,6 +59,9 @@ gpg --encrypt --recipient 12345678 <file to encrypt>
 # import gpg secret key on another machine
 gpg --import private.gpg
 
+# if encrypted
+gpg -d private.asc.gpg | gpg --import
+
 # gpg folder permissions
 # By default, the gpg home directory has its permissions set to 700 
 # and the files it contains have their permissions set to 600
@@ -72,3 +75,19 @@ pinentry /usr/bin/pinentry-curses
 
 # encrypt a file using symmetric encryption i.e. just a password
 gpg --symmetric --cipher-algo AES256 /path/to/file
+
+# export your gpg keys using symmetric encryption
+gpg --export-secret-keys --armor KEYID > KEYID-private.asc
+gpg --symmetric --cipher-algo AES256 KEYID-private.asc
+gpg --export --armor KEYID > KEYID-public.asc
+shred -u private.asc
+
+# see list of pinentry programs installed
+ls /usr/bin/pinentry*
+
+# change default time out
+# cache time for passphrases (default 600 = 10 min)
+default-cache-ttl 3600
+
+# maximum cache time even if used (default 2h)
+max-cache-ttl 7200

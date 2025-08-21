@@ -24,3 +24,6 @@ Ctrl + shift + r
 # display video in cell
 from IPython.display import Video
 Video("/path/to/file.mp4", embed=True)
+
+# launch without browser
+jupyter-lab --no-browser

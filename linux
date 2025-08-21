@@ -420,3 +420,16 @@ export PATH=~/opt/bin:$PATH # add to beginning
 
 # start barrier
 barrier --enable-crypto
+
+# see file attributes like immutability etc.
+lsattr /path/to/file
+
+# if you have a cd command in a shell script
+# just running it wont work, you should instead
+# but this works in bash functions etc.
+source /path/to/script
+
+# default apps are listed in .config/mimeapps.list
+
+# check for errors with window managers
+tail -f ~/.xsession-errors

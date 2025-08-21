@@ -553,3 +553,12 @@ git stash push --staged
 XY <path>
 X - Status of the file in the staging area (what will be committed).
 Y - Status of the file in the working directory (changes not staged yet).
+
+# also stash untracked files
+git stash push --include-untracked
+
+# also stash ignored files
+git stash push --all # or -a
+
+# see all the untracked files in a single pager like git shows with git diff
+git ls-files --others --exclude-standard | xargs bat --style=header --paging=always --color=always

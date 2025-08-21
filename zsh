@@ -34,3 +34,7 @@ unset zle_bracketed_paste
 
 # ignore Ctrl-D which otherwise would exit the shell
 setopt IGNORE_EOF
+
+# if you want zsh to correct your commands
+ENABLE_CORRECTION="true"
+setopt CORRECT

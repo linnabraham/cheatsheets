@@ -30,8 +30,12 @@ date '+%b'
 date +%Y%m%d
 
 # date arithmetic
-# Get the date n number of days into the future
+
+# get the date n number of days into the future
 date --date '+10 days'
+
+# subtract 15 minutes from now
+date -d "now - 15 minutes" +%H:%M
 
 # 2023_08_03
 date "+%Y_%m_%d"

@@ -59,9 +59,6 @@ bundle exec jekyll serve
 qemu-system-x86_64 -enable-kvm -m 2G  path/to/.iso
 qemu-system-x86_64 -enable-kvm -m 2G -kernel ipxe.419cd003a298.lkrn
 
-# To enable sysreq key
-create a file at /etc/sysctl.d/99-sysctl.conf with contents kernel.sysreq=1
-
 # To suppress error msg on screensaver
 Edit hidden file in home directory:
 ~/.xscreensaver

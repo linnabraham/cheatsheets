@@ -169,3 +169,13 @@ anchored_text = AnchoredText("Anchored Text", loc='upper left', prop=dict(size=1
 # set x and y labels
 ax.set_xlabel("Text")
 ax.set_ylabel("Text")
+
+# setting default parameters
+plt.rcParams.update({
+    'font.size': 16,           # base font size
+    'axes.titlesize': 18,      # title font size
+    'axes.labelsize': 16,      # axis label size
+    'xtick.labelsize': 14,     # x-tick label size
+    'ytick.labelsize': 14,     # y-tick label size
+    'legend.fontsize': 14,     # legend font size
+})

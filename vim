@@ -490,3 +490,21 @@ s/\v\\verb\|([^|]*)\|/\\texttt{\1}/g
 # Turn on and off the linting provided by ALE
 :ALEDisable
 :ALEEnable
+
+# keybinds to use spellcheck
+]s                         " Next misspelled word
+[s                         " Previous misspelled word
+z=                         " Fix word (show suggestions)
+
+# run a terminal or bash command in vim
+:!ls
+
+# for language related checks and completion
+:CocInstall coc-spell-checker
+:CocInstall coc-word
+:CocConfig
+{
+  "coc.source.spell.filetypes": ["markdown", "text", "tex", "plaintex"],
+  "coc.source.spell.enable": true,
+  "spell-checker.language": "en-US"
+}

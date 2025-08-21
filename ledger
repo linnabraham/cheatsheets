@@ -1,3 +1,5 @@
+# dev hints cheatsheet
+https://devhints.io/ledger
 
 #8.2.1 Basic Reporting Commands
 
@@ -45,3 +47,11 @@ ledger -M --period-sort "(amount)" reg ^expenses:Food\$
 # see bal and expenses for today
 ledger bal ^expenses --period "today"
 ledger reg ^expenses --period "today"
+
+# for current month
+--period 'this month'
+
+# more flexibility in currency
+commodity ₹
+    format ₹1,000.00
+    no-symbol-after

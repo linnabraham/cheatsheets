@@ -4,3 +4,6 @@
 # Insert following in user settings
 # https://stackoverflow.com/questions/48369303/use-in-visual-studio-code-vim-extension-caps-instead-of-esc
 "keyboard.dispatch" :"keyCode"
+
+# to accept suggestion word by word
+ctrl + right

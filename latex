@@ -540,3 +540,28 @@ convert svg files to different supported format
 # use pdf as image format when working with pdflatex as they are treated
 # as vector format unlike png and jpg
 # useful when deciding to convert from svg
+
+# to use greater than less than symbols in text mode
+\textgreater
+
+# list of figures and tables
+\listoffigures
+\listoftables
+
+# using trim to remove whitespace inside the image bounding box.
+\includegraphics[trim=10 20 10 20,clip,width=0.45\textwidth]{fig1}
+
+trim=10 20 10 20
+
+10 = cut 10pt from the left,
+20 = cut 20pt from the bottom,
+10 = cut 10pt from the right,
+20 = cut 20pt from the top.
+
+# make standalone figure using latex
+\documentclass{standalone}
+\usepackage{graphicx}
+
+\begin{document}
+# dont use figure environment here
+\end{document}

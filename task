@@ -132,3 +132,26 @@ task config urgency.user.tag.tagname.coefficient 10
 task show default.command
 # to see the default report which is next
 task show report.next.filter
+
+# dont truncate lines
+task limit:none
+
+# set a custom report as the default instead of next
+default.command=nameofreport
+
+# +WAITING is a default tag and cant be used
+
+# make a task undone
+task <UUID> modify status:pending
+
+# show all my tags
+task tags
+
+# show all tags including default ones or all ever used
+task _tags
+
+# sort report based on field in descending order
+report.reportname.sort=urgency-
+
+# a hack to show tasks that are not in subprojects
+task proj:submitThesis and proj.not:submitThesis.

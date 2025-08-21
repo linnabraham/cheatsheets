@@ -85,3 +85,10 @@ cmd | mpc addplaylist playlistname
 
 # save current queue as playlist file with .m3u
 mpc save filename
+
+# list mpc outputs
+mpc outputs
+
+# toggle or enable/disable a particular output
+mpc toggleoutput 1
+mpc enable 1

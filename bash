@@ -189,3 +189,14 @@ bash -i -c "myalias"
 
 # preview color codes
 for i in {0..255}; do printf "\e[48;5;%sm%3s \e[0m" "$i" "$i"; done; echo
+
+# split strings in bash using backslash
+
+# set vim keys in bash
+set -o vi
+
+# get back ctrl-l to clear screen in vi mode
+# put this in .inputrc
+"\C-l": clear-screen
+# reload 
+bind -f ~/.inputrc

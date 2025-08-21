@@ -78,3 +78,13 @@ ForwardX11Trusted yes
 -t ed25519
 
 # ssh-copy-id only transfers the public key; to copy the private key use scp
+
+# check if this is true
+# If you have the private key (id_ed25519), you can recreate the public key with:
+ssh-keygen -y -f id_ed25519 > id_ed25519.pub
+
+# open tunnel without interactive shell
+-N
+
+# go to background after accepting password
+-f
