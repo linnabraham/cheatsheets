@@ -12,3 +12,6 @@ sudo tailscale up
 
 # see other devices in network
 tailscale status
+
+# switch to different tailscale account
+sudo tailscale switch tailscale-email

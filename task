@@ -155,3 +155,12 @@ report.reportname.sort=urgency-
 
 # a hack to show tasks that are not in subprojects
 task proj:submitThesis and proj.not:submitThesis.
+
+# see history
+task history
+
+# give time in due
+task add name of task due:10:00
+
+# mark task as completed on different date
+task ID done end:yesterday

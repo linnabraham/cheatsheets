@@ -151,3 +151,8 @@ tmux list-windows -a
 
 # rename panel
 ctrl-b ,
+
+# Tmux sessions, by default, inherit environment variables and shell configurations
+# from the shell that launches the tmux server.
+# This means that if your ~/.inputrc file is sourced by your shell's startup files,
+# then the settings from ~/.inputrc should automatically apply to new shells launched within a tmux session.

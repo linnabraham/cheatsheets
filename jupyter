@@ -27,3 +27,9 @@ Video("/path/to/file.mp4", embed=True)
 
 # launch without browser
 jupyter-lab --no-browser
+
+# reload code without restarting kernel in notebook
+import importlib
+import path.to.package as pkg
+importlib.reload(pkg)
+from path.to.package import *
