@@ -40,3 +40,6 @@ vncviewer
 
 # connec to server with public ip
 vncviewer <ip adddress>:5901
+
+# configure menu key to use
+-MenuKey F11
