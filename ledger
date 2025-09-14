@@ -55,3 +55,6 @@ ledger reg ^expenses --period "today"
 commodity ₹
     format ₹1,000.00
     no-symbol-after
+
+# account statement
+ledger reg ^assets:savings:icici --period 'aug-sep'

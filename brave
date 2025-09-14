@@ -1,7 +1,8 @@
 # hardware acceleration for video decoding
 
-~/.config/brave-flags.conf
---enable-features=VaapiVideoDecodeLinuxGL
+# ~/.config/brave-flags.conf
+# this might not work: ---enable-features=VaapiVideoDecodeLinuxGL-
+--enable-features=AcceleratedVideoDecodeLinuxGL
 
 # Scrollable tabs like in firefox
 brave://flags/#scrollable-tabstrip
@@ -12,3 +13,6 @@ brave://settings/system/shortcuts
 
 # maximize or unmaximize
 double click on the titlebar
+
+# disable extensions
+--disable-extensions

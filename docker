@@ -1,3 +1,6 @@
+# quick setup on arch
+sudo pacman -Su docker
+
 # enable and start the docker service
 sudo systemctl enable --now docker.service
 
@@ -28,3 +31,15 @@ To remove unused images, you can run the command docker image prune.
 If you want to remove all unused data (containers, networks, images, and cache), use the command docker system prune -a.
 If you want to specify a filter to remove only a specific type of cache, use the command docker builder prune --filter <filter>. For example, to remove all cache that is older than 48 hours, use docker builder prune --filter "until=48h".
 Note that these commands will permanently delete data, so make sure you don't need any of the removed data before executing the commands.
+
+# restart an app
+# cd into the location of .yml file
+docker compose down
+docker compose up -d
+
+# show all containers even those that exited
+docker ps -a
+
+# remove container using name
+docker rm name-of-container
+

@@ -18,3 +18,6 @@ xclip -o --selection primary
 
 # copy filepaths to clipboard to be pasted as file in graphical file-managers
 printf 'file://%s\n' "$(realpath /path/to/file1)" "$(realpath /path/to/file2)" | xclip -selection clipboard -t text/uri-list
+
+# copy todays date to clipboard
+date +%Y-%m-%d | xclip -selection clipboard

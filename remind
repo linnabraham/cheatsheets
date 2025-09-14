@@ -19,3 +19,8 @@ remind -z -k'gxmessage -title "reminder" %s &' ~/.config/remind/reminders.rem &
 # reminder
 remind -z -k'notify-send "Reminder" %s -t 0 --icon=dialog-information &' ~/.reminders &
 
+# show the next event in queue to be reminded of
+rem -n
+
+# export data into a web calendar file
+rem -s12 | rem2ics -do > reminders.ics

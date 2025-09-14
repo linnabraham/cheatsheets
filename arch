@@ -77,6 +77,9 @@ Write the following into /etc/sysctl.d/50-default.conf
 or /etc/sysctl.d/99-sysctl.conf with
 kernel.sysrq = 1
 
+# reload the sysctl configuration
+sudo sysctl --system
+
 # extract rpm file on arch
 rpmextract.sh /path/to/rpm
 
@@ -91,3 +94,6 @@ speaker-test -c 2
 
 # new dependency for paru
 debugedit
+
+# after adding a user to a group for the change to take effect immediately in the current shell
+newgrp docker 

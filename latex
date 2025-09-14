@@ -57,6 +57,9 @@ pdflatex file.tex && bibtex file.aux && pdflatex file.tex && pdflatex file.tex
 # To avoid numbering sections  but make them appear in toc
 \setcounter{secnumdepth}{0}
 
+# specify depth in toc
+\setcounter{tocdepth}{1} % include sections, exclude subsections
+
 # link style set up
 \hypersetup{
     colorlinks=true,
@@ -565,3 +568,6 @@ trim=10 20 10 20
 \begin{document}
 # dont use figure environment here
 \end{document}
+
+# write caret symbol in text mode
+\^{}

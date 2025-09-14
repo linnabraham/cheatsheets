@@ -3,3 +3,6 @@ neomutt -s "subject" -a "path to attachement" -- <receipient id>
 
 # filter based on subject pattern
 l ~s Meeting
+
+# to search for pattern and move through them
+vim keybinds

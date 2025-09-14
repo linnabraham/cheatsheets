@@ -164,3 +164,9 @@ task add name of task due:10:00
 
 # mark task as completed on different date
 task ID done end:yesterday
+
+# add a task as completed
+task add description of task status:completed
+
+# list tasks that are not part of any project
+task proj:
