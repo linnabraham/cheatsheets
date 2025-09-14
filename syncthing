@@ -1,0 +1,11 @@
+# name of package in arch repo
+syncthing
+
+# to sync between two devices A and B add the device id of A in B and vice versa
+# then select a folder to sync in one device and map that in the other
+
+# start syncthing
+syncthing
+
+# enable the user service
+systemctl --user enable --now syncthing

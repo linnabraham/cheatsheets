@@ -1,0 +1,20 @@
+# get app-id and title of windows using click
+niri msg pick-window
+
+# terminal file manager with image previews
+yazi
+
+# ascii image preview
+chafa
+
+# lockscreen with blur effect
+swaylock
+
+# screenshot utility
+grim
+
+# screen recording
+wf-recorder
+
+# run this once if brave complains about X
+--enable-features=UseOzonePlatform --ozone-platform=wayland

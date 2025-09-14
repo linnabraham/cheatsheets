@@ -1,0 +1,8 @@
+# add a new contact to the addressbook named default
+khard add -a default
+
+# list addressbooks
+khard abooks
+
+# list contacts in particular addressbook
+khard ls name-of-addressbook
