@@ -1,0 +1,10 @@
+# packages to install
+govarnam-ibus-bin govarnam-schemes-git
+
+# test if varnam works
+varnamcli -s ml namaskaaram
+
+# vst files should be present in /usr/share/varnam/schemes 
+
+# check installation
+ibus list-engine | grep varnam
