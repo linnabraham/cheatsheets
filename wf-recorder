@@ -1,0 +1,2 @@
+# recording the screen along with system audio (not mic)
+wf-recorder -f "recording_$(date +%F_%H-%M-%S).mp4" -a -A "$(pactl list sources short | awk '/monitor/ {print $2; exit}')"
