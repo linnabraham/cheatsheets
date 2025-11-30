@@ -170,3 +170,6 @@ task add description of task status:completed
 
 # list tasks that are not part of any project
 task proj:
+
+# relative date
+task mod wait:+2d

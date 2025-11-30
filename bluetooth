@@ -12,6 +12,8 @@ to pair or connect graphically
 
 # bluetooth issue - no sound even though connected
 btdev="$(pactl list sinks|grep Name|grep 'bluez.*.a2dp.sink'|sed 's/Name: //'|sed 's/\s//')"
+or
+btdev="$(pactl list sinks|grep Name|grep 'bluez.*'|sed 's/Name: //'|sed 's/\s//')"
 pactl set-default-sink "$btdev"
 
 # using bluetoothctl
