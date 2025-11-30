@@ -571,3 +571,27 @@ trim=10 20 10 20
 
 # write caret symbol in text mode
 \^{}
+
+# size guide
+\tiny
+\scriptsize
+\footnotesize
+\small
+\normalsize
+\large
+\Large
+\LARGE
+\huge
+\Huge
+
+# for verse like environment but which respects newlines in  text and empty line as stanzas
+usepackage{alltt}
+
+\begin{alltt}\normalfont
+...
+\end{allttt}
+
+# minted environment for code
+\begin{minted}[fontsize=\scriptsize,breaklines]{python}
+print("Hello, world!")
+\end{minted}

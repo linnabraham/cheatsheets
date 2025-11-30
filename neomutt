@@ -4,5 +4,11 @@ neomutt -s "subject" -a "path to attachement" -- <receipient id>
 # filter based on subject pattern
 l ~s Meeting
 
+# filter based on sender name (from)
+l ~f name
+
 # to search for pattern and move through them
 vim keybinds
+
+# search case insensitive based on name for sender or receiver
+~t -i "john doe" | ~f -i "john doe"

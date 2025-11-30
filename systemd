@@ -8,6 +8,9 @@ systemctl start --user nameof.service
 HandlePowerKey=suspend
 HandleLidSwitch=ignore # ignore laptop lid close
 
+# see all unit files for user
+systemctl --user list-unit-files
+
 # List active services
 systemctl list-unit-files --state=enabled --no-pager
 
@@ -80,3 +83,9 @@ systemctl list-units --type=automount
 
 # reboot straight to uefi or bios firmware setup screen
 systemctl reboot --firmware-setup
+
+# reload after editing config files
+systemctl --user daemon-reload
+
+# show environment variables
+systemctl --user show-environment

@@ -31,6 +31,9 @@ pacman -U /var/cache/pacman/pkg/packagvers.zst - to downgrade package from cache
 
 pacman -Qdtq - to see packages that dont depend on others
 
+# remove orphaned packages
+sudo pacman -Rns $(pacman -Qdtq)
+
 pacman -F /usr/bin/qemu-system-i386 - searches through the file contents of all packages in arch repo
 # run this to populate the database in order to run the above command
 sudo pacman -Fy

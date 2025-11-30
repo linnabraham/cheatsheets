@@ -24,3 +24,6 @@ journalctl --list-boots
 
 # show from user session not system-wide logs
 journalctl --user
+
+# see logs for a user service
+journalctl --user -u task-calsync.service -b -f

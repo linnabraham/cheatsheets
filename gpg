@@ -91,3 +91,9 @@ default-cache-ttl 3600
 
 # maximum cache time even if used (default 2h)
 max-cache-ttl 7200
+
+# reload agent
+gpgconf --reload gpg-agent
+
+# do a simple unlock
+echo "unlock" | gpg --clearsign -o /dev/null

@@ -1,0 +1,5 @@
+# see which apps are exposing MPRIS right now
+busctl --user list | grep org.mpris.MediaPlayer2
+
+# find running players
+busctl --user | awk '/org.mpris.MediaPlayer2\./ {print $1}'

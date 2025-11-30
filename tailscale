@@ -15,3 +15,6 @@ tailscale status
 
 # switch to different tailscale account
 sudo tailscale switch tailscale-email
+
+# disable magicdns
+sudo tailscale set --accept-dns=false

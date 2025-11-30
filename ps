@@ -15,3 +15,6 @@ pgrep -x brave
 
 # see all process for my user
 ps -fU username
+
+# look for hung processes
+ps -eo pid,stat,comm | grep D

@@ -1,0 +1,16 @@
+# use with protonvpn
+# read this - https://pywkt.com/post/20250609-setting-up-protonvpn-wireguard-killswitch-arch-linux
+
+# download the config from protonvpn site
+sudo mv /path/to/config /etc/wireguard
+
+# dont use protonvpn for dns resolution
+edit the relevant portion in the config and restart
+
+# to see status of wireguard connection
+sudo wg
+
+# restart after changing config
+sudo wg-quick down name-of-config-sans-extn 
+sudo wg-quick up name-of-config-sans-extn
+

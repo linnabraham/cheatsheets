@@ -34,3 +34,12 @@ torsocks youtube-dl -v --no-check-certificate -f 'bestvideo[height<=480]+bestaud
 
 # use cookies to download from sites requiring login
 --cookies-from-browser chromium
+
+# get best audio
+-f bestaudio --extract-audio --audio-format opus
+
+# embedd metadata
+--embed-metadata
+
+# embedd thumbnail
+--embed-thumbnail

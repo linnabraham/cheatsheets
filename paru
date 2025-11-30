@@ -37,3 +37,6 @@ paru -Syyy $(pacman -Qeu | grep -Fv "[ignored]" | awk '{print $1}')
 
 # skip tests
  --mflags --nocheck
+
+# install package from github mirror
+git clone --branch <package_name> --single-branch https://github.com/archlinux/aur.git <package_name>

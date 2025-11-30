@@ -349,6 +349,8 @@ import astro_utils.aia as aia
 functions = [name for name, obj in inspect.getmembers(aia, inspect.isfunction)]
 print(functions)
 
+print(inspect.getsource(function_name))
+
 # use pdoc
 import pdoc
 html = pdoc.pdoc('astro_utils.aia')

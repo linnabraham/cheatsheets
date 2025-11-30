@@ -39,3 +39,5 @@ curl -s https://ipvigilante.com/$(curl -s https://ipinfo.io/ip) | jq '.data.lati
 # get weather for kochi
 curl http://wttr.in/kochi
 
+# a paste bin like service to send a text file
+| curl -F 'file=@-' https://0x0.st

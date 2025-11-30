@@ -12,3 +12,9 @@ fc-match
 
 # check the default monospace font
 fc-match Monospace
+
+# much smaller list of fonts installed
+fc-list : family | sort -u
+
+# see which fonts advertise support for a language
+fc-list :lang=ml

@@ -4,3 +4,8 @@ ctrl + shift + w
 
 # change fonts
 kitten choose-fonts
+
+# needs a config to handle copy and paste
+
+# install terminfo to remote server for tmux to work
+kitty +kitten ssh suit

@@ -1,0 +1,5 @@
+# start on wayland
+ibus start --type wayland
+
+# make verbose
+--verbose

@@ -1,0 +1,39 @@
+# check if its down for everyone
+downforeveryoneorjustme.com/readwise.io
+
+# get the resolved public ip for a website
+getent hosts readwise.io
+
+# use more than one dns resolver
+Edit resolv conf to add more dns entries
+
+# check at what level the request is getting blocked
+traceroute 216.24.57.1
+
+# the first few hops are internal then the *** shows where there is no response
+# or packets getting dropped
+traceroute to 216.24.57.1 (216.24.57.1), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.25.254)  0.537 ms  0.869 ms  0.845 ms
+ 2  sun.iucaa.in (202.52.53.254)  1.274 ms  1.496 ms  1.548 ms
+ 3  10.118.245.81 (10.118.245.81)  0.402 ms  0.395 ms  0.408 ms
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * 10.119.234.162 (10.119.234.162)  67.195 ms
+ 9  103.218.244.94 (103.218.244.94)  45.625 ms  45.183 ms 10.119.234.162 (10.119.234.162)  72.388 ms
+10  * * 103.218.244.94 (103.218.244.94)  61.905 ms
+11  * 104.23.231.30 (104.23.231.30)  64.776 ms *
+12  * * *
+13  * * *
+14  * * *
+
+# see order in which addresses are resolved
+cat /etc/nsswitch.conf | grep hosts
+## output
+hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns
+## after changing this
+hosts: files mymachines myhostname dns resolve 
+
+# see how a particular dns resolver would resolve an address
+nslookup readwise.io 1.1.1.1

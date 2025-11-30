@@ -508,3 +508,14 @@ z=                         " Fix word (show suggestions)
   "coc.source.spell.enable": true,
   "spell-checker.language": "en-US"
 }
+
+# record a macro
+# say, into register q
+qq
+# stop recording
+q
+
+# repeat the macro
+@q
+# repeat the macro 10 times
+10@q
