@@ -7,3 +7,6 @@ Also you might try resizing by a smaller amount.
 # Fixing resize issues
 Leave lot of free space in your partition if you want to shrink and move the head of the partition around.
 Afer the shrink there should be sufficient space in your parition.
+
+# fix to run on wayland
+sudo -E gparted

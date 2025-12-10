@@ -1,3 +1,6 @@
+# the rem binary and the remind binary might be different
+# rem assumes a default config file
+
 # to add a quick reminder
 echo "$TODAY AT 18:00 MSG take out the trash" >> .config/remind/reminders.rem
 
@@ -24,3 +27,18 @@ rem -n
 
 # export data into a web calendar file
 rem -s12 | rem2ics -do > reminders.ics
+
+# pass the config (data) file to use as last argument if not using the default one
+
+# get notification 5 mins in advance
++5
+
+# debug
+echo 'REM 18 --1 MSG Last' | remind - 2025-10-17
+
+# debug email notifications
+echo 'REM 18 --1 AT 18:59 MSG Last' > /tmp/test.rem
+remind -z -k'sendremind "%s"' /tmp/test.rem 2025-10-17
+
+# repeat every 30 days
+REM February 23 2005 *30 MSG Refill prescription from pharmacy

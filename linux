@@ -360,8 +360,6 @@ gtts-cli "text" | mpg123 -
 http GET https://app.wallabag.it/api/entries.json \
     "Authorization:Bearer <access_token>"
 
-# share images to cloud and get shareable link
-curl -F"file=@$fx" https://0x0.st | xclip -selection c
 
 # print battery percentage of bluetooth device using dbus (from reddit)
 dbus-send --print-reply=literal --system --dest=org.bluez /org/bluez/hci0/dev_00_1B_66_A5_C0_BB org.freedesktop.DBus.Properties.Get string:"org.bluez.Battery1" string:"Percentage"
@@ -399,9 +397,6 @@ find gal_oursel_p2/ gal_oursel_p3/ gal_oursel_p4/ gal_oursel_p5/ -type f -print0
 
 # find location info from public ip
 geoiplookup -f /usr/share/GeoIP/GeoIPCity.dat 49.37.232.96
-
-# how to use pastebin like service ix.io
-vainfo |  curl -F 'f:1=<-' ix.io
 
 # ungoogled-chromium supplies the chromium binary
 

@@ -39,5 +39,13 @@ curl -s https://ipvigilante.com/$(curl -s https://ipinfo.io/ip) | jq '.data.lati
 # get weather for kochi
 curl http://wttr.in/kochi
 
-# a paste bin like service to send a text file
+# use ix.io as pastebin
+echo "test" |  curl -F 'f:1=<-' ix.io
+
+# a pastebin like service to send a text file
 | curl -F 'file=@-' https://0x0.st
+
+curl -F'file=@shot.png' https://0x0.st
+
+# share images to cloud and get shareable link
+curl -F"file=@$fx" https://0x0.st | xclip -selection c
