@@ -126,3 +126,6 @@ pacman -Fq command
  
 # remove cache but not for the packages installed
 sudo pacman -Sc
+
+# force overwrite files for a package
+--overwrite "*"
