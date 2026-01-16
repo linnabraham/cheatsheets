@@ -565,3 +565,6 @@ git ls-files --others --exclude-standard | xargs bat --style=header --paging=alw
 
 # check git repo integrity
 git fsck --full
+
+# combine commits into one while merging
+git merge --squash branchname
