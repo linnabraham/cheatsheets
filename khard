@@ -6,3 +6,12 @@ khard abooks
 
 # list contacts in particular addressbook
 khard ls name-of-addressbook
+
+# show details
+khard show "Name-of-contact"
+
+# move contact to another addressbook
+khard move "search pattern " -A name-of-addressbook
+
+# search for patten
+khard ls -a name-of-addressbook search-pattern

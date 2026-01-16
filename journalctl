@@ -18,6 +18,7 @@ journalctl -k
 
 # follow log for individual application
 journalctl -u mpd -f
+journalctl --user -u mpd -f
 
 # see list of boots
 journalctl --list-boots
@@ -27,3 +28,12 @@ journalctl --user
 
 # see logs for a user service
 journalctl --user -u task-calsync.service -b -f
+
+# reverse chronological order
+-r
+
+# jump to the end
+-e
+
+# avoid pager
+--no-pager

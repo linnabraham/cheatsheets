@@ -37,3 +37,7 @@ hosts: files mymachines myhostname dns resolve
 
 # see how a particular dns resolver would resolve an address
 nslookup readwise.io 1.1.1.1
+
+# fix certificate issues
+sudo pacman -S --needed ca-certificates ca-certificates-utils openssl
+sudo update-ca-trust

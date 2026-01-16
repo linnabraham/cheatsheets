@@ -92,3 +92,6 @@ systemctl --user show-environment
 
 # set timezone
 sudo timedatectl set-timezone Asia/Kolkata
+
+# use conservative value of swappiness for systems with more than 8 gb ram
+sudo sysctl vm.swappiness=10

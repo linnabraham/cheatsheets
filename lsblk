@@ -11,3 +11,6 @@ lsblk -o name,size,type,mountpoint,label,uuid
 
 # show partition information
 lsblk -f
+
+# see UUID
+lsblk -dno UUID /dev/sdXX

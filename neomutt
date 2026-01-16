@@ -12,3 +12,6 @@ vim keybinds
 
 # search case insensitive based on name for sender or receiver
 ~t -i "john doe" | ~f -i "john doe"
+
+# filter deleted messages
+l ~D

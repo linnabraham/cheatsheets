@@ -176,3 +176,6 @@ task mod wait:+2d
 
 # list tasks in reverse chronological order
 task newest
+
+# duplicate task
+task id duplicate

@@ -20,3 +20,9 @@ LS_OPTIONS
 
 # list only directories
 ls -d */
+
+# show human readable file sizes
+ls -h
+
+# show hidden
+ls -a

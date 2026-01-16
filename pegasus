@@ -37,3 +37,9 @@ lfs quota -h -u clinn /scratch/
 
 # specify memory
 PBS -l select=1:ncpus=2:mem=128gb
+
+# see project id associated to directory
+lfs project -d /data/scratch/clinn
+
+# see the quota associated with the project id
+lfs quota -h -p 12345 /data/scratch/clinn

@@ -42,3 +42,9 @@ ffprobe
 # downscale video
 # set the width to 720, and automatically adjust the height to the closest value that is divisible by 2
 ffmpeg -i /path/to/input -filter:v "scale=720:-2" -c:a copy output.mp4
+
+# check for errors in file
+ffmpeg -v error -i /path/to/file -f null -
+
+# check bitrate for opus
+ffprobe -v error -show_entries format=bit_rate -of default=noprint_wrappers=1 filename.opus

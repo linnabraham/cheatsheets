@@ -133,3 +133,13 @@ conda config --set auto_activate_base false
 
 #You can undo this by running `conda init --reverse $SHELL`? [yes|no]
 
+# download miniforge conda
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+# or
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+
+# install
+bash Miniforge3-$(uname)-$(uname -m).sh
+
+# non-interactive install
+bash Miniforge3-$(uname)-$(uname -m).sh -b
