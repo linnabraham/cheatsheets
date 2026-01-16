@@ -89,3 +89,6 @@ systemctl --user daemon-reload
 
 # show environment variables
 systemctl --user show-environment
+
+# set timezone
+sudo timedatectl set-timezone Asia/Kolkata
