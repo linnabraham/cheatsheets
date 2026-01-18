@@ -3,6 +3,7 @@
 [General]
 EnableNetworkConfiguration=true
 
+iwctl device list
 # connect using iwctl where wlan0 is the device-name
 iwctl station wlan0 scan
 iwctl station wlan0 get-networks
@@ -13,3 +14,6 @@ iw dev
 
 # see active connection details
 iw dev wlan0 link
+
+# get the command prompt
+iwctl
