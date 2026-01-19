@@ -1,0 +1,7 @@
+# pip install gcalcli or use AUR package
+
+# init
+ gcalcli --client-id=CLIENT-ID init
+
+# check agenda
+gcalcli agenda
