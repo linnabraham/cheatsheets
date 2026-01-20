@@ -42,3 +42,13 @@ remind -z -k'sendremind "%s"' /tmp/test.rem 2025-10-17
 
 # repeat every 30 days
 REM February 23 2005 *30 MSG Refill prescription from pharmacy
+
+# sort entries on date
+-g
+
+# embed date in the MSG
+%B - %d -
+
+# reminders that trigger in the next 30 days
+-t30
+
