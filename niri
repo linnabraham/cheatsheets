@@ -18,3 +18,6 @@ wf-recorder
 
 # run this once if brave complains about X
 --enable-features=UseOzonePlatform --ozone-platform=wayland
+
+# power off display monitors
+niri msg action power-off-monitors
