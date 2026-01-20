@@ -3,5 +3,16 @@
 # init
  gcalcli --client-id=CLIENT-ID init
 
+# list calendars
+gcalcli list
+
 # check agenda
 gcalcli agenda
+gcalcli --calendar "name-of-calendar" agenda
+
+# add an event at specific date and time to a calendar
+gcalcli --calendar "name-of-calendar" quick "tomorrow 14:00 call with Alice"
+
+# calendar view
+gcalcli calm # monthly
+gcalcli calw # weekly
