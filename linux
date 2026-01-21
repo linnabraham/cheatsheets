@@ -33,6 +33,9 @@ source ~/.bash_aliases
 # set default browser
 xdg-settings set default-web-browser firefox-esr.desktop
 
+# set a default for pdf reading
+xdg-mime default your-app.desktop application/pdf
+
 # become super user without root password
 sudo su -
 
