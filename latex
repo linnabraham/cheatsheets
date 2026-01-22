@@ -595,3 +595,6 @@ usepackage{alltt}
 \begin{minted}[fontsize=\scriptsize,breaklines]{python}
 print("Hello, world!")
 \end{minted}
+
+# see which fonts are used in a pdf
+pdffonts filename.pdf
