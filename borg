@@ -1,0 +1,11 @@
+# start a repo to keep backups
+# the last directory path will be created if doesnt exist
+borg init --encryption=none /mnt/linn/backup/borg
+
+# create backup
+borg create --compression zstd,6 \
+  /mnt/linn/backup/borg::name-of-data-dir-{now} \
+  /path/to/data/dir
+
+# see existing backups
+borg list /mnt/linn/backup/borg
