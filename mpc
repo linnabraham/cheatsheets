@@ -92,3 +92,9 @@ mpc outputs
 # toggle or enable/disable a particular output
 mpc toggleoutput 1
 mpc enable 1
+
+# rate currently playing song
+mpc sticker "`mpc -f %file% current`" set rating 7
+
+# list available stickers for file
+mpc sticker fileuri list

@@ -196,3 +196,6 @@ lr_schedule = tf.keras.optimizers.schedules.CosineDecayRestarts(
 )
 
 optimizer = tf.keras.optimizers.Adam(learning_rate=lr_schedule)
+
+# install tensorflow for gpu
+pip install tensorflow[and-cuda]
