@@ -51,6 +51,9 @@ ledger reg ^expenses --period "today"
 # for current month
 --period 'this month'
 
+# between specific dates (use slash instead of hyphen)
+--period 'from 2024/02/01 to 2024/12/31' 
+
 # more flexibility in currency
 commodity ₹
     format ₹1,000.00
@@ -58,3 +61,19 @@ commodity ₹
 
 # account statement
 ledger reg ^assets:savings:icici --period 'aug-sep'
+
+# filter based on payee name
+ledger reg payee "keyword"
+
+# filter out unreal payments or keep only cleared payments
+--cleared
+
+# sort by date
+--sort date
+
+# search based on tag
+ledger reg %tagname
+ledger reg ^expense: and %big
+
+# see credit card bill transactions
+ledger reg ^liabilities:creditcard --period "from 2025-09-18 to 2025-10-18"

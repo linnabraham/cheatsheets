@@ -24,6 +24,9 @@ git push --tags
 # delete tag
 git tag -d tag-name
 
+# create new tag with commit hash
+git tag v1.0 commit-hash
+
 # compare local changes with remote after fetch
 git diff master origin/master
 
@@ -322,6 +325,7 @@ change the - to a space
 git restore --staged .
 
 # git log in oneline with date information
+# can also use date=relative
 git log --pretty=format:"%h %ad %s" --date=short
 
 # with coloring etc.

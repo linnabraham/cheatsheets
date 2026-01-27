@@ -40,3 +40,6 @@ paru -Syyy $(pacman -Qeu | grep -Fv "[ignored]" | awk '{print $1}')
 
 # install package from github mirror
 git clone --branch <package_name> --single-branch https://github.com/archlinux/aur.git <package_name>
+
+# rebuild all aur packages that depend on specific python version
+pacman -Qoq /usr/lib/python3.13 | pacman -Qmq - | paru -S --rebuild -

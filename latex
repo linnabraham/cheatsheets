@@ -77,6 +77,15 @@ pdflatex file.tex && bibtex file.aux && pdflatex file.tex && pdflatex file.tex
 \usepackage{setspace}
 \onehalfspacing
 
+# double spacing
+\linespread{1.6} % Standard double spacing
+# for one half spacing
+\linespread{1.3} 
+
+# math symbols
+\mp for +-
+\equiv for equivalent
+
 # changing fonts
 {\tt This will be in a "typewriter font"}
 

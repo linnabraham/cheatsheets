@@ -6,3 +6,6 @@ sudo systemctl enable rustdesk
 
 # get the id programmatically
 rustdesk --get-id
+
+# check if there is any block in the network
+curl -v telnet://rs-ny.rustdesk.com:21116
