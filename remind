@@ -52,3 +52,5 @@ REM February 23 2005 *30 MSG Refill prescription from pharmacy
 # reminders that trigger in the next 30 days
 -t30
 
+# show the time of the reminder as part of message - what comes after the AT keyword
+ %2

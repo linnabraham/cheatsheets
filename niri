@@ -1,3 +1,8 @@
+# keybinds
+
+# toggle fullscreen
+mod+shift+f
+
 # get app-id and title of windows using click
 niri msg pick-window
 
@@ -21,3 +26,13 @@ wf-recorder
 
 # power off display monitors
 niri msg action power-off-monitors
+
+# display management
+# install these apps
+wlr-randr wdisplays
+
+# resize to 50 percent width using command
+niri msg action set-window-width 50%
+
+# to switch between tiling and window
+switch-focus-between-floating-and-tiling

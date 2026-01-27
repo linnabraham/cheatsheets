@@ -174,6 +174,9 @@ printf "\ec"
 xdg-mime query default inode/directory
 xdg-mime query default application/pdf
 
+# set an app as default for a file type
+xdg-mime default your-app.desktop application/pdf
+
 # sharing home partition across distributions
 UID and GID must be the same on each distributions for the certain user(s).
 this can be done by first checking the userids using
@@ -363,10 +366,6 @@ gtts-cli "text" | mpg123 -
 http GET https://app.wallabag.it/api/entries.json \
     "Authorization:Bearer <access_token>"
 
-
-# print battery percentage of bluetooth device using dbus (from reddit)
-dbus-send --print-reply=literal --system --dest=org.bluez /org/bluez/hci0/dev_00_1B_66_A5_C0_BB org.freedesktop.DBus.Properties.Get string:"org.bluez.Battery1" string:"Percentage"
-
 # to get netstat command install net-tools on archlinux
 
 # custom URIs in desktop files obsidian
@@ -431,3 +430,21 @@ source /path/to/script
 
 # check for errors with window managers
 tail -f ~/.xsession-errors
+
+# virtual memory statistics to see whether process are hung up
+vmstat 2 5
+
+# show some values for diagnostics
+echo "XDG_CURRENT_DESKTOP: $XDG_CURRENT_DESKTOP"
+echo "XDG_SESSION_TYPE:    $XDG_SESSION_TYPE"
+echo "XDG_SESSION_DESKTOP: $XDG_SESSION_DESKTOP"
+echo "WAYLAND_DISPLAY:     $WAYLAND_DISPLAY"
+
+# show dbus session bus info
+$DBUS_SESSION_BUS_ADDRESS
+
+# find width of terminal
+tput cols
+
+# see all groups
+getent group
