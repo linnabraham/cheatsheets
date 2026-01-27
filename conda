@@ -102,7 +102,7 @@ conda remove packagename
 conda uninstall packagename
 
 # conda upgrade a package
-conda update wandb
+conda update packagename
 
 # create a requirements file from conda env
 conda list -e > requirements. txt

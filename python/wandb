@@ -2,3 +2,6 @@
 # get run name from wandb
 
 wandb.run.name
+
+# prevent printing to console after interruption using ctrl-c
+ps aux|grep wandb|grep -v grep | awk '{print $2}'|xargs kill -9
