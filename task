@@ -179,3 +179,38 @@ task newest
 
 # duplicate task
 task id duplicate
+
+# view help pages
+task help
+
+# another way to search for tags
+task tag:tagname
+
+# run web ui
+docker pull dcsunset/taskwarrior-webui:3
+docker run -d -p 8080:80 --name taskwarrior-webui \
+        -v $HOME/.taskrc:/.taskrc -v $HOME/.task:/.task \
+        dcsunset/taskwarrior-webui:3
+d5ef5f3d2bac778d4651635d3b8972cab45eb7d095c538f9889e611d8cf6d745
+
+# meta-tag for latest added task
+task +LATEST
+
+# delete completely
+# first delete then use purge
+task UUID purge
+
+# see all projects used even those that have been deleted
+task rc.list.all.projects=1 _projects
+
+# define task alias
+task config alias.shopping proj:shopping
+
+# annotate task
+task id annotate "text to annotate"
+
+# specify time with date
+due:today+13h
+
+# to not replace alias in task description 
+# use the following before description

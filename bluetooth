@@ -1,5 +1,9 @@
 # connect earphones using bluetoothctl
+power on # power on controller
+agent on # enable agent for pairing
+scan on # start scanning
 devices
+pair MAC_ID
 connect MAC_ID
 exit
 # use pair MAC_ID  for pairing new device
