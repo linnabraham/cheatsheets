@@ -1,0 +1,5 @@
+# smart pause dependency
+python-pywayland
+
+# tray icon dependency
+snixembed
