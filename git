@@ -564,6 +564,9 @@ git stash push --include-untracked
 # also stash ignored files
 git stash push --all # or -a
 
+# show all untracked files alone
+git ls-files --others --exclude-standard
+
 # see all the untracked files in a single pager like git shows with git diff
 git ls-files --others --exclude-standard | xargs bat --style=header --paging=always --color=always
 

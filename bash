@@ -200,3 +200,7 @@ set -o vi
 "\C-l": clear-screen
 # reload 
 bind -f ~/.inputrc
+
+# set optional and default value in scripts
+# Use the value of VAR if it is set and not empty; otherwise, use default
+${VAR:-default}
