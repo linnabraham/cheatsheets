@@ -9,3 +9,6 @@ kitten choose-fonts
 
 # install terminfo to remote server for tmux to work
 kitty +kitten ssh suit
+
+# run kitty with no config for debugging
+kitty --config NONE

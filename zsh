@@ -38,3 +38,6 @@ setopt IGNORE_EOF
 # if you want zsh to correct your commands
 ENABLE_CORRECTION="true"
 setopt CORRECT
+
+# start a clean shell for debugging
+zsh -f
