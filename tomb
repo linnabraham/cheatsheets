@@ -5,8 +5,10 @@ tomb lock secret.tomb -k secret.tomb.key
 
 # open the tomb
 tomb open secret.tomb -k secret.tomb.key
-# this will open a folder in someplace like
-/run/media/username/secret
+
+# by default the tomb is mounted in a directory inside /media (if not available it uses /run/media/$USER)
+# If a second argument is given to the open command, it will indicate the  mount‐point  where the tomb should be made accessible. 
+# The option -o can be used to pass mount options
 
 # close the tomb
 tomb close
