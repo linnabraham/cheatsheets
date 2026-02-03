@@ -3,3 +3,6 @@
 
 # to use the keyboard on the phone
 --keyboard=aoa
+
+# working command
+scrcpy --legacy-paste --video-codec=h265 --max-size=1920 --max-fps=60 --no-audio --keyboard=aoa
