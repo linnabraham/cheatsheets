@@ -37,3 +37,7 @@ journalctl --user -u task-calsync.service -b -f
 
 # avoid pager
 --no-pager
+
+# filter by time
+journalctl --since "1 week ago"
+journalctl --since "today"
