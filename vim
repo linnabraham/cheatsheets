@@ -519,3 +519,6 @@ q
 @q
 # repeat the macro 10 times
 10@q
+
+# count number of printed words in latex document
+:w !detex | wc -w
