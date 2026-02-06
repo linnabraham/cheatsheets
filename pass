@@ -19,3 +19,6 @@ cat .gpg-id
 
 # edit entry already in database
 pass edit /path/to/entry
+
+# re-organize
+pass mv old-entry dir/new-entry
