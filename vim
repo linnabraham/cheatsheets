@@ -522,3 +522,6 @@ q
 
 # count number of printed words in latex document
 :w !detex | wc -w
+
+# live word count
+set statusline+=%{wordcount().words}\ words
