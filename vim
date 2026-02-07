@@ -525,3 +525,6 @@ q
 
 # live word count
 set statusline+=%{wordcount().words}\ words
+
+# dont expand tab to spaces temporarily
+:setlocal noexpandtab
