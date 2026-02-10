@@ -92,7 +92,7 @@ join-pane -s 2 -t 1 -h
 :join-pane -h -s [session]:[window_number]
 :break-pane -d -t 0
 
-# show some preview of all sessions etc.
+# show some preview of all sessions etc. and cycle through them
 <C-b> + w
 
 # to quit use q
