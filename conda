@@ -143,3 +143,10 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 
 # non-interactive install
 bash Miniforge3-$(uname)-$(uname -m).sh -b
+
+# fix ssl certificate issue
+export SSL_CERT_FILE=$(python - <<'EOF'
+import certifi
+print(certifi.where())
+EOF
+)
