@@ -528,3 +528,6 @@ set statusline+=%{wordcount().words}\ words
 
 # dont expand tab to spaces temporarily
 :setlocal noexpandtab
+
+# open file which requires sudo access in users vim
+sudo -e /path/to/file
