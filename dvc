@@ -2,6 +2,8 @@
 # install dvc dvc[s3] through pip or package manager
 # authorize with s3 storage using appropriate config files
 pip install dvc dvc[s3]
+# dvc with google drive backend
+pip install dvc dvc-gdrive
 
 # for dvc-data command
 pip install dvc-data[cli]
