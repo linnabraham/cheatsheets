@@ -14,3 +14,6 @@ adb push lineage-17.1-20200921-UNOFFICIAL-harpia.zip /sdcard
 
 # pull data using adb
 adb pull /sdcard/path/to/file .
+
+# list installed packages
+adb shell pm list packages
