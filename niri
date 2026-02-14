@@ -3,6 +3,9 @@
 # toggle fullscreen
 mod+shift+f
 
+# start from tty
+niri-session
+
 # get app-id and title of windows using click
 niri msg pick-window
 
@@ -36,3 +39,6 @@ niri msg action set-window-width 50%
 
 # to switch between tiling and window
 switch-focus-between-floating-and-tiling
+
+# disable touchpad when typing
+dwt
