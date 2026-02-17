@@ -17,3 +17,10 @@ adb pull /sdcard/path/to/file .
 
 # list installed packages
 adb shell pm list packages
+
+# interactive shell access
+adb shell
+
+# explore files within shell
+ls
+ls /sdcard
