@@ -8,3 +8,6 @@ varnamcli -s ml namaskaaram
 
 # check installation
 ibus list-engine | grep varnam
+
+# preload engine so that I can switch
+gsettings set org.freedesktop.ibus.general preload-engines "['xkb:us::eng','varnam-ml']"
