@@ -1,11 +1,14 @@
 # restart pipewire service
 systemctl --user restart pipewire
 
-# list attached audio devices
-pactl list sinks
+# list sound cards on machine
+pactl list cards short
 
-# short version of above command
+# list attached audio devices
 pactl list sinks short
+
+# list attached audio devices in detail
+pactl list sinks
 
 # see loaded modules
 pactl list modules
@@ -16,3 +19,7 @@ pactl set-sink-mute <sink_name> 0
 
 # see list of sinks and sources
 wpctl status
+
+# restart all associated services
+systemctl --user restart wireplumber pipewire pipewire-pulse
+sudo systemctl restart bluetooth
