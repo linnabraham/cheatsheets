@@ -1,6 +1,9 @@
 # show bluetooth device details
 pactl list
 
+# summary
+pactl info
+
 # check default sink
 pactl info | grep "Default Sink"
 
