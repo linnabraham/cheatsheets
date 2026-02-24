@@ -9,3 +9,6 @@ syncthing
 
 # enable the user service
 systemctl --user enable --now syncthing
+
+# service to run
+sudo systemctl start syncthing@linn.service
