@@ -579,3 +579,5 @@ git merge --squash branchname
 # check files on another branch without switching
 git ls-tree -r --name-only branchname
 
+# run git commands as if from another directory
+git -C path/to/nested-repo status
