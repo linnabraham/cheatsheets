@@ -607,3 +607,8 @@ print("Hello, world!")
 
 # see which fonts are used in a pdf
 pdffonts filename.pdf
+
+# make additional tex files in a different repo visible 
+# run the following in the shell where you are compiling
+# // means “search recursively”, the trailing : preserves default paths
+export TEXINPUTS="/absolute/path/to/repo-B/notes//:"
