@@ -1,3 +1,6 @@
+# packages to install
+docker docker-compose
+
 # quick setup on arch
 sudo pacman -Su docker
 
