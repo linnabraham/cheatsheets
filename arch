@@ -97,3 +97,6 @@ debugedit
 
 # after adding a user to a group for the change to take effect immediately in the current shell
 newgrp docker 
+
+# python package to view xlsx file
+xlsx2csv

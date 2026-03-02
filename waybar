@@ -1,2 +1,5 @@
 # reload bar
 killall -SIGUSR2 waybar
+
+# default config
+/etc/xdg/waybar/config.jsonc
