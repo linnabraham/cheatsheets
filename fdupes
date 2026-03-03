@@ -1,0 +1,14 @@
+# program to find duplicates
+fdupes
+
+# each block shows different versions
+# empty files are grouped together
+
+# list dupes
+fdupes -r folder-1 folder-2
+
+# interactive delete
+# after marking versions, press delete key
+fdupes -r -d folder-1 folder-2
+
+
