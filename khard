@@ -15,3 +15,6 @@ khard move "search pattern " -A name-of-addressbook
 
 # search for patten
 khard ls -a name-of-addressbook search-pattern
+
+# remove contact from addressbook
+khard rm "search pattern" -a name-of-addressbook

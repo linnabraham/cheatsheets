@@ -1,1 +1,7 @@
 # for servers install by downloading the standalone script
+
+# clone from url
+yadm clone /url/to/repo.git
+
+# overwrite the tracked files
+yadm checkout "/home/user"

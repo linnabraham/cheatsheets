@@ -42,3 +42,7 @@ switch-focus-between-floating-and-tiling
 
 # disable touchpad when typing
 dwt
+
+# bind mouse forward and back button
+MouseForward
+MouseBack

@@ -21,3 +21,8 @@ ssh host@ip  'cd /path/to/parent && tar c ./dir' | tar xvf - -C /path/to/destina
 
 # directly pipe output of gpg decrypt to tar for decompression
 gpg -d key-backups.tar.gpg | tar -xv
+
+# copy data preserving linux attributes and permissions etc.
+tar --xattrs --acls -cpf transfer.tar /path/to/files
+# on destination machine
+tar --xattrs --acls -xpf transfer.tar
