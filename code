@@ -7,3 +7,6 @@
 
 # to accept suggestion word by word
 ctrl + right
+
+# arch aur package to install
+visual-studio-code-bin

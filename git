@@ -581,3 +581,9 @@ git ls-tree -r --name-only branchname
 
 # run git commands as if from another directory
 git -C path/to/nested-repo status
+
+# add untracked files also in the current directory
+git add .
+
+# add untracked files also but from anywhere in the repo
+git add -A

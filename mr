@@ -2,3 +2,6 @@
 
 # checkout
 mr checkout
+
+# target individual repos
+mr -d short/path/to/repo run git push

@@ -2,3 +2,6 @@
 # but doesnt print time elapsed until you terminate
 # when interrupted, the total is the wall clock time
 time cat
+
+# make single vcf file from multiple
+cat ~/.contacts/contacts/*.vcf > contacts.vcf
