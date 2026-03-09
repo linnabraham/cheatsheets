@@ -587,3 +587,6 @@ git add .
 
 # add untracked files also but from anywhere in the repo
 git add -A
+
+# show tag along with short commit hash
+git tag -n --format="%(objectname:short) %(refname:short)"

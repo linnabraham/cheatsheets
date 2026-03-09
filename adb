@@ -24,3 +24,6 @@ adb shell
 # explore files within shell
 ls
 ls /sdcard
+
+# uninstall package
+ adb shell pm uninstall -k --user 0 name.of.package
