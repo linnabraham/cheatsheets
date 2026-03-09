@@ -1,0 +1,8 @@
+# package to install from aur
+dropbox
+
+# package to get a cli that can control dropbox
+dropbox-cli
+
+# optional dependency for tray icon
+libappindicator-gtk3
