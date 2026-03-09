@@ -1,0 +1,2 @@
+# eject kindle
+udisksctl power-off -b /dev/sdX
