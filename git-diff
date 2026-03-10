@@ -1,0 +1,49 @@
+# compare local changes with remote after fetch
+git diff master origin/master
+
+# view difference between a file in two different branches
+git diff branch1 branch2 -- /path/to/file
+
+# Filter git diff by type of change
+# for filtering modified files
+--diff-filter=M
+
+# see difference between two branches
+git checkout master
+git diff feature
+
+# see only word diff
+git diff --word-diff
+
+# To show word diff instead of line diff in git
+git diff --word-diff filename
+
+# see condensed diff
+git diff --stat master develop
+
+# see the diff between latest commit and the one prior for a particular file 
+# HEAD^ refers to parent commit of current HEAD
+git diff HEAD^ HEAD -- examples/make_dataset_single.py
+
+# using a particular commit hash
+git diff abcdef1 -- path/to/your/file.txt
+
+# see condensed git diff
+git diff branch1 branch2 --stat
+
+# show diff between the stashed state and its original parent
+git stash show -p
+
+# see individual file changes from the stash
+git diff stash@{0}^! -- /path/to/file
+
+# reverse the usual order of the diff
+diff -R
+
+# use vimdiff as your git diff tool
+difftool -y -t vimdiff filename
+
+# use meld to see visual diff
+meld <(git show :scripts/data_single.py) scripts/data_single.py
+
+

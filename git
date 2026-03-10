@@ -27,9 +27,6 @@ git tag -d tag-name
 # create new tag with commit hash
 git tag v1.0 commit-hash
 
-# compare local changes with remote after fetch
-git diff master origin/master
-
 # avoid merge conflicts while pulling
 git pull --rebase
 git push
@@ -107,9 +104,6 @@ git checkout <branch-on-remote>
 # or abanded unwanted merge
 git reset
 
-# view difference between a file in two different branches
-git diff branch1 branch2 -- /path/to/file
-
 # In order to compare two branches using commit abbreviations, use the “git log” command with the following options.
 git log --oneline --graph --decorate --abbrev-commit branch1..branch2
 
@@ -119,10 +113,6 @@ git log --oneline --graph --all --decorate --abbrev-commit
 # see git log for specific branches
 git log --oneline --graph branch1 branch2
 
-# Filter git diff by type of change
-# for filtering modified files
---diff-filter=M
-
 # undo latest git commit
 # If you used git reset HEAD~ without --soft, it would default to --mixed, 
 # which keeps the changes in the working directory but unstages them.
@@ -131,10 +121,6 @@ git reset --soft HEAD~
 
 # To discard the changes in the working directory as well
 git reset --hard HEAD~
-
-# see difference between two branches
-git checkout master
-git diff feature
 
 # clone git repo using app password
 git clone https://oauth-key-goes-here@github.com/username/repo.git
@@ -149,9 +135,6 @@ git shortlog -s
 eval `ssh-agenet -s` # restart agent
 ssh-add ~/.ssh/id_rsa # add key
 ssh-add -L # list keys
-
-# see only word diff
-git diff --word-diff
 
 # To undo git add before a commit, run
 git reset <file>
@@ -222,9 +205,6 @@ git log -p -1 merge_commit_hash -- path/to/your/file
 git rebase -i HEAD~# # where # is the number of commits to squash. 
 Change pick to squash on each commit that should become part of the one above it. Then edit your commit messages as you see fit.
 
-# To show word diff instead of line diff in git
-git diff --word-diff filename
-
 # Noticed something about git
 # Contrary to my assumption, git rebase doesnt order commits using the timestamp of commits 
 
@@ -270,16 +250,6 @@ git cherry-pick <oldest-commit>^..<newest-commit>
 # if duplicate commits are a concern
 -x # this will add a cherry-picked from message in the commit msg
 
-# see condensed diff
-git diff --stat master develop
-
-# see the diff between latest commit and the one prior for a particular file 
-# HEAD^ refers to parent commit of current HEAD
-git diff HEAD^ HEAD -- examples/make_dataset_single.py
-
-# using a particular commit hash
-git diff abcdef1 -- path/to/your/file.txt
-
 # to see the history of changes or commits that affect a single file
 git log -- <file>
 
@@ -295,9 +265,6 @@ git log HEAD..origin/<branch-name>
 
 # force merge an orphan branch into the master
 --allow-unrelated-histories
-
-# see condensed git diff
-git diff branch1 branch2 --stat
 
 # similar to git show, get an entire directory from a previous commit
 # note that this can overwrite your local folder of same name if you have one
@@ -352,12 +319,6 @@ git stash list
 # see contents in a stash
 git stash show stash@{0}
 
-# show diff between the stashed state and its original parent
-git stash show -p
-
-# see individual file changes from the stash
-git diff stash@{0}^! -- /path/to/file
-
 # save the version of file in the stash with different name
 git show stash@{0}:/path/to/file
 
@@ -390,9 +351,6 @@ git pull --ff-only
 # prevent git config holding sensitive information
 [include]
         path = ~/.gitconfig.local
-
-# reverse the usual order of the diff
-diff -R
 
 ########################
 ADVANCED
@@ -464,9 +422,6 @@ git reset --merge
 # specify location of git dir in case of bare git repos
 --git-dir=/path/to/git
 
-# use vimdiff as your git diff tool
-difftool -y -t vimdiff filename
-
 # set up a submodule
 git submodule add "/path/to/repo"
 git submodule update --init --recursive
@@ -506,9 +461,6 @@ git commit --only /path/to/file -m COMMIT-MSG # -o for short
 
 # git blame with colors
 git blame --color-lines --color-by-age
-
-# use meld to see visual diff
-meld <(git show :scripts/data_single.py) scripts/data_single.py
 
 # safer version of force push which allows only to push if no one else has already pushed
 git push --force-with-lease
