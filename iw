@@ -17,3 +17,6 @@ iw dev wlan0 link
 
 # get the command prompt
 iwctl
+
+# saved connection information
+/var/lib/iwd/
