@@ -46,4 +46,5 @@ difftool -y -t vimdiff filename
 # use meld to see visual diff
 meld <(git show :scripts/data_single.py) scripts/data_single.py
 
-
+# see difference with tag
+git diff tagname..HEAD
