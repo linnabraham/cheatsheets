@@ -1,0 +1,11 @@
+# see which displays are connected and supported resolutions
+wlr-randr
+
+# turn primary display off and external on
+wlr-randr --output eDP-1 --off --output HDMI-A-2 --on
+
+# use external monitor as extended display and turn off primary display
+wlr-randr --output HDMI-A-2 --left-of eDP-1 --output eDP-1 --off
+
+# set resolution for a particular output
+wlr-randr --output eDP-1 --left-of HDMI-A-2 --output HDMI-A-2 --mode 1920x1080
