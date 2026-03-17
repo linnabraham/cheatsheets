@@ -128,9 +128,6 @@ command1;command2;command3
 # show all arguments except the first
 echo "${@:2}"
 
-# make multiple directories using bash pattern completion
-mkdir {10..20}
-
 # Declare two variables containing numbers
 num1=10
 num2=20

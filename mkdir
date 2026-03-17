@@ -1,0 +1,6 @@
+# make multiple directories using bash pattern completion
+mkdir {10..20}
+
+# make multiple named directories
+mkdir {name1,name2}
+mkdir name1 name2

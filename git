@@ -34,21 +34,6 @@ git push
 # to checkout the remote branch
 git checkout <remote branch name>
 
-# Delete local branch
-git branch -d <local-branch-name>
-
-# List all local merged branches.
-git branch --merged
-
-# List all local unmerged branches.
-git branch --no-merged
-
-# List all remote merged branches.
-git branch -r --merged
-
-# List all remote unmerged branches.
-git branch -r --no-merged
-
 # Deleting non-existent tracking branches
 git remote prune <remote> --dry-run
 
@@ -182,10 +167,6 @@ git add -p
 # without file path the show command might produce a diff
 git show <commit_id>:path/to/file > new_file_name
 
-# delete a branch
-git branch -d branchname # to show a warning if a branch is not merged
-git branch -D branchname # to directly delete it
-
 # Merge all changes in a linear fashion upto a specific commit
 git merge commit-hash # if the histories can be conneted linearly this is called a fast-forward merge
 # and proceeds without issues
@@ -231,13 +212,6 @@ git checkout -p file.txt
 
 # restore a previous version of a file using commit hash but with different name
 git show <commit_hash>:path/to/old_filename.ext > path/to/new_filename.ext
-
-# see branches in remote
-git ls-remote --heads origin
-
-# delete branch from remote without deleting locally
-git checkout <branch-name>
-git push origin --delete <branch-name>
 
 # see last three commit info
 git log -n 3
@@ -356,39 +330,10 @@ git pull --ff-only
 ADVANCED
 ########################
 
-# git branch operations
--m
---move
-
-    Move/rename a branch and the corresponding reflog.
--M
-
-    Shortcut for --move --force
-
 # combine last three git commits into one
 git reset --soft HEAD~3
 git commit -m "msg"
 git push -f
-
-# rename local and remote branch
-# Step 1: Rename the local branch to the new name
-git branch -m <old_name> <new_name>
-
-# Step 2: Delete the old branch on remote - where <remote> is, for example, origin
-git push <remote> --delete <old_name>
-
-# Or shorter way to delete remote branch [:]
-git push <remote> :<old_name>
-
-# Step 3: Prevent git from using the old name when pushing in the next step.
-# Otherwise, git will use the old upstream name instead of <new_name>.
-git branch --unset-upstream <new_name>
-
-# Step 4: Push the new branch to remote
-git push <remote> <new_name>
-
-# Step 5: Reset the upstream branch for the new_name local branch
-git push <remote> -u <new_name>
 
 # To fix if you accidently commit big file to git
 # if it was the most recent commit
@@ -542,3 +487,6 @@ git add -A
 
 # show tag along with short commit hash
 git tag -n --format="%(objectname:short) %(refname:short)"
+
+# find sha hash of file using commit hash
+git rev-parse <commit-hash>:path/to/file

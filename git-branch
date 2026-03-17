@@ -1,0 +1,57 @@
+# Delete local branch
+git branch -d <local-branch-name>
+
+# List all local merged branches.
+git branch --merged
+
+# List all local unmerged branches.
+git branch --no-merged
+
+# List all remote merged branches.
+git branch -r --merged
+
+# List all remote unmerged branches.
+git branch -r --no-merged
+
+# delete a branch
+git branch -d branchname # to show a warning if a branch is not merged
+git branch -D branchname # to directly delete it
+
+# see branches in remote
+git ls-remote --heads origin
+
+# delete branch from remote without deleting locally
+git checkout <branch-name>
+git push origin --delete <branch-name>
+
+# git branch operations
+-m
+--move
+
+    Move/rename a branch and the corresponding reflog.
+-M
+
+    Shortcut for --move --force
+
+# rename local and remote branch
+# Step 1: Rename the local branch to the new name
+git branch -m <old_name> <new_name>
+
+# Step 2: Delete the old branch on remote - where <remote> is, for example, origin
+git push <remote> --delete <old_name>
+
+# Step 3: Prevent git from using the old name when pushing in the next step.
+# Otherwise, git will use the old upstream name instead of <new_name>.
+git branch --unset-upstream <new_name>
+
+# Step 4: Push the new branch to remote
+git push <remote> <new_name>
+
+# Step 5: Reset the upstream branch for the new_name local branch
+git push <remote> -u <new_name>
+
+# Or shorter way to delete remote branch [:]
+git push <remote> :<old_name>
+
+# List all local branches (sorted by last commit date)
+git branch --sort=-committerdate

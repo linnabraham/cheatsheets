@@ -1,3 +1,17 @@
+# How to interpret the output of the command? - diff foo bar
+The output shows what changes you need to make to foo in order to make it identical to
+bar.
+
+# Changes brought about by a single commit
+git diff <parent-commit>..<current-commit>
+# or
+git show <commit-hash>
+# or
+git diff commit-hashˆ!
+
+# Most recent change made to a file
+git log -p -1 -- <file>
+
 # compare local changes with remote after fetch
 git diff master origin/master
 
