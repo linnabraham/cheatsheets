@@ -1,0 +1,9 @@
+# configure google-drive as remote
+# 1. You need to use a custom project and enable google drive API
+# 2. Install the dvc-gdrive package
+# create a folder say dvcstore in your google drive and copy the ID for the folder
+# into your .dvc/config.local as.
+# [for more refer- https://dvc.org/doc/user-guide/data-management/remote-storage/google-drive#url-format]
+# https://dvc.org/doc/user-guide/data-management/remote-storage/google-drive#url-format
+url = gdrive://<FOLDER-ID>
+
