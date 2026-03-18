@@ -1,0 +1,45 @@
+# unstage all changes or undo all staged files at once
+# or abanded unwanted merge
+git reset
+
+# undo latest git commit
+# If you used git reset HEAD~ without --soft, it would default to --mixed, 
+# which keeps the changes in the working directory but unstages them.
+# by using the --soft option you can keep the modifications in your Working Directory
+git reset --soft HEAD~
+
+# To discard the changes in the working directory as well
+git reset --hard HEAD~
+
+# To undo git add before a commit, run
+git reset <file>
+git reset #  to unstage all changes
+
+# revert to commit before merge without creating new commit
+git reset --hard <commit_before_merge>
+
+# undo a revert commit
+git reset --hard HEAD^
+
+# undo a git merge
+git reset --hard commit-before-the-merge
+or
+git reset --hard HEAD~1
+
+# A better way to undo a git merge
+#Since the methods discussed above will revert uncommitted changes, Git provides a safer flag which is --merge.
+
+#To undo a merge with the --merge flag, run git reflog to see the hashes of commits, then run 
+git reset --merge previous-commit
+
+# undo a git reset 
+git reset ORIG_HEAD
+
+# use reflog to find commit or HEAD number
+git reflog
+git reset --hard HEAD@{1}
+
+# Abort a stash pop
+# Note: This will discard any staged changes
+git reset --merge
+

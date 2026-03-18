@@ -1,3 +1,9 @@
+# current commit reference
+HEAD
+
+# reference to parent of current commit
+HEAD~
+
 # do not show untracked files in git status
 git status -uno
 
@@ -85,10 +91,6 @@ config ls-remote --heads origin
 # sometimes the branch may not be listed but you can just use
 git checkout <branch-on-remote>
 
-# unstage all changes or undo all staged files at once
-# or abanded unwanted merge
-git reset
-
 # In order to compare two branches using commit abbreviations, use the “git log” command with the following options.
 git log --oneline --graph --decorate --abbrev-commit branch1..branch2
 
@@ -98,14 +100,6 @@ git log --oneline --graph --all --decorate --abbrev-commit
 # see git log for specific branches
 git log --oneline --graph branch1 branch2
 
-# undo latest git commit
-# If you used git reset HEAD~ without --soft, it would default to --mixed, 
-# which keeps the changes in the working directory but unstages them.
-# by using the --soft option you can keep the modifications in your Working Directory
-git reset --soft HEAD~
-
-# To discard the changes in the working directory as well
-git reset --hard HEAD~
 
 # clone git repo using app password
 git clone https://oauth-key-goes-here@github.com/username/repo.git
@@ -120,10 +114,6 @@ git shortlog -s
 eval `ssh-agenet -s` # restart agent
 ssh-add ~/.ssh/id_rsa # add key
 ssh-add -L # list keys
-
-# To undo git add before a commit, run
-git reset <file>
-git reset #  to unstage all changes
 
 # view the url associated with git repo
 git config --get remote.origin.url
@@ -140,9 +130,6 @@ git push origin branchname
 # clone specific branch
 git clone -b <branch> 
 
-# revert to commit before merge without creating new commit
-git reset --hard <commit_before_merge>
-
 # git checkout if file or folder or same name exists
 git checkout branchname --
 
@@ -156,9 +143,6 @@ git push -d <remote> <branchname>
 
 # see which files changed along with commit history
 git log --raw
-
-# undo a revert commit
-git reset --hard HEAD^
 
 # stage only parts of a modified file interactively
 git add -p
@@ -191,17 +175,6 @@ Change pick to squash on each commit that should become part of the one above it
 
 # checkout file from another branch and but rename it
 git show [source_branch]:[file_path] > [full_file_path]
-
-# undo a git merge
-git reset --hard commit-before-the-merge
-or
-git reset --hard HEAD~1
-
-# A better way to undo a git merge
-#Since the methods discussed above will revert uncommitted changes, Git provides a safer flag which is --merge.
-
-#To undo a merge with the --merge flag, run git reflog to see the hashes of commits, then run 
-git reset --merge previous-commit
 
 # To get changes from master back into a feature branch
 git checkout feature-branch
@@ -272,33 +245,6 @@ git log --pretty=format:"%h %ad %s" --date=short
 # with coloring etc.
 git log --pretty=format:"%C(auto)%h%C(reset) %ad %C(auto)%d%C(reset) %s" --date=format:"%b %d, %Y"
 
-# undo a git reset 
-git reset ORIG_HEAD
-
-# stash
-git stash
-
-# save individual file to stash
-git stash -m "message" -- path/to/file
-
-# git stash reapply
-git stash pop
-
-# git stash specific stash
-git stash pop stash@{2}
-
-# see all stash
-git stash list
-
-# see contents in a stash
-git stash show stash@{0}
-
-# save the version of file in the stash with different name
-git show stash@{0}:/path/to/file
-
-# drop the stash
-git stash drop stash@{0}
-
 # save the version in shown in git status
 git show :/path/to/file > new/path/to/file
 
@@ -307,10 +253,6 @@ git commit --amend --no-edit
 
 # restore with patch
 git restore -p
-
-# use reflog to find commit or HEAD number
-git reflog
-git reset --hard HEAD@{1}
 
 # local git configuration
 git config user.email "email-id"
@@ -356,14 +298,6 @@ git config core.fileMode false
 # https://stackoverflow.com/questions/38378914/how-to-fix-git-error-rpc-failed-curl-56-gnutls
 git config --global http.postBuffer 1048576000
 
-# To stash your working directory including untracked files
-# (especially those that are in the .gitignore)
-git stash -u
-
-# Abort a stash pop
-# Note: This will discard any staged changes
-git reset --merge
-
 # specify location of git dir in case of bare git repos
 --git-dir=/path/to/git
 
@@ -388,12 +322,6 @@ git -c color.status=always status
 
 # show only tracked files in root directory
 git ls-files | awk -F'/' 'NF==1'
-
-# dont stash staged and untracked files
-git stash push --keep-index
-
-# dont stash staged files alone
-git stash push --keep-index --include-untracked
 
 # tag with more metadata
 git tag -a v1.04 -m "Message"
@@ -445,21 +373,12 @@ git clone --no-local --no-hardlinks <path-or-url-to-your-repo> script-only-repo
 cd script-only-repo
 git filter-repo --path myscript.py
 
-# stash only the changes that are currently staged
-git stash push --staged
-
 # git status -s
 # it uses a two-column code to show the status of each file:
 # if one of the codes is missing you will see a blank space or an indent
 XY <path>
 X - Status of the file in the staging area (what will be committed).
 Y - Status of the file in the working directory (changes not staged yet).
-
-# also stash untracked files
-git stash push --include-untracked
-
-# also stash ignored files
-git stash push --all # or -a
 
 # show all untracked files alone
 git ls-files --others --exclude-standard

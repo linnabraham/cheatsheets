@@ -1,0 +1,44 @@
+# stash
+git stash
+
+# save individual file to stash
+git stash -m "message" -- path/to/file
+
+# git stash reapply
+git stash pop
+
+# git stash specific stash
+git stash pop stash@{2}
+
+# see all stash
+git stash list
+
+# see contents in a stash
+git stash show stash@{0}
+
+# save the version of file in the stash with different name
+git show stash@{0}:/path/to/file
+
+# drop the stash
+git stash drop stash@{0}
+
+# To stash your working directory including untracked files
+# (especially those that are in the .gitignore)
+git stash -u
+
+
+# dont stash staged and untracked files
+git stash push --keep-index
+
+# dont stash staged files alone
+git stash push --keep-index --include-untracked
+
+# stash only the changes that are currently staged
+git stash push --staged
+
+# also stash untracked files
+git stash push --include-untracked
+
+# also stash ignored files
+git stash push --all # or -a
+
