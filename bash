@@ -201,3 +201,10 @@ bind -f ~/.inputrc
 # set optional and default value in scripts
 # Use the value of VAR if it is set and not empty; otherwise, use default
 ${VAR:-default}
+
+# see state of shell options
+set -o
+
+# enable or disable options
+set -o option_name      # turn ON an option
+set +o option_name      # turn OFF an option
