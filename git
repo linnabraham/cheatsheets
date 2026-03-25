@@ -409,3 +409,6 @@ git tag -n --format="%(objectname:short) %(refname:short)"
 
 # find sha hash of file using commit hash
 git rev-parse <commit-hash>:path/to/file
+
+# commit only some files from staged ones
+git commit <file1> <file2> -m "your message"
