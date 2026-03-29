@@ -412,3 +412,6 @@ git rev-parse <commit-hash>:path/to/file
 
 # commit only some files from staged ones
 git commit <file1> <file2> -m "your message"
+
+# undo git add
+git restore --staged

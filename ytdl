@@ -43,3 +43,6 @@ torsocks youtube-dl -v --no-check-certificate -f 'bestvideo[height<=480]+bestaud
 
 # embedd thumbnail
 --embed-thumbnail
+
+# create an archive file from existing downloaded files
+ls *.opus | grep -oP '\[([a-zA-Z0-9_-]{11})\]' | tr -d '[]' | sed 's/^/youtube /' >> ~/Music/.archive.txt
