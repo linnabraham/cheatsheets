@@ -66,8 +66,14 @@ loginctl
 
 loginctl show-session <sessid> -p Type
 
+# check hostname details
+hostnamectl status
+
 # set hostname for current session
 hostnamectl set-hostname new-hostname
+
+# permanent static hostname
+sudo hostnamectl set-hostname whatever-you-want
 
 # know whether wayland or xorg is currently in use
 loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}'
