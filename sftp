@@ -1,0 +1,14 @@
+# get into sftp server
+sftp -P port username@server
+
+# download file
+get file.txt
+
+# download folder
+get -r folder/
+
+# upload file
+put file.txt
+
+# upload folder
+put -r folder/
