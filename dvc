@@ -74,6 +74,8 @@ dvc repro prediction-plots --dry
 # or secrets (passwords, SSH keys, etc). Use --local when in doubt.
 
 # Add a stage
+dvc stage add -n name-of-stage -d /path/to/file1 -d /path/to/file2 -o /path/to/file/or/dir cmd
+# example
 dvc stage add -n printer -d write.sh -o pages ./write.sh
 
 # partial push dvc

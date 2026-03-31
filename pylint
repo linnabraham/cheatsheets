@@ -1,2 +1,5 @@
 # display only errors with pylint
 --errors-only
+
+# call as python module
+python -m pylint
