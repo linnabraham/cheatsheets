@@ -1,2 +1,11 @@
+# package name in arch repo
+mkdocs
+
 # package for material theme
 mkdocs-material
+
+# run development server
+mkdocs serve
+
+# run server on different port
+--dev-addr localhost:8001
