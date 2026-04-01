@@ -9,3 +9,6 @@ mkdocs serve
 
 # run server on different port
 --dev-addr localhost:8001
+
+# live reload
+--livereload

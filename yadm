@@ -5,3 +5,9 @@ yadm clone /url/to/repo.git
 
 # overwrite the tracked files
 yadm checkout "/home/user"
+
+# initialize
+yadm init
+
+# add files
+yadm add /path/to/file

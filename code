@@ -1,4 +1,5 @@
-# Microsoft vscode
+# arch aur package to install for microsoft vscode
+visual-studio-code-bin
 
 # To enable esc caps switching after installing vim plugin
 # Insert following in user settings
@@ -7,6 +8,3 @@
 
 # to accept suggestion word by word
 ctrl + right
-
-# arch aur package to install
-visual-studio-code-bin
