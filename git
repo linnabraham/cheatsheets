@@ -415,3 +415,9 @@ git commit <file1> <file2> -m "your message"
 
 # undo git add
 git restore --staged
+
+# create commit that undoes what was done in a particular commmit
+git revert commit-hash
+
+# search within git log
+git log --grep="your search term"
