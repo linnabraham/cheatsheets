@@ -420,4 +420,8 @@ git restore --staged
 git revert commit-hash
 
 # search within git log
+
+# see how much branches have diverged
+# caution: three dots not two
+git rev-list --left-right --count main...feature-branch
 git log --grep="your search term"

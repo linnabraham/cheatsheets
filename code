@@ -8,3 +8,12 @@ visual-studio-code-bin
 
 # to accept suggestion word by word
 ctrl + right
+
+# toggle dark mode
+settings icon on bottom left
+
+# command palette
+ctrl + shift + p
+
+# exit zen mode
+use command palette
