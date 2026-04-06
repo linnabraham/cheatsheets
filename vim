@@ -531,3 +531,6 @@ set statusline+=%{wordcount().words}\ words
 
 # open file which requires sudo access in users vim
 sudo -e /path/to/file
+
+# see hidden characters like tabs
+:set list

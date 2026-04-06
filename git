@@ -425,3 +425,9 @@ git revert commit-hash
 # caution: three dots not two
 git rev-list --left-right --count main...feature-branch
 git log --grep="your search term"
+
+# revert a range of commits - older commit first
+git revert 5886515..db7e356
+
+# revert but dont make a commit
+git revert commit-hash --no-comit

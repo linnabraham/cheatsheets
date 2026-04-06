@@ -17,3 +17,6 @@ ctrl + shift + p
 
 # exit zen mode
 use command palette
+
+# bring up settings page
+Ctrl+,
