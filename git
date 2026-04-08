@@ -138,9 +138,6 @@ git merge --no-commit --no-ff $BRANCH
 git diff --cached # To examine the staged changes:
 git merge --abort # undo the merge, even if it is a fast-forward merge:
 
-# delete branches from remote 
-git push -d <remote> <branchname>
-
 # see which files changed along with commit history
 git log --raw
 
@@ -418,6 +415,9 @@ git restore --staged
 
 # create commit that undoes what was done in a particular commmit
 git revert commit-hash
+
+# undo git revert
+git revert revert-commit-hash
 
 # search within git log
 
