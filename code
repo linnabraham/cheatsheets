@@ -19,4 +19,7 @@ ctrl + shift + p
 use command palette
 
 # bring up settings page
-Ctrl+,
+Ctrl + ,
+
+# for inline chat, make a selection or place cursor
+Ctrl + i
