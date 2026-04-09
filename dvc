@@ -93,3 +93,5 @@ dvc remove /path/to/file.dvc
 
 # garbage collection
 dvc gc -w
+
+# dvc pull doesn't work with individual files

@@ -100,3 +100,7 @@ newgrp docker
 
 # python package to view xlsx file
 xlsx2csv
+
+# set hostname with file
+# write name to
+/etc/hostname
