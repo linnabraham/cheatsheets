@@ -31,6 +31,8 @@ git push
 # Step 4(optional): if you use remote storage
 # push to dvc
 dvc push
+# note that if the .dvc files are not added to git
+# dvc push doesn't send the actual files from the cache to remote storage
 ####### Initial setup
 
 # workflow for dvc
@@ -93,5 +95,3 @@ dvc remove /path/to/file.dvc
 
 # garbage collection
 dvc gc -w
-
-# dvc pull doesn't work with individual files

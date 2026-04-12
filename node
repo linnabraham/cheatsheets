@@ -1,2 +1,5 @@
 # check node version
 node -v
+
+# install on server with no admin access
+use curl

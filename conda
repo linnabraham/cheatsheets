@@ -14,6 +14,7 @@ conda clean --all
 
 # remove conda environment
 conda env remove --name envname
+conda env remove -n envname --all
 
 # auto enae
 If your shell is Bash or a Bourne variant, enable conda for the current user with
@@ -114,9 +115,6 @@ conda config --set verbosity 2
 
 # history of your environment
 inside the conda-meta directory in  your environment directory
-
-# remove or delete environment
-conda remove -n envname --all
 
 # install to different environment than activated
 conda install -n envname
