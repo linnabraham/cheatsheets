@@ -8,6 +8,9 @@ git reset
 # by using the --soft option you can keep the modifications in your Working Directory
 git reset --soft HEAD~
 
+# undo latest two commits
+git reset --soft HEAD~2
+
 # To discard the changes in the working directory as well
 git reset --hard HEAD~
 
