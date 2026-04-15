@@ -4,6 +4,8 @@ mkdocs
 # package for material theme
 mkdocs-material
 
+# package names in conda-forge are same as those in arch repo
+
 # run development server
 mkdocs serve
 

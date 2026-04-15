@@ -101,3 +101,6 @@ ssh -fNL 8888:localhost:8888 user@host
 
 # find and kill it later
 ps aux | grep "ssh -fNL"
+
+# permission for ssh config
+chmod 600 ~/.ssh/config # readable only to you

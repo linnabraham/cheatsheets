@@ -1,2 +1,8 @@
 # aur package to install
 claude-code
+
+# in a new project directory just run
+claude
+
+# cycle between plan mode and others
+shift-tab
