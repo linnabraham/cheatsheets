@@ -43,3 +43,6 @@ git clone --branch <package_name> --single-branch https://github.com/archlinux/a
 
 # rebuild all aur packages that depend on specific python version
 pacman -Qoq /usr/lib/python3.13 | pacman -Qmq - | paru -S --rebuild -
+
+# remove make dependencies
+pacman -Qdtq | pacman -Rns -
