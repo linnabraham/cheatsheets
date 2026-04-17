@@ -4,3 +4,7 @@ ripdrag %s
 
 # show hidden files
 .
+
+# install from github
+curl -LO https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-musl.zip
+

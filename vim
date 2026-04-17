@@ -534,3 +534,6 @@ sudo -e /path/to/file
 
 # see hidden characters like tabs
 :set list
+
+# turn off spell check
+:set nospell
