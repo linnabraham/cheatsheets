@@ -612,3 +612,6 @@ pdffonts filename.pdf
 # run the following in the shell where you are compiling
 # // means “search recursively”, the trailing : preserves default paths
 export TEXINPUTS="/absolute/path/to/repo-B/notes//:"
+
+# disable individual todo types in todonotes package
+\todo[disable]{...}
