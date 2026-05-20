@@ -537,3 +537,6 @@ sudo -e /path/to/file
 
 # turn off spell check
 :set nospell
+
+# enter zenmode
+:ZenMode

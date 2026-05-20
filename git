@@ -431,3 +431,7 @@ git revert 5886515..db7e356
 
 # revert but dont make a commit
 git revert commit-hash --no-comit
+#
+# commit a single file from the staged ones
+git commit -m "Your message" -- path/to/yourfile.ext
+git commit /path/to/file -m "commit msg"
