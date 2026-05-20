@@ -13,3 +13,5 @@ pip install git+https://github.com/<username>/<repo>.git@<branch>
 pip install git+https://github.com/<username>/<repo>.git@<commit-hash>
 pip install git+https://github.com/<username>/<repo>.git@v1.2.3
 
+# Install your project from the toml
+pip install -e .

@@ -3,3 +3,6 @@ ibus start --type wayland
 
 # make verbose
 --verbose
+
+# exit program
+ibus exit

@@ -6,3 +6,6 @@ claude
 
 # cycle between plan mode and others
 shift-tab
+
+# open an interactive picker to browse all recent sessions
+claude --resume (or claude -r)

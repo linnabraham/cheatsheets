@@ -2,7 +2,7 @@
 git branch -d <local-branch-name>
 
 # delete branches from remote
-git push -d <remote> <branchname>
+git push -d <remote> <branchname1> <branchname2>
 
 # List all local merged branches.
 git branch --merged

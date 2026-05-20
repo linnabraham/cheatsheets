@@ -435,3 +435,10 @@ git revert commit-hash --no-comit
 # commit a single file from the staged ones
 git commit -m "Your message" -- path/to/yourfile.ext
 git commit /path/to/file -m "commit msg"
+
+# do fixup commit in git
+git add <missing-file>
+git commit --fixup=commit-hash
+git rebase -i --autosquash 7c635f3^
+# Git will automatically reorder and mark it
+# save and exit
